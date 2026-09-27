@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="robots" content="all">
+  <meta name="author" content="Tencent-CP" />
+  <meta name="Description" content="《王者万象棋》是《王者荣耀》IP英雄策略对战游戏。欢迎来到万象大赛的现场，超高人气的英雄卡牌竞技秀火热进行中！你将同众多棋手一起，在这个舞台上一决高下。数不胜数的卡牌带来了无限的可能性，运用你的智慧、勇气，还有必不可少的一点点运气，去赢得比赛，成为王者，夺下冠军的荣耀吧！这一次没你不行！" />
+  <meta name="Keywords" content="王者万象棋官网,王者下棋官网,王者自走棋官网,王者万象棋,万象棋,王者下棋,王者棋,王者IP新游,王者自走棋,自走棋,王者下棋手游,王者IP手游,王者万象棋手游,王者万象棋电脑版,王者新游电脑版,王者自走棋电脑版,王者万象棋预约,王者IP新游预约,万象棋预约,王者自走棋预约,王者万象棋内测,万象棋内测,王者IP新游内测,王者万象棋测试资格,万象棋测试资格,王者IP新游测试,王者万象棋安装,万象棋安装,王者下棋安装,王者自走棋安装,王者新游安装,王者万象棋下载,万象棋下载,王者下棋下载,王者自走棋下载,王者新游下载,WZWXQ,WXQ,WP" />
+  <meta name="Copyright" content="Tencent" />
+  <link rel="icon" href="//game.gtimg.cn/images/osgame/cp/appointment/share.png" type="image/x-icon">
+  <title>王者万象棋官方网站-腾讯游戏</title>
+  <!-- 设计：因赛| 重构：因赛 | 创建：2026-07-07  -->
+  <script type="text/javascript">
+    (function () {
+      var ua = navigator.userAgent;
+      var isIOS = /iPhone|iPad|iPod/ig.test(ua) ||  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      var isAndroid = /Android/ig.test(ua);
+      var a = navigator.userAgent; if (-1 != a.indexOf("iPhone") || -1 != a.indexOf("iPad") || -1 != a.indexOf("iPod") || -1 != a.indexOf("Android")) {
+        a = document.referrer; if (-1 < a.indexOf("baidu.com") || -1 < a.indexOf("sogou.com") || -1 < a.indexOf("haosou.com") || -1 < a.indexOf("hao76.com")) if (a = void 0, window.sessionStorage) sessionStorage.setItem("channel", "seo"); else { var a = a || 0, b = ""; 0 != a && (b = new Date, b.setTime(b.getTime() + 1E3 * a), b = "; expires=" + b.toGMTString()); document.cookie = "channel=" + escape("seo") + b + "; path=/" }
+        self.location = "/cp/a20260707sfgw/m.html"+location.search;
+      }
+      if (isIOS && isAndroid) {
+        window.location.href = '/cp/a20260707sfgw/m.html' + location.search;
+      }
+    })();
+  </script>  
+
+    <!-- 线上路径 -->
+    <link rel="stylesheet" href="/cp/a20260707sfgw/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/cp/a20260707sfgw/css/index.css?v=1.2">
+    <link rel="stylesheet" href="/cp/a20260707sfgw/css/ui.css" />
+    <link rel="stylesheet" href="/cp/a20260707sfgw/css/pc.css" />
+    <link rel="stylesheet" href="/cp/a20260707sfgw/css/cards.css" />
+    
+    <!-- 本地路径 -->
+    <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/index.css?v=1.2">
+    <link rel="stylesheet" href="./css/ui.css" />
+    <link rel="stylesheet" href="./css/pc.css" />
+    <link rel="stylesheet" href="./css/cards.css" /> -->
+
+    <script>
+      var width = window.screen.width;
+      var height = window.screen.height;
+      // 判断是否为台式2K屏幕
+      if (width >= 2000 && height >= 1200) {
+          document.documentElement.classList.add('big2k');
+      }
+    </script>
+</head>
+<!-- https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/ -->
+<body>
+  <main class="wrapper" id="wrap">
+    <nav class="nav">
+      <div class="logo"><img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/logo.png" alt="王者万象棋"></div>
+      <ul class="nav-list" id="menu">
+        
+        <li class=""><a class="nav nav1 active" href="#page1" data-menuanchor="page1" onclick='comm.reportEvent("btn", "pc_dh_index", "PC端导航-首页");'></a></li>
+        <li class="">
+          <a class="nav nav2" href="#page2" data-menuanchor="page2" onclick='comm.reportEvent("btn", "pc_dh_zixun", "PC端导航-资讯列表");'></a>          
+        </li>
+        <li class="" data-menuanchor="page4">
+          <div class="nav nav3" data-menuanchor="page3" onclick='comm.reportEvent("btn", "pc_dh_index", "PC端首页导航-棋手介绍");'>
+            <div class="nav_more">
+              <a href="#page3" onclick='comm.reportEvent("btn", "pc_dh_qishou", "PC端导航-棋手介绍");'>棋手介绍</a>  
+              <a href="#page4" onclick='comm.reportEvent("btn", "pc_dh_kapai", "PC端导航-卡牌介绍");'>卡牌介绍</a>  
+            </div>            
+          </div>
+          <!-- <a class="nav nav3" href="#page3" data-menuanchor="page2" onclick='comm.reportEvent("btn", "pc_dh_index", "PC端首页导航-棋手介绍");'></a>           -->
+        </li>
+        <li class=""><a class="nav nav4" href="https://wxq.qq.com/cp/a202609xszy/index.html" target="_blank" onclick='comm.reportEvent("btn", "pc_dh_xinshou", "PC端导航-新手指引");'></a></li>
+        <li class=""><a class="nav nav5" href="/cp/a20260707sfgw/teamlist.html" data-menuanchor="page5" onclick='comm.reportEvent("btn", "pc_dh_zhenrong", "PC端导航-阵容推荐");'></a></li>
+        
+        <li class="">
+          <i class="nav_new"></i>
+          <a class="nav nav6" href="/cp/a20260707sfgw/strategylist.html" onclick='comm.reportEvent("btn", "pc_dhl_wxxx", "pc端导航栏万象新星");'></a>
+        </li>
+        <li>
+          <div class="nav nav7">
+            <div class="nav_more">
+              <a href="https://wxq.qq.com/cp/a20260324xx/index.html" target="_blank" onclick='comm.reportEvent("btn", "pc_dh_czzzm", "PC端导航-创作者招募");'>创作者招募</a>  
+              <a href="https://wxq.qq.com/cp/a20260421/index.html" onclick='comm.reportEvent("btn", "pc_dh_flcx", "PC端导航-充值返利");'>充值返利</a>  
+              <a href="https://kf.qq.com/touch/kfgames/A10714/v2/PCweb/conf/index.html?scene_id=CSCE20260202201724FyxKpvTp" target="_blank" onclick='comm.reportEvent("btn", "pc_dh_kf", "PC端导航-客服专区");'>客服专区</a>  
+              <!-- <a href="https://wxq.qq.com/cp/a202609tyf/" target="_blank" onclick='comm.reportEvent("btn", "pc_dh_yxxx", "PC端导航-体验服专区");'>体验服专区</a>   -->
+            </div>            
+          </div>          
+        </li>
+      </ul>
+      <a href="javascript:;" class="music"></a>
+      <!-- <div class="login">
+        <p id="unlog"><a href="javascript:comm.login();" onclick="comm.reportEvent('btn', 'fbh_home_login', '首页登录')" id="btn_login">[登录]</a></p>
+        <p id="log" style="display: none;">欢迎您，<span id="nickname"></span><a href="javascript:comm.loginOut();" onclick="comm.reportEvent('btn', 'pc_fbh_home_logout', 'pc端首页注销')" id="btn_logout">[注销]</a></p>
+      </div> -->
+      <!-- <a href="javascript:;" class="music"></a> -->
+      <!-- <a href="javascript:openDialog('dia3');" class="nav-invite">立即预约</a> -->
+      <a href="javascript:;" class="kv_back" onclick="comm.reportEvent('btn', 'pc_home_zs_kv_back', 'PC端首页返回按钮')"></a>
+    </nav>
+    <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/loading-bg.jpg" style="display: none;" alt="">
+    <!-- 加载 -->
+    <div class="loading-con" style="display: block;">
+      <p class="loadingnum"><span>100</span>%</p>
+      <p class="loadingtxt">loading...</p>
+      <div class="load-logo"></div>
+    </div>
+
+    <div id="fullPage">
+    	  <!--part1 kv-->
+        <div class="section part1" id="part1">
+          <!-- <video id="kv_video1" data-keepplaying class="big-video on" autoplay loop muted><source  src="https://osgame.lv.game.qq.com/dis_kt_609b8cffaa92c30831d5186dda010eb2_1787627054/0b535abqoaadzyaacc4ovrvoj2gda7uagbya.f0.mp4" type="video/mp4" /></video>           -->
+           <div class="kv_video1" style="display: none;">
+              <canvas id="video" style="width: 100%;height: 100vh;object-fit: cover;"></canvas>
+            </div>
+          <div class="kv-main" style="display: none;">
+            <h1 class="slogan">玩法爆料回归 升级万象新局</h1>
+
+         
+            <!-- <a href="javascript:showOverlay('#video-dia','z3176yy64bd');" class="kv-vid" onclick="comm.reportEvent('btn', 'pc_home_zs_wanfa', 'PC端首页左上角玩法视频')"></a> -->
+            <div class="download-panel download-panel--windows" id="windowsDownloads">
+              <div class="download-cards">
+                <!-- 直播按钮 -->
+                <!-- <a href="javascript:showOverlay('#live-video');" onclick="comm.reportEvent('btn', 'pc_home_zs_live', 'PC端首页直播')" class="kv_live"></a> -->
+                <a class="download-hotspot download-hotspot--win-mobile" data-download-link="qrcode" href="javascript:;" rel="noopener" aria-label="移动端下载" >
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/top_down_code.png" alt="扫码下载移动端">
+                  <img class="download-card__qr" data-download-qrcode src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/top_down_code2.png" alt="移动端下载二维码">
+                </a>
+                <a class="download-hotspot download-hotspot--win-pc" data-download-link="pc" href="https://dlied4.myapp.com/myapp/1111527373/cos.release-76338/19000407_27902_b16547_1.1.1_M5SnfR.exe" rel="noopener" aria-label="官方PC下载" onclick="comm.reportEvent('btn', 'pc_home_centre_download_pc', 'pc端首页PC下载')"><img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/top_down_win.png" alt="官方PC下载"></a>
+                <a class="download-hotspot download-hotspot--win-wegame" data-download-link="wegame" href="https://dlied4.myapp.com/myapp/1111527373/cos.release-76338/19000116_27902_a16620_1.1.1_0_8Cdg3O.exe" rel="noopener" aria-label="WeGame下载" onclick="comm.reportEvent('btn', 'pc_home_centre_download_wegame', 'pc端首页wegame下载')"><img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/top_down_wg.png" alt="WeGame下载"></a>
+                <!-- 福利按钮 -->
+                <a href="javascript:showOverlay('#register-benefit');" onclick="comm.reportEvent('btn', 'pc_home_zs_reward', 'PC端首页福利')" class="kv_zm4_btn3"></a>
+                
+              </div>
+              
+            </div>
+
+            <div class="download-panel download-panel--mac" id="macDownloads" style="display: none;">
+              <div class="download-cards">
+                <!-- 直播按钮 -->
+                <!-- <a href="javascript:showOverlay('#live-video');" onclick="comm.reportEvent('btn', 'pc_home_zs_live', 'PC端首页直播')" class="kv_live"></a> -->
+                <a class="download-hotspot download-hotspot--mac-mobile" data-download-link="qrcode" href="javascript:;" rel="noopener" aria-label="移动端下载">
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/top_down_code.png" alt="扫码下载移动端">
+                  <img class="download-card__qr" data-download-qrcode src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/top_down_code2.png" alt="移动端下载二维码">
+                </a>
+                <a href="https://downmac.yyb.qq.com/channel/prod/raw/constant/osgame.dmg" class="download-hotspot download-hotspot--mac" data-download-link="mac"  aria-label="macOS下载" onclick="comm.reportEvent('btn', 'pc_home_centre_download_mac', 'pc端首页mac下载')"><img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/top_down_mac.png" alt="macOS下载"></a>
+                <!-- 福利按钮 -->
+                <a href="javascript:showOverlay('#register-benefit');" onclick="comm.reportEvent('btn', 'pc_home_zs_reward', 'PC端首页福利')" class="kv_zm4_btn3"></a>
+                
+              </div>
+
+            </div>
+            <div class="download-channels" role="group" aria-label="其他渠道下载">
+              <img class="download-channels__background" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/top_down_line.png" alt="">
+              <a class="download-hotspot channel-download channel-download--hykb" href="https://www.3839.com/a/148499.htm?from=hykb" target="_blank" rel="noopener" aria-label="好游快爆下载" onclick="comm.reportEvent('btn', 'pc_home_centre_download_hykb', 'pc端首页好游快爆下载')"><img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/top_down_line1.png" alt="好游快爆"></a>
+              <a class="download-hotspot channel-download channel-download--4399" href="https://a.4399.cn/game-id-250086.html?req_source=f" target="_blank" rel="noopener" aria-label="4399下载" onclick="comm.reportEvent('btn', 'pc_home_centre_download_4399', 'pc端首页4399下载')"><img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/top_down_line2.png" alt="4399游戏盒"></a>
+              <a class="download-hotspot channel-download channel-download--taptap-m" href="https://tap.cn/bICM89Dr" target="_blank" rel="noopener" aria-label="TapTap移动端下载" onclick="comm.reportEvent('btn', 'pc_home_centre_download_taptap_m', 'pc端首页taptap移动端下载')"><img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/top_down_line3.png" alt="TapTap移动端"></a>
+              <a class="download-hotspot channel-download channel-download--taptap-pc" href="https://tap.cn/zr0UNFhS" target="_blank" rel="noopener" aria-label="TapTap PC端下载" onclick="comm.reportEvent('btn', 'pc_home_centre_download_taptap_pc', 'pc端首页taptappc端下载')"><img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/top_down_line4.png" alt="TapTap PC端"></a>
+              <a class="download-hotspot channel-download channel-download--start" href="https://start.qq.com/webgame/gamedetail/200715?ADTAG=gwlogo" target="_blank" rel="noopener" aria-label="start" onclick="comm.reportEvent('btn', 'pc_home_centre_download_start', 'pc端首页start云游戏下载')"><img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/top_down_line5.png" alt="start"></a>
+            </div>
+            <img class="top_down_desc" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/top_down_desc.png" alt="">
+            
+          </div>
+
+          <!-- <a href="https://wxq.qq.com/cp/a20260306Qual/index.html" class="kv-link" onclick="comm.reportEvent('btn', 'pc_home_zgcx', 'pc端首页资格查询')"></a> -->
+          <a href="javascript:showOverlay('#age-dia');" class="kv-age" onclick="comm.reportEvent('btn', 'pc_home_zs_shiling', 'PC端首页适龄提示')"></a>
+
+
+        </div>
+        <!--新闻资讯-->
+        <div class="section part4" id="part4">
+          <!-- 新闻轮播 -->
+          <div class="news-con">
+            <div class="news-ysz"></div>
+            <h2 class="news-tit">万象资讯</h2>
+            <div class="news-data">
+              <div class="news-img-sw">
+                <div class="swiper news-sw">
+                  <div class="swiper-wrapper">
+                    <!-- <div class="swiper-slide"><img src="https://game.gtimg.cn/images/osgame/cp/main/news-poster1.jpg"></div> -->
+                  </div>
+                  <div class="news-navigation swiper-pagination"></div>
+                </div>
+              </div>
+
+              <div class="news-box">
+                <div class="news-tab">
+                  <a href="javascript:;" class="news-btn on" onclick="comm.reportEvent('btn', 'pc_home_zixun_all', 'PC端万象资讯-全部')">全部</a>                  
+                  <a href="javascript:;" class="news-btn" onclick="comm.reportEvent('btn', 'pc_home_zixun_bulletin', 'PC端万象资讯-公告')">公告</a>
+                  <a href="javascript:;" class="news-btn" onclick="comm.reportEvent('btn', 'pc_home_zixun_news', 'PC端万象资讯-新闻')">新闻</a>
+                  <a href="javascript:;" class="news-btn" onclick="comm.reportEvent('btn', 'pc_home_zixun_activity', 'PC端万象资讯-活动')">活动</a>
+                  <a href="javascript:;" class="news-btn" onclick="comm.reportEvent('btn', 'pc_home_zixun_column', 'PC端万象资讯-栏目')">栏目</a>
+                </div>
+                <div class="news-ul" id="list1">
+                  <ul class="news-list on">
+                  </ul>
+                  <ul class="news-list">
+                  </ul>
+                  <ul class="news-list">
+                  </ul>
+                  <ul class="news-list">
+                  </ul>
+                  <ul class="news-list">
+                  </ul>
+                </div>
+                
+                <a href="/cp/a20260707sfgw/newslist.html" class="news-more" onclick="comm.reportEvent('btn', 'pc_home_zixun_more', 'PC端万象资讯-更多资讯')"></a>                            
+              </div>
+              
+            </div>
+          </div>
+          <!-- 新闻列表 -->
+          <div class="news-wrap news-wrap1" style="display: none;">
+            <div class="news-list-con">
+              <p class="news-path"><a href="#page1" class="newsback">首页</a>><a href="javascript:;" class="newsback">万象资讯</a>>新闻列表</p>
+              <div class="news-tab">
+                <a href="javascript:;" class="news-btn on">全部</a>
+                <a href="javascript:;" class="news-btn">公告</a>
+                <a href="javascript:;" class="news-btn">新闻</a>                
+                <a href="javascript:;" class="news-btn">活动</a>
+                <a href="javascript:;" class="news-btn">攻略</a>
+              </div>
+              <div class="news-ul" id="list2">
+                <ul class="news-list on">
+                </ul>
+                <ul class="news-list">
+                </ul>
+                <ul class="news-list">
+                </ul>
+                <ul class="news-list">
+                </ul>
+                <ul class="news-list">
+                </ul>
+              </div>
+              <div class="none-tip"></div>
+            </div>
+          </div>
+
+
+        </div>
+        <!-- 棋手 -->
+        <div class="section part3" id="part3">
+          <div class="s3-sw-con">
+            <div class="swiper s3-swiper stop-swiping">
+              <div class="swiper-wrapper">
+				  
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                    
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm5.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_xiaoyu_台词语音', 'pc端棋手介绍-台词语音')"></a>“在梦境之中寻求真实，在现实之中渴望奇迹。”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm6.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_qiaoxi_台词语音', 'pc端棋手介绍-台词语音')"></a>“点亮的心，不会轻易熄灭。”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm4.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_xiang_台词语音', 'pc端棋手介绍-台词语音')"></a>“无趣的生活，是一切失败的罪魁祸首！”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm7.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_naonao_台词语音', 'pc端棋手介绍-台词语音')"></a>“雨滴里藏着彩虹，泡泡里住着美梦。”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm8.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_baige_台词语音', 'pc端棋手介绍-台词语音')"></a>“兴之所至，心之所安。”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm9.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_sunxiaobin_台词语音', 'pc端棋手介绍-台词语音')"></a>“时间会证明一切的！”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm3.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_yixing_台词语音', 'pc端棋手介绍-台词语音')"></a>“不得贪胜，不可不胜。”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm10.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_mingxiansheng_台词语音', 'pc端棋手介绍-台词语音')"></a>“人生乏味啊，我欲令之光怪陆离。”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm11.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_xiaoe_台词语音', 'pc端棋手介绍-台词语音')"></a>“常怀善意，才能感受这个世界的美好。”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+   
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm12.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_jing_台词语音', 'pc端棋手介绍-台词语音')"></a>“破碎定义，做不平凡的自己。”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm1.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_xiaodajia_台词语音', 'pc端棋手介绍-台词语音')"></a>“戏里戏外，都是我向往的世界。”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm2.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_yao_台词语音', 'pc端棋手介绍-台词语音')"></a>“我的梦想就是，看遍世界上所有有趣的东西~”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm13.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_marco_台词语音', 'pc端棋手介绍-台词语音')"></a>“我能说走就走，也能随时闪亮登场！”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm18.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_yinglyu_台词语音', 'pc端棋手介绍-台词语音')"></a>“规则决定秩序，而我，决定规则。”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm14.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_yuhuan_台词语音', 'pc端棋手介绍-台词语音')"></a>“心中有所想，便能在琴声中有所得。”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm15.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_zhaojun_台词语音', 'pc端棋手介绍-台词语音')"></a>“灵魂仍然炽热，但回忆已被冰封。”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm16.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_uncleban_台词语音', 'pc端棋手介绍-台词语音')"></a>“真理至高无上，而生活还在真理之上。”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="r-bg" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/r-bg1.png" alt="">
+                  <div class="r-desc">
+                    <img class="r_ti" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh_ti1.png" alt="">                                        
+
+                    <p class="r-t1"><a class="r-voice" href="javascript:;" data-voice="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/role_bgm17.mp3" onclick="comm.reportEvent('btn', 'pc_home_qishou_dirjiang_台词语音', 'pc端棋手介绍-台词语音')"></a>“想要改变的前提，是坚持。”</p>
+                    <a href="roledetail.html"  class="r-btn"></a>
+
+                  </div>
+                </div>
+                				
+				
+              </div>
+              <div class="swiper-button-next s3_next"></div>
+              <div class="swiper-button-prev s3_prev"></div>
+            </div>
+            <div class="swiper s3-swiper2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_xiaoyu', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_qiaoxi', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_xiang', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_naonao', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_baige', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_sunxiaobin', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_yixing', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_mingxiansheng', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_xiaoe', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_jing', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_xiaodaji', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_yao', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_marco', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_yinglyu', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_yuhuan', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_zhaojun', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_uncleban', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                <div class="swiper-slide" onclick="comm.reportEvent('btn', 'pc_home_qishou_dirjiang', 'PC端棋手介绍-棋手头像')">                  
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/role/rh1.png" alt="">
+                  <i class="rh"></i>
+                  <p>镜</p>
+                </div>
+                
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- 卡牌 -->
+        <div class="section part5" id="part5">
+          <div class="cards-wrap">
+            <div class="cards-list-con">
+              <img class="cards-title" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/card-ti.png" alt="">
+              <!-- <p class="cards-path"><a href="https://wxq.qq.com/cp/appointment/index.html?part=1" onclick="comm.reportEvent('btn', 'pc_home_zixunlist_route', 'PC端万象资讯列表页-列表路径')">首页</a>><a href="https://wxq.qq.com/cp/appointment/index.html?part=3" onclick="comm.reportEvent('btn', 'pc_home_zixunlist_route2', 'PC端万象资讯列表页-列表路径2')">万象图鉴</a>>卡牌介绍</p> -->
+              <div class="cards-list">
+                <!-- 卡牌导航 -->
+                <div class="card-tab">
+                  <a href="javascript:;" onclick="comm.reportEvent('btn', 'pc_kptj_yxp', 'pc端英雄牌类型切换');comm.reportEvent('pop', 'kptj_yxp_exposure', '卡牌图鉴英雄牌列表曝光');" class="card-yx on" data-id="1">
+                    <p>英雄牌</p>
+                  </a>
+                  <a href="javascript:;" onclick="comm.reportEvent('btn', 'pc_kptj_tfp', 'pc端天赋牌类型切换');comm.reportEvent('pop', 'kptj_tfp_exposure', '卡牌图鉴天赋牌列表曝光');" class="card-tf" data-id="2">
+                    <p>天赋牌</p>
+                  </a>
+                  <a href="javascript:;" onclick="comm.reportEvent('btn', 'pc_kptj_zbp', 'pc端装备牌类型切换');comm.reportEvent('pop', 'kptj_zbp_exposure', '卡牌图鉴装备牌列表曝光');" class="card-zb" data-id="3">
+                    <p>装备牌</p>
+                  </a>
+                  <a href="javascript:;" onclick="comm.reportEvent('btn', 'pc_kptj_xgp', 'pc端效果牌类型切换');comm.reportEvent('pop', 'kptj_xgp_exposure', '卡牌图鉴效果牌列表曝光');" class="card-xg" data-id="4">
+                    <p>效果牌</p>
+                  </a>
+                </div>
+                <!-- 搜索 -->
+                  <div class="cards-search">
+                  <input type="text" placeholder="请输入你想搜索的卡牌名">
+                  <a href="javascript:;"></a>
+                  </div>
+                <!-- 卡牌内容 -->
+                <div class="cards-box">
+                  <!-- 未搜索到信息 -->
+                  <div class="cards-err">
+                    <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-err.png" alt="">
+                    <p>未搜索到该卡牌信息 </p>
+                  </div>
+                  <!-- 英雄牌 -->
+                  <div class="cards-detail cards-yx on">
+                    <!-- 左边内容 -->
+                    <div class="cards-left">
+                      <div class="cards-l-top">
+                        <div class="cards-l-item" data-id="1">
+                          <p>阵&nbsp;&nbsp;&nbsp;&nbsp;营</p>
+                          <div class="cards-l-item2">
+                            <a href="javascript:;" data-id="all" class="on">全部</a>
+                            <a href="javascript:;" data-id="321">大河流域</a>
+                            <a href="javascript:;" data-id="320">逐鹿</a>
+                            <a href="javascript:;" data-id="309">三分之地</a>
+                            <a href="javascript:;" data-id="319">河洛</a>
+                            <a href="javascript:;" data-id="314">日落海</a>
+                            <a href="javascript:;" data-id="307">无阵营</a>
+                          </div>
+                        </div>
+                        <div class="cards-l-item" data-id="2" style="height: 1.24rem;">
+                          <p>关键词</p>
+                          <div class="cards-l-item2">
+                            <a href="javascript:;" data-id="all">全部</a>
+                            <a href="javascript:;" data-id="5">败阵</a>
+                            <a href="javascript:;" data-id="1">登场</a>
+                            <a href="javascript:;" data-id="16">复生</a>
+                            <a href="javascript:;" data-id="13">合成</a>
+                            <a href="javascript:;" data-id="3">开团</a>
+                            <a href="javascript:;" data-id="4">凯旋</a>
+                            <a href="javascript:;" data-id="100">闪现</a>
+                            <a href="javascript:;" data-id="200">夺取</a>
+                            <a href="javascript:;" data-id="321">图腾</a>
+                              <a href="javascript:;" data-id="10">牺牲</a>
+                              <a href="javascript:;" data-id="11">整备</a>
+                              <a href="javascript:;" data-id="9">退场</a>
+                          </div>
+                        </div>
+                        <div class="cards-l-item" data-id="3">
+                          <p>品&nbsp;&nbsp;&nbsp;&nbsp;阶</p>
+                          <div class="cards-l-item2">
+                            <a href="javascript:;" data-id="all">全部</a>
+                            <a href="javascript:;" data-id="1">1阶</a>
+                            <a href="javascript:;" data-id="2">2阶</a>
+                            <a href="javascript:;" data-id="3">3阶</a>
+                            <a href="javascript:;" data-id="4">4阶</a>
+                            <a href="javascript:;" data-id="5">5阶</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 卡牌列表 -->
+                      <div class="cards-l-list">
+                        <!-- 阵营 -->
+                        <!--<div class="cards-l-li">
+                          <div class="li-ti">                                  
+                            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/icon/Icon_DaHeLiuYu.png" alt="">
+                            <p>大河流域</p>                      
+                          </div>
+                          <div class="li-cards">
+                            &lt;!&ndash;<div class="li-detail on">
+                              <img class="li-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-icon2.png" alt="">
+                              <i class="li-new"></i>
+                              <img class="li-hero" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-hero.png" alt="">
+                              <p>影</p>
+                            </div>&ndash;&gt;
+                          </div>
+                        </div>
+                        &lt;!&ndash; 品阶 &ndash;&gt;
+                        <div class="cards-l-li">
+                          <div class="li-ti">                                                        
+                            <p>1阶</p>                      
+                          </div>
+                          <div class="li-cards">
+                          </div>
+                        </div>
+                        &lt;!&ndash; 关键词 &ndash;&gt;
+                        <div class="cards-l-li">
+                          <div class="li-ti">                                                        
+                            <p>败阵</p>
+                            <span>英雄上阵期间若战斗失败，触发效果。</span>                      
+                          </div>
+                          <div class="li-cards">
+                          </div>
+                        </div>-->
+                      </div>
+                    </div>
+                    <!-- 右边内容 -->
+                    <div class="cards-right">
+                      <div class="cards-r-tab">
+                        <a href="javascript:;" class="on">说明</a>
+                        <a href="javascript:;">技能</a>
+                        <a href="javascript:;">属性</a>
+                        <a href="javascript:;">觉醒</a>
+                      </div>
+                      <div class="cards-r-box">
+                        <!-- 说明 -->
+                        <div class="cards-r-item r-item1 on">
+                          <!--<img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img.png" alt="">
+                          <div class="cards-r-desc">
+                            <span>被动：</span><p>战斗开始时，触发效果。 </p>
+                          </div>
+                          <div class="cards-r-desc">
+                            <span>图腾：</span><p>大河流域阵营专属单位，存活时提供特殊效果。   </p>
+                          </div>-->
+                        </div>
+                        <!-- 技能 -->
+                        <div class="cards-r-item r-item2">
+                          <div class="r-item2-top">
+                            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img2.png" alt="">
+                            <p>技能名称</p>
+                            <a href="javascript:;" class="cards_play"></a>
+                          </div>
+                          <p class="cards-r-desc2">
+                            被动：大司命的普通攻击会持续连接敌人，在3秒内造成5次伤害，每次造成<span class="y">50%物理攻击力的物理伤害</span>。
+                          </p>
+                          <p class="cards-r-desc2">
+                            主动：大司命神巫之力全开，从天而临对附近2格敌人造成<span class="y">150+200%物理攻击力的物理伤害</span>并<span class="g">恢复100+5% 最大生命的生命值</span>。同时凝聚1名范 围内敌人的灵体协助战斗（视作召唤物）。之后进入神巫状态,无法恢复法力值，但普攻会恢复<span class="y">10+1%最大生命值的生命值</span>。
+                          </p>
+                          <p class="cards-r-desc2">
+                            灵体继承大司命部分属性并且在大司命神巫状态攻击时获得同样的生命恢 复效果。
+                          </p>
+                          <p class="cards-r-desc2"><span class="y">诸恶俱散！</span></p>
+                          <div class="r-item2-b">
+                            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-num.png" alt="">
+                            <p>恢复效果提升至250+10%最大生命值</p>
+                          </div>
+                          <div class="r-item2-b">
+                            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-num2.png" alt="">
+                            <p>神巫状态下大司命可以同时攻击范围内最多3名敌人</p>
+                          </div>
+                          <div class="r-item2-b">
+                            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-num3.png" alt="">
+                            <p>灵体数量+2</p>
+                          </div>
+                        </div>
+                        <!-- 属性 -->
+                        <div class="cards-r-item r-item3">
+                          <div class="r-item3-li">
+                            <div class="r-item3-left">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/icon/cards-right-icon1.png" alt="">
+                              <p>最大生命值</p>
+                            </div>
+                            <div class="r-item3-right">
+                              <p>240</p>
+                            </div>
+                          </div>
+                          <div class="r-item3-li">
+                            <div class="r-item3-left">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/icon/cards-right-icon2.png" alt="">
+                              <p>法力值</p>
+                            </div>
+                            <div class="r-item3-right">
+                              <p>15/25</p>
+                            </div>
+                          </div>
+                          <div class="r-item3-li">
+                            <div class="r-item3-left">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/icon/cards-right-icon3.png" alt="">
+                              <p>物理攻击力</p>
+                            </div>
+                            <div class="r-item3-right">
+                              <p>240</p>
+                            </div>
+                          </div>
+                          <div class="r-item3-li">
+                            <div class="r-item3-left">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/icon/cards-right-icon4.png" alt="">
+                              <p>法术攻击力</p>
+                            </div>
+                            <div class="r-item3-right">
+                              <p>15/25</p>
+                            </div>
+                          </div>
+                          <div class="r-item3-li">
+                            <div class="r-item3-left">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/icon/cards-right-icon5.png" alt="">
+                              <p>物理防御</p>
+                            </div>
+                            <div class="r-item3-right">
+                              <p>240</p>
+                            </div>
+                          </div>
+                          <div class="r-item3-li">
+                            <div class="r-item3-left">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/icon/cards-right-icon6.png" alt="">
+                              <p>法术防御</p>
+                            </div>
+                            <div class="r-item3-right">
+                              <p>15/25</p>
+                            </div>
+                          </div>
+                          <div class="r-item3-li">
+                            <div class="r-item3-left">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/icon/cards-right-icon7.png" alt="">
+                              <p>暴击率</p>
+                            </div>
+                            <div class="r-item3-right">
+                              <p>240</p>
+                            </div>
+                          </div>
+                          <div class="r-item3-li">
+                            <div class="r-item3-left">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/icon/cards-right-icon8.png" alt="">
+                              <p>暴击效果</p>
+                            </div>
+                            <div class="r-item3-right">
+                              <p>15/25</p>
+                            </div>
+                          </div>
+                          <div class="r-item3-li">
+                            <div class="r-item3-left">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/icon/cards-right-icon9.png" alt="">
+                              <p>攻速</p>
+                            </div>
+                            <div class="r-item3-right">
+                              <p>240</p>
+                            </div>
+                          </div>
+                          <div class="r-item3-li">
+                            <div class="r-item3-left">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/icon/cards-right-icon10.png" alt="">
+                              <p>攻击距离</p>
+                            </div>
+                            <div class="r-item3-right">
+                              <p>15/25</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- 觉醒 -->
+                        <div class="cards-r-item r-item4">
+                          <!--<div class="swiper" id="cards-right">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img3.png" alt="">                        
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img4.png" alt="">
+                              </div>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination1"></div>
+                          </div>-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 天赋牌 -->
+                  <div class="cards-detail cards-tf">
+                    <!-- 左边内容 -->
+                    <div class="cards-left">
+                      <div class="cards-l-top">
+                        <div class="cards-l-item" data-id="1">
+                            <p>品&nbsp;&nbsp;&nbsp;&nbsp;阶</p>
+                            <div class="cards-l-item2">
+                                <a href="javascript:;" data-id="all" class="on">全部</a>
+                                <a href="javascript:;" data-id="1">1阶</a>
+                                <a href="javascript:;" data-id="2">2阶</a>
+                                <a href="javascript:;" data-id="3">3阶</a>
+                            </div>
+
+                          <!--<p>卡牌类型</p>
+                          <div class="cards-l-item2">
+                            <a href="javascript:;" data-id="all" class="on">全部</a>
+                            <a href="javascript:;" data-id="1">初始阵容</a>
+                            <a href="javascript:;" data-id="2">第一轮拍卖</a>
+                            <a href="javascript:;" data-id="3">第二轮拍卖</a>
+                            <a href="javascript:;" data-id="3">第三轮拍卖</a>
+                            <a href="javascript:;" data-id="3">第四轮拍卖</a>
+                            <a href="javascript:;" data-id="3">第五轮拍卖</a>
+                            <a href="javascript:;" data-id="3">第六轮拍卖</a>
+                            <a href="javascript:;" data-id="3">第七轮拍卖</a>
+                            <a href="javascript:;" data-id="3">第八轮拍卖</a>
+                          </div>-->
+                        </div>
+                          <div class="cards-l-item" data-id="2">
+                              <p>解&nbsp;&nbsp;&nbsp;&nbsp;锁</p>
+                              <div class="cards-l-item2">
+                                  <a href="javascript:;" data-id="all">全部</a>
+                                  <a href="javascript:;" data-id="1">初始天赋</a>
+                                  <a href="javascript:;" data-id="2">天赋包一</a>
+                                  <a href="javascript:;" data-id="3">天赋包二</a>
+                                  <a href="javascript:;" data-id="4">天赋包三</a>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- 卡牌列表 -->
+                      <div class="cards-l-list">
+                        <!-- 品阶 -->
+                        <!--<div class="cards-l-li">
+                          <div class="li-ti">                                                        
+                            <p>1阶</p>                      
+                          </div>
+                          <div class="li-cards">
+                            &lt;!&ndash;<div class="li-detail on">
+                              <i class="li-new"></i>
+                              类名添加tf_bg1为一阶，tf_bg2为二阶，tf_bg3为三阶
+                              <img class="li-hero tf_bg1" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img5.png" alt="">
+                              <p>二象限</p>
+                            </div>&ndash;&gt;
+                          </div>
+                        </div>
+                        &lt;!&ndash; 解锁 &ndash;&gt;
+                        <div class="cards-l-li">
+                          <div class="li-ti">                                                        
+                            <p>初始天赋</p>      
+                            <span>初始获得卡牌</span>                
+                          </div>
+                          <div class="li-cards">
+                          </div>
+                        </div>-->
+                      </div>
+                    </div>
+                    <!-- 右边内容 -->
+                    <div class="cards-right">
+                      <div class="cards-r-box">
+                        <div class="cards-r-item r-item1 on">
+                          <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img6.png" alt="">
+                          <h2>相关</h2>
+                          <div class="cards-r-desc">
+                            棋手升级时概率选择获取天赋。 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 装备牌 -->
+                  <div class="cards-detail cards-zb">
+                    <!-- 左边内容 -->
+                    <div class="cards-left">
+                      <div class="cards-l-top">
+                        <div class="cards-l-item" data-id="1">
+                          <p>相&nbsp;&nbsp;&nbsp;&nbsp;关</p>
+                          <div class="cards-l-item2">
+                            <a href="javascript:;" data-id="all" class="on">全部</a>
+                            <a href="javascript:;" data-id="16">基础装备</a>
+                            <a href="javascript:;" data-id="4">普通装备</a>
+                            <a href="javascript:;" data-id="5">特殊装备</a>
+                            <a href="javascript:;" data-id="15">天赋装备</a>
+                          </div>
+                        </div>
+                        <div class="cards-l-item" data-id="2">
+                          <p>类&nbsp;&nbsp;&nbsp;&nbsp;型</p>
+                          <div class="cards-l-item2">
+                            <a href="javascript:;" data-id="all">全部</a>
+                            <a href="javascript:;" data-id="7">防御装备</a>
+                            <a href="javascript:;" data-id="2">法术装备</a>
+                            <a href="javascript:;" data-id="3">通用装备</a>
+                            <a href="javascript:;" data-id="1">物理装备</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 卡牌列表 -->
+                      <div class="cards-l-list">
+                        <!-- 相关 -->
+                        <!--<div class="cards-l-li">
+                          <div class="li-ti">                                                        
+                            <p>物理装备</p>                      
+                          </div>
+                          <div class="li-cards">
+                            &lt;!&ndash;<div class="li-detail on">
+                              <i class="li-new"></i>
+                              <img class="li-hero" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img7.png" alt="">
+                              <p>力量腰带</p>
+                            </div>&ndash;&gt;
+                          </div>
+                        </div>
+                        &lt;!&ndash; 类型 &ndash;&gt;
+                        <div class="cards-l-li">
+                          <div class="li-ti">                                                        
+                            <p>普通装备</p>      
+                            <span>由基础装备合成的通用装备</span>                
+                          </div>
+                          <div class="li-cards">
+                          </div>
+                        </div>-->
+                      </div>
+                    </div>
+                    <!-- 右边内容 -->
+                    <div class="cards-right">
+                      <div class="cards-r-box">
+                        <div class="cards-r-item r-item1 on">
+                          <!--<div class="swiper" id="cards-right2">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img3.png" alt="">                        
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img4.png" alt="">
+                              </div>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination2"></div>
+                          </div>-->
+                          <div class="swiper-desc">
+                            <div class="swiper-desc-con" style="display: block;">
+                              <h2>相关</h2>
+                              <div class="cards-r-desc">
+                                该卡牌通过商店购买、拍卖等渠道获得。 
+                              </div>
+                            </div>
+                            <div class="swiper-desc-con">
+                              <h2>相关</h2>
+                              <div class="cards-r-desc">
+                                <!-- 类名添加desc-img为圆形，添加desc-img2为长方形，desc-img3为正方形 -->
+                                <a href="javascript:showOverlay('#cards');" class="desc-img">
+                                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img7.png" alt="">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 效果牌 -->
+                  <div class="cards-detail cards-xg">
+                    <!-- 左边内容 -->
+                    <div class="cards-left">
+                      <div class="cards-l-top">
+                        <div class="cards-l-item" data-id="1">
+                          <p>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;阶</p>
+                          <div class="cards-l-item2">
+                            <a href="javascript:;" data-id="all" class="on">全部</a>
+                            <a href="javascript:;" data-id="1">1阶</a>
+                            <a href="javascript:;" data-id="2">2阶</a>
+                            <a href="javascript:;" data-id="3">3阶</a>
+                            <a href="javascript:;" data-id="4">4阶</a>
+                            <a href="javascript:;" data-id="5">5阶</a>
+                            <a href="javascript:;" data-id="6">6阶</a>
+                          </div>
+                        </div>
+                        <div class="cards-l-item" data-id="2">
+                          <p>卡牌类型</p>
+                          <div class="cards-l-item2">
+                            <a href="javascript:;" data-id="all">全部</a>
+                            <a href="javascript:;" data-id="0">通用</a>
+                            <a href="javascript:;" data-id="321">大河流域</a>
+                            <a href="javascript:;" data-id="319">河洛</a>
+                            <a href="javascript:;" data-id="314">日落海</a>
+                            <a href="javascript:;" data-id="309">三分之地</a>
+                            <a href="javascript:;" data-id="307">无阵营</a>
+                            <a href="javascript:;" data-id="320">逐鹿</a>
+                          </div>
+                        </div>
+                        <div class="cards-l-item" data-id="3">
+                          <p>解&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;锁</p>
+                          <div class="cards-l-item2">
+                            <a href="javascript:;" data-id="all">全部</a>
+                            <a href="javascript:;" data-id="1">初始效果卡</a>
+                            <a href="javascript:;" data-id="2">效果卡包一</a>
+                            <a href="javascript:;" data-id="3">效果卡包二</a>
+                            <a href="javascript:;" data-id="4">效果卡包三</a>
+                            <a href="javascript:;" data-id="5">效果卡包四</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 卡牌列表 -->
+                      <div class="cards-l-list">
+                        <!-- 品阶 -->
+                        <!--<div class="cards-l-li">
+                          <div class="li-ti">                                                        
+                            <p>1阶</p>                      
+                          </div>
+                          <div class="li-cards">
+                            &lt;!&ndash;<div class="li-detail on">
+                              <i class="li-new"></i>
+                              <img class="li-hero" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img8.png" alt="">
+                              <p>援护战术</p>
+                            </div>&ndash;&gt;
+                          </div>
+                        </div>
+                        &lt;!&ndash; 解锁 &ndash;&gt;
+                        <div class="cards-l-li">
+                          <div class="li-ti">                                                        
+                            <p>初始效果卡</p>      
+                            <span>初始解锁</span>                
+                          </div>
+                          <div class="li-cards">
+                          </div>
+                        </div>-->
+                      </div>
+                    </div>
+                    <!-- 右边内容 -->
+                    <div class="cards-right">
+                      <div class="cards-r-box">
+                        <div class="cards-r-item r-item1">
+                          <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img6.png" alt="">
+                          <h2>相关</h2>
+                          <div class="cards-r-desc">
+                            该卡牌通过商店购买、拍卖等渠道获得。 
+                          </div>
+                        </div>
+                        <div class="cards-r-item r-item2">
+                          <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img6.png" alt="">
+                          <h2>相关</h2>
+                          <div class="cards-r-descimg">
+                            <!-- 类名添加desc-img为圆形，添加desc-img2为长方形，desc-img3为正方形 -->
+                            <a class="desc-img3" href="javascript:showOverlay('#cards');">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img6.png" alt="">
+                            </a>
+                            <a href="javascript:showOverlay('#cards');">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img6.png" alt="">
+                            </a>
+                            <a href="javascript:showOverlay('#cards');">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img6.png" alt="">
+                            </a>
+                            <a href="javascript:showOverlay('#cards');">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img6.png" alt="">
+                            </a>
+                          </div>
+                          <div class="cards-r-desc">
+                            <span>转瞬：</span><p>回合结束时自动销毁，且出售不会获得能量。  </p>
+                          </div>
+                        </div>
+                        <div class="cards-r-item r-item3">
+                          <!--<div class="swiper" id="cards-right3">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img3.png" alt="">                        
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img4.png" alt="">
+                              </div>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination3"></div>
+                          </div>-->
+                          <h2>相关</h2>
+                          <div class="cards-r-descimg">
+                            <a href="javascript:showOverlay('#cards');">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img6.png" alt="">
+                            </a>
+                            <a href="javascript:showOverlay('#cards');">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img6.png" alt="">
+                            </a>
+                            <a href="javascript:showOverlay('#cards');">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img6.png" alt="">
+                            </a>
+                            <a href="javascript:showOverlay('#cards');">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img6.png" alt="">
+                            </a>
+                          </div>
+                          <div class="cards-r-desc">
+                            <span>转瞬：</span><p>回合结束时自动销毁，且出售不会获得能量。  </p>
+                          </div>
+                          <div class="cards-r-desc" style="display: none;">
+                            <a href="javascript:showOverlay('#cards');" class="desc-img">
+                              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/cards-img7.png" alt="">
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 阵容 -->
+        <div class="section part6" id="part6">
+          <div class="part6_con">
+            <div class="part6_top">
+              <h2></h2>
+              <a href="javascript:showOverlay('#team-tips');" class="p6_team" onclick="comm.reportEvent('btn', 'pc_xszr_zrm', 'pc端新手阵容了解如何使用阵容码')"></a>
+              <a href="/cp/a20260707sfgw/teamlist.html" target="_blank" class="p6_more" onclick="comm.reportEvent('btn', 'pc_xszr_more', 'pc端新手阵容查看更多')"></a>
+            </div>
+            <div class="p6_box">
+              <!-- 角色tab -->
+              <div class="p6_box_l">
+
+                <div class="p6_box_l_item on" onclick="PTTSendClick('btn','pc_xszy_lvbu','pc端新手阵容吕布切换')">
+                  <img class="p6_role" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_role1.png" alt="">
+                  <div class="p6_l_desc">
+                    <h2>三分登场流</h2>
+                    <p>核心：吕布</p>
+                    <a href="javascript:;" data-clipboard-text="1" class="p6_l_btn" onclick="PTTSendClick('btn','pc_xszy_lvbu_copy','pc端新手阵容吕布复制阵容码')">复制阵容码</a>
+                  </div>
+                  <img class="p6_l_icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_icon1.png" alt="">
+                </div>
+                <div class="p6_box_l_item" onclick="PTTSendClick('btn','pc_xszy_anqila','pc端新手阵容安琪拉切换')">
+                  <img class="p6_role" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_role2.png" alt="">
+                  <div class="p6_l_desc">
+                    <h2>日落海整备流</h2>
+                    <p>核心：安琪拉</p>
+                    <a href="javascript:;" data-clipboard-text="2" class="p6_l_btn" onclick="PTTSendClick('btn','pc_xszy_anqila_copy','pc端新手阵容安琪拉复制阵容码')">复制阵容码</a>
+                  </div>
+                  <img class="p6_l_icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_icon1.png" alt="">
+                </div>
+                <div class="p6_box_l_item" onclick="PTTSendClick('btn','pc_xszy_aoyin','pc端新手阵容敖隐切换')">
+                  <img class="p6_role" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_role3.png" alt="">
+                  <div class="p6_l_desc">
+                    <h2>大河图腾流</h2>
+                    <p>核心：敖隐</p>
+                    <a href="javascript:;" data-clipboard-text="3" class="p6_l_btn" onclick="PTTSendClick('btn','pc_xszy_aoyin_copy','pc端新手阵容敖隐复制阵容码')">复制阵容码</a>
+                  </div>
+                  <img class="p6_l_icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_icon1.png" alt="">
+                </div>
+                <div class="p6_box_l_item" onclick="PTTSendClick('btn','pc_xszy_baili','pc端新手阵容百里玄策切换')">
+                  <img class="p6_role" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_role4.png" alt="">
+                  <div class="p6_l_desc">
+                    <h2>河洛古币流</h2>
+                    <p>核心：百里玄策</p>
+                    <a href="javascript:;" data-clipboard-text="4" class="p6_l_btn" onclick="PTTSendClick('btn','pc_xszy_baili_copy','pc端新手阵容百里玄策复制阵容码')">复制阵容码</a>
+                  </div>
+                  <img class="p6_l_icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_icon1.png" alt="">
+                </div>
+                <div class="p6_box_l_item" onclick="PTTSendClick('btn','pc_xszy_mengya','pc端新手阵容蒙犽切换')">
+                  <img class="p6_role" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_role5.png" alt="">
+                  <div class="p6_l_desc">
+                    <h2>逐鹿战术牌流</h2>
+                    <p>核心：蒙犽</p>
+                    <a href="javascript:;" data-clipboard-text="5" class="p6_l_btn" onclick="PTTSendClick('btn','pc_xszy_mengya_copy','pc端新手阵容蒙犽复制阵容码')">复制阵容码</a>
+                  </div>
+                  <img class="p6_l_icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_icon2.png" alt="">
+                </div>
+                
+
+              </div>
+              <!-- 内容 -->
+              <div class="p6_box_r">
+
+                <div class="p6_box_r_con act">
+                  
+                  <div class="p6_box_r_tab">
+                    <a href="javascript:;" onclick="PTTSendClick('btn','pc_xszr_lvbu_spjx','pc端新手阵容教学')" class="on">视频教学</a>
+                    <a href="javascript:;" onclick="PTTSendClick('btn','pc_xszr_lvbu_ytsl','pc端新手一图速览')">一图速览</a>
+                    <a href="javascript:;" onclick="PTTSendClick('btn','pc_xszr_lvbu_twxj','pc端新手图文详解')">图文详解</a>
+                  </div>
+                  <div class="p6_box_r_item">
+                    <div class="r_item_con on">
+                      <div class="p6_video" id="p6_video1">
+                        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_video1.jpg" alt="">
+                        <a href="javascript:;" class="p6_video_play" onclick="PTTSendClick('btn','pc_xszr_lvbu_spjx','pc端新手阵容吕布教学')"></a>
+                      </div>
+                      
+                    </div>
+                    <div class="r_item_con">
+                      <a href="javascript:showOverlay('#team-tips3',0);" class="p6_item_btn"></a>
+                      <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_1_2.jpg" alt="">
+                    </div>
+                    <div class="r_item_con r_item_con2">
+                      <a href="javascript:showOverlay('#team-tips4',0);" class="p6_item_btn"></a>
+                      <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_1_3.jpg" alt="">
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="p6_box_r_con">
+                  
+                  <div class="p6_box_r_tab">
+                    <a href="javascript:;" onclick="PTTSendClick('btn','pc_xszr_anqila_spjx','pc端新手阵容教学')" class="on">视频教学</a>
+                    <a href="javascript:;" onclick="PTTSendClick('btn','pc_xszr_anqila_ytsl','pc端新手一图速览')">一图速览</a>
+                    <a href="javascript:;" onclick="PTTSendClick('btn','pc_xszr_anqila_twxj','pc端新手图文详解')">图文详解</a>
+                  </div>
+                  <div class="p6_box_r_item">
+                    <div class="r_item_con on">
+                      <div class="p6_video" id="p6_video2">
+                        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_video2.jpg" alt="">
+                        <a href="javascript:;" class="p6_video_play" onclick="PTTSendClick('btn','pc_xszr_anqila_spjx','pc端新手阵容安琪拉教学')"></a>
+                      </div>
+                      
+                    </div>
+                    <div class="r_item_con">
+                      <a href="javascript:showOverlay('#team-tips3',1);" class="p6_item_btn"></a>
+                      <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_2_2.jpg" alt="">
+                    </div>
+                    <div class="r_item_con r_item_con2">
+                      <a href="javascript:showOverlay('#team-tips4',1);" class="p6_item_btn"></a>
+                      <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_2_3.jpg" alt="">
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="p6_box_r_con">
+                  
+                  <div class="p6_box_r_tab">
+                    <a href="javascript:;" onclick="PTTSendClick('btn','pc_xszr_aoyin_spjx','pc端新手阵容教学')" class="on">视频教学</a>
+                    <a href="javascript:;" onclick="PTTSendClick('btn','pc_xszr_aoyin_ytsl','pc端新手一图速览')">一图速览</a>
+                    <a href="javascript:;" onclick="PTTSendClick('btn','pc_xszr_aoyin_twxj','pc端新手图文详解')">图文详解</a>
+                  </div>
+                  <div class="p6_box_r_item">
+                    <div class="r_item_con on">
+                      <div class="p6_video" id="p6_video3">
+                        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_video3.jpg" alt="">
+                        <a href="javascript:;" class="p6_video_play" onclick="PTTSendClick('btn','pc_xszr_aoyin_spjx','pc端新手阵容敖隐教学')"></a>
+                      </div>
+                      
+                    </div>
+                    <div class="r_item_con">
+                      <a href="javascript:showOverlay('#team-tips3',2);" class="p6_item_btn"></a>
+                      <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_3_2.jpg" alt="">
+                    </div>
+                    <div class="r_item_con r_item_con2">
+                      <a href="javascript:showOverlay('#team-tips4',2);" class="p6_item_btn"></a>
+                      <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_3_3.jpg" alt="">
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="p6_box_r_con">
+                  
+                  <div class="p6_box_r_tab">
+                    <a href="javascript:;" onclick="PTTSendClick('btn','pc_xszr_baili_spjx','pc端新手阵容教学')" class="on">视频教学</a>
+                    <a href="javascript:;" onclick="PTTSendClick('btn','pc_xszr_baili_ytsl','pc端新手一图速览')">一图速览</a>
+                    <a href="javascript:;" onclick="PTTSendClick('btn','pc_xszr_baili_twxj','pc端新手图文详解')">图文详解</a>
+                  </div>
+                  <div class="p6_box_r_item">
+                    <div class="r_item_con on">
+                      <div class="p6_video" id="p6_video4">
+                        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_video4.jpg" alt="">
+                        <a href="javascript:;" class="p6_video_play" onclick="PTTSendClick('btn','pc_xszr_baili_spjx','pc端新手阵容百里玄策教学')"></a>
+                      </div>
+                      
+                    </div>
+                    <div class="r_item_con">
+                      <a href="javascript:showOverlay('#team-tips3',3);" class="p6_item_btn"></a>
+                      <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_4_2.jpg" alt="">
+                    </div>
+                    <div class="r_item_con r_item_con2">
+                      <a href="javascript:showOverlay('#team-tips4',3);" class="p6_item_btn"></a>
+                      <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_4_3.jpg" alt="">
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="p6_box_r_con">
+                  
+                  <div class="p6_box_r_tab">
+                    <a href="javascript:;" onclick="PTTSendClick('btn','pc_xszr_mengya_spjx','pc端新手阵容教学')" class="on">视频教学</a>
+                    <a href="javascript:;" onclick="PTTSendClick('btn','pc_xszr_mengya_ytsl','pc端新手一图速览')">一图速览</a>
+                    <a href="javascript:;" onclick="PTTSendClick('btn','pc_xszr_mengya_twxj','pc端新手图文详解')">图文详解</a>
+                  </div>
+                  <div class="p6_box_r_item">
+                    <div class="r_item_con on">
+                      <div class="p6_video" id="p6_video5">
+                        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_video5.jpg" alt="">
+                        <a href="javascript:;" class="p6_video_play" onclick="PTTSendClick('btn','pc_xszr_mengya_spjx','pc端新手阵容蒙犽教学')"></a>
+                      </div>
+                      
+                    </div>
+                    <div class="r_item_con">
+                      <a href="javascript:showOverlay('#team-tips3',4);" class="p6_item_btn"></a>
+                      <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_5_2.jpg" alt="">
+                    </div>
+                    <div class="r_item_con r_item_con2">
+                      <a href="javascript:showOverlay('#team-tips4',4);" class="p6_item_btn"></a>
+                      <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_5_3.jpg" alt="">
+                    </div>
+                  </div>
+
+                </div>
+
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <!--foot-->
+        <div class="section fp-auto-height foot">
+
+        	<div id="afooter"></div>
+        </div>
+    </div>
+
+    <div class="commit-media">
+      <div class="icons">
+        <a class="si1" href="javascript:;" onclick="comm.reportEvent('btn', 'pc_home_dblgh_qwdj', 'PC端首页底部官号-企业微信点击')">
+          <div class="media-code">
+            <img class="adtag_code" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/code-qw.png" alt="">
+          </div>
+          <p>企业微信</p>
+        </a>
+        <a class="si2" href="https://camp.qq.com/h5/webdist/redirect-app/index.html?module=mygameprofile&params=multiGameId%3D30001&channelId=6920" target="_blank" onclick="comm.reportEvent('btn', 'pc_home_dblgh_yddj', 'PC端首页底部官号-营地专区点击')">
+          <div class="media-code">
+            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/code-yd.png" alt="">
+          </div>
+          <p>王者营地</p>
+        </a>
+        <a class="si3" href="javascript:;" onclick="comm.reportEvent('btn', 'pc_home_dblgh_gzhdj', 'PC端首页底部官号-微信公众号点击')">
+          <div class="media-code">
+            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/code-wx.png" alt="">
+          </div>
+          <p>微信公众号</p>
+        </a>
+        <a class="si4" href="https://pd.qq.com/g/224sc93fcl" target="_blank" onclick="comm.reportEvent('btn', 'pc_home_dblgh_qqpddj', 'PC端首页底部官号-腾讯频道点击')">
+          <div class="media-code">
+            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/code-tx.png" alt="">
+          </div>
+          <p>腾讯频道</p>
+        </a>
+        <a class="si5" href="https://space.bilibili.com/1308577656" target="_blank" onclick="comm.reportEvent('btn', 'pc_home_dblgh_bzdj', 'PC端首页底部官号-B站点击')">
+          <div class="media-code">
+            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/code-bz.png" alt="">
+          </div>
+          <p>哔哩哔哩</p>
+        </a>
+        <a class="si6" href="https://www.douyin.com/user/MS4wLjABAAAAs7Woowpt-zneS1WlLa7Pyqd3lVv2D8rIfWJp63ZSamY" target="_blank" onclick="comm.reportEvent('btn', 'pc_home_dblgh_dydj', 'PC端首页底部官号-抖音点击')">
+          <div class="media-code">
+            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/code-dy.png" alt="">
+          </div>
+          <p>抖音</p>
+        </a>
+        <a class="si7" href="https://v.kuaishou.com/nri2t1Tp" target="_blank" onclick="comm.reportEvent('btn', 'pc_home_dblgh_ksdj', 'PC端首页底部官号-快手点击')">
+          <div class="media-code">
+            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/code-ks.png" alt="">
+          </div>          
+          <p>快手</p>
+        </a>
+        <a class="si8" href="https://weibo.com/u/7774689081" target="_blank" onclick="comm.reportEvent('btn', 'pc_home_dblgh_wbdj', 'PC端首页底部官号-微博点击')">
+          <div class="media-code">
+            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/code-wb.png" alt="">
+          </div>
+          <p>微博</p>
+        </a>
+        <a class="si9" href="https://xhslink.cn/m/8IGO0tsz40M" target="_blank" onclick="comm.reportEvent('btn', 'pc_home_dblgh_xhsdj', 'PC端首页底部官号-小红书点击')">
+          <div class="media-code">
+            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/code-xhs.png" alt="">
+          </div>
+          <p>小红书</p>
+        </a>
+        <!-- <a class="si10" href="https://www.wegame.com.cn/store/2002548/" target="_blank" onclick="comm.reportEvent('btn', 'pc_home_dblgh_wegamedj', 'PC端首页底部官号-wegame')"> -->
+        <a class="si11" href="javascript:;"  onclick="comm.reportEvent('btn', 'pc_home_dblgh_xcxdj', 'PC端首页底部官号-小程序点击')">
+          <div class="media-code">
+            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/code-xcx.png" alt="">
+          </div>
+          <p>小程序</p>
+        </a>
+        </a>
+      </div>
+      <div class="arrow"></div>
+      <!-- class gray 灰态 已预约 -->
+      <!-- <a href="javascript:index.gotoCamp(2);" onclick="comm.reportEvent('btn', 'reservation_reward', '预约奖励')" class="invite-btn2"></a>
+      <a href="javascript:index.gotoCamp(1, 1);" onclick="comm.reportEvent('btn', 'home_dbl_reservation', '底部栏立即预约')" class="invite-btn reserveGame" style="display: none;">预约游戏</a> -->
+    </div>
+
+  </main>
+
+  <!-- 一封信 -->
+   <div class="one_box" style="display: none;">
+
+   </div>
+
+  <div class="wx-login-overlay ui-overlay" id="login-wx">
+    <div class="login-content">
+      <p>微信登录</p>
+      <img class="QR-code" />
+      <img class="bg-line-img" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/wx-login-overlay-bg.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/close.svg" />
+    </div>
+  </div>
+
+  <!-- 领取预约奖励 -->
+  <div class="ui-overlay" id="receive-prize">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="overlay-title">预约奖励</div>
+      <div class="slot-content">
+        <p>绑定手机号且完成信息订阅后视为预约成功，可获得领取礼包的资格 </p>
+        <div class="chess prize-view">
+          <div class="prize-content">
+            <div class="game-info">
+              <p>王者万象棋道具领取规则</p>
+            </div>
+            <div class="prize-list">
+              <div>
+                <div class="prize-image-view">
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/chess-prize-1.png" />
+                </div>
+                <p>万事如弈×1</p>
+              </div>
+              <div>
+                <div class="prize-image-view">
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/chess-prize-2.png" />
+                </div>
+                <p>魔法雪球×1</p>
+              </div>
+              <div>
+                <div class="prize-image-view">
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/chess-prize-3.png" />
+                </div>
+                <p>万象之约(1年)×1</p>
+              </div>
+            </div>
+          </div>
+          <div class="remark">
+            <p>礼包将在游戏上线后发放至首月内完成注册的角色邮箱，单账号限领1次，多平台预约不会叠加<span>（奖励预览为研发中版本，请以上线版本为准）</span></p>
+          </div>
+        </div>
+        <div class="honor prize-view">
+          <div class="prize-content">
+            <div class="game-info">
+              <p>王者荣耀道具领取规则</p>
+            </div>
+            <div class="prize-list">
+              <div>
+                <div class="prize-image-view">
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/honor-prize-1.png" />
+                </div>
+                <p>钻石×50</p>
+              </div>
+              <div>
+                <div class="prize-image-view">
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/honor-prize-2.png" />
+                </div>
+                <p>亲密玫瑰×2</p>
+              </div>
+              <div>
+                <div class="prize-image-view">
+                  <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/honor-prize-3.png" />
+                </div>
+                <p>新品英雄抽奖券×1</p>
+              </div>
+            </div>
+          </div>
+          <div class="remark">
+            <p>预约成功后即可选择王者荣耀角色领取，单账号限领1次</p>
+          </div>
+        </div>
+        <div class="account-choose" style="display: none;">
+          <div class="ui-select">
+            <div class="select-label">昵称</div>
+            <div class="select-value">
+              <input placeholder="请选择角色昵称" readonly />
+              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/arrow-long.svg" />
+            </div>
+          </div>
+          <div class="ui-select">
+            <div class="select-label">系统</div>
+            <div class="select-value">
+              <input placeholder="请选择系统" readonly />
+              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/arrow-long.svg" />
+            </div>
+          </div>
+          <div class="ui-select">
+            <div class="select-label">大区</div>
+            <div class="select-value">
+              <input placeholder="请选择大区" readonly />
+              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/arrow-long.svg" />
+            </div>
+          </div>
+          <div class="ui-select">
+            <div class="select-label">平台</div>
+            <div class="select-value">
+              <input placeholder="请选择平台" readonly />
+              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/arrow-long.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 绑定手机号 -->
+  <div class="ui-overlay" id="bind-phone-number">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="overlay-title"><img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/overlayTitle/common.png" /></div>
+      <div class="slot-content">
+        <!-- 共用部分 已绑定手机号提示以及修改手机号 -->
+        <div class="Bound-phone-number" style="display: none;">
+        <div class="reserved-tip">你已在王者星会员绑定手机号</div>
+        <div class="phone-number-input">
+          <input placeholder="请输入手机号" />
+          <div class="change-icon"><img />更改</div>
+        </div>
+        </div>
+        <!-- 手机号已绑定 已预约 -->
+        <div class="status-1" style="display: none;">
+          <div class="cancel-auth">
+            <span>点击此处</span> 解除授权并退订信息。因系统延迟的原因，在您执行解除操作的3个工作日内后，该手机号将不再收到相关通知
+          </div>
+        </div>
+        <!-- 手机号已绑定 未绑定 -->
+        <div class="status-3">
+          <div class="phone-number-input">
+            <div class="prefix-number">+86</div>
+            <input placeholder="请输入手机号" />
+          </div>
+          <div class="code-input">
+            <input placeholder="请输入验证码" />
+            <div class="get-code">获取验证码</div>
+          </div>
+        </div>
+        <!-- 共用部分 预约授权消息接收以及按钮 -->
+        <div class="auth-info">
+          <div class="expand handle-box" data-type="expand" style="display: none;">展开<img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/arrow.svg"></div>
+          <div class="collapse handle-box" data-type="collapse">收起<img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/arrow.svg"></div>
+          
+          <!-- 如果需要禁止点击 使用data-readonly="true" -->
+          <!-- 使用data-value标记不同的checkbox,获取已选中的checkbox 详见 方法 ui.js => getCheckboxActive -->
+          <!-- 直接使用html制作圆环会导致某些分辨率下的圆环和实心圆显示错位的问题 所以改成svg形式 -->
+
+          <div class="ui-checkbox on" data-readonly="true" data-value="policy">
+            <div class="checkbox-value">
+              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/checkbox-value.svg" class="cancel-status" />
+              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/checkbox-value-active.svg" class="active-status" />
+            </div>
+            <div class="checkbox-label">成功绑定后，该手机号将成为您与王者IP游戏的“链接”第一时间以电话或者短信形式为您带来王者万象棋、王者荣耀世界、王者荣耀及王者营地相关的测试预约、版本更新、活动惊喜等相关信息!</div>
+          </div>
+          <div class="list">
+            <div class="ui-checkbox on">
+              <div class="checkbox-value">
+                <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/checkbox-value.svg" class="cancel-status" />
+                <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/checkbox-value-active.svg" class="active-status" />
+              </div>
+              <div class="checkbox-label">接收王者万象棋信息</div>
+            </div>
+            <div class="ui-checkbox">
+              <div class="checkbox-value">
+                <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/checkbox-value.svg" class="cancel-status" />
+                <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/checkbox-value-active.svg" class="active-status" />
+              </div>
+              <div class="checkbox-label">接收王者荣耀世界信息</div>
+            </div>
+            <div class="ui-checkbox">
+              <div class="checkbox-value">
+                <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/checkbox-value.svg" class="cancel-status" />
+                <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/checkbox-value-active.svg" class="active-status" />
+              </div>
+              <div class="checkbox-label">接收王者荣耀信息</div>
+            </div>
+            <div class="ui-checkbox">
+              <div class="checkbox-value">
+                <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/checkbox-value.svg" class="cancel-status" />
+                <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/svg/checkbox-value-active.svg" class="active-status" />
+              </div>
+              <div class="checkbox-label">接收王者营地信息</div>
+            </div>
+          </div>
+        </div>
+        <!-- 共用部分 确认预约按钮 -->
+        <div class="buttons">
+          <div class="ui-button">确认预约</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 预约成功 -->
+  <div class="ui-overlay" id="reserve-success">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="overlay-title">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/overlayTitle/subscribeSuccess.png" />
+      </div>
+      <div class="slot-content">
+        <div class="text-content">扫码关注王者万象棋企业微信<br />获取王者万象棋一手游戏资讯</div>
+        <img class="adtag_code" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/wxQrCode.png"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- 解除授权 -->
+  <div class="ui-overlay" id="revoke-auth">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="overlay-title">确认解除授权</div>
+      <div class="slot-content">
+        <div class="text-content">确认解除授权并退订信息吗?因系统延迟的原因，在您执行解除操作的3个工作日后，该手机号将不再收到相关通知</div>
+        <div class="buttons">
+          <div class="ui-button cancel-btn">我再想想</div>
+          <div class="ui-button">确认解除</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 领取奖励确认账号 -->
+  <div class="ui-overlay" id="confirm-account">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="overlay-title">确认领取奖励角色账号</div>
+      <div class="slot-content">
+        <div class="text-content">确认领取王者万象棋奖励至账号</div>
+        <div class="text-content blue">XXXX(用户角色名)?</div>
+        <div class="buttons">
+          <div class="ui-button">更换账号</div>
+          <div class="ui-button">确认领取</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 选择登录弹窗 -->
+  <div class="ui-overlay" id="login-choose">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" onclick="comm.reportEvent('btn', 'login_close', '关闭登录')" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="overlay-title">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/overlayTitle/login-choose.png" />
+      </div>
+      <div class="slot-content">
+        <div class="qq-login login-icon" data-type="qq">
+          <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/qq-icon.png" />
+          <span>QQ</span>
+        </div>
+        <div class="wx-login login-icon" data-type="wx">
+          <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/wx-icon.png" />
+          <span>微信</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 取消预约确认弹窗 -->
+  <div class="ui-overlay" id="cancel-reserve">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" onclick="comm.reportEvent('btn', 'confirm_again_cancel_reservation_close', '关闭二次确认取消预约')" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="overlay-title">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/overlayTitle/cancelAppointed.png" />
+      </div>
+      <div class="slot-content">
+        <div class="text-content">预约王者万象棋，才能获取游戏上线一手资讯噢~</div>
+        <div class="buttons">
+          <div class="ui-button grey cancel-btn" onclick="index.cancelReserve()">取消预约</div>
+          <div class="ui-button  cancel-btn" onclick="comm.reportEvent('btn', 'confirm_again_cancel_wzxx', '二次确认我再想想')">我再想想</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 取消预约成功弹窗 -->
+  <div class="ui-overlay" id="reserve-cancelled">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="overlay-title">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/overlayTitle/common.png">
+      </div>
+      <div class="slot-content cancel-btn">
+        您已取消预约
+      </div>
+    </div>
+  </div>
+
+  <!-- 预约发布会直播弹窗 -->
+  <div class="ui-overlay" id="receive-live">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="overlay-title">扫码预约发布会直播</div>
+      <div class="slot-content">
+        <img class="dia-code" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/dia-code.png" alt="">
+        <div class="dia-codebox">
+          <img class="adtag_code" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/wxQrCode.png"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 直播弹窗 -->
+  <div class="ui-overlay" id="live-video">
+    <div class="ui-overlay-content">
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <p>【直播中】王者万象棋六角笼争霸赛</p>
+      <div class="video_box">
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- 邀请函 -->
+  <div class="ui-overlay" id="letter-dia">
+    <div class="ui-overlay-content">
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="letter_box">
+        <img id="animatedImage" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/letter/0000.png" alt="">
+        <img id="animatedImage2" style="display: none;" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/letter/0014.png" alt="">
+        <div class="letter_con">
+          <!-- <div class="letter_text">
+            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/letter-text.png" alt="">
+            <p>&nbsp;</p>
+          </div> -->
+          <!-- Swiper -->
+          <div class="swiper letter_text">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">                
+                <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/letter-text.png" alt="">                
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+          <div class="letter_foot">
+           <a href="javascript:;"></a>
+           <a href="javascript:;"></a>
+           <a href="javascript:;"></a>
+           <a href="javascript:;"></a>
+           <a href="javascript:;"></a>
+           <a href="javascript:;"></a>
+           <a href="javascript:;"></a>
+           <a href="javascript:;"></a>
+           <a href="javascript:;"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 活动入口弹窗-李白 -->
+  <div class="ui-overlay" id="receive-link">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="overlay-title">王者万象棋</div>
+      <div class="slot-content">
+        <img class="dia-code2" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/dia-code2.png" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- 活动入口弹窗-小妲己 -->
+  <div class="ui-overlay" id="receive-link2">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="overlay-title">万象大赛 等你登场</div>
+      <div class="slot-content">
+        <img class="dia-code2" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/dia-code3.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- 玩法预告弹窗 -->
+  <div class="ui-overlay" id="video-dia">
+    <div class="ui-overlay-content">
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="video_box2">
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- 适龄提示弹窗 -->
+  <div class="ui-overlay" id="age-dia">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/team/close-icon.png" />
+      <div class="overlay-title">适龄提示</div>
+      <div class="slot-content">
+        <p>1.本游戏是一款玩法策略性较强的对战游戏，适用于年满12周岁及以上的用户，建议未成年人在家长监护下使用游戏产品。</p>
+        <p></p>
+        <p>2.本游戏基于架空的故事背景和幻想世界观，清新时尚的风格，画面色彩鲜明、配乐明快，没有设置主体剧情。游戏中部分英雄角色有基于历史的适量改编，不会与现实相混淆。玩法基于一定难度的思维判断，玩家间通过运营资源和排兵布阵进行对战，鼓励玩家通过思考和训练达成目标。游戏中有基于语音和文字的陌生人社交系统，且社交系统的管理遵循相关法律法规。</p>
+        <p></p>
+        <p>3.根据国家相关要求，游戏中有用户实名认证系统，未通过实名认证的用户不可进入游戏；认证为未成年人的用户除周五、周六、周日及法定节假日每日20时至21时外其他时间均不可进入游戏。游戏中部分玩法和道具需要付费。根据腾讯健康系统管理规定，认证为未成年人的用户将接受以下管理：未满12周岁的用户不能付费；12周岁以上未满16周岁的未成年人用户，单次充值金额不得超过50元人民币，每月充值金额累计不得超过200元人民币；16周岁以上的未成年人用户，单次充值金额不得超过100元人民币，每月充值金额累计不得超过400元人民币。</p>
+        <p></p>
+        <p>4.游戏中的对战策略及资源运营有助于锻炼玩家的逻辑思维能力和全局观。在游戏中需要玩家合理运营及分配资源，提升英雄级别，排列棋子阵营来提高阵容的强度以获得对战的胜利。同时对游戏动画、角色设计、服饰搭配等方面结合了众多中华传统文化元素进行现代化创作，能够激起玩家对优秀传统文化的兴趣，增强文化认同感。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 通用弹窗 -->
+  <div class="ui-overlay" id="system-tips">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="overlay-title"><img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/overlayTitle/common.png" /></div>
+      <div class="slot-content cancel-btn">
+        系统繁忙，请稍后再试
+      </div>
+    </div>
+  </div>
+
+  <!-- 活动入口弹窗-招募 -->
+  <div class="ui-overlay" id="receive-link3">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="overlay-title">填写招募问卷</div>
+      <div class="slot-content">
+        <img class="dia-code2" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/dia-code4.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- 活动入口弹窗-参与活动 -->
+  <div class="ui-overlay" id="receive-link4">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/close-icon.png" />
+      <div class="overlay-title">参与活动赢资格</div>
+      <div class="slot-content">
+        <div class="codelist">
+          <div class="on">
+            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/pop_code1.png">
+          </div>
+          <div class="">
+            <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/pop_code2.png">
+          </div>
+        </div>
+        <img class="dia-code2" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/dia-code5.png" alt="">
+        <div class="platlist">
+          <a href="javascript:;" class="on" onclick="comm.reportEvent('btn', 'pc_home_zjcs_wxhdm', 'pc端终极测试微信活动码曝光')">
+            <i></i>
+            <span>微信扫码</span>
+          </a>
+          <a href="javascript:;" onclick="comm.reportEvent('btn', 'pc_home_zjcs_qqhdm', 'pc端终极测试QQ活动码曝光')" class="">
+            <i></i>
+            <span>QQ扫码</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 卡牌弹窗 -->
+  <div class="ui-overlay" id="cards">
+    <div class="ui-overlay-content">      
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/close.png" />      
+      <div class="slot-content">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/card/pop-img.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- 通用弹窗 -->
+  <div class="ui-overlay" id="team-tips2">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/team/close-icon.png" />
+      <div class="overlay-title"><img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/team/pop_ti.png" /></div>
+      <div class="slot-content cancel-btn">
+        阵容码已复制到剪贴板中，<br>前往<span>游戏-阵容-我的阵容-导入阵容</span>使用吧
+      </div>
+    </div>
+  </div>
+
+  <!-- 如何使用阵容码弹窗 -->
+  <div class="ui-overlay" id="team-tips">
+    <div class="ui-overlay-content">
+      <img class="tip-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/reserve-page/tip-icon.png" />
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/team/close-icon.png" />
+      <div class="overlay-title"><img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/team/pop_ti2.png" /></div>
+      <div class="slot-content">
+        <div class="swiper" id="team-swiper">
+
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p>第一步：点击【复制阵容码】后，登录游戏，点击大厅右下角的【阵容】按钮</p>
+              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/team/team-swiper1.png" alt="">                        
+            </div>
+            <div class="swiper-slide">
+              <p>第二步：选择【收藏阵容】，点击右下角的【导入阵容】按钮</p>
+              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/team/team-swiper2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <p>第三步：当收藏阵容已达到数量上限时，选择需替换的阵容，点击阵容旁的【替换】按钮完成阵容导入</p>
+              <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/team/team-swiper3.png" alt="">
+            </div>
+          </div>
+          <div class="swiper-button-next team-next"></div>
+          <div class="swiper-button-prev team-prev"></div>
+           <div class="swiper-scrollbar"></div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- 官网注册福利弹窗 -->
+  <div class="ui-overlay" id="register-benefit" >
+    <div class="ui-overlay-content">
+      <img class="register-benefit__image" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/pop4.png" alt="官网注册专属福利">
+      <button class="close-icon register-benefit__close" type="button" aria-label="关闭弹框">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/pop_close3.png" alt="">
+      </button>
+    </div>
+  </div>
+
+  <!-- 查看大图弹窗 -->
+  <div class="ui-overlay" id="team-tips3" style="z-index: 101">
+    <div class="ui-overlay-content">      
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/team/close-icon.png" />      
+      <div class="slot-content cancel-btn">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_1_2.jpg" alt="">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_2_2.jpg" alt="">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_3_2.jpg" alt="">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_4_2.jpg" alt="">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_5_2.jpg" alt="">
+      </div>      
+    </div>
+  </div>
+
+  <!-- 查看大图弹窗 -->
+  <div class="ui-overlay" id="team-tips4" style="z-index: 101">
+    <div class="ui-overlay-content">      
+      <img class="close-icon" src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/team/close-icon.png" />      
+      <div class="slot-content cancel-btn">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_1_3.jpg" alt="">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_2_3.jpg" alt="">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_3_3.jpg" alt="">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_4_3.jpg" alt="">
+        <img src="https://game.gtimg.cn/images/osgame/cp/a20260707sfgw/p6_guide_5_3.jpg" alt="">
+      </div>      
+    </div>
+  </div>
+  
+  <!-- 遮罩 + iframe -->
+  <div class="overlay" id="overlay">
+    <iframe></iframe>
+  </div>
+
+  <!-- <script src="//ossweb-img.qq.com/images/js/title.js"></script> -->
+  <script src="https://game.gtimg.cn/images/js/milo-next/latest/milo.min.js"></script>
+  <script src="https://tam.cdn-go.cn/aegis-sdk/latest/aegis.min.js"></script>
+  <script src="//game.gtimg.cn/images/js/2018foot/foot.js"></script>  
+  <script src="//ossweb-img.qq.com/images/js/comm/showDialog.min.js"></script>
+  <script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+  <script src="//ossweb-img.qq.com/images/js/jquery/jquery.fullPage.2.9.4.min.js"></script>    
+  <script src="https://vm.gtimg.cn/thumbplayer/superplayer/superplayer.js"></script>
+  <script type="text/javascript" src="https://tiem-cdn.qq.com/slugteam/sdk/browser_adapt.js"></script>
+  <script src="//vasd-cms.qq.com/cms/common/utils/report/aegis_wrapper.min.js"></script>
+  <!-- <script src="/cp/appointment/js/spritespin.js"></script> -->
+  <script src="//static.o2.qq.com/sdk/o2aegis.f.min.js" charset="UTF-8"></script>
+  <!-- 线上地址 -->
+  <script src="/cp/a20260707sfgw/js/clipboard.min.js"></script>
+  <script src="/cp/a20260707sfgw/js/jsmpeg.min.js"></script>
+  <script src="/cp/a20260707sfgw/js/swiper-bundle.min.js"></script>
+  <script src="/cp/a20260707sfgw/js/preloadjs.min.js"></script>
+  <script src="/cp/a20260707sfgw/js/md5.js"></script>
+  <script src="/cp/a20260707sfgw/js/comm_pc.js"></script>
+  <script src="/cp/a20260707sfgw/js/ui.js"></script>
+  <script src="/cp/a20260707sfgw/js/comm.js"></script>
+  <script src="/cp/a20260707sfgw/js/index.js"></script>
+  <script src="/cp/a20260707sfgw/js/cards.js"></script>  
+  <script src="/cp/a20260707sfgw/js/role.js"></script>
+
+  <!-- 本地地址 -->
+  <!-- <script src="./js/clipboard.min.js"></script>
+  <script src="./js/jsmpeg.min.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/preloadjs.min.js"></script>
+  <script src="./js/md5.js"></script>
+  <script src="./js/comm_pc.js"></script>
+  <script src="./js/ui.js"></script>
+  <script src="./js/comm.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/cards.js"></script>  
+  <script src="./js/role.js"></script> -->
+
+  <script>
+    
+    $('.kv_back').click(function(){
+      if (typeof(customBrowserInterface) == "object") {
+        customBrowserInterface.closeWebview();
+      }
+    });
+    // 高度适配处理
+    function getScreenAspectRatio() {
+      var width = window.innerWidth;
+      var height = window.innerHeight;    
+      var Ratio = width / height;
+      console.log(`屏幕宽高比: ${Ratio}`);
+      if(Ratio > 2.2) {
+        $('.wrapper').addClass('land');
+      } else {
+        $('.wrapper').removeClass('land');
+      }
+      
+    }
+
+    getScreenAspectRatio();
+    window.addEventListener('resize', getScreenAspectRatio, false);
+  </script>
+
+
+
+</body>
+
+</html>
+<!-- 埋点统计 -->
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script>
+    //此段代码不能放到外链JS中，
+    var setSite = {
+        //设置网站属性
+        siteType: 'os', //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+        pageType: 'index', //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN,不支持点(.)、下划线(_)
+        pageName: '官网PC首页', //必填项:页面中文名
+        project: 'base', //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;官网微社区base;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;皮肤skin;默认other;
+        osact: 'pc', //选填项:默认是0。osact=0表示非官网专题；osact=pc表示pc官网/pc官网专题；osact=m表示移动官网/移动官网专题；osact=ingame表示微社区/微社区专题
+    };
+    if (typeof pgvMain == 'function') pgvMain(); //千万不能忘记！
+</script>

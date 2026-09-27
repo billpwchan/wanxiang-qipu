@@ -1,0 +1,27 @@
+{
+ admin off
+ auto_https off
+}
+:8080 {
+ root * /srv/current
+ encode zstd gzip
+ header {
+  -Server
+  X-Content-Type-Options nosniff
+  X-Frame-Options DENY
+  Referrer-Policy strict-origin-when-cross-origin
+  Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+  Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'"
+ }
+ handle /healthz {
+  respond "ok" 200
+ }
+ handle /assets/cards/* {
+  header Cache-Control "public, max-age=31536000, immutable"
+  file_server
+ }
+ handle {
+  header Cache-Control "no-cache"
+  file_server
+ }
+}

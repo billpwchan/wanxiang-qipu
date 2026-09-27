@@ -1,0 +1,4350 @@
+{
+  "source": "Tencent public card assets",
+  "fetchedAt": "2026-09-23",
+  "files": [
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/bd50906724791132e7fef18b41368abe.png",
+      "path": "assets/cards/aa294a5ee45639816f6fffb0.png",
+      "bytes": 24922,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/5c7348b30921b80c7b24f1b344e66fe3.png",
+      "path": "assets/cards/8ce4370ce39eb1a2e9ddeeba.png",
+      "bytes": 97121,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/2271ca2d7d8a6420d326c3fa336b9ac7.png",
+      "path": "assets/cards/593caec347cf02b85df1285e.png",
+      "bytes": 24006,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/58a6757c9094f038fccb14f6d0e9c50b.png",
+      "path": "assets/cards/46c773a61093b0badb622f3b.png",
+      "bytes": 104754,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/bf7985ba2e1f9acaed5d1046d22827bc.png",
+      "path": "assets/cards/026d1a96f33c63ad1ba8a414.png",
+      "bytes": 26204,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/ecac8234623e07f2c52135f1d9e5ec4d.png",
+      "path": "assets/cards/6eb016a373fdbc23b2746204.png",
+      "bytes": 87793,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/ec2de510aaf9ba36f374130ee1cd2bdd.png",
+      "path": "assets/cards/bcd5d5709fc614a5616cca24.png",
+      "bytes": 22061,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/e89583c66a3dbfee66d6b47828aa24b0.png",
+      "path": "assets/cards/03279562c85268aeab74862c.png",
+      "bytes": 95698,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/b1b1c4935f3d6eb4cb242e62de5ff0c5.png",
+      "path": "assets/cards/e48f2f90fb58eb1ff1aedeb0.png",
+      "bytes": 22373,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/c540a7f2cef990b5c3249aed9046c4ba.png",
+      "path": "assets/cards/1bbe5b5210e72691b2d5496a.png",
+      "bytes": 95151,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/5ecd03adb33a8d187ff822c588330f68.png",
+      "path": "assets/cards/6492096e4665ff0256938a54.png",
+      "bytes": 23919,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/c6c91f011529f66de555a8774821ca22.png",
+      "path": "assets/cards/6d06ee817b47f3ecda2c3f90.png",
+      "bytes": 78990,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/a5cf6d85a212323809f9445c3b48f425.png",
+      "path": "assets/cards/3e256d705856336bf8eebde0.png",
+      "bytes": 26339,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/9670b18a21540dae4be644a142f4ab94.png",
+      "path": "assets/cards/342facf9afa4580f7f88701d.png",
+      "bytes": 80983,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/c3fb8a2aed92d604b46b6be098bc9139.png",
+      "path": "assets/cards/76c011ccff354f8872c6aa61.png",
+      "bytes": 23879,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/6f2435829dc52b53a16c706fb9a30956.png",
+      "path": "assets/cards/d14a232c291484f7d0b6a237.png",
+      "bytes": 76923,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/f7ef3c5560cccec98ad29468a75cc883.png",
+      "path": "assets/cards/0cfa19704ca359836ecfcd90.png",
+      "bytes": 25751,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/047601bd83b7e124a2dfac8158003280.png",
+      "path": "assets/cards/8c7f9db7ba6d1f99ca9050b5.png",
+      "bytes": 103612,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/a449e1cc89889154333ab8576c0289c6.png",
+      "path": "assets/cards/af8c83b16cc9b8835c075313.png",
+      "bytes": 24194,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/ce0fcf7fe07d4a1270466b2be3dbf8ac.png",
+      "path": "assets/cards/ade157b7f77abd9353e865cb.png",
+      "bytes": 102873,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/2abcfd1ac6f720240ed70402610e574e.png",
+      "path": "assets/cards/a648de96c50492cdf9adb99d.png",
+      "bytes": 23397,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/7471befb4e462fc33e6e5620860c7e74.png",
+      "path": "assets/cards/8218753ac44df661fd42ab9a.png",
+      "bytes": 85056,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/0de5ed257bd358d6110087499ff1e493.png",
+      "path": "assets/cards/b4636931dfa509406806b5ab.png",
+      "bytes": 26719,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/3b7a1f0cd6d7a1308d2c02439773a944.png",
+      "path": "assets/cards/4e0b3dd91520873b5b5018b8.png",
+      "bytes": 91345,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/5b7769e634c8899e4953e01bec2fca2e.png",
+      "path": "assets/cards/b73a93c940103d5a3e364952.png",
+      "bytes": 27742,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/b35644e6dbb623f3d4467554f566fa9b.png",
+      "path": "assets/cards/5944f4527a4ce89c3d0ec8ad.png",
+      "bytes": 59776,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/e17d6f3d65eb2e87550697a68b361b75.png",
+      "path": "assets/cards/ab15dd00d31c1ae40d9ab017.png",
+      "bytes": 21410,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/3be801fa01638ada2a2e4ff2ab532bdc.png",
+      "path": "assets/cards/76b58427eef214f8f86e0075.png",
+      "bytes": 66144,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/74bdbbdc99a98145cc9f86cc0e41da59.png",
+      "path": "assets/cards/bb649dc205045a08d1108967.png",
+      "bytes": 25188,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/8e38f29d239db08858b6e2eed4cd50cc.png",
+      "path": "assets/cards/34ddf09af3ba5cefff9473ee.png",
+      "bytes": 81544,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/2674fae42335fc1ce006b8476aa32fad.png",
+      "path": "assets/cards/06e05df92a8a4ae14999cf34.png",
+      "bytes": 24377,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/2fd1b220d63e9faae125410e2c002358.png",
+      "path": "assets/cards/ee7bd6788be9a0a09bb132c2.png",
+      "bytes": 91271,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/189b5f960a9f6a9e823d823215c2c39b.png",
+      "path": "assets/cards/585e46bdd36858305f3ffad1.png",
+      "bytes": 21815,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/43a4eba256d03021365a907e4e943333.png",
+      "path": "assets/cards/1e07e40b7f36836ebc2de3c0.png",
+      "bytes": 81192,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/2b2ccd1348d6e5020649d7362e101900.png",
+      "path": "assets/cards/4ec3e8c96e8c0df02e4868c0.png",
+      "bytes": 24997,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/d96597a59724474ee1c2127701dc4a76.png",
+      "path": "assets/cards/17c3d2b63a4f0f05258cd780.png",
+      "bytes": 82508,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/18742e5bb95a71174b50f25aff6b9b56.png",
+      "path": "assets/cards/892509c6e3b0ae1a84c98a62.png",
+      "bytes": 23766,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/110e0751141f22f07f85f00085d476b8.png",
+      "path": "assets/cards/201bfd3847cddde8a432c952.png",
+      "bytes": 69343,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/88705f544b5d4492d0a129a47115ffd1.png",
+      "path": "assets/cards/529da2aa44569c2c6dc9c88a.png",
+      "bytes": 27031,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/fbafea05b877426d1cc3646941801e2b.png",
+      "path": "assets/cards/d18e330b2f5919370595f8af.png",
+      "bytes": 104564,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/90feabff398cf6fb80bfc47becdd0653.png",
+      "path": "assets/cards/62424c2ea6811a92c37133fe.png",
+      "bytes": 28375,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/b6115eeecd0bded5a81423bc43e5dc74.png",
+      "path": "assets/cards/6d24d6cd94eb57cd827fd2a5.png",
+      "bytes": 54375,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/986d585a5dc3dc5bc1fea1cadaff5f72.png",
+      "path": "assets/cards/1c59374b69178de11fd83e51.png",
+      "bytes": 25995,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/0e869135406b92e21236cf5ab966a345.png",
+      "path": "assets/cards/67eb852a0d711c7d6a9d5121.png",
+      "bytes": 69817,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/e37c41d9977fb7943e896959c2be0fef.png",
+      "path": "assets/cards/e26cab126f41c8234b596ae1.png",
+      "bytes": 26777,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/d9d19b57cee5981692046a0d4283a66d.png",
+      "path": "assets/cards/44957568a6cbba17a920dc52.png",
+      "bytes": 79945,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/198e67ac6fbaafbab9aa27338df6590a.png",
+      "path": "assets/cards/4ba860d35d7ae2a3610876e4.png",
+      "bytes": 21823,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/deb14fb998df7717ecccc47962d7c2ab.png",
+      "path": "assets/cards/9ee0b4baedb2531d1acea6f3.png",
+      "bytes": 73372,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/b1936a0c293710205470446d3876e20d.png",
+      "path": "assets/cards/ce7cf394b14ba1e7beb872b0.png",
+      "bytes": 22908,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/c4194417ec91def6e83dece482584eff.png",
+      "path": "assets/cards/033606f33ca4380ec5c99b81.png",
+      "bytes": 73469,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/6b17f3a73b257035a350aa31bda1c464.png",
+      "path": "assets/cards/f7ef28d6a1e6a48c44f6cee0.png",
+      "bytes": 22707,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/25c1f7b3cd20bb03854b560dc2427722.png",
+      "path": "assets/cards/f4033c031a68fc1b4b1df45d.png",
+      "bytes": 97825,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/2cf66bb3403c0783ed965c9fbb63aafa.png",
+      "path": "assets/cards/f93689f037583e9c17459449.png",
+      "bytes": 25976,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/4c9384713054f51514310f8ad5b57fc2.png",
+      "path": "assets/cards/cc0ed9bcfe55ffe82be984ac.png",
+      "bytes": 109155,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/88124cfd87e1369f485dbff3ef6eb374.png",
+      "path": "assets/cards/1553e44aae2d0b246ce0c318.png",
+      "bytes": 23483,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/516d5e748f0244ec0712f7ce60394145.png",
+      "path": "assets/cards/c97bb5258334b08baf9840e6.png",
+      "bytes": 86896,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/faa2bc18f7630ff22c35ec35ffb5a872.png",
+      "path": "assets/cards/e0e1ca1f9eac7d8d729201d6.png",
+      "bytes": 21856,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/d881e8e6b5d10379c3763026b587498c.png",
+      "path": "assets/cards/dcc79d8fbdae65507d284ed0.png",
+      "bytes": 55617,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/f67c42716500d97656904fa3263eb9d7.png",
+      "path": "assets/cards/bdb5dd497d4f90a2a36ba5d8.png",
+      "bytes": 21406,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/d52d34bcc613196e2cebaa841bcf6b71.png",
+      "path": "assets/cards/53ee22f64ffa1b1f42afa867.png",
+      "bytes": 68932,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/40fe1c263075f889d23f29baabdfa225.png",
+      "path": "assets/cards/e40778d702c5df9f55cbf2fb.png",
+      "bytes": 23300,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/7986d922c1669afe351afe701e472165.png",
+      "path": "assets/cards/377deb34c02ce91c72262719.png",
+      "bytes": 67737,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/36716634173d0cc96dbcedd2ac6b6646.png",
+      "path": "assets/cards/271b9460b2e028662700be58.png",
+      "bytes": 24046,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/b21fae3b475767b57ab02dc920cb5827.png",
+      "path": "assets/cards/23846c6e0cb087424c090f12.png",
+      "bytes": 119315,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/b4835ebc7bd4df52d5cd835de22f2257.png",
+      "path": "assets/cards/68f12becc12ebf9748c8bcf8.png",
+      "bytes": 26381,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/95c652a6cf330e91c2be4f5c7a740fb5.png",
+      "path": "assets/cards/28a8d80871f56b298d87649a.png",
+      "bytes": 99071,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/5e8581caf2935e84070ee44936bb3779.png",
+      "path": "assets/cards/7a28da7b55226856f91a7ad0.png",
+      "bytes": 27694,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/72ecf54c9a80eeb1dbee2ba5aa43cfd4.png",
+      "path": "assets/cards/dbc3bd9012dd43a3371337e3.png",
+      "bytes": 108195,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/f6f2d52e4223b1e1ea25df41e8e2bbf3.png",
+      "path": "assets/cards/03b63a2c7aded523319e9ab3.png",
+      "bytes": 23835,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/7760046caadf7c8a4d3922da89fb87f6.png",
+      "path": "assets/cards/7addf0875eaf07be0a31e8b9.png",
+      "bytes": 75899,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/5de6a396516f822473bd4f476f4da9bc.png",
+      "path": "assets/cards/05743c6dc6bc5b056a55d221.png",
+      "bytes": 23941,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/c138f303993d08f0a93398123c752bca.png",
+      "path": "assets/cards/339d35e8400f096bb738c4ec.png",
+      "bytes": 76529,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/204baba8a4d96b2383ae0beea27a8cec.png",
+      "path": "assets/cards/3e410d121da3c893d25fd378.png",
+      "bytes": 25911,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/a9b1216040428a3513adbf888328c7c1.png",
+      "path": "assets/cards/f775d559c73db8ba40c05093.png",
+      "bytes": 78626,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/916803561412111d80ab05e114b5246b.png",
+      "path": "assets/cards/f1988ab1fcea4fbc48495a97.png",
+      "bytes": 23986,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/dcde51ae84bb111cc09d7ea918ccf313.png",
+      "path": "assets/cards/c3ab6b285f281eec4bc5b4e4.png",
+      "bytes": 99414,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/95ee94ee672de169b1869da12558d7c6.png",
+      "path": "assets/cards/f074d2594cbd9745d362177b.png",
+      "bytes": 22403,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/8e50ed9c6d8423c678e5647adeb8c995.png",
+      "path": "assets/cards/85714d580317da7ff88ba8ce.png",
+      "bytes": 84035,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/c7e4c38d9050539a8ae6cfddacb72f20.png",
+      "path": "assets/cards/9f3830828f54cf26a6fc5f4c.png",
+      "bytes": 25391,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/7bbc2266d9cc0231052304669442a869.png",
+      "path": "assets/cards/3ea4ec8c36a2dfba2855b3bf.png",
+      "bytes": 100884,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/77c58bb27bb46cea3ea32d6b2b81a52e.png",
+      "path": "assets/cards/cad947092fc2ce96f1748c32.png",
+      "bytes": 23480,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/b764763140ad3e0638b1f9dfc8eed3ff.png",
+      "path": "assets/cards/a916d4ac673956c099fd816a.png",
+      "bytes": 63934,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/2cf753e41136bbe6c5d4c6924d89db55.png",
+      "path": "assets/cards/4e2b72873fc4860f3cf83607.png",
+      "bytes": 23465,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/bacc7ed403ea57858fc61c4c081b7291.png",
+      "path": "assets/cards/54c5a5ba6a3eeda46711c6e4.png",
+      "bytes": 54256,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/9736bab9c472acc5bdc8942ac7200c9a.png",
+      "path": "assets/cards/f0beea028cf9ae810c0bef79.png",
+      "bytes": 23380,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/3989121de070589426b0218f06172ba2.png",
+      "path": "assets/cards/a0cf6206940fcd564d714bc5.png",
+      "bytes": 98571,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/f0363e1c543d5c0bf02fd1b1c13ea117.png",
+      "path": "assets/cards/b7ef19d03795c72535a8dd5f.png",
+      "bytes": 21835,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/eb3d203f33eec656a150959461ced637.png",
+      "path": "assets/cards/77e8981022a3964452b4872f.png",
+      "bytes": 81278,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/fad4dda086e78227f65dedd121e5db9d.png",
+      "path": "assets/cards/f0aceadf6f5558544ffc8e3e.png",
+      "bytes": 27185,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/d594710476057dec7c40ea5d85eca90a.png",
+      "path": "assets/cards/2e0a45696471146718ad98ea.png",
+      "bytes": 90386,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/4cdf701fe4b6bb3947e34cf09f6cad44.png",
+      "path": "assets/cards/2826b110a73d0aa3cc741f99.png",
+      "bytes": 23339,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/513a6fe2723cb77f5e4866b83903c652.png",
+      "path": "assets/cards/6b410c0eb8ee1063d19fe14a.png",
+      "bytes": 89404,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/60b7c74fe7a942e875eb44defd76fdb2.png",
+      "path": "assets/cards/e564a867e33143d3a0305fd5.png",
+      "bytes": 24538,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/cfe8a616b0824c06a446dbbd84e67f29.png",
+      "path": "assets/cards/bca69d249df5932e0f4020d4.png",
+      "bytes": 101233,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/bd5d400d4aab509599f3db935d91f254.png",
+      "path": "assets/cards/c9165581d5cc00f9f759c6a2.png",
+      "bytes": 24659,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/ee8074658c9f445a434938f7f890dff9.png",
+      "path": "assets/cards/07b40b8f3eaa6ce898420057.png",
+      "bytes": 77996,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/735083ee049068dc3dfa3cc4af6ec321.png",
+      "path": "assets/cards/6c293c1d39e6e5841974e69d.png",
+      "bytes": 23137,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/826010ba09d9a4399d412be945796f92.png",
+      "path": "assets/cards/588e497acc8e5ff45feb7b6b.png",
+      "bytes": 99161,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/e07974389273c900bfcdb5f22c7b0d17.png",
+      "path": "assets/cards/ec25af1160e4441c2f6639f8.png",
+      "bytes": 22528,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/cc399dc4a4d9f6b4a39f46d936a9a748.png",
+      "path": "assets/cards/a4b1286ad631c2b405dc9ce0.png",
+      "bytes": 90533,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/906a48992c7228914777dfe4efcfa434.png",
+      "path": "assets/cards/8eebf512c090b73d8abb5615.png",
+      "bytes": 22524,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/a4135927773be59e539faa1b86bb22ba.png",
+      "path": "assets/cards/9410faffefe341f85939cdd8.png",
+      "bytes": 105089,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/fe0850fcceb7fb3abdf7456ec02a5740.png",
+      "path": "assets/cards/94d6f501abf0f2350c959318.png",
+      "bytes": 22641,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/097f21f2402181c71fe3a7ee5149ab7c.png",
+      "path": "assets/cards/6d50280ba71dcc57cc50f303.png",
+      "bytes": 97273,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/faac65959d499e474f7b118747e3b319.png",
+      "path": "assets/cards/71ffe7377df032841ad72087.png",
+      "bytes": 22639,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/b13f4c907c7e34e149fa52d407d4d9e7.png",
+      "path": "assets/cards/0bc4155e0095e3e9325511a9.png",
+      "bytes": 86455,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/46ead358e10a832c74dd50af15b24380.png",
+      "path": "assets/cards/6336ad1d3399a01411b2be9f.png",
+      "bytes": 26959,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/f5ab325c1b8399de367c6118456e5798.png",
+      "path": "assets/cards/a814af11b12cc548242f7686.png",
+      "bytes": 100827,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/f03154d2e4bfc7266a3a93bc26187f08.png",
+      "path": "assets/cards/f04140b96808fd3bedbfc523.png",
+      "bytes": 25670,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/cc1a7d9d2ec8071ffebf64a01d1a6dab.png",
+      "path": "assets/cards/763e1f023f01a8baaa24ffe3.png",
+      "bytes": 80693,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/bbcb4b0d0e241589d8e5ed6188bff57a.png",
+      "path": "assets/cards/d4c53efc77e8fab233e25b8c.png",
+      "bytes": 23242,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/ee16aaa4768f2d7d7ce6e48c007a93e8.png",
+      "path": "assets/cards/5ba2e907db2baf90dff21eee.png",
+      "bytes": 96267,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/4708536fe1e026afd08faa1e93527ee7.png",
+      "path": "assets/cards/59fc9d6504ad9a84569fae3b.png",
+      "bytes": 23942,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/d1110df125f314bf50aaab394392b573.png",
+      "path": "assets/cards/3cf0f0b15763c8ee171949cd.png",
+      "bytes": 81933,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/2af25469dff50369747fcf3973dcda48.png",
+      "path": "assets/cards/0099d3c02b1675b15f33a96d.png",
+      "bytes": 24224,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/c40b6203f89ac73f5c9774516c63fa41.png",
+      "path": "assets/cards/f86b2363e4b5eba7d821f32f.png",
+      "bytes": 72521,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/24428dd12ddd9d7b29addc9d33279e5d.png",
+      "path": "assets/cards/f039770a24180724437972cf.png",
+      "bytes": 23430,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/8084662f2fca2862f480d14b8825d725.png",
+      "path": "assets/cards/ca58c64a09a2b57e747063e0.png",
+      "bytes": 102555,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/91eccc72e272ee7cb08a335dd048203f.png",
+      "path": "assets/cards/18e029f18e2eb5fd1b22908b.png",
+      "bytes": 24361,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/4f31630a294232a96543339963973444.png",
+      "path": "assets/cards/a9ac28060434bec152fc3199.png",
+      "bytes": 69186,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/77f16591920deacf6727bfae934f97f1.png",
+      "path": "assets/cards/7fe526c1238750a3fed9868a.png",
+      "bytes": 21673,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/56d89cf209b3b268281f7ea1c6e5769c.png",
+      "path": "assets/cards/4c26e0ba4ef1111e7185fe0d.png",
+      "bytes": 86316,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/9d0a3bdf56b254cd8e7bf30874df8a2e.png",
+      "path": "assets/cards/e46aaaa869aa4fbbf626cff3.png",
+      "bytes": 19544,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/c657e478bb7071bfd476a373fba08065.png",
+      "path": "assets/cards/c6c5a1683c9fa3f0e676e7e6.png",
+      "bytes": 84088,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/9db0288a1b34639f079120b56dda6b8d.png",
+      "path": "assets/cards/b5f1ab2e45466368d1ec0138.png",
+      "bytes": 24965,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/e4ab92fef920653bdefa7d32c61e18bb.png",
+      "path": "assets/cards/ea7da1d2d8cad42267c08717.png",
+      "bytes": 108215,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/0d292f0d30751de609ba583362aa9648.png",
+      "path": "assets/cards/4527c2c0c9338d8822f679e1.png",
+      "bytes": 24077,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/eba7c7213db215cd6edc8cbb7fd1bcc2.png",
+      "path": "assets/cards/cb56d5aa4a9e6696e4738ed0.png",
+      "bytes": 111684,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/11711f999d889b61daf6e926017dfd03.png",
+      "path": "assets/cards/f15965df27201ed12d704263.png",
+      "bytes": 21710,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/5f61a79568ba645b3dfcfd81393cde63.png",
+      "path": "assets/cards/b42302572d6a7083038a9c55.png",
+      "bytes": 71700,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/948dd54e701f36f77aec600b1249c463.png",
+      "path": "assets/cards/7140f706fb77355745f5045f.png",
+      "bytes": 25698,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/c60616de6e3122ff8e8f608cbb59620e.png",
+      "path": "assets/cards/8ea1beaadea12adf35c5f4af.png",
+      "bytes": 102460,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/1b0b4002e6af2bd3a3c1c8ab6bb3e0e5.png",
+      "path": "assets/cards/180c849584123244f0034bcf.png",
+      "bytes": 23068,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/eff3d8a87768945c2006a52a964f89a5.png",
+      "path": "assets/cards/0ff1032ab206cbdde91554ff.png",
+      "bytes": 64722,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/60e779d8ec852fb83fba06f6faef313b.png",
+      "path": "assets/cards/c1773767422fa926ea8e5701.png",
+      "bytes": 23575,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/94cc02e6e1ff454c8e4a9dba53b8ffca.png",
+      "path": "assets/cards/06d658da4fd78b125fd1c1ee.png",
+      "bytes": 76267,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/eef754cb0fd3bea25affa930175a1547.png",
+      "path": "assets/cards/701402434d9c54495c00d4a7.png",
+      "bytes": 23528,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/20914477a0b35a80edd29a1d01b10ea5.png",
+      "path": "assets/cards/ad7dee73ac7ea64a1c6a51ec.png",
+      "bytes": 74245,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/5765e0a774103621c8ed9b0d91383304.png",
+      "path": "assets/cards/34c5d2d6e27b4729bf0bfeef.png",
+      "bytes": 21760,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/bab8754999f59ceb89f9778dad76f60c.png",
+      "path": "assets/cards/64276f64ee217639bc7a6a9a.png",
+      "bytes": 79448,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/b7110fe4f30068b797f74abe482dd699.png",
+      "path": "assets/cards/b3995ee02d23c28fbb21f72a.png",
+      "bytes": 27150,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/d1632c89af6f86fe9db23f12e3561457.png",
+      "path": "assets/cards/7ba28b9b2b3b71f3266b4a26.png",
+      "bytes": 57736,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/54913769ab8bc4bd6b46891cfaa5def1.png",
+      "path": "assets/cards/fa48c63d0b645acd978d0b5c.png",
+      "bytes": 23322,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/58808dfd3b1859235de1c215203b8f32.png",
+      "path": "assets/cards/ea9f823e0fde90ae528101fe.png",
+      "bytes": 85688,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/f7d88265cf5d5899cf5221e48aa3f1ed.png",
+      "path": "assets/cards/444e941d572beb2a3314d539.png",
+      "bytes": 25344,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/026e61179e2703470d2721331a518735.png",
+      "path": "assets/cards/9a0a535599b629a622b9a4d2.png",
+      "bytes": 69713,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/cc4544aa19e3c6f29834f333c560d455.png",
+      "path": "assets/cards/0a1c80bf49dc9eb941a21a18.png",
+      "bytes": 26767,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/319c62dfbcd0efd777c3aff27f6ab150.png",
+      "path": "assets/cards/31c554de28c68249e3717af5.png",
+      "bytes": 96326,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/4124b5b315c015ba3fb6915982033935.png",
+      "path": "assets/cards/0a698715c7cc7bc1e33e640e.png",
+      "bytes": 24797,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/09c20f80ebec7d4ff7730bd6ee1b250e.png",
+      "path": "assets/cards/2372324663d763c2c697f3c8.png",
+      "bytes": 74386,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/3253a45c5ea2c83ec00c6565c3b19714.png",
+      "path": "assets/cards/3018da6d8a7875e4af5691c5.png",
+      "bytes": 20439,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/4e071fa5300f30965909f2737f2aa79b.png",
+      "path": "assets/cards/c16cae920a49db60d61d3cb1.png",
+      "bytes": 97185,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/3c2ea8dba87075476a3c717e40b1414d.png",
+      "path": "assets/cards/ef998522d215dd5786eba952.png",
+      "bytes": 25835,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/f3a7f8381ab88c3eb10144ea912199f8.png",
+      "path": "assets/cards/c69b7a147a6c276e48085cb9.png",
+      "bytes": 98391,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/8315dc5b0815e812564c2b816221eee4.png",
+      "path": "assets/cards/0609bcbd3f4e530741835e88.png",
+      "bytes": 26004,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/fda6d0318fbf6f611875c8b99063cbaf.png",
+      "path": "assets/cards/c4b164ba52d36b0e20d68483.png",
+      "bytes": 99852,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/b4fb96da87cf5f63e317dafd7485d35b.png",
+      "path": "assets/cards/bb921294396dbcb811e6b621.png",
+      "bytes": 20709,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/818c5ceabea7377cf9fcb59f2e35abf4.png",
+      "path": "assets/cards/57f0c3eabc58dd8650982811.png",
+      "bytes": 62912,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/83d453b16fe389a84fee2ddf0771c0af.png",
+      "path": "assets/cards/b0cd0a2405497e8f4dc3164e.png",
+      "bytes": 24591,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/bf6e73128268676f88c5f3fdd521e5ba.png",
+      "path": "assets/cards/cab7496cde575c4f2400451f.png",
+      "bytes": 108267,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/1ddd6a323443fd6bc9fe5dc92246a6c7.png",
+      "path": "assets/cards/ed63690b5099f1ed261124a4.png",
+      "bytes": 24164,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/89a583dfc59104ab113f45f15a7ceb0c.png",
+      "path": "assets/cards/ee1371b14a1cff1061093dc9.png",
+      "bytes": 108673,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/24e7ee4edd16d7d1bced9c9faf4a9d28.png",
+      "path": "assets/cards/1b01e4b2046dfe4d4d2f566b.png",
+      "bytes": 24618,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/9d32da8b3c5709aaada93411d2ce30f3.png",
+      "path": "assets/cards/89dd0d56317ae3824e0dcd64.png",
+      "bytes": 116009,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/f9342e4ef544d6602d7ab0fda166926a.png",
+      "path": "assets/cards/68e2b02bab7f8f2e0fd87720.png",
+      "bytes": 20844,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/c3127ffdcd763126344ee518d43e7429.png",
+      "path": "assets/cards/5ed65d66f0720bc31f575786.png",
+      "bytes": 69994,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/0ff6583da4264c6031d0987c48f755fc.png",
+      "path": "assets/cards/001abaa916998a4ff6bbcff5.png",
+      "bytes": 25946,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/31f66b97767e5d2284d0f8fe4194fd6a.png",
+      "path": "assets/cards/b37497cc2ed3fcaf11149601.png",
+      "bytes": 78097,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_hero_touxiang_auto/02f3415fc1336207db094aeb27378205.png",
+      "path": "assets/cards/743bda52bf68de60ef7c4f9f.png",
+      "bytes": 23224,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_cardhero_kamian_auto/dd7e9032d8555ec7ae2aaefcf2305734.png",
+      "path": "assets/cards/1b8be5f03a19bbdb19d23534.png",
+      "bytes": 82890,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/3c3d61ddf7268e2d245138fcf5ce384e.png",
+      "path": "assets/cards/267addda79143e1ea6f5e578.png",
+      "bytes": 6754,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/8b964f3e6fde22ca9f1d35dcab952b12.png",
+      "path": "assets/cards/045fece16e0f452a410288d0.png",
+      "bytes": 5577,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/314008de75e25564e29831ea33708acb.png",
+      "path": "assets/cards/db8a835b9ae6eb8fcb3320e9.png",
+      "bytes": 4577,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/4b1734b634dfe55e0f7da0bee5fc0aff.png",
+      "path": "assets/cards/8e3ab2c65ffbbdb324bdb57f.png",
+      "bytes": 4481,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/542ce56938c47d456f9241303b8fbf60.png",
+      "path": "assets/cards/4ad86fd3731bff68df6ed5f2.png",
+      "bytes": 4876,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/83d63d8637d1b66aa704f2262f308d42.png",
+      "path": "assets/cards/937d972752eb8dcfdc2c794b.png",
+      "bytes": 5058,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/2c7481df5d77c8c9a8f422deb17d8f31.png",
+      "path": "assets/cards/d10d46a6e448ad012a65dcff.png",
+      "bytes": 6463,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/0a43d6a7390a70300d38350a141154ed.png",
+      "path": "assets/cards/f5511832f115787adbc0a6fb.png",
+      "bytes": 3870,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/1118abe237316d3db2dac2c6636f4f8c.png",
+      "path": "assets/cards/5674f08b80c1eaf39f070580.png",
+      "bytes": 4977,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/b59379749602c119c5310c16425860c8.png",
+      "path": "assets/cards/988f073f7d91256e1412f677.png",
+      "bytes": 4332,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/b59f8c72b65d6dad471b7855b4cd71c6.png",
+      "path": "assets/cards/b7d05b39296f58810cb7ae68.png",
+      "bytes": 5297,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/21ad548b528d48d0523828bfb280bda5.png",
+      "path": "assets/cards/fc39b21db9ef14e7214af43f.png",
+      "bytes": 6103,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/490bf18d87002ac069ff1f6edd14dbc6.png",
+      "path": "assets/cards/80311dd4a17b71a846e4a134.png",
+      "bytes": 5113,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/2345cd2f8a3d7617d9c1936602fbd185.png",
+      "path": "assets/cards/32c7478583939e4b77cdd971.png",
+      "bytes": 5229,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5edc49a3e0c64da9f6720c74595d801e.png",
+      "path": "assets/cards/6baab9bd1d66e0e7d857f167.png",
+      "bytes": 3892,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/29e71d971655fcfce4bc767c5f5af5c4.png",
+      "path": "assets/cards/f08ec86a13fb2e313eba20df.png",
+      "bytes": 3981,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/15a0f9c5eea4202d04f1ab70470beeed.png",
+      "path": "assets/cards/d2f2655329147246c673aa8b.png",
+      "bytes": 3811,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/94ca18fd135b74d13e822230371da4c3.png",
+      "path": "assets/cards/13b08948b681f6c1a001b0b9.png",
+      "bytes": 3742,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/9abc10f92c4fff0c982cbc6458a98554.png",
+      "path": "assets/cards/1a9cec9f67a8e83ec06c5135.png",
+      "bytes": 4881,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/2c19fa4d18965a3c4eda2f92be0980d2.png",
+      "path": "assets/cards/bb9f5f3cc5615d7d6b536018.png",
+      "bytes": 4631,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/3760022e130b83716d80f1a322d606ee.png",
+      "path": "assets/cards/fad40311d4abeaf3b877fa03.png",
+      "bytes": 4740,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/d00d1da03bb8b09d7886c04dd53885b7.png",
+      "path": "assets/cards/b08a127c5aaf04fecf28c1e3.png",
+      "bytes": 7645,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/0912d38b403e17f12165a3d2cf466435.png",
+      "path": "assets/cards/e9990ebd1914f61d1e32359c.png",
+      "bytes": 3477,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/e00532847573ea10a90c98db84ae18c3.png",
+      "path": "assets/cards/3783e37b47ffa80217fb8e4b.png",
+      "bytes": 6306,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/268e1abbc6be26ab900372dd0e0ed51e.png",
+      "path": "assets/cards/0e11cf4362e69f2a37d8cae7.png",
+      "bytes": 4292,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/cc455a244d1a6c4522a33ab472bbf592.png",
+      "path": "assets/cards/f5b4b5babdddb0001c92a0d1.png",
+      "bytes": 6628,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/eeb0667f92a3741ba9ed4f9221f37dab.png",
+      "path": "assets/cards/fe979c3b4b3d5c8b9a62ccbd.png",
+      "bytes": 4240,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/3d9f41e500f334edd91b714c740c30b5.png",
+      "path": "assets/cards/23d796ccd57cadd873718f1d.png",
+      "bytes": 4931,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/4bf01b3fe0f8336e5c9847dd88303548.png",
+      "path": "assets/cards/3bf3f32edcff9d81ad67d748.png",
+      "bytes": 6497,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/247c8bc7c6a0971e16f22441547fd42f.png",
+      "path": "assets/cards/1013ae1b9ddf3f45377d4c60.png",
+      "bytes": 4305,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/7b5153efb03de269414e8b4e1a8c7595.png",
+      "path": "assets/cards/109f32b67a95d6a11061b06f.png",
+      "bytes": 4917,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/dca39d34962d82a8280a49a5d946834e.png",
+      "path": "assets/cards/5957a6a386a1557f5a70c64a.png",
+      "bytes": 4099,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/6fb6f023bc0401b3908cc66251ab1245.png",
+      "path": "assets/cards/968d575662ef42bffd2e5b07.png",
+      "bytes": 3935,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/4dc9cc76734c89ce3935fb47e3510910.png",
+      "path": "assets/cards/97ab6b55eda0c959b8c215ea.png",
+      "bytes": 4504,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/229ea8a1e18f998d6098d7f87ce63821.png",
+      "path": "assets/cards/5e83c13cb7d35cc44328702f.png",
+      "bytes": 5678,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/15ef91962547a15983636090bfe2fb50.png",
+      "path": "assets/cards/d87e972cde16937f9473c82d.png",
+      "bytes": 5091,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/06ef53cdfabd535b247a969263bf17eb.png",
+      "path": "assets/cards/b376d987afe2fe96d6f68435.png",
+      "bytes": 7375,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/b579e6ef76857f836bd39be4e6c638e8.png",
+      "path": "assets/cards/d0efeba92abb596f814b0514.png",
+      "bytes": 4546,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/afcb335b225464324505cac3b30349b8.png",
+      "path": "assets/cards/aa9b87e072f8f9dc29e7968a.png",
+      "bytes": 4601,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/2af25c0b55fbc7ea14576e92feddd96b.png",
+      "path": "assets/cards/5ebacbaf6157f1a3e9d6cd9d.png",
+      "bytes": 5652,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/ed95ebf41b84719cd094c0349f5fe9c5.png",
+      "path": "assets/cards/53645897c5c91e49cbe51299.png",
+      "bytes": 4830,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/179da1d3804e1dea56cff16d289a0ef0.png",
+      "path": "assets/cards/3adbdcb1421372a188d4d781.png",
+      "bytes": 5537,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/fd60bede1c3b581b6adde1e8826ac08c.png",
+      "path": "assets/cards/132c10c79107adaf4e7019fa.png",
+      "bytes": 5574,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/1b8d50bdeb4049463dcb9f5e30c016b5.png",
+      "path": "assets/cards/9ddfd24f48187f82d3c84b14.png",
+      "bytes": 4101,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/f060628b7db6f2c925402c7e77644cbd.png",
+      "path": "assets/cards/4195e49de78ff7346115ef71.png",
+      "bytes": 4808,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/e2080fc960ca8350864df7e387619620.png",
+      "path": "assets/cards/e05a091f9ca24e4cc0010b56.png",
+      "bytes": 5519,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/129958b19de69b17e0b0e518ebb8b279.png",
+      "path": "assets/cards/583585255abadc9f0a572b40.png",
+      "bytes": 5011,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/d7940e4e2050f691b13388aeb139b7be.png",
+      "path": "assets/cards/3c1e98e33043d521178f57d6.png",
+      "bytes": 4884,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/cf704834c8b022700b6c92f971c7d6c6.png",
+      "path": "assets/cards/640af34ae4ebb272d717f037.png",
+      "bytes": 5069,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/382327882ccf7cd03cd8407d7c35337f.png",
+      "path": "assets/cards/c3896cdb229f77d3d84f9576.png",
+      "bytes": 5647,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/b1b1a8ddab8c64783a43c550cb967aaf.png",
+      "path": "assets/cards/565d34c731db8e3c27235b48.png",
+      "bytes": 5831,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/10635da75eb7af5aeb8461cb89031c5f.png",
+      "path": "assets/cards/01b953e5b3fedbd2048c231f.png",
+      "bytes": 4374,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/891af1efbd7bacaf38794763514a21cf.png",
+      "path": "assets/cards/651dbc12ea01a560ecc61099.png",
+      "bytes": 5301,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/71d1482b5f18b90d5fc60e217bc7a969.png",
+      "path": "assets/cards/774ef5a3f511589728ef2dc1.png",
+      "bytes": 4601,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/6dd55c83f98bf13912aed8771b7832c4.png",
+      "path": "assets/cards/659aedbc6b934fb0a8198154.png",
+      "bytes": 5082,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/af9e1fee6c3b30be7964dece477b6db8.png",
+      "path": "assets/cards/a36928ebf9640faf6e1f4ab0.png",
+      "bytes": 5692,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/cdf3dcb365db0be2bbda64cee0449521.png",
+      "path": "assets/cards/c823789eb2d98381aec0459a.png",
+      "bytes": 4677,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/bbe37188994cf425f6702d103adb33fc.png",
+      "path": "assets/cards/a1a1ec2a468e9e8d1c35b7ec.png",
+      "bytes": 6916,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/9c782a4af4fa23fe6f2fdd589c5c16a0.png",
+      "path": "assets/cards/5515793c5e83bbe86743348d.png",
+      "bytes": 5133,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/bf8c0b48c596b8912eb04ae481a4c89b.png",
+      "path": "assets/cards/33980ec5e347648a395a9b76.png",
+      "bytes": 3787,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/cb62520f20bd634dbbffd16ea49a2842.png",
+      "path": "assets/cards/19a479d2d26203bfbb857bf8.png",
+      "bytes": 5030,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/ce747dae57195b75f427700d12b85c81.png",
+      "path": "assets/cards/a008f367af64883da6060d69.png",
+      "bytes": 5092,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/ab7c68a59fef98b5f52949790db0951f.png",
+      "path": "assets/cards/3116c4677ffd9b7000ba93e0.png",
+      "bytes": 5553,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/15972e38b36cc202d1b6916179f258aa.png",
+      "path": "assets/cards/141810ca55e87c1661a14af9.png",
+      "bytes": 3674,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/13afaddd3ec322545f4bc19ec4e364b0.png",
+      "path": "assets/cards/960cba7ab39a59ba4d210059.png",
+      "bytes": 4177,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/f3d95a7af4d7c4f85dad4acab3c3891a.png",
+      "path": "assets/cards/169273bbd65a6fa5be3d4dbc.png",
+      "bytes": 5247,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/7ad3e314a0159cfa153d4224e22cd216.png",
+      "path": "assets/cards/984564eff7ffa7047e5abac1.png",
+      "bytes": 4392,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/a9246d8e86c02c31427bd658f8df6c6c.png",
+      "path": "assets/cards/0a9602b9d20fd2a082d33fe2.png",
+      "bytes": 4956,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/a9e1a28ecc86a58aa62b891be64d23b1.png",
+      "path": "assets/cards/9c0039a506f1d2555e9c5f4c.png",
+      "bytes": 5590,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/082225556c21869ef26b54cdcdd0117c.png",
+      "path": "assets/cards/35f5bfd6214e85097074e971.png",
+      "bytes": 6383,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/cb959f05887688426dd52391549c5d68.png",
+      "path": "assets/cards/c677a1d52e3ed1eed3ae0094.png",
+      "bytes": 4455,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/6acf8c251a4d80a2a6fe21f881f1272d.png",
+      "path": "assets/cards/81205c667d63e3a5c2d162f6.png",
+      "bytes": 5376,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/511274e7af66e590b2aeb5ca848c2e0e.png",
+      "path": "assets/cards/bd4db3160354a41d3a09c2ed.png",
+      "bytes": 4714,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/287b56917b07a847fc1b1f80308dca7b.png",
+      "path": "assets/cards/c6538184e296ae517b19a8e9.png",
+      "bytes": 4882,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/d6239db5e49f7a687c7148ae33dc1ee7.png",
+      "path": "assets/cards/2e6a2f0bf888c26b01853858.png",
+      "bytes": 4985,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/7e62947cb4eaa0e90ccde0eeea459a15.png",
+      "path": "assets/cards/d3967f19ba9a89c0fcde479f.png",
+      "bytes": 4904,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/c221103d03f686d480ca1f4219d66829.png",
+      "path": "assets/cards/a1659bf58cde3b984501de88.png",
+      "bytes": 4266,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/22d4d77f50614d27a2ecd783990c1361.png",
+      "path": "assets/cards/a5a881f17baf19f72e9fa09d.png",
+      "bytes": 5299,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/3ff6b69195f0f720500ee23512b0f988.png",
+      "path": "assets/cards/34ea4b51a058b3659cbcda4b.png",
+      "bytes": 4837,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/36d372e25258a7270bc52e585b3de979.png",
+      "path": "assets/cards/237e69cb8d47078bd4b8d42e.png",
+      "bytes": 4177,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/843d26ade1a2dca6555481ac1544d577.png",
+      "path": "assets/cards/eca0900750741e7b1738abcd.png",
+      "bytes": 5365,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/b3fbe27aa060ac3c3bd4094dd6d99f0f.png",
+      "path": "assets/cards/43bf56fb458f74545f4de5f2.png",
+      "bytes": 3518,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/a9104c614ef692ba47ba30064c2309ff.png",
+      "path": "assets/cards/3e7377f08b3ed7e720004c10.png",
+      "bytes": 5802,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/db6c401986d1688ce552439524260839.png",
+      "path": "assets/cards/fd1873baf9e4106922f04d2a.png",
+      "bytes": 3382,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/11569367631b8635993919c821872ba3.png",
+      "path": "assets/cards/c44790dc7109eb1338e9bb33.png",
+      "bytes": 5772,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/f1f645217086a518c8d417f6c6ac4e64.png",
+      "path": "assets/cards/ecfa6455b4e42323f6c92adc.png",
+      "bytes": 2991,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/51e16000e63d1e55d0ffa99f0bb67bb9.png",
+      "path": "assets/cards/abe541eb24b7f54fb210dbe3.png",
+      "bytes": 5443,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/71bf0189ed7f1e50a579ad1cac96a386.png",
+      "path": "assets/cards/ff31debc86619fda18d31382.png",
+      "bytes": 5728,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/1500308a65a1936c4fccf62230cdfcfd.png",
+      "path": "assets/cards/0461aacf37e192cd31928bbc.png",
+      "bytes": 4692,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/d78c51ae9c9faf69f09c44d76b8fa13a.png",
+      "path": "assets/cards/b5820492548d16e2a4717b64.png",
+      "bytes": 3691,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/e98ebedc230de729d6033305c859b0f5.png",
+      "path": "assets/cards/4ad63be1d396fac402245c8e.png",
+      "bytes": 4156,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/e2c0bcda9f83d97b82449a7ebd870192.png",
+      "path": "assets/cards/e064481bf613d0a26ab864b5.png",
+      "bytes": 4971,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/c096938d737bb43db4242679ddf8f150.png",
+      "path": "assets/cards/c57aa6b8463ff5b349f6aa6c.png",
+      "bytes": 4310,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/65a0381f856a0613ab4c93ed4889c50e.png",
+      "path": "assets/cards/4e2dbbca0c8b24b91f5145d4.png",
+      "bytes": 4401,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5e28ae5cb83f8bacfd65f5ac13b991d3.png",
+      "path": "assets/cards/41a053177766bdbd29013612.png",
+      "bytes": 6707,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5d05015942b564e8c5e63da126d9e1d9.png",
+      "path": "assets/cards/c8bc0c9a080048861b950eb5.png",
+      "bytes": 4774,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/7bd49ecad71c5e7c91495017ce3cb621.png",
+      "path": "assets/cards/a088216a6db614aedff6bcb3.png",
+      "bytes": 5555,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/011acc2768c083803f916e2464a96b33.png",
+      "path": "assets/cards/b3901cbc4d07b4981a25e1f0.png",
+      "bytes": 4971,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/2e63e1979aedba66f287a38be436ced9.png",
+      "path": "assets/cards/808c2e7162fa3ccf34cf063e.png",
+      "bytes": 3910,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/06766fca6ea40b506b37d82c268ef986.png",
+      "path": "assets/cards/f22b11c362b360617360d6b4.png",
+      "bytes": 5529,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/b3ecdb7a11e28f7e5ae375e038f9c27b.png",
+      "path": "assets/cards/1db3b0ed74bda7902cc45ba1.png",
+      "bytes": 6258,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/d6665771601822c75bfdcab3827ffbc8.png",
+      "path": "assets/cards/01c1823eb595552bd8104921.png",
+      "bytes": 5085,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/94874dfc276b5f5c234b5a72bbacbd02.png",
+      "path": "assets/cards/3b40d39a67021a9d4922bcd2.png",
+      "bytes": 5619,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/6e66a42d047af0ec7c6ed2e660416eb6.png",
+      "path": "assets/cards/81be5f1c11f7f45faeb3471d.png",
+      "bytes": 5107,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/1b937e4a750873f3cb13cee21add1cbb.png",
+      "path": "assets/cards/3323c89ce7c56064653d090e.png",
+      "bytes": 5576,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/bd389f97f1f56c070a12eaa5d3acc48c.png",
+      "path": "assets/cards/f25bff4d641769ff2c053c17.png",
+      "bytes": 5401,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/cd2ee42747a406f19a6f32deb612b27e.png",
+      "path": "assets/cards/0edda3b944ccca3c20b1ca45.png",
+      "bytes": 5342,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/cee84208eba92c003822ba3e313d7993.png",
+      "path": "assets/cards/20456c04f3a124436b34703f.png",
+      "bytes": 5621,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/fe7c90bbbbb942adaf3cd3a84abdad2d.png",
+      "path": "assets/cards/86be922ccc37e843550d7476.png",
+      "bytes": 4383,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/859e4b9cc8f173dcf8910025b06582c9.png",
+      "path": "assets/cards/771cf6d941f7e6678e7e4abf.png",
+      "bytes": 4340,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/6ef272284f66579261671e1a52955059.png",
+      "path": "assets/cards/a35e620d1917c5b76f2c7a48.png",
+      "bytes": 5500,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/bd4e04dd8e1d06ea61aab24058fb0708.png",
+      "path": "assets/cards/aa92f779db4362a9fd167e59.png",
+      "bytes": 5666,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/23953071d332b129b059b3082e20ec52.png",
+      "path": "assets/cards/528cec83938a98a5cb55d57f.png",
+      "bytes": 6604,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/0765ca7f237da5eebf2cf56c37a10850.png",
+      "path": "assets/cards/0cf5f2ed4cbd43506f49959f.png",
+      "bytes": 5542,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5cae30c6b79af06456b9458fa80ba446.png",
+      "path": "assets/cards/3961dda7ad40f9a3391c6167.png",
+      "bytes": 4786,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/3c2cc90237812b54314b3d967483aee7.png",
+      "path": "assets/cards/e764c04cf973c7ad07170d6d.png",
+      "bytes": 4473,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/58f9d25ee3085f3d8dab490292cc6d53.png",
+      "path": "assets/cards/db530b11a678955eaaf0a55e.png",
+      "bytes": 5155,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/31bbd6133c8b6e83a82741eac39afa5b.png",
+      "path": "assets/cards/6aea790a9b221b8c323eb62b.png",
+      "bytes": 5518,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/074fe9f64b92b90d26a9f79ed8b858b0.png",
+      "path": "assets/cards/615ab6896a8f0b76b058c2cb.png",
+      "bytes": 5685,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/9b8d3eca48b558c746084788c24ffe1a.png",
+      "path": "assets/cards/49538e5ff36df64df7f44cf9.png",
+      "bytes": 5528,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/c002c0dd304e4440e750f4463a85e644.png",
+      "path": "assets/cards/63c7924577e09ca330df785b.png",
+      "bytes": 5446,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/b837739ef67ba5135609eac270337a57.png",
+      "path": "assets/cards/7d138bbee655d1936c9b16fb.png",
+      "bytes": 5432,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/31d3ec2e332bbe7fc7e94b8f87e0ba86.png",
+      "path": "assets/cards/02caceb3d67e974b07b28a45.png",
+      "bytes": 3749,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/a5b1dd54a5c2ba694692abfa2fdf85ef.png",
+      "path": "assets/cards/669e5ba8ceb01f940c5ef821.png",
+      "bytes": 3814,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/122724b6d9679c93b63ebb8130d85b66.png",
+      "path": "assets/cards/c31a9b2739cb4549bd5e5d06.png",
+      "bytes": 4199,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/47d98d32d4e0ab3948fa49427bc4b798.png",
+      "path": "assets/cards/06c1c654ab9970a9347fafd5.png",
+      "bytes": 3127,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/03f2e5670f933db1b5761a4be17e64fc.png",
+      "path": "assets/cards/0e672673be65a743d2b5609b.png",
+      "bytes": 4370,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/4300ebaefa847a845b537f509d36559f.png",
+      "path": "assets/cards/a6e63594029802978515ca12.png",
+      "bytes": 5830,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/de18b8b8688fb5d9b5555b0be60db5ca.png",
+      "path": "assets/cards/09d23afde00b64ffea0e0b62.png",
+      "bytes": 4832,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/430fc8e2fb4850b7eb744427de24ee2a.png",
+      "path": "assets/cards/bdbb39f184c842748bb7742c.png",
+      "bytes": 3874,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/d476e8c9b119a6f869bab7028b64f32e.png",
+      "path": "assets/cards/3d06142688875fa829dd0326.png",
+      "bytes": 4936,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/e26682f65cdf46fa92e1ffe57798f09f.png",
+      "path": "assets/cards/608a6559126a4b99a869768a.png",
+      "bytes": 4286,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/e2a36a2d0c92682ba8e805e69ac6f7fa.png",
+      "path": "assets/cards/81ecf7b3ba4f1ec0a7af6deb.png",
+      "bytes": 4021,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/916d0bc2d58e2ef7434549c6da292077.png",
+      "path": "assets/cards/0b71671bbebbd44ed3b4d521.png",
+      "bytes": 4485,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/c155d9696fc152e506f9d3cd2c53ce27.png",
+      "path": "assets/cards/8538b8ff2f03a124593eb2fd.png",
+      "bytes": 4570,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/31351f165f5c6a655995c8fcdb164786.png",
+      "path": "assets/cards/72ea0cba9545c97a1707f97e.png",
+      "bytes": 5140,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/f2dd2f39f10897344a225645e8ecd6c5.png",
+      "path": "assets/cards/b64abcccb592fd0d3bc77a39.png",
+      "bytes": 4436,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/6b0060780ff21c034bddac587249a7f2.png",
+      "path": "assets/cards/1d8d446efd56a2577a9f3049.png",
+      "bytes": 4271,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/f3255a4def1de1131823be905ebb3159.png",
+      "path": "assets/cards/5bda542b7c3cd449510dfe2f.png",
+      "bytes": 5657,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/cd6ca2a4b0cffd9123003aeb06279f34.png",
+      "path": "assets/cards/bc0c37df7e675c7475cafb43.png",
+      "bytes": 5222,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/022220bcd2fd635f9db6e3883079d1ab.png",
+      "path": "assets/cards/d3dba010ffb1630297cce6b9.png",
+      "bytes": 4254,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/76d2db796f70c3d5339c7fb5e5a9b934.png",
+      "path": "assets/cards/0db03c251414bd825644ed81.png",
+      "bytes": 5634,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/b3269353af507f9c0870f8e27f637cd8.png",
+      "path": "assets/cards/c6787d37752fe9d7a195f060.png",
+      "bytes": 4512,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/e482f8df45a4d5f183f9d9125e0fcae6.png",
+      "path": "assets/cards/2c6624227d77e0ce58575273.png",
+      "bytes": 4951,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/43b32ed44e054d0a4e921a23100cfc09.png",
+      "path": "assets/cards/b5ce6bd32a6f7cdb2b5af690.png",
+      "bytes": 5418,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/38c5d8c14c650a19ad6524c2deb55873.png",
+      "path": "assets/cards/a152d2c5536d3a0e84f32f14.png",
+      "bytes": 3681,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/4d8468ac796db87192b468a949c58e71.png",
+      "path": "assets/cards/912ffea907751b2326d2972a.png",
+      "bytes": 4296,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/eeda68d327792c9dfc90b064b514640e.png",
+      "path": "assets/cards/2af8f4eb6b2e52dc3c491f33.png",
+      "bytes": 6436,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/08ad843d5a0ce85eaa8b6907046fbe96.png",
+      "path": "assets/cards/de826a24d6393b74c4f05a24.png",
+      "bytes": 5031,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/12490efc53e5edecce5f0d54ea381522.png",
+      "path": "assets/cards/bb1040850113c608b27cfd33.png",
+      "bytes": 4778,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/587fc4f9e16db2b6cb1e72b33d5d368b.png",
+      "path": "assets/cards/8d66a0c1b0d2f308a140b22d.png",
+      "bytes": 4745,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/8a2b546ff4ad27759ddeebac1314e04f.png",
+      "path": "assets/cards/e7a017068437cbfd519b9725.png",
+      "bytes": 5719,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/c8a17d0e677a88fca7a6517eac1624c2.png",
+      "path": "assets/cards/63d93157cd423b63554a90f4.png",
+      "bytes": 5330,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/614cae67b3364c72a88e55b3a1238e0d.png",
+      "path": "assets/cards/85ce64760be6b486fe5f5e5c.png",
+      "bytes": 5354,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/6d3df9394db2d1863cdb7f9dea15e546.png",
+      "path": "assets/cards/fbd627bdf0450c424ff8998d.png",
+      "bytes": 4795,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/afef5964ab77136c63977ee804950699.png",
+      "path": "assets/cards/4a756e58130969baa4685da6.png",
+      "bytes": 5534,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/8192863c1334520dd636e5ae4e4e3439.png",
+      "path": "assets/cards/65bb5d514eeb998c20ac40d4.png",
+      "bytes": 4922,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/f59b670d9a9945ef516d24c36a01e392.png",
+      "path": "assets/cards/7306ebbea5a3a36ccd204ba2.png",
+      "bytes": 3767,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/9406c33c5475900f7de60eed4512851d.png",
+      "path": "assets/cards/5ae4efddc79980c472c31c82.png",
+      "bytes": 5755,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/4f702aedb7fd445c98127aa3d4b26f4a.png",
+      "path": "assets/cards/3f7072418445eb3e68bdf297.png",
+      "bytes": 4833,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/904a6995cb1fc8dfd8daec48dfd9910a.png",
+      "path": "assets/cards/cbc8fb678240b436af2cd4e9.png",
+      "bytes": 4700,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/c8ba73c3f49e179733dd9633a99a437a.png",
+      "path": "assets/cards/1431515a4f2b2868ca170f8a.png",
+      "bytes": 4756,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/8334d1741b8a4a4412213cdf10aa8d73.png",
+      "path": "assets/cards/d25a066ead83fbf2b10925c6.png",
+      "bytes": 3697,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/331f3a26740c3486707256001bb6ff2b.png",
+      "path": "assets/cards/e362b85b73234856cc99c67a.png",
+      "bytes": 3119,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/58b92f8abed1a085f63bb3336895b021.png",
+      "path": "assets/cards/39c7682249502c90f2f3f1e9.png",
+      "bytes": 4555,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/c1cbf8e4e8bc2ccd2c7cdb8d9ebbf35f.png",
+      "path": "assets/cards/9168fdaf1b754639ac5bdfec.png",
+      "bytes": 2784,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/3de9b736ddb3d61da16dd45be608864a.png",
+      "path": "assets/cards/48e2f12f82f778f0b34f6bda.png",
+      "bytes": 4797,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/4e85088926fa7fec9817c12908cc920e.png",
+      "path": "assets/cards/a3ba147192e946476831c5de.png",
+      "bytes": 3393,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5df9d1d742120405bec799d66a83eb8a.png",
+      "path": "assets/cards/41269ab9a985e7dddfd7412b.png",
+      "bytes": 5002,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/38da00de3a426a0f239f0a5e5801d30b.png",
+      "path": "assets/cards/8f7061528a5ee638922555ab.png",
+      "bytes": 3575,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/7a21bd2b2ed32d78a4bb11126323cf5d.png",
+      "path": "assets/cards/c12bba76cdb80045fad34d5e.png",
+      "bytes": 2398,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/ee079fe36b2ff628e9dc652634b98ecd.png",
+      "path": "assets/cards/21ddccc44723ebcbbfffbc42.png",
+      "bytes": 3393,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/6935b17998d8cb7e3f75a326dc708b1e.png",
+      "path": "assets/cards/e153f8cb32397a46fcc04bd6.png",
+      "bytes": 6226,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/6a8dd95e56882a13aad774c9d274ccba.png",
+      "path": "assets/cards/0454c44df30fa6043417b730.png",
+      "bytes": 5453,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/64da45fb0b891bb2b996c6b87e699bda.png",
+      "path": "assets/cards/80b48ff49fbc90f1c9b6b95b.png",
+      "bytes": 4723,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/7271bb871ba22375b9055b1c2f1cb828.png",
+      "path": "assets/cards/99db624ee97510410871e4e4.png",
+      "bytes": 4011,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/cecad436bd0a2e429c2d6a64b72562fa.png",
+      "path": "assets/cards/1b17e5ef2022344a0062a210.png",
+      "bytes": 4243,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/d1245911b04ad6a30279d1faa344699d.png",
+      "path": "assets/cards/c9c69934bca2a8fa60010684.png",
+      "bytes": 3646,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/07829b3815c1dc7ed3d4aa79fc965920.png",
+      "path": "assets/cards/63e9067e0befb255a8fc8da2.png",
+      "bytes": 5763,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/62eb094e22114785d113f2758dfd8695.png",
+      "path": "assets/cards/247e9f9e01847b9e0b39d219.png",
+      "bytes": 4046,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/a873aeb49c30ef73698899e3fb09f23e.png",
+      "path": "assets/cards/839453af36fb23a886ef2f0d.png",
+      "bytes": 5815,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/3688e2ddd393a7cc5245156e49fc203c.png",
+      "path": "assets/cards/0e114216fd6b1a4a554729c2.png",
+      "bytes": 4268,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/3df197d85de6189352d88f0930104264.png",
+      "path": "assets/cards/5f3cc0b97e3c41cd5df888fc.png",
+      "bytes": 3937,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/ae254e5a8615c5693b1b65477fad08b9.png",
+      "path": "assets/cards/1bcd7c3b5f23ed94ec1b9b85.png",
+      "bytes": 4744,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/f9aaf6ed44aea1abd0355a19b39ec6ac.png",
+      "path": "assets/cards/299a130ed4c9c643ba338bb7.png",
+      "bytes": 4818,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/4f10ce4759f2702c16c4090b7f03ee7c.png",
+      "path": "assets/cards/bb4066d7ebaecdf287a9bbc3.png",
+      "bytes": 4399,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/ac047aceb9e4e7576d488980527e6fdc.png",
+      "path": "assets/cards/12864df8a986eb90b9bd4750.png",
+      "bytes": 5337,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/bb4c2494a30e3ffdeed97d90cba275ef.png",
+      "path": "assets/cards/f7cc254ad5a0f1adaa4500a6.png",
+      "bytes": 4244,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/cfe9f3552db4bb31f55ad8133ef1d8fb.png",
+      "path": "assets/cards/0a037218ef58ca974510e878.png",
+      "bytes": 5230,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/a75295263c9edd7163e1cbe974904d5f.png",
+      "path": "assets/cards/e18f65a7f42630dd96777785.png",
+      "bytes": 5191,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/b912a3a7551267d85f2c578230982ef2.png",
+      "path": "assets/cards/338ca00cf3146f28255a529c.png",
+      "bytes": 4142,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/eac097c1906cc8042d454e9d569d43c9.png",
+      "path": "assets/cards/d27892d80a64bd29f333b6a7.png",
+      "bytes": 4654,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/e3ba1b315573b08f3050d42423480380.png",
+      "path": "assets/cards/9972e177c8c690f10a52c051.png",
+      "bytes": 5243,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/acfc540d2c111f37ac864a7bcb7f7897.png",
+      "path": "assets/cards/c420fc5b4d69ff9d62e796da.png",
+      "bytes": 4160,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/9dceb5af954bb45632ee5fdf74369f6b.png",
+      "path": "assets/cards/774450bf276e1d7fdf6a1a17.png",
+      "bytes": 3873,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/8ebc2f964655de7557f6aa5b91f47529.png",
+      "path": "assets/cards/e8c00e45146da97ababb0bb3.png",
+      "bytes": 5058,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/aa6333aed2ca549c818cbabf6a0044f3.png",
+      "path": "assets/cards/203258ae36786ab0cfa4f4e2.png",
+      "bytes": 6333,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/e8adeceadd9e79b3e9612469c95f9c9c.png",
+      "path": "assets/cards/3f200dd918d216a70d32963a.png",
+      "bytes": 4919,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/c9ca46fb5bb5dcfc0d7c8cb46253bad0.png",
+      "path": "assets/cards/f14b9f4f98b175248874a119.png",
+      "bytes": 5107,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/2d53b222443c766132f9fc28230b9e28.png",
+      "path": "assets/cards/2a83cb001be275a6503bd5d0.png",
+      "bytes": 4774,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/667b38f3c1dbf7d1d55f7b73fcda43a2.png",
+      "path": "assets/cards/488061709abaed4170291858.png",
+      "bytes": 5075,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/ead3e11b38c7a4ee34b2216a5222c246.png",
+      "path": "assets/cards/ed5bfc702a823ce4998053c4.png",
+      "bytes": 5852,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/a8b2f6dbe605d71faf317e942f5067cf.png",
+      "path": "assets/cards/dd8c7d3061323db0f95759f2.png",
+      "bytes": 4285,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/a86e8fe4e758684e0af136e4056e2f70.png",
+      "path": "assets/cards/7d78e06ba4c024d506b90e3e.png",
+      "bytes": 3857,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/7977d831e698465a99f90a184fa4d869.png",
+      "path": "assets/cards/c3ade4c28bd1c48f26bbec04.png",
+      "bytes": 5383,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5c8b9502a3699f284d88d36134ee233e.png",
+      "path": "assets/cards/38b2e1789fc7f135b095cf2d.png",
+      "bytes": 5276,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/32b057049acb29776569b33d837fa232.png",
+      "path": "assets/cards/5dde452777f21e994516590a.png",
+      "bytes": 5468,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/55e1035d61af6495579906bd63cc5176.png",
+      "path": "assets/cards/8bd904088d4d9f059ba30495.png",
+      "bytes": 4537,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/328adfa9c5b0d0fe8df01ab35a9374c9.png",
+      "path": "assets/cards/98552ebea7e6071d0e19f0f8.png",
+      "bytes": 5528,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/6bec26f7fd55ed8392f8862c4a0a9e8b.png",
+      "path": "assets/cards/1a2189981b33cc63dc2dc281.png",
+      "bytes": 4016,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/85c4428df8e330b3f30bd18eee1b9431.png",
+      "path": "assets/cards/30a447839b12ef1d321fc63c.png",
+      "bytes": 3538,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/9e7df6138aa8ad19d490bda97d785116.png",
+      "path": "assets/cards/c843c62a81e696cd1c646627.png",
+      "bytes": 3631,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/943bb7d4f72a325077d6613d2a11d5c7.png",
+      "path": "assets/cards/5edb7c6dcadddd6e885c533f.png",
+      "bytes": 3886,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/6fda6deb3cccd116325f22fc4c9eae13.png",
+      "path": "assets/cards/cdeb73e7a5a59a4708572f9f.png",
+      "bytes": 5590,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/645a85811ac3cf4b563b84b7e7c80977.png",
+      "path": "assets/cards/b2cacbf12b6ac88533f07492.png",
+      "bytes": 4604,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/0b9f02ceaf9d9e673b2512991b46c665.png",
+      "path": "assets/cards/62f10bb548835c4462cc0388.png",
+      "bytes": 5409,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/db68d14f08ae8464eb456ac5f293a489.png",
+      "path": "assets/cards/421abb7947ec2c2a1e90b879.png",
+      "bytes": 5194,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/0cb57eea09ec2cf65270ffc896a96f46.png",
+      "path": "assets/cards/1059a35b5a6ce515573a0fe9.png",
+      "bytes": 3759,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/97c4c18749c62b40e157e9405ab23701.png",
+      "path": "assets/cards/a20fef7da99abb6e356e1746.png",
+      "bytes": 3588,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/2e91ec01b5997b8476178a4fd9a8f756.png",
+      "path": "assets/cards/a348eb95bf1cf70e84375f00.png",
+      "bytes": 5536,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/a26611c135f7276eb5f86f300ae2f81a.png",
+      "path": "assets/cards/49bc7b5b1a0d918a70b67259.png",
+      "bytes": 3986,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/dea4abd4b82055d81e2d9ef3679d7964.png",
+      "path": "assets/cards/c29b6042738330e40459357b.png",
+      "bytes": 3061,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/88524946ef82788ce4c08038847b1a18.png",
+      "path": "assets/cards/ed0a98f32a975c9acd33a824.png",
+      "bytes": 3975,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/e13573ce241bda9dacfbdaf736981650.png",
+      "path": "assets/cards/60c2ac34445f3b432f128f06.png",
+      "bytes": 17626,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/77311396e9759df6f78df3027aca15ab.png",
+      "path": "assets/cards/81d03da9baf776a809fac8a2.png",
+      "bytes": 20385,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/caf8e2a94c95ed06898c02de43d7dd7d.png",
+      "path": "assets/cards/4a7fc66798d705d947eeb1ef.png",
+      "bytes": 21432,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/a3f9b0de55ad876b03b12f0cff30d7de.png",
+      "path": "assets/cards/a33d778c451fced2c1f79048.png",
+      "bytes": 21892,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/ccbdeea2af6942cae2b42609b278b705.png",
+      "path": "assets/cards/4f580226743a0963725a0280.png",
+      "bytes": 18151,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/0a4708e5717e04d94b861a6de51cbec2.png",
+      "path": "assets/cards/cea45baa8e7a86a16fd2861e.png",
+      "bytes": 18403,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/165fa497920da5cdd49d84813dac3d02.png",
+      "path": "assets/cards/70b67d6a459ac67683ecc133.png",
+      "bytes": 18887,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/3f8d188120b54ea1d7acee4749133cae.png",
+      "path": "assets/cards/a4c664f39bfb4c731244328d.png",
+      "bytes": 19077,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/ad68b39d38402e205f0740dcbd9e9019.png",
+      "path": "assets/cards/43ffff19df413623b8897ff1.png",
+      "bytes": 23812,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/7ab8429256b9465380e9522c9f54ed90.png",
+      "path": "assets/cards/7b9e4e7bb89e4e32ca9b65f4.png",
+      "bytes": 22860,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/cd96ec0c659330f055c6ab92c23c6bb7.png",
+      "path": "assets/cards/4cbc9c426a1516852c7984ac.png",
+      "bytes": 24003,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/09d3b27f0d2332a5bb42cfe3f7f584e4.png",
+      "path": "assets/cards/aee1bb5a42c74e7df847c920.png",
+      "bytes": 26181,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/f70a4e72b85582fa6454557031cb3855.png",
+      "path": "assets/cards/48a0b7a879b6d80e90653af9.png",
+      "bytes": 22472,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/e1b8db2d1994c1f3f89b61a516953469.png",
+      "path": "assets/cards/de984b248a73b58d01145ad4.png",
+      "bytes": 21738,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/e5933a5ff4462d0708bb30a0ef7c3125.png",
+      "path": "assets/cards/6124bc9b2a221d143f71a897.png",
+      "bytes": 22032,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/98289eb726909ed2a1fbad2a7a585e57.png",
+      "path": "assets/cards/759530a7454fbdddd95d8f31.png",
+      "bytes": 20932,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/e81516a164b266601918bef7cb939567.png",
+      "path": "assets/cards/17581306327a4c562e60f794.png",
+      "bytes": 17996,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/5b6d86ce02ede25128d0f51f717a49d5.png",
+      "path": "assets/cards/25617c24d5c023efecb427c5.png",
+      "bytes": 20359,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/df7404f35155daefe2217bd8c90e44dc.png",
+      "path": "assets/cards/20b88117be27286e322787d9.png",
+      "bytes": 23328,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/83762b30067ae21e993d8b708301588d.png",
+      "path": "assets/cards/31d98f46b1a561910a00dec7.png",
+      "bytes": 20327,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/ee0100f27ce76d71c8b3c68d565b9032.png",
+      "path": "assets/cards/1a7793a6aa33c5884bd3eade.png",
+      "bytes": 26099,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/74bd92e19b93241fa84aba07fd95be80.png",
+      "path": "assets/cards/85dd5ec568f634a4c0e984f1.png",
+      "bytes": 24130,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/ff39f6d125e20bf392e79abc1bbc507b.png",
+      "path": "assets/cards/64879527155ec1c3d7ceb876.png",
+      "bytes": 20465,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/fd81eae8d5ce712110295d1b7acf153f.png",
+      "path": "assets/cards/9246dcb7a375aa4666391ef9.png",
+      "bytes": 21494,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/20e29371436df28c9a555ba788f48e70.png",
+      "path": "assets/cards/012cb04b4741b22a7fe6c710.png",
+      "bytes": 20049,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/254f510134e061a6b13d2778a633df41.png",
+      "path": "assets/cards/7978fe73f892f8e2e627877e.png",
+      "bytes": 18913,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/b4b0f182c3ae500badb1a230736d9d4b.png",
+      "path": "assets/cards/8de3f047d1de0660fa28c941.png",
+      "bytes": 20823,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/f6dfc9a4a0badaef3f85368de4ef9816.png",
+      "path": "assets/cards/c4b077b67af65a260105d279.png",
+      "bytes": 20719,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/9040b673a3b8a552d84b0d1166749bc6.png",
+      "path": "assets/cards/a72d8ce51028d7ba433d0774.png",
+      "bytes": 18551,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/12a798f61f02eb64205e1cb182ea9a0c.png",
+      "path": "assets/cards/56c6da09ffb0d577e140cf17.png",
+      "bytes": 23366,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/eb3ea53103e91cc7894428efd0f5e872.png",
+      "path": "assets/cards/06f1176d8277d46244066789.png",
+      "bytes": 21730,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/04934b666e880169ed1b5da304573f3e.png",
+      "path": "assets/cards/49f2b5aacd8b2b4ac22817d3.png",
+      "bytes": 21853,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/bdfda61642ab7af80979ae1c3db65ad4.png",
+      "path": "assets/cards/7a517ea2b1d1e66158960a1d.png",
+      "bytes": 21448,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/78ec1df857ab29bc1109089359bc1cb2.png",
+      "path": "assets/cards/76617b2051430a6de894fc13.png",
+      "bytes": 22458,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/2bf3f6b4e76cc845431332c86773924b.png",
+      "path": "assets/cards/e4634a4c22e310f690b8ef3b.png",
+      "bytes": 26966,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/12da569aa48b3f3510b1fafd66b4b9c8.png",
+      "path": "assets/cards/1e3d374719fe865ecdd2c4f7.png",
+      "bytes": 21387,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/5792069a274f5da02f0238844a06142d.png",
+      "path": "assets/cards/6e41c201b508d64b4207b24a.png",
+      "bytes": 21669,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/365effb83f1c7f1580ae58d8c52ecf99.png",
+      "path": "assets/cards/67f9e69c6ad24309e8f4677e.png",
+      "bytes": 25414,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/c6fc6bbf1d7b9384294b022202bea7ef.png",
+      "path": "assets/cards/fc7843135fdb64bc508c2e7d.png",
+      "bytes": 22084,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/2ade9f75fb0e8cf58cc9637b047b72d2.png",
+      "path": "assets/cards/fd9e0ece77c507929b8d0032.png",
+      "bytes": 23261,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/0028b000af509898ca0c4e8ed3c303b5.png",
+      "path": "assets/cards/f0a53ec288e746806d0e2141.png",
+      "bytes": 22518,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/a2f6c3354bae1c58f81af10158b7ef67.png",
+      "path": "assets/cards/bc2e15dc35782087d78fe41d.png",
+      "bytes": 19932,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/812740760d2dd1f691b7eabd06585787.png",
+      "path": "assets/cards/164594678c0bb462233688b4.png",
+      "bytes": 22664,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/26e0f4236bd891dd1c2db8fe3548ca6b.png",
+      "path": "assets/cards/b1cc1383d9fc6c1643e4ae05.png",
+      "bytes": 25126,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/fb5ecccbeced50d9a180282d8025cf42.png",
+      "path": "assets/cards/fc23427409300be514f76a40.png",
+      "bytes": 24154,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/f1b6cbe9234af83ad3505f96e9ec149f.png",
+      "path": "assets/cards/97ce575111cdd771218c1c05.png",
+      "bytes": 22470,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/4970ff9b9b41e36ecee809e9be87109b.png",
+      "path": "assets/cards/94fbed8d1ce6faa200dfe37c.png",
+      "bytes": 23743,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/367508399464a1d3d099cadcdb13cde5.png",
+      "path": "assets/cards/97ca33e1734ae0a1638863d5.png",
+      "bytes": 23617,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/a4da867aef39b8b8918697320e662617.png",
+      "path": "assets/cards/0302a54304e1bdaf6705fe12.png",
+      "bytes": 25303,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/c30b56e03929c5b9168851b897bda983.png",
+      "path": "assets/cards/f5e641a5829a3132abfbd400.png",
+      "bytes": 21967,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/281abe6856a78a3caf8d1ae5917a8a0a.png",
+      "path": "assets/cards/933b5f492b3e2a14f814b21b.png",
+      "bytes": 21939,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/2a3117f4126195726fe65d7b58d2f87f.png",
+      "path": "assets/cards/da9a03f01dfd22eb7242da8b.png",
+      "bytes": 26253,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/ded9805282c6b3a9b90652eb895f520c.png",
+      "path": "assets/cards/90962acea8e407015da16f9b.png",
+      "bytes": 22576,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/f147c3edc5ff5253d849959025f88ccd.png",
+      "path": "assets/cards/8ac2be7ee539658e93b33d38.png",
+      "bytes": 22992,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/7e128442d16bd5e46dc0573ded816e21.png",
+      "path": "assets/cards/362f10714f46f2fc4c4a3b78.png",
+      "bytes": 25265,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/57c72dfda0d0c33143e31d78f6243dd8.png",
+      "path": "assets/cards/29ee42a53d8075f305f70cf4.png",
+      "bytes": 23955,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/87f684a4baac722bad63bac599ae354b.png",
+      "path": "assets/cards/840ae146d91a03d0ffe73ece.png",
+      "bytes": 19424,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/4654e8afb1cad81458dd4759b065044b.png",
+      "path": "assets/cards/6e0ac7a6a32579cab1cbe3ee.png",
+      "bytes": 24655,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/c5d93e50a7563b567ea5f51e7cfb3505.png",
+      "path": "assets/cards/dbdba5519e5b1361687d7669.png",
+      "bytes": 22187,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/83071ce9410c47e0a5aa42cd817eb94f.png",
+      "path": "assets/cards/d220551b107254b9c18e93e8.png",
+      "bytes": 21367,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/01a0af4000ba33e0c2627ce757c998e0.png",
+      "path": "assets/cards/9610ba0012e6699210327f88.png",
+      "bytes": 23952,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/c58a22ddb79d010b889ee791c1bc5e4c.png",
+      "path": "assets/cards/fdcb50ebaf63b6e8aff147e3.png",
+      "bytes": 19906,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/6b16990dc680783a240582906f7a6295.png",
+      "path": "assets/cards/cba262b2b8f31a2888149c95.png",
+      "bytes": 18651,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/020d6b014e88bc8bb1d730f088e15743.png",
+      "path": "assets/cards/9466714cb39ff3c5c5196cc1.png",
+      "bytes": 23140,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/23d4e0c8126fb1e7d31b1841eaa4de18.png",
+      "path": "assets/cards/d968b40c69e281674cc7ff39.png",
+      "bytes": 28036,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/e8b68cbdc1617fdf8bd9666ba92e21e5.png",
+      "path": "assets/cards/737190d69853cd5de59f9b8e.png",
+      "bytes": 30298,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/eb1def5205d39f641fb3e7a6df630da1.png",
+      "path": "assets/cards/ec2cdee856fa26aacbb6385b.png",
+      "bytes": 25546,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/a423d857adc21206424a5a440993ccec.png",
+      "path": "assets/cards/51bd2d525077cbbaf750d702.png",
+      "bytes": 23545,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/5ff9cdb3eab4b1e16d9886ce928b22f3.png",
+      "path": "assets/cards/5b9ff89a071d1ce65731dbcd.png",
+      "bytes": 25637,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/d255991cf70fd2d8ae73353ee870d23d.png",
+      "path": "assets/cards/6118dfe13c3e6cad00d97bcf.png",
+      "bytes": 23606,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/6a55a5113b9785ce34796d77cbcd6f71.png",
+      "path": "assets/cards/ca208e2057cdfb3c0fd14f00.png",
+      "bytes": 21844,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/25398d3258ed879408d17a6e05daadc1.png",
+      "path": "assets/cards/363e05cb88103ec7789eb0a2.png",
+      "bytes": 19588,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_equip_auto/d96c8827649447700010c81f68a70e93.png",
+      "path": "assets/cards/0a996d1af1179fd5cb3efa1b.png",
+      "bytes": 20352,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/0e67a481ef89459f355408c1604ba559.png",
+      "path": "assets/cards/6b9f7c931733ec25a7775fe2.png",
+      "bytes": 22987,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/3770db546665bdbfccba7ba7b145972c.png",
+      "path": "assets/cards/a43dbe7539b7811f1f688c9a.png",
+      "bytes": 66362,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/c6dc3a9cc80d820a8c62ea9a11a4bde1.png",
+      "path": "assets/cards/4330320815fa3eb8a7ac1c18.png",
+      "bytes": 27358,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/a222656dd76ab94922ad82b1c339e628.png",
+      "path": "assets/cards/0460dc61110a9274f7446412.png",
+      "bytes": 83955,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/eaf3d260593898918453a6802b4f2861.png",
+      "path": "assets/cards/06b47452a97b5bb32b7838a1.png",
+      "bytes": 28442,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/6269fdcda04e4fc36e1f1213c563d8f6.png",
+      "path": "assets/cards/562215d1dec432a99620e0ce.png",
+      "bytes": 82893,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/755ee35fbd0bf00331affe7be9bfb23f.png",
+      "path": "assets/cards/8adf0847b4c5f2e94df5a7b7.png",
+      "bytes": 23901,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/637fba2e48e98ee607d92d65f030bbba.png",
+      "path": "assets/cards/5c07c9fa60af38deb8c7aec9.png",
+      "bytes": 69581,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/f0d0f9bcd021bbd9c26710a07ba70b0e.png",
+      "path": "assets/cards/1df357b6239290128a9c6357.png",
+      "bytes": 24960,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/5c2639bef08a2f298a3b5291235cd630.png",
+      "path": "assets/cards/3f4fad2cbffa57e2688a59a1.png",
+      "bytes": 69715,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/591461e90948ff993c261df63c3e2918.png",
+      "path": "assets/cards/23ad94de3b4afe8783bb8669.png",
+      "bytes": 23780,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/aa0b45f5b49fd75ce5bb47956d179bdb.png",
+      "path": "assets/cards/f1cce44dd6e6de6e0c2d332b.png",
+      "bytes": 71249,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/5895a8cbaefdec2940c2aeaa6d7a6cc2.png",
+      "path": "assets/cards/df731747a42beb514d6903c7.png",
+      "bytes": 24988,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/fe85eb927c2dd00069d7f4c5ed4c1526.png",
+      "path": "assets/cards/b22bb6d1314e1349a6341712.png",
+      "bytes": 72209,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/c3dd6df33d27feb05430e68cc6ea8aad.png",
+      "path": "assets/cards/f5266cac0d3abbe0d8b8fb59.png",
+      "bytes": 23995,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/83d0e0bae8ad9a7eecbf593ad2ae62f1.png",
+      "path": "assets/cards/70fd12351774fd91d2611936.png",
+      "bytes": 69367,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/c7726ba15ee4068fc5be2fcd2139826f.png",
+      "path": "assets/cards/1ca4eb5470b05e8b4267f470.png",
+      "bytes": 22257,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/f1fbd445602a034a0ad74a8cb2afce39.png",
+      "path": "assets/cards/5869e091b76957b949f05b28.png",
+      "bytes": 62866,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/61f9b4dd0e07a0f1b86c92cecc3e1ae0.png",
+      "path": "assets/cards/b7794ca74b570c7373e0bd7e.png",
+      "bytes": 80407,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/7d1ec4420964bf37194f14d2366c9b09.png",
+      "path": "assets/cards/208ed7b2b38bd8187ca9f750.png",
+      "bytes": 22624,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/104c33df4e23c3af5eae051e57251893.png",
+      "path": "assets/cards/fa0d3a5fd94f5c10fa3ac557.png",
+      "bytes": 59668,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/19142e39746336385f19c3e0ae841311.png",
+      "path": "assets/cards/77935e134405ce9618f89e3e.png",
+      "bytes": 26141,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/5f79eaff5cd561e8fec7629ae2d23a3e.png",
+      "path": "assets/cards/43f6bf644300fc33d8a2afa4.png",
+      "bytes": 70926,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/b81d2e0667b15602612e93a6e52ab7be.png",
+      "path": "assets/cards/853984639be8cf94e9396273.png",
+      "bytes": 26127,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/ac94acd8352d1b7fb4c567e1469bb6c2.png",
+      "path": "assets/cards/2c43d38623b8ddf9f284907d.png",
+      "bytes": 67794,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/03689567d90f8ee4bc0ca9a3d3042b19.png",
+      "path": "assets/cards/c1ef42ed2f57786de81551cf.png",
+      "bytes": 25480,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/dfc34fb8b1bab312591e6719b8516565.png",
+      "path": "assets/cards/503e7edb4a4cc138906af2b3.png",
+      "bytes": 75922,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/216bf733e676df6eb92382416cf4aa5d.png",
+      "path": "assets/cards/cfe6bf70e774ccc190cde620.png",
+      "bytes": 20242,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/73449f08bf864e1334af9e54abdb220f.png",
+      "path": "assets/cards/a22af834cb2b446231dc5802.png",
+      "bytes": 54271,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/97a8d6245a0d3a3890820790658be309.png",
+      "path": "assets/cards/c6312c479240ae4f27cb8a20.png",
+      "bytes": 22229,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/bb13f159e9baaa0935532da1eb5f87de.png",
+      "path": "assets/cards/fb48e6e6c7d644f7d5fdc0c0.png",
+      "bytes": 59473,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/47d986582d29e59ff87b516cf5a73f7c.png",
+      "path": "assets/cards/57846f434be304caca3c5706.png",
+      "bytes": 21824,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/315efacc91f7b6f8b8b7fc6af75a27b0.png",
+      "path": "assets/cards/ad5fb91d3c09dcb589a2eeda.png",
+      "bytes": 63035,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/beae22b4a4c43b48c546cf7fb70f0af6.png",
+      "path": "assets/cards/cee63fda25b53689893bf543.png",
+      "bytes": 27339,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/bf349ec7dcadea09ec9f9383fc35d30f.png",
+      "path": "assets/cards/03fbf5be2a7e071649a8594c.png",
+      "bytes": 77273,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/7cd2904945837f8de1798b2ad5166f73.png",
+      "path": "assets/cards/0948b77ab2a30c00ba6db1a5.png",
+      "bytes": 25228,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/b6860c0d52fe944721819c4c84c48b33.png",
+      "path": "assets/cards/184c45053918a80083dee300.png",
+      "bytes": 66472,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/e7a12c0cbc3226ad0283f43dc32666f5.png",
+      "path": "assets/cards/4c2c096e80d6557efb74c608.png",
+      "bytes": 25122,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/d6ee9c55436fe61219eeef561746e6aa.png",
+      "path": "assets/cards/99bdfdafe7803900d0b5ba27.png",
+      "bytes": 72889,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/c2b9ccb268a90bdd30fdf5f48488019b.png",
+      "path": "assets/cards/713b95f58a9656058acbd841.png",
+      "bytes": 27914,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/79f2e82e9f13e5df9e616264fd198d4f.png",
+      "path": "assets/cards/edfecffc1436a149ac7faa10.png",
+      "bytes": 79908,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/88a9f13afa303d9302d5011763e4b53d.png",
+      "path": "assets/cards/eca0406108e35f0090e7a651.png",
+      "bytes": 24225,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/be18cb15a307df277deff8f27e2e3387.png",
+      "path": "assets/cards/daf367a9f7bb1fe20ecde93a.png",
+      "bytes": 70701,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/b24bddfb6605b7c7a7d32f37d1ac12d6.png",
+      "path": "assets/cards/949d20fd503e0e04ec67172b.png",
+      "bytes": 22229,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/64b9c504ea708990a9beb72c09648a37.png",
+      "path": "assets/cards/b449e73d00c3ac595461ea55.png",
+      "bytes": 64399,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/37686079b90b75be0ca82f6ca4919910.png",
+      "path": "assets/cards/df344c02a9a0d5ee5ba3f073.png",
+      "bytes": 23809,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/91d50bdcf847113097569a5bf9f4adb5.png",
+      "path": "assets/cards/a33376a97d0ef2a6f1ab3c8f.png",
+      "bytes": 66957,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/21ee9e0a92c72d834eb1b5ff323a53e9.png",
+      "path": "assets/cards/ddcbf7bb214544866077dbc6.png",
+      "bytes": 26291,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/dcacdac8afb7aaa84cc6a78d7d68d164.png",
+      "path": "assets/cards/9086e9cfbedf895b0f77eea5.png",
+      "bytes": 80086,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/8b4c33f36814b0133ecb797d3a71ef8e.png",
+      "path": "assets/cards/43058ed33ed43a18c3c381a0.png",
+      "bytes": 24928,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/cc53468111f5c06f9d5e11b697637a69.png",
+      "path": "assets/cards/6743bf9f4f19998dea57ffed.png",
+      "bytes": 71215,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/0897fa5d78ff8d1eabbd36801738ec18.png",
+      "path": "assets/cards/96f82997b9d6c69655b5a6fd.png",
+      "bytes": 24972,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/3f88375b5f2c3d6884f6f71f0f933438.png",
+      "path": "assets/cards/b735fe81ad79abe0f8c6c491.png",
+      "bytes": 72870,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/28fde9cf217e4efcbeb02eb065d5b5fa.png",
+      "path": "assets/cards/538ca14a8dbbc48c31b465d6.png",
+      "bytes": 29135,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/90635457470c16ac510857fea303c3d6.png",
+      "path": "assets/cards/2b63a2a48020d312945ac00b.png",
+      "bytes": 87825,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/454099d3b7ae48bd6a7711efbadd809e.png",
+      "path": "assets/cards/36af77855925cedb85eb0117.png",
+      "bytes": 24827,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/af2f7d4771d4fe3026f4b64de49809d5.png",
+      "path": "assets/cards/1b5016abe326f850aeb8fc96.png",
+      "bytes": 69999,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/493cd2be90d4c2f61879ab9db273f04b.png",
+      "path": "assets/cards/e4c9f613160f357eec8e0f4f.png",
+      "bytes": 23000,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/af83de76433e07fdd27b363adc5bcb3f.png",
+      "path": "assets/cards/a21f5d1bd6212da3290b3571.png",
+      "bytes": 66916,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/6ba26189274b672fa0afb06c8bcd5930.png",
+      "path": "assets/cards/ca7fc3ef0030ac813aff67eb.png",
+      "bytes": 25971,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/15eae64051f8edc32636853ffad81421.png",
+      "path": "assets/cards/41a88ee25baca2d4d1b14ff6.png",
+      "bytes": 72576,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/5ac951540995b908e1497a7097b74818.png",
+      "path": "assets/cards/d4826bfbdbf6b33ade125997.png",
+      "bytes": 25327,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/a0463611b5106e54a5a40f48f5945f3a.png",
+      "path": "assets/cards/1d77752e2c28905ccfff03c9.png",
+      "bytes": 79186,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/f3d59a49475bd1f27e62ca2aaf8ef847.png",
+      "path": "assets/cards/ec1329866a656def928822b9.png",
+      "bytes": 72310,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/567047bd1df9dfe41c592d9018bcaf9f.png",
+      "path": "assets/cards/a869fd987699a88eb96959ca.png",
+      "bytes": 26394,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/5929cb653425539fbb21b3564c806ee5.png",
+      "path": "assets/cards/d3780979d5b056a9a4cd3c25.png",
+      "bytes": 74370,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/9e80d98337c1eae92d369d5b3db40a45.png",
+      "path": "assets/cards/798c5617849eb166c8fd0e06.png",
+      "bytes": 26096,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/f74442e1825d80c22b9d940838bc8a5e.png",
+      "path": "assets/cards/25f642a1e275b8fe5a0512a9.png",
+      "bytes": 71295,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/b87ee3e7cce4a423b920a7ba714e0ed6.png",
+      "path": "assets/cards/44bf553a10c3a07687042ec1.png",
+      "bytes": 26890,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/e0061b4c65382804f7cef1b80efb57b6.png",
+      "path": "assets/cards/4afa5225358a25e0ba3395bb.png",
+      "bytes": 81851,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/69c9c9ddb49472f99609267d47687bc2.png",
+      "path": "assets/cards/c4770c3b3b042cd0a773a838.png",
+      "bytes": 71059,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/1e40c24cbc29c17392ec7e154d20eea4.png",
+      "path": "assets/cards/9fc0013f1b81d8a38fe0bceb.png",
+      "bytes": 26950,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/2fa2b7b163ec21a5e2d047cda69ff1f5.png",
+      "path": "assets/cards/c590ba93077d6fae336ba5a2.png",
+      "bytes": 78596,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/7bec9a537353574244926c9d35a23990.png",
+      "path": "assets/cards/a2f66d5300a4d9e640a3494a.png",
+      "bytes": 25755,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/6fa94496d1862440534b5fa778c7916e.png",
+      "path": "assets/cards/84509c732c9fd9285408debe.png",
+      "bytes": 73437,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/5f75d49b335062321fd5d535754cef73.png",
+      "path": "assets/cards/8ac4dc62942c35846e4df5b7.png",
+      "bytes": 24135,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/a4b2e4d9ebadf72b2b39a4d3eb10c7b7.png",
+      "path": "assets/cards/b5fa5e37deb7caa0bf4994c2.png",
+      "bytes": 71388,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/2e57cc001e624fcf47df58f9e2377604.png",
+      "path": "assets/cards/403678a815ac827ade8a0133.png",
+      "bytes": 24801,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/7ad97e42e16e0d3fc22edb595786f5a9.png",
+      "path": "assets/cards/31b8739aa08c937140f2616a.png",
+      "bytes": 75684,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/628e059b53e35fc38aae263794c4c6fd.png",
+      "path": "assets/cards/ea806ef9db9b15dc51ecca71.png",
+      "bytes": 79446,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/28202476bc7fb1808e3180be2ceaa0c7.png",
+      "path": "assets/cards/5a0119c3023691fe2f90ecbd.png",
+      "bytes": 69043,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/79df4061d49fa6c573d957998646e14e.png",
+      "path": "assets/cards/a7a1f582431c04f7750df43e.png",
+      "bytes": 30210,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/28ae7d274ee98514269166561bc5f373.png",
+      "path": "assets/cards/0ae5db2ab60de77b69c0b5a0.png",
+      "bytes": 89422,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/a7e67ae36a9caa64846a3c3dc4880831.png",
+      "path": "assets/cards/97e98c36810aa1904e98d8b7.png",
+      "bytes": 22029,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/e02284b731b85939492e0830b405c36c.png",
+      "path": "assets/cards/e8c12b43fe62436d5b55d1da.png",
+      "bytes": 58694,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/1ba7bb9a56ca4c357cd347e83dcbfda0.png",
+      "path": "assets/cards/e991c5f4fa7028b4179ef4a7.png",
+      "bytes": 25233,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/a35b2db3935a73260718b71a8ce95471.png",
+      "path": "assets/cards/f33ff3ecc9f8cea3df009754.png",
+      "bytes": 76276,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/a912cc87b6d778546ecad81a96a82373.png",
+      "path": "assets/cards/0dd70bf9c589d194070948d5.png",
+      "bytes": 74452,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/e75acb811b9d2a721ce63429069ee096.png",
+      "path": "assets/cards/d003180534777f60d402df5b.png",
+      "bytes": 24158,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/f4cebbcad5c1e88394cb0bbf705ef08a.png",
+      "path": "assets/cards/336439689369899e4b65b45d.png",
+      "bytes": 63342,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/e8cc5eea754727ed320d91a59017e73c.png",
+      "path": "assets/cards/3e1f366216db51c8ae94fc90.png",
+      "bytes": 25675,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/ab3fdfedc694757d3e1bf677675987cc.png",
+      "path": "assets/cards/4206215d87d259d1784e2aff.png",
+      "bytes": 25998,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/4ade85faeb760cad19351d421354953e.png",
+      "path": "assets/cards/6836a5efce552f827507a090.png",
+      "bytes": 76186,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/81b1ed833f80ae580c456ad11744953c.png",
+      "path": "assets/cards/5822e85481ea6d875cb48ad8.png",
+      "bytes": 23136,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/ede32044ada988146aa61bd88b7ddc17.png",
+      "path": "assets/cards/ef55e37b700a64228e23d6a0.png",
+      "bytes": 66234,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/b2bf924233e9bb75754485f7490d2cee.png",
+      "path": "assets/cards/f2bbc39c4ab1e5aab2bb448f.png",
+      "bytes": 26706,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/f37adb9b487c03555faf2b24e0691416.png",
+      "path": "assets/cards/72a447c96acb66c6b3d6aba8.png",
+      "bytes": 76136,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/4fda23667e8452ca876dfd8629eed0d3.png",
+      "path": "assets/cards/9638a996adf9c28a0723ae3e.png",
+      "bytes": 24316,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/d80b85da99e731d119585b24f410cee8.png",
+      "path": "assets/cards/936e37309fc5358e98b34546.png",
+      "bytes": 72419,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/f19a657d9bb3a21dde6a1bcfae25f1d7.png",
+      "path": "assets/cards/8646c5b7113fcfd9dfb7f200.png",
+      "bytes": 25433,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/d64ede2c3c334583180ade2accf474a3.png",
+      "path": "assets/cards/f14b3bfbcdeb35457f6c8263.png",
+      "bytes": 76263,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/ac72e7f99f7785b7b42c4e73bf32cca3.png",
+      "path": "assets/cards/6eaad46ba2c9e6161324d586.png",
+      "bytes": 26525,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/09fd11720e90fcd07f9cd7e05f0e24bc.png",
+      "path": "assets/cards/1ce54bd678d9971e81868a20.png",
+      "bytes": 71036,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/b7cea9bfaf888905201db78191b968fe.png",
+      "path": "assets/cards/e11b6d069e10eb84aa252f53.png",
+      "bytes": 24224,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/72a7f9c8627ea1966ab3064dce3f9c8e.png",
+      "path": "assets/cards/26a11917f7cd690fbdb4459f.png",
+      "bytes": 70349,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/4bfac63cf2976f31f3e74f9de13ce0f7.png",
+      "path": "assets/cards/ee5dc1a1c280646188bb7814.png",
+      "bytes": 22872,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/fa62f4a0296b8a71708739d5814a2d95.png",
+      "path": "assets/cards/6664164c7b27afde90eeb88a.png",
+      "bytes": 59848,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/0be6a8e26d8232de75f2fc7ef542fc23.png",
+      "path": "assets/cards/b33b9fd553e7b9fcfedf4769.png",
+      "bytes": 23157,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/295c17b6fe5141b7627efa3b58c36cd5.png",
+      "path": "assets/cards/eed6ddb0625c1a7abc0d93d7.png",
+      "bytes": 64746,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/f406cd92e79e15a20cb4fc957e6391e6.png",
+      "path": "assets/cards/b071b16255bb1e1a4e8eeb81.png",
+      "bytes": 28364,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/0a3fcfcba7cbfda8efd922c639a00807.png",
+      "path": "assets/cards/71b1679ec5e4c04da34e66ec.png",
+      "bytes": 85181,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/0b858446870d28d05d13ad89c9deaab9.png",
+      "path": "assets/cards/0798974aa7b63603f21999d8.png",
+      "bytes": 21508,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/6724b7d917bb25b66056c587426cbf87.png",
+      "path": "assets/cards/0f646a798be41328f4a47db9.png",
+      "bytes": 58823,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/6b4da12bda75c299f1519847a6bab7e6.png",
+      "path": "assets/cards/9eaa152dd5d6e28199349132.png",
+      "bytes": 66921,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/3a41d612f8396d57b3c31010d35f1961.png",
+      "path": "assets/cards/dad01cb6e8043d9d9568acd8.png",
+      "bytes": 27615,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/9c82a88f854a820dac19cb58c751fb4b.png",
+      "path": "assets/cards/524058cad3e9dd2e8bad779b.png",
+      "bytes": 77429,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/9a23a27c5e93163ede83cae69f724746.png",
+      "path": "assets/cards/b8940d1529bf8b0ea6d37971.png",
+      "bytes": 24475,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/345e689578d30a781362026229bcca4a.png",
+      "path": "assets/cards/820f8c32ed4e289268fa1af1.png",
+      "bytes": 70281,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/6b6199fa9b620085c526a0036c1c052c.png",
+      "path": "assets/cards/2f1be20dfd81024ac04b9631.png",
+      "bytes": 22082,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/fab7d04e69ff9ed1840ae11abb0eb131.png",
+      "path": "assets/cards/dec4fc1bacbb5b0785efcc96.png",
+      "bytes": 61673,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/26e4fe88ef6bbd2a77e4792a42444483.png",
+      "path": "assets/cards/746e74f8801a8fdfe02569eb.png",
+      "bytes": 27465,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/849d03c99a966fcb1b5426b5a3e1b3d9.png",
+      "path": "assets/cards/550d1087d049697dafcbb797.png",
+      "bytes": 77747,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/97bde48bc3580e7b621a4c4949edc1f7.png",
+      "path": "assets/cards/0232cf88bd3a1f2f157d62ad.png",
+      "bytes": 21885,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/7330590e3b26b4cc8a4fcbe69b3be091.png",
+      "path": "assets/cards/502969d42a85d7b36ac6bee4.png",
+      "bytes": 59959,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/161b89b026e2be37b0cdfc409cf89cd9.png",
+      "path": "assets/cards/698553c3be293e65c49140c4.png",
+      "bytes": 22735,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/2e54b2645ec99c2885e2e3d740863514.png",
+      "path": "assets/cards/352a04d2d8e0cd1248514e0c.png",
+      "bytes": 60471,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/03496ae672a23d33e3604be7163e6f25.png",
+      "path": "assets/cards/5fd2f1e6172faab3b79f7f53.png",
+      "bytes": 23622,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/a016feed9b1120c414be74033684eeac.png",
+      "path": "assets/cards/696a40731256fc1faca48c7e.png",
+      "bytes": 69532,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/e8d4452bd61ef89d2306532a236e3809.png",
+      "path": "assets/cards/c70ac1e5c7f738491bf7d9fb.png",
+      "bytes": 81371,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/36c629d5c0c37367a6ea62bf048de4c2.png",
+      "path": "assets/cards/dca9f9f0da54a97f6f6bdfee.png",
+      "bytes": 26427,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/d58be3dd9fab6b625bdf9a6ec6318122.png",
+      "path": "assets/cards/d6fd74fb4062755f12ffaa98.png",
+      "bytes": 27349,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/6bad127ffe7f5cbc8d149e9cb8eb68ce.png",
+      "path": "assets/cards/e39dc009393a1b5411dff050.png",
+      "bytes": 80406,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/61550c4b02ce77ea7b1e88a0414b60fe.png",
+      "path": "assets/cards/3064d6bcedaf65c11cce6b1e.png",
+      "bytes": 25929,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/190e344cc2f7996f5c69c18d00df7791.png",
+      "path": "assets/cards/ef05df01e386e7c9ea7cdcfc.png",
+      "bytes": 78890,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/8a1ac8b3733615d8a241d14f8b01c1e6.png",
+      "path": "assets/cards/724ea3998a49194c85217337.png",
+      "bytes": 24230,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/0019212bef3e0e5428617eb48c784011.png",
+      "path": "assets/cards/7400f82885be135a030a56cb.png",
+      "bytes": 66107,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/310321e3f8c3c6d6e3ac9ae1edbe3abb.png",
+      "path": "assets/cards/b6929dba2009a009c9dce864.png",
+      "bytes": 22071,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/3509fe62bd07ba6edee8d723b7462321.png",
+      "path": "assets/cards/3b79a435ab6c46101c7fe602.png",
+      "bytes": 64777,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/5271de994109b6f1ef853c9c5cb750c1.png",
+      "path": "assets/cards/5b6f746e46d259fd897b9df5.png",
+      "bytes": 23893,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/18a2a6ccde1ee4fcf6edba3dc7ee2f08.png",
+      "path": "assets/cards/dc4d3e659735e2c41af9bd12.png",
+      "bytes": 66476,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/a52d34d455554bd0cc6af71fa3a09cab.png",
+      "path": "assets/cards/019b20e2aaf564163e8d9971.png",
+      "bytes": 28568,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/aaddadfb15da9f488a59170153e5cef0.png",
+      "path": "assets/cards/29710886507eeeaa67400408.png",
+      "bytes": 90593,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/f61adc67b60f9a804f53e250fd8fa245.png",
+      "path": "assets/cards/fad2fdcd5cd77dc9e83e5c3f.png",
+      "bytes": 25206,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/194c2339eebfeeb6e29f46b9b42ce140.png",
+      "path": "assets/cards/f4c8948e742a5ba714818983.png",
+      "bytes": 70336,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/b1c1f47b747f293406d8c928ec9882aa.png",
+      "path": "assets/cards/14fd359552357f2df1f8ffe0.png",
+      "bytes": 21237,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/544607b8424723bea80ea56aab04b7b2.png",
+      "path": "assets/cards/8894d6a265ab3eb82d14d4a7.png",
+      "bytes": 58036,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/2b4fe4522c7584140443f5bfcc27c174.png",
+      "path": "assets/cards/2a01762a43f684191e33f231.png",
+      "bytes": 26326,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/68e0177cb02550c2b0246df7ad2f13b0.png",
+      "path": "assets/cards/1bbcb204abf86b3114fdce0e.png",
+      "bytes": 76797,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/4547ee55fa28cbc8329d8dce9f0045b9.png",
+      "path": "assets/cards/6bcc9696c39b763114e962a2.png",
+      "bytes": 23372,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/996f0f4ebea84fa8592270134b04f9b2.png",
+      "path": "assets/cards/412350df3daba835e5884159.png",
+      "bytes": 65199,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/5c772198db1daf081324cf33b81a89b4.png",
+      "path": "assets/cards/7caed948a3d7e63c736dcd6a.png",
+      "bytes": 24197,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/5fd99d2ef010d73f55fc019471a6b63d.png",
+      "path": "assets/cards/f776ae6a95ca69c66f4aebb0.png",
+      "bytes": 74856,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/ccf4f6940c59a24e02ba17686e70f5cc.png",
+      "path": "assets/cards/2041822513854773709de188.png",
+      "bytes": 23403,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/2eb686dc9f54a1ac0148f3a34c4a4d0b.png",
+      "path": "assets/cards/78aef63d4f07faa840606368.png",
+      "bytes": 68773,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/03085daf9eff2e12e60bca879e174fae.png",
+      "path": "assets/cards/f54b1faf2db8982f85f03d65.png",
+      "bytes": 26872,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/f941c721e24dec33ee2fd7abfd350efc.png",
+      "path": "assets/cards/57bc0c243b29d5e1d6d4f4fd.png",
+      "bytes": 79380,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/09af039488c9c9407a24c3569a7d5146.png",
+      "path": "assets/cards/1432ce5173c442108c2830b8.png",
+      "bytes": 23701,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/4da5484797e3a76a94f757e10c9f6649.png",
+      "path": "assets/cards/6d68b3081ef8fa7e5eb4d428.png",
+      "bytes": 68979,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/fee1ee94e920b9c10040fdf862d3f652.png",
+      "path": "assets/cards/188ef3ea009accab8575a1c1.png",
+      "bytes": 21107,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/0ccfa5144682dbba3c88f2cfbc233931.png",
+      "path": "assets/cards/4c57e4e308a8032c09f3fd55.png",
+      "bytes": 61472,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/eb805dcb66838a7462c3b6ec05e814ea.png",
+      "path": "assets/cards/3af34e4fbe9b50c701e6eca6.png",
+      "bytes": 25717,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/4491d69de3282b0ba0881b3e684640be.png",
+      "path": "assets/cards/8d6ce6754b4c89823c09330d.png",
+      "bytes": 74881,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/ca9cb3c44c31771807183df570dac6a9.png",
+      "path": "assets/cards/8e1d13dc4edd30761af9b905.png",
+      "bytes": 25970,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/ed990e9655d9dbaab2997e63153d1758.png",
+      "path": "assets/cards/ea3948e02a1a08d769f2eacc.png",
+      "bytes": 74600,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/5a4e4ec24d0c4924f035b88ea42d739c.png",
+      "path": "assets/cards/5d5e75e05ae661af1495ac4c.png",
+      "bytes": 25330,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/f130abc4d58e7948c44545a0b18168c5.png",
+      "path": "assets/cards/a6de4b1230ac6e92af6f2d1f.png",
+      "bytes": 70356,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/aa571f8eaff1a05fe85cbf0086aa390f.png",
+      "path": "assets/cards/4991fe8d455c6aa098d9ce39.png",
+      "bytes": 61220,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/703139bbb0fa00387a9ca83c36727f4a.png",
+      "path": "assets/cards/840370de6e64c96a4a0868b6.png",
+      "bytes": 26382,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/90982b2739fd28b0c9846c03429af0de.png",
+      "path": "assets/cards/44c6d9f23262c57e8d017c3f.png",
+      "bytes": 83877,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/cabee4e10ea8a674c460117c213821cc.png",
+      "path": "assets/cards/cbf3957f80da3c81d3accecb.png",
+      "bytes": 29374,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/885707bdddd74bbb7bd7ddbffa5d5e54.png",
+      "path": "assets/cards/70ec3f09e2c581b2b47734f8.png",
+      "bytes": 87246,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/2c08ee60177d1b671aea8793bd984fa7.png",
+      "path": "assets/cards/c4436933db8963e8d4e2e65b.png",
+      "bytes": 27672,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/dd93aa733559c1f56cb35b2df8ad71ad.png",
+      "path": "assets/cards/61a89581d0790ccbc22cb34f.png",
+      "bytes": 77022,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/30e87d64f55d40a71c221abc3b3cb7dc.png",
+      "path": "assets/cards/cfb9ad8b37e7cd293bd2fd1d.png",
+      "bytes": 25695,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/a7d907f776b8e62fbc04a0f113c600db.png",
+      "path": "assets/cards/7a8269e8b57daf56737c629d.png",
+      "bytes": 73757,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/f595acd009c6b4bcf96d7ce4a98e7246.png",
+      "path": "assets/cards/4a9185e222474813ff8ac583.png",
+      "bytes": 23788,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/fc9c3c78be1b3ccb84084fa2d9c2329f.png",
+      "path": "assets/cards/2cd038a0cd73144b8ed31d35.png",
+      "bytes": 67685,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/1dffb3d4607f43919b36183b126d7dbd.png",
+      "path": "assets/cards/1d9082ad07f585cb3c0f082a.png",
+      "bytes": 22369,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/22a18b63fbfacea25ca6de08650b8804.png",
+      "path": "assets/cards/7fef9fdb97783fd3b62cf8ff.png",
+      "bytes": 67110,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_squarehud_auto/8b1c2e8a84f1b251d7f6b796bb27490a.png",
+      "path": "assets/cards/e7816965115db76111044262.png",
+      "bytes": 22531,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_magic_auto/290e66238d6f470a5f327ea15757b7ec.png",
+      "path": "assets/cards/cbb9d8b41a1dcf09ef69c03d.png",
+      "bytes": 69438,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/bc5c433997ab7f9ac5938d040b7406d2.png",
+      "path": "assets/cards/251660392eb08f1e174c1680.png",
+      "bytes": 25898,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/7e00b12adcc7c6a48bf625aa91e2454f.png",
+      "path": "assets/cards/7b3f423e8527674a2b3a3d64.png",
+      "bytes": 148418,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/7e182ec521ccd4c95b2efb13d0fec90d.png",
+      "path": "assets/cards/4a1bac9adb29448fb69eff7d.png",
+      "bytes": 9157,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+      "path": "assets/cards/9607e794a87edc81f9e0a901.png",
+      "bytes": 7989,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/d2c42bd355b98d78f554c8e540959a51.png",
+      "path": "assets/cards/b7b031c6a90998f4de11412a.png",
+      "bytes": 8854,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/dc7bd05ddb2ceb42ff574051e422c8ab.png",
+      "path": "assets/cards/354fb087fb2468b853c07eea.png",
+      "bytes": 26613,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/b70ff9e54e3a0d76fba729a5bbb1c792.png",
+      "path": "assets/cards/f37b0cafcce9ffbefcf4ac18.png",
+      "bytes": 141584,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/aff826c9cd5b1536b56150ea8cac618c.png",
+      "path": "assets/cards/b444e0a7ac8c8d6d3cf1feed.png",
+      "bytes": 8062,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/c245dcd7d02580a31df7077c93cc249e.png",
+      "path": "assets/cards/4738d8e894cf8dbfebd1068e.png",
+      "bytes": 7947,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/505975bd5d63f01325ee29515551acdb.png",
+      "path": "assets/cards/6334011bd0d97ad180a7e1df.png",
+      "bytes": 30468,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/50ad0883c3bc185ffdd198263ab65466.png",
+      "path": "assets/cards/93bd2d25266d7cb8986ad942.png",
+      "bytes": 214108,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/a36b9dab26e55e160b31423a00a12791.png",
+      "path": "assets/cards/ce694af3e50a4fe99e15a8a2.png",
+      "bytes": 11317,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/59f25d3b8c62ec326c96e03ade53e11b.png",
+      "path": "assets/cards/2fafcdd07f4f55e500778336.png",
+      "bytes": 22734,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/aa7d598f183346447345b42eecd99669.png",
+      "path": "assets/cards/87e308383618a1218338e757.png",
+      "bytes": 189020,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/d5a71a34dd88803a3e87f3face4ffcec.png",
+      "path": "assets/cards/38f7c3ecc02755c4310b7749.png",
+      "bytes": 8753,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/a4ac6aceaccb7b1539e48d2f2a209eb7.png",
+      "path": "assets/cards/2adb9985d474f2e7059089ce.png",
+      "bytes": 8665,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/28514d6f37bd65aaf8e212ebcc4b52c3.png",
+      "path": "assets/cards/39cb2bc0a5eca36bbb8b76f8.png",
+      "bytes": 26397,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/1b87c6a9b387b9a6bd48cefaf2967209.png",
+      "path": "assets/cards/c4191c07897944c384b99479.png",
+      "bytes": 160055,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/3cbd047ed370bd5f9e720ee63e6be04c.png",
+      "path": "assets/cards/05bd76a898a29c55ba57ecc1.png",
+      "bytes": 10331,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/7177ec46b855ed09f95be35885e84f48.png",
+      "path": "assets/cards/75b0e189b5580bcd8d31b396.png",
+      "bytes": 9680,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/f9d2e1fcfbfc30496eff6da8f4227f52.png",
+      "path": "assets/cards/e577cc50d5f017fd302faead.png",
+      "bytes": 29323,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/585ca34d534d39608202e4be766a675c.png",
+      "path": "assets/cards/676978e49833be63afe0994b.png",
+      "bytes": 132427,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/2a7836597ea8b3050614e669b9318649.png",
+      "path": "assets/cards/8067542066533c3ba176ef00.png",
+      "bytes": 8157,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/ae090d340811e7e00da09ffdf2ffad08.png",
+      "path": "assets/cards/e2acbc62990e73f65a5ee12b.png",
+      "bytes": 8803,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/bcd369cc4dfb9c584a2e336876e15f6d.png",
+      "path": "assets/cards/587478d93d77c2ddfc20f64c.png",
+      "bytes": 30366,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/76faabc5c6c354f8221b789e17058253.png",
+      "path": "assets/cards/e32e874e8e42ae09eb22badf.png",
+      "bytes": 248656,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/847728fabf55d8e10d42983c714343ee.png",
+      "path": "assets/cards/4cbb10dbf8cdacd4d25ea4b9.png",
+      "bytes": 12028,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/3bcc949a223374da9328849b8ec28d07.png",
+      "path": "assets/cards/6ef62beb7b34f4aa247a9083.png",
+      "bytes": 9340,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/78de9ae5fc4ed040d57f27fc193de603.png",
+      "path": "assets/cards/2dfcdaa7a7abd355262c4fd4.png",
+      "bytes": 32939,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/93093539e579d83840f98dfb6e200adf.png",
+      "path": "assets/cards/2cc17d08978cd6a1ebe8d18e.png",
+      "bytes": 156377,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/1a9a03335e6cb28491cd2f69d98b8f9c.png",
+      "path": "assets/cards/ab4ccdb9497c198e29d8ab26.png",
+      "bytes": 9624,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/cb5eedf580967893e6f4ea787b20e2c8.png",
+      "path": "assets/cards/271686475140c55737875394.png",
+      "bytes": 8178,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/1b164494b9d31aee3629b4d282eda71e.png",
+      "path": "assets/cards/8922dd50acda70a5b9f9a6d1.png",
+      "bytes": 28780,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/b3fd4e0aa4faaf1c23804e7a554e0ba3.png",
+      "path": "assets/cards/c05e536db62b4fbb8d53b942.png",
+      "bytes": 150073,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/7c9933a16160958bf2229f9b166c09f7.png",
+      "path": "assets/cards/68fad9ab9caaf457def7e19d.png",
+      "bytes": 10334,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/74101a4d5cb08b865bfb5b8d9b393429.png",
+      "path": "assets/cards/6924a1a548c5ae03bdf0c052.png",
+      "bytes": 8963,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/d7321b3c5334ca1521ec550c980b3f56.png",
+      "path": "assets/cards/ebe3c165ab0a6678b25025b4.png",
+      "bytes": 22375,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/63b4742b5a23950a558afc07e5622296.png",
+      "path": "assets/cards/a99ef8b239c9aa7a1a5b4fc1.png",
+      "bytes": 148121,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/d9dba2b673c153cedc9620b74634a0e0.png",
+      "path": "assets/cards/20d126c41785dc349511db67.png",
+      "bytes": 9159,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/8013b9badd357ac8a7b55757149e1428.png",
+      "path": "assets/cards/db7d197ad2f300d4cf381972.png",
+      "bytes": 9072,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/64c94b8dcdbfb48ab4611de5daa38c32.png",
+      "path": "assets/cards/ff712e775ee88be69a8a164f.png",
+      "bytes": 26719,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/38353de545d3bc7eef4e286b4243faa8.png",
+      "path": "assets/cards/88ecee7ba4d6042246608fb3.png",
+      "bytes": 196994,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/585756115d0f427c6641a8b4fc89416a.png",
+      "path": "assets/cards/7cce250bd95526fc3b6cd3f0.png",
+      "bytes": 12019,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/39e0c8120f5c05173cd98d382f01f848.png",
+      "path": "assets/cards/3917bbe8055eff95c8b74c59.png",
+      "bytes": 8507,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/69b517f66c1ed9115c8d142ca9098467.png",
+      "path": "assets/cards/23890c4f59cd5ec3ed36e8db.png",
+      "bytes": 25340,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/ad8947e7d30e55756a7d76896f46ea29.png",
+      "path": "assets/cards/f5868419a7075f31b80e376b.png",
+      "bytes": 128821,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/1dcc9302f7aa8a52234975fe30407f7a.png",
+      "path": "assets/cards/6f5027d05ce47ec0cf6f64ce.png",
+      "bytes": 11793,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/e582576458eb2f1a3585582d53e4e2f7.png",
+      "path": "assets/cards/a69f9db96310b072d3dd2b1e.png",
+      "bytes": 9228,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/ddd0732d105530d4b62021dca87202a9.png",
+      "path": "assets/cards/da508f46134664819e72e87f.png",
+      "bytes": 24743,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/d7b23b766a880df73d7d59f9c679cd40.png",
+      "path": "assets/cards/41a0cafc6ae7fdb7c45ae098.png",
+      "bytes": 173269,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/041cc8fe938c1a1b12969ce92e4304f1.png",
+      "path": "assets/cards/97cfacd25a9db15797ffc9ef.png",
+      "bytes": 9793,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/2e179f748486d73caa15d6d2427157f2.png",
+      "path": "assets/cards/60786f2743b0b012f0469e6b.png",
+      "bytes": 8063,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/45bc4978da2e172f56758d4ddf2911b3.png",
+      "path": "assets/cards/9c7aa74c9e3400833235cfcb.png",
+      "bytes": 26128,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/b44fa31d1cefd1f812cef5901bb5db0c.png",
+      "path": "assets/cards/722992fc8229901f7febe635.png",
+      "bytes": 138892,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/871f5b916ae8d187575a2df42c4cad74.png",
+      "path": "assets/cards/6720f8ce6389ad8f48edf220.png",
+      "bytes": 10359,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/db2b7f01eabfa9111d708a01d596c101.png",
+      "path": "assets/cards/b522511d455918adc51bd14a.png",
+      "bytes": 9186,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/2ff54ea6cbe795347fb9c4a5fd53ae76.png",
+      "path": "assets/cards/1621acd4308cd2d41e921fb9.png",
+      "bytes": 28310,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/6db784af711d4b968c0d407a70360b63.png",
+      "path": "assets/cards/0150432bc19d0b4f4750562c.png",
+      "bytes": 153151,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/795dd1e31f7933e388ff435ca93b161a.png",
+      "path": "assets/cards/482bff42530d8a253c655012.png",
+      "bytes": 10368,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/9510a42389dd49d1fa64ab5daa2b492e.png",
+      "path": "assets/cards/5d8fda22037f6eb38680357b.png",
+      "bytes": 8986,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/295a4d70c2080024ed752b893d634081.png",
+      "path": "assets/cards/1345707d20d5ef7bae79c035.png",
+      "bytes": 36173,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/b64c5e798a8705e1d0bb4077dde7fc5f.png",
+      "path": "assets/cards/9f237e88a65ec429cbef7cee.png",
+      "bytes": 164510,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/1c702a76fe3fd2db678177e17965ba3a.png",
+      "path": "assets/cards/0b38982191749853d817f43c.png",
+      "bytes": 9143,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/34ee14c857b9a1f29f90f49b57808d84.png",
+      "path": "assets/cards/2fe0c502bea5749ce378ac77.png",
+      "bytes": 9295,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/fd8ce8b6ccef463717b5a50a85d4db9d.png",
+      "path": "assets/cards/8dc3a43e2c7589c09ce12760.png",
+      "bytes": 24208,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/434ca597839b623d436a73232fe0619d.png",
+      "path": "assets/cards/dbb8407789b8a095489cf959.png",
+      "bytes": 158711,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/95581fe110e7db41c0e289eeb7da4058.png",
+      "path": "assets/cards/fd5afc5be4e90214f666bc59.png",
+      "bytes": 11542,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/92aecc9e4e94535f80957e9b17c7fd12.png",
+      "path": "assets/cards/f896c4a7180e56a0937c8f9f.png",
+      "bytes": 9200,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/94f40003033d7cacbc42f7ed54fe2bf2.png",
+      "path": "assets/cards/32bd1899243308f25831d8e1.png",
+      "bytes": 22278,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/168aae5e0b3a8a4528ddd89bb14868e7.png",
+      "path": "assets/cards/e55233a0d454c5ade1520750.png",
+      "bytes": 129931,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/4b8dd6015ec25269d9c794a3744c12c3.png",
+      "path": "assets/cards/2470a6a7660136f5da5f955c.png",
+      "bytes": 10907,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/19c90230d5451669f5b6fb63220f7a84.png",
+      "path": "assets/cards/6b56564b4c81463f1b1e41bf.png",
+      "bytes": 9725,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/48ae48ae26a5bcd0db5569438ce880d5.png",
+      "path": "assets/cards/763f9364e9771d72e43f54da.png",
+      "bytes": 9973,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_banshen_auto/5948264aeb8444e4c0bce593b848977f.png",
+      "path": "assets/cards/ca919f84b6ae90aa943ba7b5.png",
+      "bytes": 32534,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_haibao_auto/ee127a1c111ea90f739f985fb99b0040.png",
+      "path": "assets/cards/30be6cba35778a4c57cdc3d7.png",
+      "bytes": 181065,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/76563408c929e63fae226462fd2b3d35.png",
+      "path": "assets/cards/f139ca0b14c669c6086737d6.png",
+      "bytes": 10832,
+      "error": null
+    },
+    {
+      "url": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/60593b2fae31599e18ad659be2cb9806.png",
+      "path": "assets/cards/8aea8caf08b523ff6152ab5a.png",
+      "bytes": 9284,
+      "error": null
+    }
+  ]
+}

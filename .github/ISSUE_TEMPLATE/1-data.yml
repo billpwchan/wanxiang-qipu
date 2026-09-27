@@ -1,0 +1,28 @@
+name: 数据纠错
+description: 卡牌效果、路线买法、拍卖上限、站位和实际不一样
+labels: [数据]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: 在哪里
+      description: 页面地址，或路线 / 卡牌名字
+      placeholder: https://wanxiang.52-198-144-26.sslip.io/#/r/kaituan 第一次拍卖
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: 现在写的是什么，应该是什么
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 依据
+      description: 游戏内截图、卡面原文、对局记录、datawxq 查询条件与结果，任选
+  - type: input
+    id: version
+    attributes:
+      label: 游戏版本
+      placeholder: S1 · 9/24

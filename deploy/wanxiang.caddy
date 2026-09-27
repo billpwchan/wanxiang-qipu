@@ -1,0 +1,4 @@
+# Owns only this hostname and fragment. Other services remain unchanged.
+wanxiang.52-198-144-26.sslip.io {
+ reverse_proxy wanxiang-guide:8080
+}

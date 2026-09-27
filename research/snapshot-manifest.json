@@ -1,0 +1,32 @@
+[
+  {
+    "id": "heroes",
+    "url": "https://game.gtimg.cn/images/amside/ide_timer/589094_oscard_new_1.js",
+    "count": 85,
+    "sha256": "00f9903f22a8acf505874558a393d61c8159428825a53d3a4c0c8663e21743d0"
+  },
+  {
+    "id": "talents",
+    "url": "https://game.gtimg.cn/images/amside/ide_timer/589094_oscard_new_8.js",
+    "count": 255,
+    "sha256": "cd10ca046fa2e7f2b13b64d01e16d78b588b987adc00b7e08bbe93f8dee5ae78"
+  },
+  {
+    "id": "equipment",
+    "url": "https://game.gtimg.cn/images/amside/ide_timer/589094_oscard_new_4.js",
+    "count": 73,
+    "sha256": "c4b72089a4fa0699cf9314e2358d41899fe9c32fcc5d726d4a0785240e31f980"
+  },
+  {
+    "id": "effects",
+    "url": "https://game.gtimg.cn/images/amside/ide_timer/589094_oscard_new_2.js",
+    "count": 98,
+    "sha256": "6c72de81d9297d5f65cbba898794650c8b74d06a72951069059eb2f39e7c717f"
+  },
+  {
+    "id": "lords",
+    "url": "https://game.gtimg.cn/images/amside/ide_timer/589094_oscard_new_16.js",
+    "count": 19,
+    "sha256": "458ffc4363b9b713d4f361751154b7737ee318fa805ca9f7419b5ebf18ddf3db"
+  }
+]

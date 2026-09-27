@@ -1,0 +1,30 @@
+<!doctype html>
+<!-- README 设备展示（1440×820）：iPad 横屏的对局副屏 + 手机上的开局推荐，嵌的是真实站点页面。
+     跟随 prefers-color-scheme，scripts/build_readme_images.mjs 分别用浅色和夜场截图。 -->
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>万象棋谱 · showcase</title>
+<style>
+:root { --bg: #e8edf7; --bg2: #d6def1; --bezel: #0c0f1a; --edge: #2a2f42; --shadow: rgba(30, 44, 110, .32); color-scheme: light; }
+@media (prefers-color-scheme: dark) { :root { --bg: #0a0e1c; --bg2: #141d3c; --bezel: #05070d; --edge: #30374f; --shadow: rgba(0, 0, 0, .7); color-scheme: dark; } }
+* { box-sizing: border-box; margin: 0; }
+html, body { width: 1440px; height: 820px; overflow: hidden; }
+body { background: radial-gradient(120% 90% at 30% 20%, var(--bg2), var(--bg) 60%); position: relative; }
+/* 竖纹：和站点同一种玻璃语言，这里只做极淡的背景纹理 */
+body::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, rgba(255,255,255,.07) 0 1px, transparent 1px 28px); pointer-events: none; }
+.dev { position: absolute; background: var(--bezel); box-shadow: 0 0 0 2px var(--edge), 0 40px 80px -30px var(--shadow), 0 18px 30px -18px var(--shadow); overflow: hidden; }
+.dev iframe { border: 0; display: block; transform-origin: 0 0; background: var(--bg); }
+.pad { left: 70px; top: 70px; width: 1016px; height: 712px; border-radius: 40px; padding: 18px; }
+.pad .scr { width: 980px; height: 676px; border-radius: 24px; overflow: hidden; }
+.pad iframe { width: 1180px; height: 814px; transform: scale(.8305); }
+.phone { left: 1052px; top: 150px; width: 318px; height: 650px; border-radius: 52px; padding: 11px; }
+.phone .scr { width: 296px; height: 628px; border-radius: 42px; overflow: hidden; }
+.phone iframe { width: 390px; height: 828px; transform: scale(.759); }
+</style>
+<div class="dev pad"><div class="scr"><iframe id="a" src="/?still#/play/kaituan?lord=%E9%A6%99%E9%A6%99&s=4"></iframe></div></div>
+<div class="dev phone"><div class="scr"><iframe id="b" src="/?still#/?ban=%E4%B8%89%E5%88%86%E4%B9%8B%E5%9C%B0"></iframe></div></div>
+<script>
+let n = 0;
+for (const f of document.querySelectorAll('iframe')) f.addEventListener('load', () => { if (++n === 2) setTimeout(() => { document.body.dataset.ready = '1'; }, 3800); });
+</script>
+</html>

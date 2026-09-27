@@ -1,0 +1,22 @@
+{
+  "name": "wanxiang-qipu",
+  "version": "5.0.0",
+  "private": true,
+  "description": "王者万象棋 S1 对局助手：按本局禁用给出棋手和路线，逐阶段告诉你买什么；附带读屏的局内副驾。",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "serve": "python3 -m http.server 4173 --bind 127.0.0.1 --directory site/dist",
+    "test": "node scripts/verify-site.mjs && node scripts/verify-ui.mjs && node copilot/test/run.mjs --replay",
+    "verify": "node scripts/verify-site.mjs",
+    "verify:ui": "node scripts/verify-ui.mjs",
+    "verify:gpu": "GPU=1 node scripts/verify-ui.mjs",
+    "test:copilot": "node copilot/test/run.mjs",
+    "build:facts": "node scripts/build_facts.mjs",
+    "release": "python3 scripts/make_release.py",
+    "copilot": "./copilot/wx",
+    "copilot:demo": "./copilot/wx demo"
+  }
+}

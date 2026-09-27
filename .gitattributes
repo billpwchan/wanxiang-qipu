@@ -1,0 +1,25 @@
+# 二进制
+*.png    binary
+*.jpg    binary
+*.webp   binary
+*.woff2  binary
+*.otf    binary
+*.ttf    binary
+
+# 生成文件：GitHub 默认折叠 diff、不计入语言统计
+site/dist/data/facts.js     linguist-generated
+site/dist/data/meta.js      linguist-generated
+site/dist/data/evidence.js  linguist-generated
+site/dist/data/icons.js     linguist-generated
+site/dist/data/cards.json   linguist-generated
+site/dist/data/*.json       linguist-generated
+site/dist/release.json      linguist-generated
+copilot/test/frames.jsonl   linguist-generated
+
+# 原始抓取数据与旧版本：不计入语言统计
+research/raw/**                linguist-vendored
+research/raw-*/**              linguist-vendored
+research/deep-s1-*/**          linguist-vendored
+research/v4/**                 linguist-vendored
+research/v2/**                 linguist-vendored
+site/legacy-*/**               linguist-vendored

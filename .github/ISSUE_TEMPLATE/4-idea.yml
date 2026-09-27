@@ -1,0 +1,17 @@
+name: 功能建议
+description: 想要的功能、页面上用不顺的地方
+labels: [建议]
+body:
+  - type: textarea
+    id: moment
+    attributes:
+      label: 在对局的哪个时刻
+      description: 比如：第二次拍卖前、撞车以后、决赛换牌时
+    validations:
+      required: true
+  - type: textarea
+    id: want
+    attributes:
+      label: 希望它怎么帮你
+    validations:
+      required: true
