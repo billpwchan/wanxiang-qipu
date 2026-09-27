@@ -14,7 +14,7 @@
 [![在线使用](https://img.shields.io/badge/在线使用-wanxiang-2c46f5?style=flat-square)](https://wanxiang.52-198-144-26.sslip.io/)
 [![游戏版本](https://img.shields.io/badge/游戏版本-S1_·_9%2F24-d8952a?style=flat-square)](CHANGELOG.md)
 [![数据](https://img.shields.io/badge/检索器终局-18.5_万-465073?style=flat-square)](docs/methodology.md)
-[![verify](https://img.shields.io/github/actions/workflow/status/billpwchan/wanxiang-qipu/verify.yml?branch=main&label=50%20项浏览器测试&style=flat-square)](https://github.com/billpwchan/wanxiang-qipu/actions/workflows/verify.yml)
+[![verify](https://img.shields.io/github/actions/workflow/status/billpwchan/wanxiang-qipu/verify.yml?branch=main&label=50%20%E9%A1%B9%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95&style=flat-square)](https://github.com/billpwchan/wanxiang-qipu/actions/workflows/verify.yml)
 [![无构建](https://img.shields.io/badge/依赖-0_·_无构建-10152e?style=flat-square)](#本地运行)
 [![MIT](https://img.shields.io/badge/代码许可-MIT-8990ae?style=flat-square)](LICENSE)
 
