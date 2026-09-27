@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN" class="js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>万象棋谱 · S1</title>
+<meta name="description" content="王者万象棋 S1：按本局禁用阵营选棋手和路线，逐回合买牌、转型，数据来自顶尖玩家对局。">
+<meta name="theme-color" content="#0c0d12">
+<meta property="og:title" content="万象棋谱 · S1">
+<meta property="og:description" content="禁了谁 → 拿哪个棋手、走哪条路线 → 每回合买什么。">
+<meta property="og:image" content="assets/og.jpg">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/smiley.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="app.css">
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/Flip.min.js" defer></script>
+<script src="vendor/SplitText.min.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<header class="bar" id="bar">
+  <a class="brand" href="#/">万象棋谱<small>S1 · 9/24 版本</small></a>
+  <nav class="nav" aria-label="主导航">
+    <a href="#/routes" data-nav="routes">路线</a>
+    <a href="#/lords" data-nav="lords">棋手</a>
+    <a href="#/tips" data-nav="tips">要点</a>
+    <a href="#/cards" data-nav="cards">查牌</a>
+  </nav>
+</header>
+<main id="view" tabindex="-1"><p class="wrap" style="padding-top:140px;color:#6a6e78">载入中…</p></main>
+<dialog class="sheet" id="sheet" aria-label="详情" data-lenis-prevent><div class="sh" id="sheet-body"></div></dialog>
+<noscript><p class="wrap" style="padding-top:140px">需要开启 JavaScript。</p></noscript>
+</body>
+</html>

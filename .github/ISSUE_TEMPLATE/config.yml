@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 数据怎么来的
+    url: https://github.com/billpwchan/wanxiang-qipu/blob/main/docs/methodology.md
+    about: 平均名次、「棋手的全部对局」、撞车、搭档这些数字的算法和局限

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>万象棋谱 · S1</title>
+<meta name="description" content="王者万象棋 S1 对局助手：看本局禁用，选棋手和路线；对局里每个阶段该买什么、拍卖出多少、什么时候换。数据来自顶尖对局。">
+<meta name="theme-color" content="#e8edf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0e1c" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="万象棋谱 · S1">
+<meta property="og:description" content="这局禁了谁 → 用哪个棋手、打哪套 → 每个阶段买什么。">
+<meta property="og:image" content="assets/og.jpg">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/shuhei.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="app.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<header class="bar" id="bar">
+  <div class="wrap">
+    <a class="brand" href="#/">万象棋谱<small>S1 · 9/24 版本</small></a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#/" data-nav="home">开局</a>
+      <a href="#/routes" data-nav="routes">路线</a>
+      <a href="#/lords" data-nav="lords">棋手</a>
+      <a href="#/cards" data-nav="cards">查牌</a>
+    </nav>
+  </div>
+</header>
+<main id="view" tabindex="-1"><p class="wrap" style="padding-top:120px;color:#8990ae">载入中…</p></main>
+<footer class="foot" id="foot">
+  <div class="wrap">
+    <span>数据：datawxq.com 公开榜单（顶尖棋手 · 9/24 版本 · 近 7 天）· 官方卡牌与社区阵容接口 · 更新于 2026-09-26</span>
+    <span><button class="link" data-note>数据说明</button> · <a class="link" href="#/rules">通用规则</a></span>
+  </div>
+</footer>
+<dialog class="sheet" id="sheet" aria-label="详情"><div class="panel" id="panel"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p class="wrap" style="padding-top:120px">需要开启 JavaScript。</p></noscript>
+</body>
+</html>

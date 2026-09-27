@@ -1,0 +1,5 @@
+# 数据与素材脚本（scripts/*.py、research/v3/*.py）。网站本身和测试不需要 Python 依赖。
+Pillow>=10.0        # 卡图 / 立绘转 WebP、分享图
+numpy>=1.24         # 分享图玻璃效果、抠图焦点
+opencv-python>=4.8  # fetch_skins.py：SIFT 匹配卡面所用皮肤
+fonttools[woff]>=4.40  # build_font.py：字体子集化为 woff2

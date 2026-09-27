@@ -1,0 +1,23 @@
+name: 游戏版本更新了
+description: 新版本上线或平衡调整，需要重跑数据
+labels: [版本更新]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: 新版本
+      placeholder: 例如 10/08 平衡调整
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: 改了什么
+      description: 官方公告链接，或改动的卡牌、棋手、天赋
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: 可能影响哪些路线
+      description: 可选

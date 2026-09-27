@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>万象副驾</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23e6b43a'/%3E%3C/svg%3E">
+<style>
+:root { --bg:#101419; --panel:#182028; --line:#2a333c; --ink:#eef2f1; --ink2:#aab5bf; --ink3:#77828d; --gold:#e6b43a; --gold-wash:#3a3020; --azure:#86ade0; --red:#e0788d;
+  --display:"Kaiti SC","STKaiti","KaiTi",serif; --body:-apple-system,"PingFang SC","Hiragino Sans GB",sans-serif; --mono:ui-monospace,"SF Mono",Menlo,monospace; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 var(--body); padding: env(safe-area-inset-top,0) 14px calc(env(safe-area-inset-bottom,0) + 14px); }
+.bar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 12.5px; color: var(--ink3); }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--ink3); }
+.dot.on { background: #5fcf8f; box-shadow: 0 0 8px #5fcf8f; }
+.chip { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 99px; background: var(--panel); border: 1px solid var(--line); color: var(--ink2); font-size: 13px; white-space: nowrap; }
+.chip b { color: var(--ink); font-family: var(--mono); }
+.screen { background: var(--gold); color: #1c232b; border-color: var(--gold); font-weight: 700; }
+button { font: inherit; color: inherit; cursor: pointer; }
+.grid { display: grid; gap: 14px; margin-top: 14px; }
+@media (min-width: 900px) { .grid { grid-template-columns: 1.3fr 1fr; } }
+.now { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 14px; padding: 16px 18px; }
+.now-k { font-size: 12px; letter-spacing: .12em; color: var(--gold); }
+.now-msg { font: 44px/1.15 var(--display); margin: 6px 0 4px; }
+.now-why { color: var(--ink2); font-size: 15px; }
+.list { display: grid; gap: 8px; margin-top: 12px; }
+.it { display: grid; grid-template-columns: 52px 1fr auto; gap: 12px; align-items: center; padding: 10px 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; }
+.it.top { border-color: var(--gold); background: linear-gradient(90deg, var(--gold-wash), var(--panel) 70%); }
+.it img, .it .mono { width: 52px; height: 52px; border-radius: 10px; object-fit: cover; background: #0c1014; display: grid; place-items: center; font: 22px var(--display); color: var(--ink3); }
+.it-name { font-weight: 700; font-size: 17px; }
+.it-why { font-size: 13px; color: var(--ink2); }
+.it-s { font: 700 20px var(--mono); color: var(--ink3); }
+.it.top .it-s { color: var(--gold); }
+h2 { font: 20px var(--display); margin: 18px 0 8px; font-weight: 400; color: var(--ink2); }
+.routes { display: flex; gap: 6px; flex-wrap: wrap; }
+.routes button { border: 1px solid var(--line); background: var(--panel); border-radius: 99px; padding: 6px 12px; font-size: 14px; }
+.routes button.on { background: var(--ink); color: var(--bg); border-color: var(--ink); font-weight: 700; }
+.routes button small { color: var(--ink3); font-family: var(--mono); margin-left: 4px; }
+.plan { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.plan-h { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.plan-id { font: 34px/1 var(--display); color: var(--gold); white-space: nowrap; flex: none; }
+.buys { display: flex; gap: 8px; margin: 10px 0 6px; flex-wrap: wrap; }
+.buys span { display: grid; justify-items: center; font-size: 11.5px; gap: 2px; }
+.buys img { width: 44px; height: 44px; border-radius: 9px; object-fit: cover; }
+.plan ul { margin: 6px 0 0; padding-left: 1.1em; color: var(--ink2); }
+.ctl { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+.ctl button { border: 1px solid var(--line); background: var(--panel); border-radius: 10px; padding: 10px 14px; font-weight: 600; }
+.ctl button.primary { background: var(--gold); color: #1c232b; border-color: var(--gold); }
+.deep { white-space: pre-wrap; background: #0c1014; border: 1px dashed var(--line); border-radius: 10px; padding: 12px; margin-top: 10px; color: var(--ink); font-size: 15px; }
+.log { font-size: 13px; color: var(--ink3); display: grid; gap: 3px; }
+.log b { color: var(--ink2); font-weight: 600; }
+.owned { display: flex; gap: 6px; flex-wrap: wrap; }
+.empty { color: var(--ink3); font-size: 14px; padding: 10px 0; }
+</style>
+</head>
+<body>
+<div class="bar"><span class="dot" id="dot"></span><span id="cap">连接中…</span><span class="chip screen" id="screen">—</span><span class="chip">回合 <b id="round">?</b></span><span class="chip">能量 <b id="energy">?</b></span><span class="chip">棋手 <b id="lord">?</b></span><span class="chip">禁用 <b id="ban">?</b></span></div>
+<div class="grid">
+  <section>
+    <div class="now"><div class="now-k" id="now-k">现在</div><div class="now-msg" id="now-msg">等待画面</div><div class="now-why" id="now-why">把 iPad 画面镜像到这台 Mac，副驾会自己读商店、天赋和拍卖。</div></div>
+    <div class="list" id="list"></div>
+    <div class="deep" id="deep" hidden></div>
+    <div class="ctl"><button class="primary" id="btn-deep">深想这一步</button><button id="btn-voice">语音：开</button><button id="btn-reset">新一局</button><button id="btn-rminus">回合 −</button><button id="btn-rplus">回合 +</button></div>
+  </section>
+  <section>
+    <h2>路线（自动推断，点一下锁定）</h2><div class="routes" id="routes"></div>
+    <h2>这个阶段的计划</h2><div class="plan" id="plan"></div>
+    <h2>你拿到的牌</h2><div class="owned" id="owned"><span class="empty">从手牌里自动记录</span></div>
+    <h2>说过的话</h2><div class="log" id="log"></div>
+  </section>
+</div>
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const SCREEN = { lord: '选棋手', talent: '天赋', auction: '拍卖', shop: '商店', other: '战斗/其他', waiting: '等待' };
+let S = null, routes = [];
+const post = (p) => fetch(p, { method: 'POST' });
+fetch('/routes').then((r) => r.json()).then((r) => { routes = r; if (S) draw(S); });
+const img = (n) => S?.imgs?.[n] ? `<img src="${S.imgs[n]}" alt="">` : `<span class="mono">${esc((n || '?')[0])}</span>`;
+function draw(s) {
+  S = s;
+  $('dot').classList.toggle('on', s.lastFrame && Date.now() / 1000 - s.lastFrame < 8);
+  $('cap').textContent = s.capture + (s.fps ? ` · ${s.fps} fps` : '');
+  $('screen').textContent = SCREEN[s.screen] || s.screen;
+  $('round').textContent = s.round ?? (s.estRound ? '≈' + s.estRound : '?');
+  $('energy').textContent = s.energy ?? '?';
+  $('lord').textContent = s.lord ?? '?';
+  $('ban').textContent = s.ban ?? '?';
+  const top = s.advice?.[0];
+  const last = s.log?.[0];
+  $('now-k').textContent = SCREEN[s.screen] ? `现在 · ${SCREEN[s.screen]}` : '现在';
+  $('now-msg').textContent = s.headline || (last ? last.msg : '等待画面');
+  $('now-why').textContent = top ? top.why : '把 iPad 画面镜像到这台 Mac，副驾会自己读商店、天赋和拍卖。';
+  $('list').innerHTML = (s.advice || []).map((a, i) => `<div class="it ${i === 0 && a.s > 0 ? 'top' : ''}">${img(a.name)}<div><div class="it-name">${esc(a.name)}${a.cap ? ` · ≤${a.cap} 能` : ''}</div><div class="it-why">${esc(a.why)}</div></div><div class="it-s">${a.s > 0 ? Math.round(a.s) : '·'}</div></div>`).join('');
+  const sc = Object.fromEntries((s.routeScores || []).map((x) => [x.id, x.s]));
+  $('routes').innerHTML = `<button data-r="" class="${s.pinned ? '' : 'on'}">自动</button>` + routes.map((r) => `<button data-r="${r.id}" class="${s.route === r.id ? 'on' : ''}">${esc(r.name)}${sc[r.id] != null ? `<small>${sc[r.id]}</small>` : ''}</button>`).join('');
+  const p = s.plan || {};
+  $('plan').innerHTML = `<div class="plan-h"><span class="plan-id">${esc(p.phase || '—')}</span><span class="chip">${esc(s.routeName || '')}</span>${p.rounds ? `<span class="chip">${esc(p.rounds)}</span>` : ''}${p.e ? `<span class="chip">每回合 +${p.e} 能量</span>` : ''}${p.lv ? `<span class="chip">${esc(p.lv)}</span>` : ''}</div>
+    ${p.buy?.length ? `<div class="buys">${p.buy.map((n) => `<span>${img(n)}${esc(n)}</span>`).join('')}</div>` : ''}
+    ${p.targets?.length ? `<div class="buys">${p.targets.map((t) => `<span>${img(t.h)}${esc(t.h)} ≤${t.cap}</span>`).join('')}</div>` : ''}
+    <ul>${(p.do || []).map((x) => `<li>${esc(x)}</li>`).join('')}${p.see?.length ? `<li>看到就拿：${p.see.map(esc).join('、')}</li>` : ''}</ul>`;
+  const owned = Object.entries(s.owned || {});
+  $('owned').innerHTML = owned.length ? owned.map(([n, c]) => `<span class="chip">${esc(n)} <b>×${c}</b></span>`).join('') : '<span class="empty">从手牌里自动记录</span>';
+  $('log').innerHTML = (s.log || []).map((l) => `<div><span>${l.t}</span> <b>${esc(l.msg)}</b></div>`).join('') || '<span class="empty">还没说话</span>';
+  $('btn-voice').textContent = '语音：' + (s.voice ? '开' : '关');
+  const d = s.deep;
+  $('deep').hidden = !d;
+  if (d) $('deep').textContent = d.text + (d.ms ? `\n（${(d.ms / 1000).toFixed(1)} 秒）` : '');
+}
+$('routes').onclick = (e) => { const b = e.target.closest('[data-r]'); if (b) post('/pin?route=' + b.dataset.r); };
+$('btn-deep').onclick = () => post('/deep');
+$('btn-voice').onclick = () => post('/voice?on=' + (S?.voice ? 0 : 1));
+$('btn-reset').onclick = () => post('/reset');
+$('btn-rminus').onclick = () => post('/round?r=' + Math.max(1, ((S?.round || S?.estRound || 1) - 1)));
+$('btn-rplus').onclick = () => post('/round?r=' + ((S?.round || S?.estRound || 0) + 1));
+const es = new EventSource('/events');
+es.onmessage = (e) => draw(JSON.parse(e.data));
+es.onerror = () => { $('cap').textContent = '与副驾断开：确认 brain 还在运行'; $('dot').classList.remove('on'); };
+</script>
+</body>
+</html>

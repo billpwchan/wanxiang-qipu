@@ -1,0 +1,42 @@
+# 系统 / 编辑器
+.DS_Store
+*.swp
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+node_modules/
+
+# 发布包：scripts/make_release.py 的输出
+releases/
+*.tar.gz
+
+# 本机编译产物（首次运行时自动编译）
+copilot/bin/
+scripts/lift/lift
+
+# 副驾运行记录与截帧（可能含个人对局画面）
+copilot/logs/
+
+# 可重新下载的大文件缓存
+# 官方卡面 PNG：scripts/build_data.py
+research/cache/
+# 官网皮肤原画：scripts/fetch_skins.py
+research/skins/
+# 阿里妈妈字体 npm 包：见 docs/data-pipeline.md
+research/v4/fonts/
+# 官方社区阵容原始分页与合并结果：含作者昵称、用户 ID、头像，只留本地
+# 仓库里的 lineups.json 由 scripts/trim_lineups.py 生成，只保留阵容本身
+research/v4/lineups/p*.js
+research/v4/lineups/all.json
+research/raw/lineups.json
+
+# v4 退役素材（只保留数据模块作历史参考）
+research/v4/retired/*
+!research/v4/retired/data/
+
+# v3 时期的字体源，v5 不再使用
+site/src/
+
+# 第三方托管工具的本地配置
+site/.openai/

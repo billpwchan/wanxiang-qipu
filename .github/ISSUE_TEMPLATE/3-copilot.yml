@@ -1,0 +1,27 @@
+name: 副驾认错了
+description: 副驾认错了界面、卡名，或建议明显不对
+labels: [副驾]
+body:
+  - type: dropdown
+    id: screen
+    attributes:
+      label: 哪个界面
+      options: [选棋手, 商店, 天赋三选一, 拍卖, 其他]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 副驾说了什么，应该是什么
+    validations:
+      required: true
+  - type: textarea
+    id: frames
+    attributes:
+      label: 截帧
+      description: 用 ./copilot/wx --save 打一局，附上 copilot/logs/frames/ 里对应的截图和当天的 .jsonl。截图里有昵称请先打码。
+  - type: input
+    id: setup
+    attributes:
+      label: 设备
+      placeholder: iPad Pro 11 + USB 镜像 / macOS 15

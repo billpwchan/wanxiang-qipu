@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e1217" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#eef1f0" media="(prefers-color-scheme: light)">
+<title>万象棋谱 · S1</title>
+<meta name="description" content="王者万象棋 S1：按禁用阵营选棋手和路线，10 条路线的逐回合选牌、成型阵容与出装，数据来自顶尖玩家对局。">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23e2b34a'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='%231b1408' font-family='serif'%3E%E8%B1%A1%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="app.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到内容</a>
+<header class="top">
+  <a class="brand" href="#/"><span class="seal">象</span><span class="brand-name">万象棋谱</span><span class="brand-season">S1</span></a>
+  <div class="top-links"><a class="top-chip" href="#/rules">原理</a><a class="top-chip gold" href="#/rules?s=patch">9/24</a></div>
+</header>
+<nav class="nav" aria-label="主要导航">
+  <a href="#/" data-nav="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5z M5 10h14 M10 4v16"/></svg><span>开局</span></a>
+  <a href="#/routes" data-nav="routes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4v16 M6 6h11l-2 3.5 2 3.5H6"/></svg><span>路线</span></a>
+  <a href="#/lords" data-nav="lords"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6"/></svg><span>棋手</span></a>
+  <a href="#/play" data-nav="play"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M10 8.5v7l6-3.5z"/></svg><span>跟打</span></a>
+  <a href="#/cards" data-nav="cards"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3.5" width="11" height="15" rx="2"/><path d="M9 20.5h8a2 2 0 0 0 2-2v-11"/></svg><span>查牌</span></a>
+</nav>
+<main id="main" tabindex="-1"><div id="view" class="view"><p class="loading">载入棋谱…</p></div></main>
+<dialog id="sheet" aria-labelledby="sheet-title"><div class="sheet-inner"><button class="sheet-close" type="button" aria-label="关闭">×</button><div id="sheet-body"></div></div></dialog>
+</body>
+</html>

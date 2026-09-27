@@ -1,0 +1,63 @@
+<!doctype html>
+<!-- README 横幅（1280×640）。scripts/build_readme_images.mjs 用 Chrome 截图；?theme=dark 为夜场版。
+     和网站同一块竖纹玻璃（site/dist/glass.js）：左侧玻璃后是棋手群像，右侧清晰。 -->
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>万象棋谱 · banner</title>
+<style>
+@font-face { font-family: 'WXD'; src: url('/fonts/shuhei.woff2') format('woff2'); font-weight: 700; }
+:root { --bg: #e8edf7; --ink: #10152e; --ink2: #465073; --ink3: #7d85a6; --act: #2c46f5; --gold: #d8952a; --chip: rgba(255,255,255,.62); --chipline: rgba(16,21,46,.08); }
+:root.dark { --bg: #0a0e1c; --ink: #ecf0ff; --ink2: #b3bbdb; --ink3: #7c86ab; --act: #8b97ff; --gold: #f2b24d; --chip: rgba(20,27,49,.62); --chipline: rgba(236,240,255,.1); }
+* { box-sizing: border-box; margin: 0; }
+html, body { width: 1280px; height: 640px; overflow: hidden; background: var(--bg); }
+body { position: relative; font: 16px/1.5 system-ui, -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; }
+canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.copy { position: absolute; left: 76px; top: 0; bottom: 0; width: 760px; display: flex; flex-direction: column; justify-content: center; }
+.eyebrow { font-size: 19px; letter-spacing: .14em; color: var(--ink2); font-weight: 600; }
+.eyebrow b { color: var(--gold); font-weight: 700; }
+h1 { font: 700 150px/1 'WXD', 'PingFang SC', sans-serif; letter-spacing: -.01em; margin: 20px 0 30px -6px; white-space: nowrap; }
+.flow { white-space: nowrap; font-size: 24px; font-weight: 600; color: var(--ink); letter-spacing: .02em; }
+.flow i { font-style: normal; color: var(--act); padding: 0 .28em; }
+.parts { display: flex; gap: 10px; margin-top: 34px; }
+.parts span { font-size: 16px; font-weight: 600; color: var(--ink2); padding: 8px 16px; border-radius: 999px; background: var(--chip); border: 1px solid var(--chipline); backdrop-filter: blur(6px); }
+</style>
+<canvas id="gl"></canvas>
+<div class="copy">
+  <p class="eyebrow">王者万象棋 <b>S1</b> · 9/24 版本</p>
+  <h1>万象棋谱</h1>
+  <p class="flow">这局禁了谁<i>→</i>用哪个棋手、打哪套<i>→</i>每个阶段买什么</p>
+  <p class="parts"><span>开局推荐</span><span>对局副屏</span><span>读屏副驾</span></p>
+</div>
+<script type="module">
+import { Glass, loadImg } from '/glass.js';
+const dark = new URLSearchParams(location.search).get('theme') === 'dark';
+document.documentElement.classList.toggle('dark', dark);
+const L = await (await fetch('/data/lords.json')).json();
+const src = (n) => `/assets/lord/${L[n].id}.webp`;
+// 后排小、前排大；明先生在玻璃后，孙小宾跨在玻璃边缘上
+const back = [['明先生', .40, .70], ['嬴律', .99, .70]];
+const front = [['孙小宾', .62, .84], ['香香', .87, .86]];
+const W = 2560, H = 1280;
+const cv = Object.assign(document.createElement('canvas'), { width: W, height: H });
+const x = cv.getContext('2d');
+const g = x.createLinearGradient(0, 0, W, H);
+(dark ? ['#0d1330', '#1b2150', '#0f2a44', '#23174a'] : ['#e3e9fb', '#cfdaf9', '#e6dcfb', '#d3ecf6']).forEach((c, i, a) => g.addColorStop(i / (a.length - 1), c));
+x.fillStyle = g; x.fillRect(0, 0, W, H);
+const draw = async ([n, cx, hk], alpha, shade) => {
+  const im = await loadImg(src(n));
+  const h = H * hk, w = im.width * h / im.height;
+  x.save(); x.globalAlpha = alpha;
+  x.shadowColor = dark ? 'rgba(0,0,0,.55)' : 'rgba(30,40,90,.25)'; x.shadowBlur = shade; x.shadowOffsetY = 18;
+  x.drawImage(im, cx * W - w / 2, H - h, w, h); x.restore();
+};
+for (const b of back) await draw(b, dark ? .55 : .62, 30);
+for (const f of front) await draw(f, 1, 60);
+const glass = new Glass(document.getElementById('gl'), { flute: 30, edge: 0.52, frost: dark ? 0.72 : 0.66, dpr: 2, tint: dark ? [0.04, 0.055, 0.11] : [0.91, 0.93, 0.98] });
+glass.set(0, cv, .5, .5);
+glass.set(1, cv, .5, .5);
+glass.open = 1;
+glass.draw();
+await document.fonts.ready;
+document.body.dataset.ready = '1';
+</script>
+</html>

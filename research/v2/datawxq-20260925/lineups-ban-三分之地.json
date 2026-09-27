@@ -1,0 +1,2242 @@
+{
+ "r": "picked:三分之地",
+ "label": "禁用阵营 三分之地 ⌄",
+ "cards": [
+  {
+   "title": "逐鹿 · 嬴政 · 庄周",
+   "commanders": [
+    "明先生 36.0%",
+    "白歌 14.1%",
+    "小妲己 12.5%"
+   ],
+   "units": [
+    {
+     "name": "嬴政",
+     "awakened": true,
+     "items": [
+      "虚无法杖",
+      "名刀·司命",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "庄周",
+     "awakened": true,
+     "items": [
+      "霸者重铠",
+      "不祥征兆",
+      "极寒风暴"
+     ]
+    },
+    {
+     "name": "蒙犽",
+     "awakened": true,
+     "items": [
+      "无尽巨剑",
+      "影牙",
+      "破晓"
+     ]
+    },
+    {
+     "name": "芈月",
+     "awakened": true,
+     "items": [
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "白起",
+     "awakened": true,
+     "items": [
+      "霸者重铠"
+     ]
+    },
+    {
+     "name": "西施",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "鲁班七号",
+     "awakened": true,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 40.8% 前三率 54.9% 登顶率 17.7% 平均名次 3.34",
+   "meta": "7 人阵容 · 2186 场 · 30 种变阵"
+  },
+  {
+   "title": "河洛 · 花木兰 · 程咬金",
+   "commanders": [
+    "嬴律 38.7%",
+    "明先生 28.3%",
+    "庄小鱼 17.3%"
+   ],
+   "units": [
+    {
+     "name": "花木兰",
+     "awakened": true,
+     "items": [
+      "凝渊",
+      "无尽巨剑",
+      "反伤重甲"
+     ]
+    },
+    {
+     "name": "程咬金",
+     "awakened": true,
+     "items": [
+      "不死鸟之眼",
+      "反伤重甲",
+      "生命魔典"
+     ]
+    },
+    {
+     "name": "李白",
+     "awakened": true,
+     "items": [
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "上官婉儿",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "武则天",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "钟馗",
+     "awakened": true,
+     "items": [
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 21.9% 前三率 76.2% 登顶率 38.9% 平均名次 2.42",
+   "meta": "7 人阵容 · 1175 场 · 16 种变阵"
+  },
+  {
+   "title": "河洛 · 李信 · 铠",
+   "commanders": [
+    "瑶妹 92.1%",
+    "明先生 2.3%",
+    "闹闹 1.5%"
+   ],
+   "units": [
+    {
+     "name": "李信",
+     "awakened": true,
+     "items": [
+      "无尽巨剑",
+      "魔律之刃",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "铠",
+     "awakened": true,
+     "items": [
+      "铸梦·逐风"
+     ]
+    },
+    {
+     "name": "钟馗",
+     "awakened": true,
+     "items": [
+      "自然法杖"
+     ]
+    },
+    {
+     "name": "明世隐",
+     "awakened": true,
+     "items": [
+      "自然法杖",
+      "法源之杯",
+      "破茧之衣"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "花木兰",
+     "awakened": false,
+     "items": [
+      "小鹿的庇护",
+      "凝渊",
+      "无尽巨剑"
+     ]
+    },
+    {
+     "name": "程咬金",
+     "awakened": false,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 21.9% 前三率 59.8% 登顶率 21.2% 平均名次 3.04",
+   "meta": "7 人阵容 · 1171 场 · 18 种变阵"
+  },
+  {
+   "title": "大河流域 · 公孙离 · 虞姬",
+   "commanders": [
+    "香香 79.0%",
+    "嬴律 8.8%",
+    "瑶妹 5.1%"
+   ],
+   "units": [
+    {
+     "name": "公孙离",
+     "awakened": true,
+     "items": [
+      "日渊",
+      "寒霜侵袭",
+      "破晓"
+     ]
+    },
+    {
+     "name": "虞姬",
+     "awakened": true,
+     "items": [
+      "无尽巨剑",
+      "铸梦·逐风",
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "鬼谷子",
+     "awakened": true,
+     "items": [
+      "霸者重铠"
+     ]
+    },
+    {
+     "name": "瑶",
+     "awakened": true,
+     "items": [
+      "破茧之衣",
+      "近卫荣耀",
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "少司缘",
+     "awakened": true,
+     "items": [
+      "破茧之衣"
+     ]
+    },
+    {
+     "name": "张良",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "云中君",
+     "awakened": true,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 18.0% 前三率 68.6% 登顶率 20.2% 平均名次 2.86",
+   "meta": "7 人阵容 · 966 场 · 16 种变阵"
+  },
+  {
+   "title": "大河流域 · 敖隐 · 东皇太一",
+   "commanders": [
+    "闹闹 25.8%",
+    "瑶妹 23.7%",
+    "昭君 18.6%"
+   ],
+   "units": [
+    {
+     "name": "敖隐",
+     "awakened": true,
+     "items": [
+      "自然法杖",
+      "破晓",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "东皇太一",
+     "awakened": true,
+     "items": [
+      "不死鸟之眼",
+      "反伤重甲",
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "虞姬",
+     "awakened": true,
+     "items": [
+      "无尽巨剑",
+      "铸梦·逐风",
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "少司缘",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "鬼谷子",
+     "awakened": true,
+     "items": [
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "大司命",
+     "awakened": true,
+     "items": [
+      "铸梦·逐风"
+     ]
+    },
+    {
+     "name": "张良",
+     "awakened": true,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 14.8% 前三率 56.8% 登顶率 12.1% 平均名次 3.26",
+   "meta": "7 人阵容 · 794 场 · 18 种变阵"
+  },
+  {
+   "title": "河洛 · 百里守约 · 程咬金",
+   "commanders": [
+    "阿离 95.8%",
+    "姜导 1.4%",
+    "瑶妹 1.0%"
+   ],
+   "units": [
+    {
+     "name": "百里守约",
+     "awakened": true,
+     "items": [
+      "无尽巨剑",
+      "名刀·司命",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "程咬金",
+     "awakened": false,
+     "items": [
+      "不死鸟之眼"
+     ]
+    },
+    {
+     "name": "铠",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "钟馗",
+     "awakened": false,
+     "items": [
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "盾山",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "明世隐",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 14.6% 前三率 43.3% 登顶率 6.8% 平均名次 3.77",
+   "meta": "7 人阵容 · 780 场 · 24 种变阵"
+  },
+  {
+   "title": "大河流域 · 韩信 · 雅典娜",
+   "commanders": [
+    "姜导 50.9%",
+    "明先生 38.5%",
+    "阿离 4.0%"
+   ],
+   "units": [
+    {
+     "name": "韩信",
+     "awakened": true,
+     "items": [
+      "自然法杖",
+      "铸梦·逐风",
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "雅典娜",
+     "awakened": true,
+     "items": [
+      "不死鸟之眼"
+     ]
+    },
+    {
+     "name": "亚连",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "瑶",
+     "awakened": true,
+     "items": [
+      "自然法杖",
+      "破茧之衣",
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "云中君",
+     "awakened": true,
+     "items": [
+      "凝渊",
+      "影牙",
+      "铸梦·逐风"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": [
+      "破茧之衣"
+     ]
+    },
+    {
+     "name": "狂铁",
+     "awakened": true,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 13.4% 前三率 56.8% 登顶率 15.6% 平均名次 3.31",
+   "meta": "7 人阵容 · 717 场 · 19 种变阵"
+  },
+  {
+   "title": "河洛 · 苏烈 · 司空震",
+   "commanders": [
+    "常小娥 100.0%"
+   ],
+   "units": [
+    {
+     "name": "苏烈",
+     "awakened": true,
+     "items": [
+      "红莲炎甲",
+      "反伤重甲",
+      "生命魔典"
+     ]
+    },
+    {
+     "name": "司空震",
+     "awakened": false,
+     "items": [
+      "金色圣剑",
+      "痛苦面具",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "裴擒虎",
+     "awakened": true,
+     "items": [
+      "凝渊",
+      "无尽巨剑",
+      "铸梦·逐风"
+     ]
+    },
+    {
+     "name": "海月",
+     "awakened": false,
+     "items": [
+      "不死鸟之眼"
+     ]
+    }
+   ],
+   "metrics": "登场率 11.8% 前三率 32.8% 登顶率 14.8% 平均名次 3.97",
+   "meta": "4 人阵容 · 634 场 · 4 种变阵"
+  },
+  {
+   "title": "裴擒虎 · 猪八戒",
+   "commanders": [
+    "镜 93.8%",
+    "马可 3.3%",
+    "白歌 1.5%"
+   ],
+   "units": [
+    {
+     "name": "裴擒虎",
+     "awakened": true,
+     "items": [
+      "无尽巨剑",
+      "影牙",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "猪八戒",
+     "awakened": true,
+     "items": [
+      "不死鸟之眼",
+      "反伤重甲",
+      "生命魔典"
+     ]
+    },
+    {
+     "name": "阿轲",
+     "awakened": true,
+     "items": [
+      "无尽巨剑",
+      "影牙",
+      "铸梦·逐风"
+     ]
+    },
+    {
+     "name": "明世隐",
+     "awakened": true,
+     "items": [
+      "自然法杖"
+     ]
+    }
+   ],
+   "metrics": "登场率 11.2% 前三率 28.1% 登顶率 4.0% 平均名次 4.40",
+   "meta": "4 人阵容 · 598 场 · 4 种变阵"
+  },
+  {
+   "title": "日落海 · 司空震 · 亚瑟",
+   "commanders": [
+    "玉环 75.9%",
+    "小妲己 21.1%",
+    "乔汐 1.6%"
+   ],
+   "units": [
+    {
+     "name": "司空震",
+     "awakened": true,
+     "items": [
+      "金色圣剑",
+      "痛苦面具",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "亚瑟",
+     "awakened": true,
+     "items": [
+      "霸者重铠"
+     ]
+    },
+    {
+     "name": "莱西奥",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "海诺",
+     "awakened": true,
+     "items": [
+      "法源之杯",
+      "魔律之刃",
+      "贤者之书"
+     ]
+    },
+    {
+     "name": "姬小满",
+     "awakened": true,
+     "items": [
+      "霸者重铠"
+     ]
+    },
+    {
+     "name": "姜子牙",
+     "awakened": true,
+     "items": [
+      "自然法杖",
+      "名刀·司命",
+      "魔律之刃"
+     ]
+    }
+   ],
+   "metrics": "登场率 10.3% 前三率 50.6% 登顶率 30.7% 平均名次 3.35",
+   "meta": "6 人阵容 · 551 场 · 9 种变阵"
+  },
+  {
+   "title": "大河流域 · 公孙离 · 猪八戒",
+   "commanders": [
+    "明先生 69.7%",
+    "嬴律 17.5%",
+    "香香 9.8%"
+   ],
+   "units": [
+    {
+     "name": "公孙离",
+     "awakened": true,
+     "items": [
+      "日渊",
+      "寒霜侵袭",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "猪八戒",
+     "awakened": true,
+     "items": [
+      "不死鸟之眼",
+      "反伤重甲",
+      "生命魔典"
+     ]
+    },
+    {
+     "name": "瑶",
+     "awakened": true,
+     "items": [
+      "制裁之剑",
+      "破茧之衣",
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "张良",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "鬼谷子",
+     "awakened": true,
+     "items": [
+      "破茧之衣"
+     ]
+    },
+    {
+     "name": "云中君",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": [
+      "破茧之衣"
+     ]
+    }
+   ],
+   "metrics": "登场率 9.5% 前三率 71.3% 登顶率 19.8% 平均名次 2.77",
+   "meta": "7 人阵容 · 509 场 · 9 种变阵"
+  },
+  {
+   "title": "日落海 · 安琪拉 · 米莱狄",
+   "commanders": [
+    "闹闹 54.2%",
+    "香香 10.3%",
+    "常小娥 7.4%"
+   ],
+   "units": [
+    {
+     "name": "安琪拉",
+     "awakened": true,
+     "items": [
+      "虚无法杖",
+      "法源之杯",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "米莱狄",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "亚连",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "朵莉亚",
+     "awakened": true,
+     "items": [
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "雅典娜",
+     "awakened": true,
+     "items": [
+      "不死鸟之眼",
+      "极寒风暴",
+      "反伤重甲"
+     ]
+    },
+    {
+     "name": "海诺",
+     "awakened": false,
+     "items": [
+      "贤者之书"
+     ]
+    },
+    {
+     "name": "狂铁",
+     "awakened": true,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 6.9% 前三率 42.0% 登顶率 6.0% 平均名次 3.75",
+   "meta": "7 人阵容 · 367 场 · 11 种变阵"
+  },
+  {
+   "title": "大河流域 · 刘邦 · 瑶",
+   "commanders": [
+    "明先生 46.3%",
+    "阿离 22.9%",
+    "瑶妹 10.2%"
+   ],
+   "units": [
+    {
+     "name": "刘邦",
+     "awakened": true,
+     "items": [
+      "纯净苍穹",
+      "金色圣剑",
+      "不死鸟之眼"
+     ]
+    },
+    {
+     "name": "瑶",
+     "awakened": true,
+     "items": [
+      "破茧之衣",
+      "近卫荣耀",
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "大司命",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "鬼谷子",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "扁鹊",
+     "awakened": true,
+     "items": [
+      "自然法杖",
+      "法源之杯",
+      "不死鸟之眼"
+     ]
+    },
+    {
+     "name": "少司缘",
+     "awakened": false,
+     "items": [
+      "破茧之衣"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": [
+      "近卫荣耀"
+     ]
+    }
+   ],
+   "metrics": "登场率 6.6% 前三率 51.4% 登顶率 11.6% 平均名次 3.50",
+   "meta": "7 人阵容 · 354 场 · 8 种变阵"
+  },
+  {
+   "title": "逐鹿 · 嬴政 · 庄周",
+   "commanders": [
+    "明先生 38.7%",
+    "小妲己 27.5%",
+    "嬴律 8.1%"
+   ],
+   "units": [
+    {
+     "name": "嬴政",
+     "awakened": true,
+     "items": [
+      "虚无法杖",
+      "名刀·司命",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "庄周",
+     "awakened": true,
+     "items": [
+      "纯净苍穹",
+      "霸者重铠",
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "白起",
+     "awakened": true,
+     "items": [
+      "霸者重铠",
+      "名刀·司命",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "芈月",
+     "awakened": true,
+     "items": [
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "西施",
+     "awakened": true,
+     "items": [
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "鲁班大师",
+     "awakened": false,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 6.4% 前三率 81.5% 登顶率 36.7% 平均名次 2.34",
+   "meta": "7 人阵容 · 346 场 · 16 种变阵"
+  },
+  {
+   "title": "大河流域 · 虞姬 · 瑶",
+   "commanders": [
+    "明先生 34.6%",
+    "香香 26.4%",
+    "姜导 21.1%"
+   ],
+   "units": [
+    {
+     "name": "虞姬",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "瑶",
+     "awakened": true,
+     "items": [
+      "静谧之铃",
+      "破茧之衣",
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "鬼谷子",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "张良",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "云中君",
+     "awakened": true,
+     "items": [
+      "破茧之衣"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": [
+      "破茧之衣"
+     ]
+    },
+    {
+     "name": "韩信",
+     "awakened": true,
+     "items": [
+      "无尽巨剑",
+      "铸梦·逐风",
+      "炽热支配者"
+     ]
+    }
+   ],
+   "metrics": "登场率 3.9% 前三率 69.2% 登顶率 16.8% 平均名次 2.85",
+   "meta": "7 人阵容 · 208 场 · 5 种变阵"
+  },
+  {
+   "title": "大河流域 · 敖隐 · 东皇太一",
+   "commanders": [
+    "昭君 47.1%",
+    "闹闹 17.8%",
+    "瑶妹 9.6%"
+   ],
+   "units": [
+    {
+     "name": "敖隐",
+     "awakened": true,
+     "items": [
+      "寒霜侵袭",
+      "自然法杖",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "东皇太一",
+     "awakened": true,
+     "items": [
+      "不死鸟之眼",
+      "反伤重甲",
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "大司命",
+     "awakened": true,
+     "items": [
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "少司缘",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "鬼谷子",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "瑶",
+     "awakened": true,
+     "items": [
+      "破茧之衣"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 3.9% 前三率 79.3% 登顶率 33.7% 平均名次 2.38",
+   "meta": "7 人阵容 · 208 场 · 9 种变阵"
+  },
+  {
+   "title": "大河流域 · 大司命 · 米莱狄",
+   "commanders": [
+    "明先生 88.2%",
+    "瑶妹 1.8%",
+    "闹闹 1.8%"
+   ],
+   "units": [
+    {
+     "name": "大司命",
+     "awakened": true,
+     "items": [
+      "霸者重铠",
+      "不死鸟之眼",
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "米莱狄",
+     "awakened": true,
+     "items": [
+      "法源之杯",
+      "魔律之刃",
+      "贤者之书"
+     ]
+    },
+    {
+     "name": "鬼谷子",
+     "awakened": true,
+     "items": [
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "蒙恬",
+     "awakened": true,
+     "items": [
+      "魔律之刃"
+     ]
+    },
+    {
+     "name": "项羽",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "少司缘",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "鲁班大师",
+     "awakened": false,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 3.2% 前三率 49.4% 登顶率 8.8% 平均名次 3.61",
+   "meta": "7 人阵容 · 170 场 · 5 种变阵"
+  },
+  {
+   "title": "大河流域 · 大司命 · 米莱狄",
+   "commanders": [
+    "明先生 94.1%",
+    "嬴律 1.8%",
+    "常小娥 1.2%"
+   ],
+   "units": [
+    {
+     "name": "大司命",
+     "awakened": true,
+     "items": [
+      "铸梦·逐风",
+      "不死鸟之眼",
+      "反伤重甲"
+     ]
+    },
+    {
+     "name": "米莱狄",
+     "awakened": true,
+     "items": [
+      "法源之杯",
+      "魔律之刃",
+      "贤者之书"
+     ]
+    },
+    {
+     "name": "蒙恬",
+     "awakened": true,
+     "items": [
+      "魔律之刃"
+     ]
+    },
+    {
+     "name": "钟馗",
+     "awakened": true,
+     "items": [
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "项羽",
+     "awakened": true,
+     "items": [
+      "破茧之衣",
+      "霸者重铠",
+      "冥王"
+     ]
+    },
+    {
+     "name": "鲁班大师",
+     "awakened": true,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 3.1% 前三率 74.6% 登顶率 26.0% 平均名次 2.56",
+   "meta": "7 人阵容 · 169 场 · 3 种变阵"
+  },
+  {
+   "title": "大河流域 · 公孙离 · 猪八戒",
+   "commanders": [
+    "嬴律 52.4%",
+    "香香 25.6%",
+    "明先生 14.6%"
+   ],
+   "units": [
+    {
+     "name": "公孙离",
+     "awakened": true,
+     "items": [
+      "日渊",
+      "寒霜侵袭",
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "猪八戒",
+     "awakened": true,
+     "items": [
+      "不死鸟之眼",
+      "反伤重甲",
+      "生命魔典"
+     ]
+    },
+    {
+     "name": "瑶",
+     "awakened": true,
+     "items": [
+      "破茧之衣"
+     ]
+    },
+    {
+     "name": "少司缘",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "鬼谷子",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": [
+      "破茧之衣"
+     ]
+    },
+    {
+     "name": "虞姬",
+     "awakened": true,
+     "items": [
+      "无尽巨剑",
+      "寒霜侵袭",
+      "名刀·司命"
+     ]
+    }
+   ],
+   "metrics": "登场率 3.0% 前三率 78.7% 登顶率 14.6% 平均名次 2.64",
+   "meta": "7 人阵容 · 164 场 · 8 种变阵"
+  },
+  {
+   "title": "河洛 · 花木兰 · 程咬金",
+   "commanders": [
+    "嬴律 28.9%",
+    "明先生 24.6%",
+    "庄小鱼 19.7%"
+   ],
+   "units": [
+    {
+     "name": "花木兰",
+     "awakened": true,
+     "items": [
+      "凝渊",
+      "无尽巨剑",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "程咬金",
+     "awakened": true,
+     "items": [
+      "不死鸟之眼"
+     ]
+    },
+    {
+     "name": "李白",
+     "awakened": true,
+     "items": [
+      "百锻刀",
+      "捕能手套",
+      "无尽巨剑"
+     ]
+    },
+    {
+     "name": "上官婉儿",
+     "awakened": true,
+     "items": [
+      "自然法杖"
+     ]
+    },
+    {
+     "name": "武则天",
+     "awakened": true,
+     "items": [
+      "聚灵法杖",
+      "静谧之铃",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "盾山",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "露娜",
+     "awakened": false,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 2.6% 前三率 57.8% 登顶率 29.6% 平均名次 3.03",
+   "meta": "7 人阵容 · 142 场 · 5 种变阵"
+  },
+  {
+   "title": "河洛 · 李信 · 花木兰",
+   "commanders": [
+    "瑶妹 54.7%",
+    "常小娥 38.3%",
+    "阿离 2.3%"
+   ],
+   "units": [
+    {
+     "name": "李信",
+     "awakened": true,
+     "items": [
+      "凝渊",
+      "无尽巨剑",
+      "自然法杖"
+     ]
+    },
+    {
+     "name": "花木兰",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "铠",
+     "awakened": true,
+     "items": [
+      "凝渊"
+     ]
+    },
+    {
+     "name": "钟馗",
+     "awakened": true,
+     "items": [
+      "破茧之衣",
+      "近卫荣耀",
+      "生命魔典"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "苏烈",
+     "awakened": true,
+     "items": [
+      "聚灵水晶",
+      "不死鸟之眼",
+      "反伤重甲"
+     ]
+    },
+    {
+     "name": "海月",
+     "awakened": false,
+     "items": [
+      "不死鸟之眼"
+     ]
+    }
+   ],
+   "metrics": "登场率 2.4% 前三率 78.1% 登顶率 33.6% 平均名次 2.48",
+   "meta": "7 人阵容 · 128 场 · 7 种变阵"
+  },
+  {
+   "title": "河洛 · 司空震 · 裴擒虎",
+   "commanders": [
+    "常小娥 100.0%"
+   ],
+   "units": [
+    {
+     "name": "司空震",
+     "awakened": false,
+     "items": [
+      "金色圣剑",
+      "名刀·司命",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "裴擒虎",
+     "awakened": true,
+     "items": [
+      "凝渊",
+      "无尽巨剑",
+      "铸梦·逐风"
+     ]
+    },
+    {
+     "name": "苏烈",
+     "awakened": true,
+     "items": [
+      "反伤重甲"
+     ]
+    },
+    {
+     "name": "海月",
+     "awakened": false,
+     "items": [
+      "不死鸟之眼",
+      "魔律之刃",
+      "贤者之书"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "钟馗",
+     "awakened": false,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 2.2% 前三率 76.1% 登顶率 46.2% 平均名次 2.33",
+   "meta": "6 人阵容 · 117 场 · 5 种变阵"
+  },
+  {
+   "title": "大河流域 · 东皇太一 · 大司命",
+   "commanders": [
+    "明先生 91.7%",
+    "嬴律 3.7%",
+    "小妲己 0.9%"
+   ],
+   "units": [
+    {
+     "name": "东皇太一",
+     "awakened": true,
+     "items": [
+      "聚灵水晶",
+      "霸者重铠",
+      "不死鸟之眼"
+     ]
+    },
+    {
+     "name": "大司命",
+     "awakened": true,
+     "items": [
+      "学识宝石",
+      "铸梦·逐风",
+      "不死鸟之眼"
+     ]
+    },
+    {
+     "name": "米莱狄",
+     "awakened": true,
+     "items": [
+      "法源之杯",
+      "魔律之刃",
+      "贤者之书"
+     ]
+    },
+    {
+     "name": "鬼谷子",
+     "awakened": true,
+     "items": [
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "鲁班大师",
+     "awakened": true,
+     "items": [
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "少司缘",
+     "awakened": true,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 2.0% 前三率 72.2% 登顶率 23.2% 平均名次 2.77",
+   "meta": "7 人阵容 · 108 场 · 6 种变阵"
+  },
+  {
+   "title": "河洛 · 李信 · 铠",
+   "commanders": [
+    "瑶妹 89.7%",
+    "阿离 5.6%",
+    "班叔 2.8%"
+   ],
+   "units": [
+    {
+     "name": "李信",
+     "awakened": true,
+     "items": [
+      "凝渊",
+      "无尽巨剑",
+      "魔律之刃"
+     ]
+    },
+    {
+     "name": "铠",
+     "awakened": false,
+     "items": [
+      "凝渊"
+     ]
+    },
+    {
+     "name": "明世隐",
+     "awakened": true,
+     "items": [
+      "自然法杖"
+     ]
+    },
+    {
+     "name": "钟馗",
+     "awakened": false,
+     "items": [
+      "凝渊",
+      "纯净苍穹",
+      "破茧之衣"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": [
+      "小鹿的庇护",
+      "破茧之衣",
+      "驱雷"
+     ]
+    },
+    {
+     "name": "盾山",
+     "awakened": false,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 2.0% 前三率 50.5% 登顶率 17.8% 平均名次 3.52",
+   "meta": "6 人阵容 · 107 场 · 6 种变阵"
+  },
+  {
+   "title": "逐鹿 · 曜 · 芈月",
+   "commanders": [
+    "阿离 89.1%",
+    "姜导 6.9%",
+    "白歌 1.0%"
+   ],
+   "units": [
+    {
+     "name": "曜",
+     "awakened": true,
+     "items": [
+      "凝渊",
+      "不死鸟之眼",
+      "红魔"
+     ]
+    },
+    {
+     "name": "芈月",
+     "awakened": true,
+     "items": [
+      "纯净苍穹"
+     ]
+    },
+    {
+     "name": "墨子",
+     "awakened": true,
+     "items": [
+      "寒霜侵袭",
+      "金色圣剑",
+      "铸梦·逐风"
+     ]
+    },
+    {
+     "name": "西施",
+     "awakened": true,
+     "items": [
+      "纯净苍穹"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "扁鹊",
+     "awakened": false,
+     "items": [
+      "日渊",
+      "名刀·司命",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "孙膑",
+     "awakened": true,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 1.9% 前三率 52.5% 登顶率 3.0% 平均名次 3.56",
+   "meta": "7 人阵容 · 101 场 · 6 种变阵"
+  },
+  {
+   "title": "河洛 · 司空震 · 裴擒虎",
+   "commanders": [
+    "常小娥 85.2%",
+    "乔汐 13.6%",
+    "阿离 1.1%"
+   ],
+   "units": [
+    {
+     "name": "司空震",
+     "awakened": true,
+     "items": [
+      "金色圣剑",
+      "痛苦面具",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "裴擒虎",
+     "awakened": true,
+     "items": [
+      "凝渊",
+      "无尽巨剑",
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "海月",
+     "awakened": false,
+     "items": [
+      "聚灵水晶",
+      "不死鸟之眼",
+      "反伤重甲"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": [
+      "红莲炎甲"
+     ]
+    }
+   ],
+   "metrics": "登场率 1.6% 前三率 59.1% 登顶率 27.3% 平均名次 3.05",
+   "meta": "4 人阵容 · 88 场 · 3 种变阵"
+  },
+  {
+   "title": "河洛 · 百里玄策 · 程咬金",
+   "commanders": [
+    "姜导 69.0%",
+    "阿离 13.1%",
+    "闹闹 3.6%"
+   ],
+   "units": [
+    {
+     "name": "百里玄策",
+     "awakened": true,
+     "items": [
+      "无尽巨剑",
+      "影牙",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "程咬金",
+     "awakened": true,
+     "items": [
+      "鼓舞之戒",
+      "霸者重铠",
+      "红魔"
+     ]
+    },
+    {
+     "name": "李元芳",
+     "awakened": true,
+     "items": [
+      "日渊"
+     ]
+    },
+    {
+     "name": "盾山",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "钟馗",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "上官婉儿",
+     "awakened": false,
+     "items": [
+      "法源之杯"
+     ]
+    }
+   ],
+   "metrics": "登场率 1.6% 前三率 48.8% 登顶率 4.8% 平均名次 3.58",
+   "meta": "7 人阵容 · 84 场 · 5 种变阵"
+  },
+  {
+   "title": "大河流域 · 韩信 · 孙悟空",
+   "commanders": [
+    "姜导 50.6%",
+    "明先生 19.8%",
+    "阿离 14.8%"
+   ],
+   "units": [
+    {
+     "name": "韩信",
+     "awakened": true,
+     "items": [
+      "无尽巨剑",
+      "铸梦·逐风",
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "孙悟空",
+     "awakened": true,
+     "items": [
+      "凝渊"
+     ]
+    },
+    {
+     "name": "瑶",
+     "awakened": true,
+     "items": [
+      "静谧之铃",
+      "破茧之衣",
+      "阿科米亚之子"
+     ]
+    },
+    {
+     "name": "云中君",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": [
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "张良",
+     "awakened": true,
+     "items": [
+      "鼓舞之戒",
+      "破茧之衣",
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "亚连",
+     "awakened": true,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 1.5% 前三率 54.3% 登顶率 12.3% 平均名次 3.37",
+   "meta": "7 人阵容 · 81 场 · 3 种变阵"
+  },
+  {
+   "title": "河洛 · 李信 · 程咬金",
+   "commanders": [
+    "瑶妹 83.3%",
+    "阿离 9.0%",
+    "香香 2.6%"
+   ],
+   "units": [
+    {
+     "name": "李信",
+     "awakened": true,
+     "items": [
+      "凝渊",
+      "自然法杖",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "程咬金",
+     "awakened": false,
+     "items": [
+      "鼓舞之戒",
+      "凝渊",
+      "不死鸟之眼"
+     ]
+    },
+    {
+     "name": "铠",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "钟馗",
+     "awakened": true,
+     "items": [
+      "小鹿的庇护",
+      "不死鸟之眼",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "盾山",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "苏烈",
+     "awakened": false,
+     "items": [
+      "红莲炎甲"
+     ]
+    }
+   ],
+   "metrics": "登场率 1.5% 前三率 52.6% 登顶率 16.7% 平均名次 3.35",
+   "meta": "7 人阵容 · 78 场 · 7 种变阵"
+  },
+  {
+   "title": "日落海 · 韩信 · 安琪拉",
+   "commanders": [
+    "姜导 46.1%",
+    "明先生 36.8%",
+    "嬴律 4.0%"
+   ],
+   "units": [
+    {
+     "name": "韩信",
+     "awakened": true,
+     "items": [
+      "凝渊",
+      "无尽巨剑",
+      "铸梦·逐风"
+     ]
+    },
+    {
+     "name": "安琪拉",
+     "awakened": true,
+     "items": [
+      "纯净苍穹",
+      "自然法杖",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "雅典娜",
+     "awakened": true,
+     "items": [
+      "盛华",
+      "不死鸟之眼",
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "亚连",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "朵莉亚",
+     "awakened": true,
+     "items": [
+      "破茧之衣"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "米莱狄",
+     "awakened": true,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 1.4% 前三率 52.6% 登顶率 13.2% 平均名次 3.38",
+   "meta": "7 人阵容 · 76 场 · 4 种变阵"
+  },
+  {
+   "title": "逐鹿 · 海月 · 扁鹊",
+   "commanders": [
+    "阿离 76.4%",
+    "瑶妹 9.7%",
+    "嬴律 8.3%"
+   ],
+   "units": [
+    {
+     "name": "海月",
+     "awakened": false,
+     "items": [
+      "不死鸟之眼",
+      "魔律之刃",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "扁鹊",
+     "awakened": false,
+     "items": [
+      "静谧之铃",
+      "寒霜侵袭",
+      "影牙"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": [
+      "凝渊",
+      "自然法杖",
+      "御灵之纱"
+     ]
+    },
+    {
+     "name": "瑶",
+     "awakened": false,
+     "items": [
+      "自然法杖"
+     ]
+    }
+   ],
+   "metrics": "登场率 1.3% 前三率 65.3% 登顶率 26.4% 平均名次 2.82",
+   "meta": "4 人阵容 · 72 场 · 4 种变阵"
+  },
+  {
+   "title": "河洛 · 苏烈 · 姜子牙",
+   "commanders": [
+    "常小娥 100.0%"
+   ],
+   "units": [
+    {
+     "name": "苏烈",
+     "awakened": true,
+     "items": [
+      "影牙",
+      "红莲炎甲",
+      "反伤重甲"
+     ]
+    },
+    {
+     "name": "姜子牙",
+     "awakened": false,
+     "items": [
+      "虚无法杖",
+      "法源之杯",
+      "贤者之书"
+     ]
+    },
+    {
+     "name": "杨玉环",
+     "awakened": false,
+     "items": [
+      "纯净苍穹",
+      "法源之杯",
+      "贤者之书"
+     ]
+    },
+    {
+     "name": "海月",
+     "awakened": false,
+     "items": [
+      "不死鸟之眼"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": [
+      "红莲炎甲"
+     ]
+    }
+   ],
+   "metrics": "登场率 1.3% 前三率 47.9% 登顶率 18.3% 平均名次 3.62",
+   "meta": "5 人阵容 · 71 场 · 3 种变阵"
+  },
+  {
+   "title": "日落海 · 司空震 · 亚瑟",
+   "commanders": [
+    "玉环 59.4%",
+    "小妲己 40.6%"
+   ],
+   "units": [
+    {
+     "name": "司空震",
+     "awakened": true,
+     "items": [
+      "金色圣剑",
+      "痛苦面具",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "亚瑟",
+     "awakened": true,
+     "items": [
+      "聚灵水晶",
+      "霸者重铠",
+      "红莲炎甲"
+     ]
+    },
+    {
+     "name": "姜子牙",
+     "awakened": true,
+     "items": [
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "钟馗",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "莱西奥",
+     "awakened": true,
+     "items": [
+      "鼓舞之戒",
+      "制裁之剑",
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "海诺",
+     "awakened": true,
+     "items": [
+      "自然法杖"
+     ]
+    }
+   ],
+   "metrics": "登场率 1.3% 前三率 95.7% 登顶率 76.8% 平均名次 1.36",
+   "meta": "7 人阵容 · 69 场 · 2 种变阵"
+  },
+  {
+   "title": "逐鹿 · 廉颇 · 芈月",
+   "commanders": [
+    "姜导 76.9%",
+    "小妲己 10.8%",
+    "瑶妹 4.6%"
+   ],
+   "units": [
+    {
+     "name": "廉颇",
+     "awakened": true,
+     "items": [
+      "不死鸟之眼",
+      "反伤重甲",
+      "生命魔典"
+     ]
+    },
+    {
+     "name": "芈月",
+     "awakened": true,
+     "items": [
+      "自然法杖"
+     ]
+    },
+    {
+     "name": "西施",
+     "awakened": true,
+     "items": [
+      "自然法杖"
+     ]
+    },
+    {
+     "name": "墨子",
+     "awakened": true,
+     "items": [
+      "聚灵水晶",
+      "炽热支配者",
+      "生命魔典"
+     ]
+    },
+    {
+     "name": "扁鹊",
+     "awakened": false,
+     "items": [
+      "制裁之剑",
+      "纯净苍穹",
+      "破茧之衣"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 1.2% 前三率 32.3% 登顶率 7.7% 平均名次 4.14",
+   "meta": "6 人阵容 · 65 场 · 4 种变阵"
+  },
+  {
+   "title": "逐鹿 · 蒙恬 · 西施",
+   "commanders": [
+    "小妲己 52.4%",
+    "明先生 15.9%",
+    "班叔 4.8%"
+   ],
+   "units": [
+    {
+     "name": "蒙恬",
+     "awakened": true,
+     "items": [
+      "聚灵水晶",
+      "魔律之刃",
+      "生命魔典"
+     ]
+    },
+    {
+     "name": "西施",
+     "awakened": true,
+     "items": []
+    },
+    {
+     "name": "苍",
+     "awakened": true,
+     "items": [
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "芈月",
+     "awakened": true,
+     "items": [
+      "鼓舞之戒",
+      "不死鸟之眼",
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": [
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "鲁班大师",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "米莱狄",
+     "awakened": true,
+     "items": [
+      "法源之杯",
+      "魔律之刃",
+      "贤者之书"
+     ]
+    }
+   ],
+   "metrics": "登场率 1.2% 前三率 55.6% 登顶率 20.6% 平均名次 3.13",
+   "meta": "7 人阵容 · 63 场 · 3 种变阵"
+  },
+  {
+   "title": "大河流域 · 裴擒虎 · 猪八戒",
+   "commanders": [
+    "镜 51.7%",
+    "马可 20.7%",
+    "明先生 8.6%"
+   ],
+   "units": [
+    {
+     "name": "裴擒虎",
+     "awakened": true,
+     "items": [
+      "无尽巨剑",
+      "名刀·司命",
+      "炽热支配者"
+     ]
+    },
+    {
+     "name": "猪八戒",
+     "awakened": true,
+     "items": [
+      "不死鸟之眼",
+      "反伤重甲",
+      "生命魔典"
+     ]
+    },
+    {
+     "name": "阿轲",
+     "awakened": true,
+     "items": [
+      "无尽巨剑",
+      "铸梦·逐风",
+      "名刀·司命"
+     ]
+    },
+    {
+     "name": "明世隐",
+     "awakened": true,
+     "items": [
+      "自然法杖"
+     ]
+    },
+    {
+     "name": "瑶",
+     "awakened": true,
+     "items": [
+      "破茧之衣"
+     ]
+    },
+    {
+     "name": "云中君",
+     "awakened": true,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 1.1% 前三率 37.9% 登顶率 5.2% 平均名次 4.00",
+   "meta": "6 人阵容 · 58 场 · 3 种变阵"
+  },
+  {
+   "title": "逐鹿 · 干将莫邪 · 孙膑",
+   "commanders": [
+    "阿离 89.1%",
+    "马可 3.6%",
+    "瑶妹 3.6%"
+   ],
+   "units": [
+    {
+     "name": "干将莫邪",
+     "awakened": true,
+     "items": [
+      "法源之杯"
+     ]
+    },
+    {
+     "name": "孙膑",
+     "awakened": true,
+     "items": [
+      "静谧之铃",
+      "纯净苍穹",
+      "虚无法杖"
+     ]
+    },
+    {
+     "name": "曜",
+     "awakened": true,
+     "items": [
+      "分身镜",
+      "凝渊",
+      "冥王"
+     ]
+    },
+    {
+     "name": "牛魔",
+     "awakened": true,
+     "items": [
+      "聚灵水晶",
+      "魔女斗篷",
+      "近卫荣耀"
+     ]
+    },
+    {
+     "name": "猪八戒",
+     "awakened": false,
+     "items": [
+      "不死鸟之眼"
+     ]
+    }
+   ],
+   "metrics": "登场率 1.0% 前三率 7.3% 登顶率 0.0% 平均名次 4.98",
+   "meta": "5 人阵容 · 55 场 · 3 种变阵"
+  },
+  {
+   "title": "河洛 · 李信 · 花木兰",
+   "commanders": [
+    "瑶妹 85.5%",
+    "阿离 3.6%",
+    "闹闹 3.6%"
+   ],
+   "units": [
+    {
+     "name": "李信",
+     "awakened": true,
+     "items": [
+      "百锻刀",
+      "无尽巨剑",
+      "魔律之刃"
+     ]
+    },
+    {
+     "name": "花木兰",
+     "awakened": false,
+     "items": [
+      "凝渊",
+      "反伤重甲",
+      "红魔"
+     ]
+    },
+    {
+     "name": "铠",
+     "awakened": true,
+     "items": [
+      "反伤重甲"
+     ]
+    },
+    {
+     "name": "钟馗",
+     "awakened": true,
+     "items": [
+      "自然法杖",
+      "红莲炎甲",
+      "生命魔典"
+     ]
+    },
+    {
+     "name": "太乙真人",
+     "awakened": false,
+     "items": [
+      "自然法杖"
+     ]
+    },
+    {
+     "name": "盾山",
+     "awakened": false,
+     "items": []
+    },
+    {
+     "name": "武则天",
+     "awakened": false,
+     "items": []
+    }
+   ],
+   "metrics": "登场率 1.0% 前三率 92.7% 登顶率 50.9% 平均名次 1.73",
+   "meta": "7 人阵容 · 55 场 · 3 种变阵"
+  }
+ ]
+}

@@ -1,0 +1,553 @@
+{
+ "瑶妹": {
+  "id": 11,
+  "name": "瑶妹",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/16777f3ad8d23d9205f8c6b29061ac91.png",
+  "desc": "",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=11&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "91199",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/aff826c9cd5b1536b56150ea8cac618c.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "661101",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "661106",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/c245dcd7d02580a31df7077c93cc249e.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/02e4f37d6cdcaecb22bada74dde8d872.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/44ffbd28ad3da3816bd389432be33732.png"
+ },
+ "常小娥": {
+  "id": 24,
+  "name": "常小娥",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/c8c45b73de5a2f5e62adb846c0ae517c.png",
+  "desc": "",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=24&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "92499",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/2a7836597ea8b3050614e669b9318649.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "662401",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "662407",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/ae090d340811e7e00da09ffdf2ffad08.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/866fffffaa7ec8292ecf580131c177f0.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/1c2b58fb532648408a13675d5085b236.png"
+ },
+ "白歌": {
+  "id": 33,
+  "name": "白歌",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/47182c515afd06d9d4d93ddd8f201b99.png",
+  "desc": "上限最高，启动后找齐牌上六级无敌。",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=33&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "93399",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/d9dba2b673c153cedc9620b74634a0e0.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "663301",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "663307",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/8013b9badd357ac8a7b55757149e1428.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/9c12aa4a489bc381df3a20bc629bc353.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/23f289306b08caf285a11a07e5af9c16.png"
+ },
+ "孙小宾": {
+  "id": 38,
+  "name": "孙小宾",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/5a05f3de05c33fef474d16022506d821.png",
+  "desc": "启动快，觉醒快，在中期能够快速抢牌和觉醒。",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=38&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "93899",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/871f5b916ae8d187575a2df42c4cad74.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "663801",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "663805",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/db2b7f01eabfa9111d708a01d596c101.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/38c83773424d41c86b993b4399b7cf3d.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/8cd968bb6197d029fe1ee0e0996e568c.png"
+ },
+ "小妲己": {
+  "id": 10,
+  "name": "小妲己",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/01c3968bd0ae109654ccb8a21aefae64.png",
+  "desc": "装备神器多，中期启动比较吃经济天赋，有经济天赋上限也很高。",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=10&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "91099",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/7e182ec521ccd4c95b2efb13d0fec90d.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "661001",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "661009",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/d2c42bd355b98d78f554c8e540959a51.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/9f94a44d6dde6fa19ef9b572094ca9e9.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/b82a71222d5d34eb5dd4763c933ec64e.png"
+ },
+ "昭君": {
+  "id": 34,
+  "name": "昭君",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/bfee6b5e52907279bec2c399a0be77f3.png",
+  "desc": "昭君有一个冰冻强化为：冻结后，英雄不变、觉醒进度+2，该强化极大程度加强了大河龙蛇的成型速度！",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=34&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "93499",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/585756115d0f427c6641a8b4fc89416a.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "663401",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "663405",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/39e0c8120f5c05173cd98d382f01f848.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/6eea8bf613fcfd215c6d794d10aef6fa.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/88f9e09727ade5a5d28693e18b2beb97.png"
+ },
+ "闹闹": {
+  "id": 40,
+  "name": "闹闹",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/0fa9a62913f2eb2621bddc0e046fe4f1.png",
+  "desc": "闹闹有非常优秀的找牌机制，可以保证中期体系成形更快，6本后闹闹也可以多选择一个阵营天赋，大河的专属天赋都很强。",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=40&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "94099",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/1c702a76fe3fd2db678177e17965ba3a.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "664001",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "664005",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/34ee14c857b9a1f29f90f49b57808d84.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/3f521660fff02cb60ecb7c6d3a5602e6.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/2c9ff119168a9ab2344e7324723d8021.png"
+ },
+ "镜": {
+  "id": 21,
+  "name": "镜",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/4a34614097e77daf4500a10f4dfbb58a.png",
+  "desc": "强大的复制的能力一张牌全员觉醒",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=21&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "92199",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/d5a71a34dd88803a3e87f3face4ffcec.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "662101",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "662107",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/a4ac6aceaccb7b1539e48d2f2a209eb7.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/155b1b00de49c33d9c8516a300b37a44.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/c71b6d9f54416eebdd60c245d6afa6b2.png"
+ },
+ "乔汐": {
+  "id": 22,
+  "name": "乔汐",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/0b5f332f7fab409231b1ea4383b3491c.png",
+  "desc": "",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=22&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "92299",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/3cbd047ed370bd5f9e720ee63e6be04c.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "662201",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "662206",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/7177ec46b855ed09f95be35885e84f48.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/fe19244a5016220315fd49b002c0006b.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/15c608c1a202ec1983a18d6d7bc58ce5.png"
+ },
+ "阿离": {
+  "id": 20,
+  "name": "阿离",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/119a3615b3e0b17491c795df3da4183e.png",
+  "desc": "",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=20&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "92099",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/a36b9dab26e55e160b31423a00a12791.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "662001",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "610010",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/3778505292dbeb09d1bb12bba4a48b95.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/da063d07fa49b37980e92d00161f23b7.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/91252874eb4ece31620b8c88bc92648f.png"
+ },
+ "弈星": {
+  "id": 36,
+  "name": "弈星",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/acadc747e75a60aa5191e41cc2719346.png",
+  "desc": "有同行偷同行，没同行留驭势一起用打合成",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=36&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "93699",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/041cc8fe938c1a1b12969ce92e4304f1.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "663601",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "663607",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/2e179f748486d73caa15d6d2427157f2.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/6a39de8a14fb4b3546ce9ebcaa2f61e0.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/063533a93bdf9e099d13e425bcafcd53.png"
+ },
+ "明先生": {
+  "id": 39,
+  "name": "明先生",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/75a13d66c8fc8bad8ab324b8779311f1.png",
+  "desc": "快速搜牌",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=39&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "93999",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/795dd1e31f7933e388ff435ca93b161a.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "663901",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "663905",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/9510a42389dd49d1fa64ab5daa2b492e.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/db123a07f33f5d97b360f1e28da6506f.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/23c4c8a0299d3980a44dbd9049bd4d16.png"
+ },
+ "姜导": {
+  "id": 41,
+  "name": "姜导",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/aa35e080d6b69a83d90fe0d1b5b20ea9.png",
+  "desc": "",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=41&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "94199",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/95581fe110e7db41c0e289eeb7da4058.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "664101",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "664108",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/92aecc9e4e94535f80957e9b17c7fd12.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/e9e64c58aba915e2e259b0d7871b642d.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/6425e2fdd38ee688bf53d1e1b54ecd8a.png"
+ },
+ "嬴律": {
+  "id": 43,
+  "name": "嬴律",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/345a419499ea3ef1f1e298022af8e3f8.png",
+  "desc": "",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=43&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "94399",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/4b8dd6015ec25269d9c794a3744c12c3.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "664301",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "610006",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/19c90230d5451669f5b6fb63220f7a84.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/0128a93f2b5833b1e6bf3e40739908c5.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/d9a2ca2aa0a6f3196966f9a3d92a444d.png"
+ },
+ "马可": {
+  "id": 32,
+  "name": "马可",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/89287acb08f878ffc7608da2828587d5.png",
+  "desc": "马可有冰耀宝石镜和复制场上三张牌，可以快速觉醒所有牌，后期还有增伤，可以完美适配三分射\n",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=32&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "93299",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/7c9933a16160958bf2229f9b166c09f7.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "663201",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "610013",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/74101a4d5cb08b865bfb5b8d9b393429.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/480a6de8b34a545ff45073cdd9e5fe58.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/00ecbcba61354e4f951bd097157615b1.png"
+ },
+ "庄小鱼": {
+  "id": 31,
+  "name": "庄小鱼",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/81595fcbaa6966a79cedf0daa24b412a.png",
+  "desc": "成型快 经济少一点",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=31&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "93199",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/1a9a03335e6cb28491cd2f69d98b8f9c.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "663101",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "663108",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/cb5eedf580967893e6f4ea787b20e2c8.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/40fc6661d736280edf6d13be2be3be82.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/6f7a4bbef658947bb7ff48f431883dc4.png"
+ },
+ "班叔": {
+  "id": 35,
+  "name": "班叔",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/57f792c0c385f815aef88e260123e043.png",
+  "desc": "班叔不是区qwq",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=35&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "93599",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/1dcc9302f7aa8a52234975fe30407f7a.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "663501",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "663502",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/e582576458eb2f1a3585582d53e4e2f7.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/ca4efc11a6db35d088e304b8c0aa5f84.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/7e8eada8345b57298678dd3bb2d73d8c.png"
+ },
+ "香香": {
+  "id": 50,
+  "name": "香香",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/c9863437ffcf04b72839508aa2e1ec08.png",
+  "desc": "香香可以主动攻击敌人，前期非常强势。拥有超过10级的1-3阶英雄越多香香攻击力越高，这套阵容低阶英雄多很适合香香。",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=50&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "95099",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/76563408c929e63fae226462fd2b3d35.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "665001",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "665005",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/60593b2fae31599e18ad659be2cb9806.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/4762363802b278dd3276e83b565f205a.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/bbf1556555337b9bb164b96073e42f01.png"
+ },
+ "玉环": {
+  "id": 25,
+  "name": "玉环",
+  "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_touxiang_auto/78c8bc23695303ee38c8a0ea84b9832b.png",
+  "desc": "首选玉环，牌最多，需要非常熟练和很快的手速",
+  "jumpUrl": "https://camp.qq.com/h5/webdist/os-handbook-detail/index.html?lordId=25&isNavigationBarHidden=1#/chess-player",
+  "skillList": [
+   {
+    "id": "92599",
+    "name": "技能",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_jineng_auto/847728fabf55d8e10d42983c714343ee.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "662501",
+    "name": "秘技",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/5a4364e3ab865be844e8fc0d18b91ae9.png",
+    "jumpUrl": ""
+   },
+   {
+    "id": "662502",
+    "name": "专属",
+    "icon": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_talent_auto/3bcc949a223374da9328849b8ec28d07.png",
+    "jumpUrl": ""
+   }
+  ],
+  "banShenImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_D1/d71167fe36124e35c00fe410c3adf61c.png",
+  "bgImg": "https://game-os-cos.kohsocialapp.qq.com/manage/custom_os_lord_bgImg/8513f3acac3dad3d0d4bf5b597633182.png"
+ }
+}

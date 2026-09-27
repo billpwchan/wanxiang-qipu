@@ -1,0 +1,30 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 中文字体（横向溢出检查依赖真实字宽）
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
+      - name: 数据完整性
+        run: node scripts/verify-site.mjs
+      - name: 真实浏览器交互（50 项）
+        run: node scripts/verify-ui.mjs
+      - name: 副驾回放
+        run: node copilot/test/run.mjs --replay
+      - name: README 表格与数据一致
+        run: node scripts/sync_readme.mjs --check

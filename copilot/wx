@@ -1,0 +1,24 @@
+#!/bin/zsh
+# 万象副驾启动器：./copilot/wx [窗口名] [--lan] [--no-voice] [--save]
+#   ./copilot/wx windows     列出可抓取的窗口（先确认 iPad 镜像窗口叫什么）
+#   ./copilot/wx demo        不开游戏预览 HUD
+set -e
+HERE="${0:A:h}"
+cd "$HERE/.."
+if [[ ! -x copilot/bin/eye || copilot/eye/main.swift -nt copilot/bin/eye ]]; then
+  echo "编译 eye…"
+  swiftc -O -parse-as-library -swift-version 5 -o copilot/bin/eye copilot/eye/main.swift \
+    -framework ScreenCaptureKit -framework Vision -framework CoreGraphics -framework ImageIO -framework UniformTypeIdentifiers
+fi
+case "$1" in
+  windows) exec copilot/bin/eye list ;;
+  demo) (sleep 1.5; open "http://127.0.0.1:4174/") & exec node copilot/brain.mjs demo copilot/test/frames.jsonl "${@:2}" ;;
+esac
+MATCH="${1:-影片录制}"; [[ "$MATCH" == --* ]] && MATCH="影片录制" || shift || true
+if ! copilot/bin/eye list >/dev/null 2>&1; then
+  echo "需要屏幕录制权限：系统设置 → 隐私与安全性 → 屏幕与系统录音，打开你正在用的终端，然后重开终端。"
+  open "x-apple.systempreferences:com.apple.preference.security?Privacy_ScreenCapture" || true
+  exit 2
+fi
+(sleep 1.5; open "http://127.0.0.1:4174/") &
+exec node copilot/brain.mjs live --match "$MATCH" "$@"

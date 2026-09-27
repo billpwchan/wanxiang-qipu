@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#eef1f0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12171c" media="(prefers-color-scheme: dark)">
+<title>万象 · S1 棋谱</title>
+<meta name="description" content="王者万象棋 S1 打法手册：9/24 版本卡面推导的 8 条路线、逐回合选牌、转型条件与对局中跟打。">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231c232b'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='%23e0a526' font-family='serif'%3E%E8%B1%A1%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="app.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到内容</a>
+<header class="top">
+  <a class="brand" href="#/"><span class="seal">象</span><span class="brand-name">万象棋谱</span><span class="brand-season">S1</span></a>
+  <a class="patch-chip" href="#/rules?s=patch">9/24 版本</a>
+</header>
+<nav class="nav" aria-label="主要导航">
+  <a href="#/" data-nav="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z M4 12h16 M12 5v14"/></svg><span>开局</span></a>
+  <a href="#/routes" data-nav="routes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4v16 M6 7h11l-2 3 2 3H6"/></svg><span>打法</span></a>
+  <a href="#/play" data-nav="play"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M10 8.5v7l6-3.5z"/></svg><span>跟打</span></a>
+  <a href="#/cards" data-nav="cards"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></svg><span>查牌</span></a>
+  <a href="#/rules" data-nav="rules"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h10l4 4v12H5z M9 11h6 M9 15h6"/></svg><span>原理</span></a>
+</nav>
+<main id="main" tabindex="-1"><div id="view" class="view"><p class="loading">载入棋谱…</p></div></main>
+<dialog id="sheet" aria-labelledby="sheet-title"><div class="sheet-inner"><button class="sheet-close" type="button" aria-label="关闭">×</button><div id="sheet-body"></div></div></dialog>
+</body>
+</html>
