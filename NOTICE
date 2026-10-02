@@ -1,0 +1,20 @@
+NOTICE
+
+The MIT License in LICENSE covers the source code and original documentation
+in this repository. It does not cover the game artwork and data in these
+directories:
+
+- site/dist/assets/c/
+- site/dist/assets/lord/
+- site/dist/assets/art/
+- site/dist/assets/poster/
+- research/v4/official/
+- copilot/test/cards/
+
+This material (Honor of Kings / 王者万象棋 card art, character renders,
+illustrations, posters, icons and related data) is the property of Tencent
+and its respective owners. It is included for non-commercial reference only
+and is not licensed under the MIT License.
+
+本仓库的 MIT 许可只覆盖源代码和原创文档。上述目录中的游戏美术和数据归腾讯及相关权利人所有，
+不在 MIT 许可范围内，仅供非商业参考。

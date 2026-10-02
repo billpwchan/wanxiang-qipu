@@ -220,6 +220,8 @@ docs/             方法、架构、数据流程、部署；images/ 与 src/ 是
 
 非官方玩家研究项目，与腾讯、王者荣耀无关。游戏名称、卡面、立绘、原画等素材版权归腾讯所有；对局统计来自 datawxq.com 的公开页面。代码以 [MIT](LICENSE) 许可发布，许可范围不包括上述游戏素材和第三方数据。
 
+不在 MIT 许可范围内的素材目录见 [NOTICE](NOTICE)。
+
 <div align="center">
 
 [![Star History](https://api.star-history.com/svg?repos=billpwchan/wanxiang-qipu&type=Date)](https://star-history.com/#billpwchan/wanxiang-qipu&Date)
