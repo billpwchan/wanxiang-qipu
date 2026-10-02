@@ -1,9 +1,9 @@
 # 部署
 
-网站是纯静态文件，部署在一台已有其他服务的 Ubuntu 服务器上。原则是**只动自己的东西**：新增一个容器、一个网关片段、一个目录，不改其他服务的任何配置。
+网站是纯静态文件，部署在一台已有其他服务的 Linux 服务器上。原则是**只动自己的东西**：新增一个容器、一个网关片段、一个目录，不改其他服务的任何配置。
 
 - 地址：https://wanxiang.52-198-144-26.sslip.io/
-- 服务器：52.198.144.26（Ubuntu / Lightsail）
+- 服务器：`<server-ip>`，SSH 用户 `<ssh-user>`（具体值不写进仓库）
 - 当前发布：20260926-151739（`site/dist/release.json`）
 - 目录：`/opt/wanxiang/releases/<发布号>`，`/opt/wanxiang/current` 是指向当前版本的软链接
 - 容器：`wanxiang-guide`，用服务器上已有的 `caddy:2.10-alpine` 镜像，配置见 `deploy/Caddyfile`
@@ -16,8 +16,8 @@
 node scripts/verify-site.mjs && node scripts/verify-ui.mjs      # 先在本地全部通过
 python3 scripts/make_release.py                                  # 写 release.json，打包到 releases/wanxiang-static-<R>.tar.gz
 R=<上一步打印的 release>
-scp releases/wanxiang-static-$R.tar.gz ubuntu@52.198.144.26:/tmp/   # 注意主机后面的冒号，漏了会在本地生成一个叫 ubuntu@… 的文件
-ssh ubuntu@52.198.144.26 "sudo python3 - $R /tmp/wanxiang-static-$R.tar.gz" < deploy/update.py
+scp releases/wanxiang-static-$R.tar.gz <ssh-user>@<server-ip>:/tmp/   # 注意主机后面的冒号，漏了会在本地生成一个叫 <ssh-user>@… 的文件
+ssh <ssh-user>@<server-ip> "sudo python3 - $R /tmp/wanxiang-static-$R.tar.gz" < deploy/update.py
 node scripts/verify-ui.mjs https://wanxiang.52-198-144-26.sslip.io/  # 公网验收
 ```
 
@@ -37,7 +37,7 @@ node scripts/verify-ui.mjs https://wanxiang.52-198-144-26.sslip.io/  # 公网验
 旧版本目录都保留着，把 `current` 原子指回去即可：
 
 ```sh
-ssh ubuntu@52.198.144.26 'cd /opt/wanxiang && sudo ln -s releases/<旧发布号> next && sudo mv -T next current'
+ssh <ssh-user>@<server-ip> 'cd /opt/wanxiang && sudo ln -s releases/<旧发布号> next && sudo mv -T next current'
 ```
 
 撤下整个网站：只移走本项目的 `wanxiang.caddy` 片段，验证并平滑重载网关，再停止 `wanxiang-guide`。保留目录与发布版本即可恢复。不要覆盖网关总配置、清理其他片段或停止其他容器。
