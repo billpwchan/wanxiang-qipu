@@ -353,7 +353,14 @@ function push() {
 }
 function serve() {
   const hud = join(HERE, 'hud');
+  // 只认面板自己的地址：Host 挡 DNS 重绑定，Origin 挡任意网页跨站 POST（例如替你触发深想）
+  const hosts = ['127.0.0.1', 'localhost'];
+  if (flag('--lan')) for (const list of Object.values(networkInterfaces())) for (const a of list) if (a.family === 'IPv4' && !a.internal) hosts.push(a.address);
+  const allowed = new Set(hosts.map((h) => `${h}:${PORT}`));
+  const origins = new Set(hosts.map((h) => `http://${h}:${PORT}`));
   const srv = createServer((req, res) => {
+    const origin = req.headers.origin;
+    if (!allowed.has(req.headers.host) || (req.method === 'POST' && origin !== undefined && !origins.has(origin))) { res.writeHead(403); res.end(); return; }
     let url;
     try { url = new URL(req.url, 'http://x'); } catch { res.writeHead(400); res.end(); return; } // 例如 '//'：别让一个坏请求打断对局中的副驾
     if (url.pathname === '/events') {

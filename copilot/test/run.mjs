@@ -1,7 +1,8 @@
 // 回归测试：用官方卡面渲染模拟 iPad 画面 → eye OCR → brain 回放 → 检查每一步建议。
 // node copilot/test/run.mjs            完整流程（macOS：Chrome 截图 + Apple Vision OCR，会重写 frames.jsonl）
 // node copilot/test/run.mjs --replay   只回放已提交的 frames.jsonl（任何系统可跑，CI 用这个）
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawn } from 'node:child_process';
+import { request } from 'node:http';
 import { readdirSync, writeFileSync, mkdtempSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
@@ -40,4 +41,20 @@ out.forEach((line, i) => {
   if (!ok) fail++;
   console.log(ok ? 'PASS' : 'FAIL', line.slice(0, 150));
 });
+// 面板服务只认自己的地址：外站网页的 POST、DNS 重绑定后的 Host 都要拒绝
+const PORT = 4300 + Math.floor(Math.random() * 400);
+const hud = spawn('node', [join(ROOT, 'copilot/brain.mjs'), 'demo', join(HERE, 'frames.jsonl'), '--no-voice', '--port', String(PORT), '--until', '1'], { stdio: 'ignore' });
+const status = (method, path, headers = {}) => new Promise((ok) => request({ host: '127.0.0.1', port: PORT, method, path, headers }, (r) => { r.resume(); ok(r.statusCode); }).on('error', () => ok(0)).end());
+for (let i = 0; i < 50 && !(await status('GET', '/routes')); i++) await new Promise((r) => setTimeout(r, 100));
+const guards = [
+  ['GET /routes', await status('GET', '/routes'), 200],
+  ['同源 POST', await status('POST', '/voice?on=0', { origin: `http://127.0.0.1:${PORT}` }), 204],
+  ['外站 Origin 的 POST', await status('POST', '/voice?on=1', { origin: 'https://evil.example' }), 403],
+  ['重绑定的 Host', await status('GET', '/routes', { host: `evil.example:${PORT}` }), 403],
+];
+hud.kill();
+for (const [name, got, want] of guards) {
+  if (got !== want) fail++;
+  console.log(got === want ? 'PASS' : 'FAIL', `面板服务：${name} → ${got}`);
+}
 process.exit(fail ? 1 : 0);
