@@ -27,9 +27,16 @@ const CHROME = process.env.CHROME || (process.platform === 'darwin' ? '/Applicat
 const port = 9800 + Math.floor(Math.random() * 100);
 const GPU = process.env.GPU === '1';
 const proc = spawn(CHROME, ['--headless=new', ...(GPU ? ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] : ['--disable-gpu']), ...(process.env.CI ? ['--no-sandbox'] : []), `--remote-debugging-port=${port}`, '--user-data-dir=' + path.join(tmpdir(), 'wx-ui-' + port), 'about:blank'], { stdio: 'ignore' });
+proc.on('error', (e) => {
+  console.error(e.code === 'ENOENT' ? `找不到浏览器：${CHROME}\n用 CHROME=<浏览器路径> 指定，例如：\n  Windows  $env:CHROME='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'\n  macOS    CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'` : `启动浏览器失败：${CHROME}\n${e.message}`);
+  process.exit(1);
+});
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let info; for (let i = 0; i < 50 && !info; i++) { try { info = await (await fetch(`http://127.0.0.1:${port}/json/list`)).json(); } catch { await sleep(200); } }
-const ws = new WebSocket(info.find((t) => t.type === 'page').webSocketDebuggerUrl);
+if (!info) { console.error(`浏览器没有在 10 秒内打开调试端口 ${port}：${CHROME}`); proc.kill(); server?.close(); process.exit(1); }
+const page = info.find((t) => t.type === 'page');
+if (!page) { console.error(`调试端口 ${port} 上没有页面目标，浏览器可能启动失败：${CHROME}`); proc.kill(); server?.close(); process.exit(1); }
+const ws = new WebSocket(page.webSocketDebuggerUrl);
 await new Promise((r) => ws.addEventListener('open', r));
 let id = 0; const pending = new Map(); const errors = []; const bad = [];
 ws.addEventListener('message', (e) => {
