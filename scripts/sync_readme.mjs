@@ -3,12 +3,14 @@
 //   node scripts/sync_readme.mjs --check   只检查是否同步（CI 用），不同步时退出码 1
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const D = path.join(ROOT, 'site/dist/data');
-const { ROUTES, TRAPS } = await import(path.join(D, 'plan.js'));
-const { FACTS } = await import(path.join(D, 'facts.js'));
+// Windows 上动态 import 必须是 file:// URL，path.join 得到的 D:\… 会被 ESM loader 拒绝
+const load = (p) => import(pathToFileURL(p).href);
+const { ROUTES, TRAPS } = await load(path.join(D, 'plan.js'));
+const { FACTS } = await load(path.join(D, 'facts.js'));
 const SITE = 'https://wanxiang.52-198-144-26.sslip.io/';
 const TIER = { top: '首选', ok: '可以打', avg: '一般' };
 const short = (f) => ({ 三分之地: '三分', 大河流域: '大河' }[f] || f);

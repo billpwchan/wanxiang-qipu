@@ -4,14 +4,15 @@
 //   research/v4/lineups/lineups.json  官方社区阵容（阵容码 = key，导入次数 = useNum；scripts/trim_lineups.py 去掉了作者信息）
 // node scripts/build_facts.mjs
 import { readFileSync, writeFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import path from 'node:path';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const D = (p) => path.join(ROOT, 'site/dist/data', p);
-const { ROUTES, TRAPS, BANS } = await import(D('plan.js'));
-const { META } = await import(D('meta.js'));
-const { EVIDENCE: E } = await import(D('evidence.js'));
+// Windows 上动态 import 必须是 file:// URL，path.join 得到的 D:\… 会被 ESM loader 拒绝
+const { ROUTES, TRAPS, BANS } = await import(pathToFileURL(D('plan.js')).href);
+const { META } = await import(pathToFileURL(D('meta.js')).href);
+const { EVIDENCE: E } = await import(pathToFileURL(D('evidence.js')).href);
 const cards = JSON.parse(readFileSync(D('cards.json')));
 const lordAssets = JSON.parse(readFileSync(D('lords.json')));
 const posters = JSON.parse(readFileSync(D('posters.json')));

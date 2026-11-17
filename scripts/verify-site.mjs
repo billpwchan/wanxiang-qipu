@@ -3,12 +3,14 @@
 // node scripts/verify-site.mjs
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const D = path.join(ROOT, 'site/dist');
-const { STAGES, BANS, ROUTES, TRAPS, RULES } = await import(path.join(D, 'data/plan.js'));
-const { FACTS } = await import(path.join(D, 'data/facts.js'));
-const { ICONS } = await import(path.join(D, 'data/icons.js'));
+// Windows 上动态 import 必须是 file:// URL，path.join 得到的 D:\… 会被 ESM loader 拒绝
+const load = (p) => import(pathToFileURL(p).href);
+const { STAGES, BANS, ROUTES, TRAPS, RULES } = await load(path.join(D, 'data/plan.js'));
+const { FACTS } = await load(path.join(D, 'data/facts.js'));
+const { ICONS } = await load(path.join(D, 'data/icons.js'));
 const cards = JSON.parse(readFileSync(path.join(D, 'data/cards.json')));
 const art = JSON.parse(readFileSync(path.join(D, 'data/art.json')));
 const BY = {};
