@@ -38,6 +38,8 @@ snapshots/raw/
 snapshots/probe-variants/
 # datawxq 统计抓取结果（scripts/fetch_stats.mjs 产物）：只留本地，合并结果进 data/comps.json
 snapshots/probe-stats/
+# 图鉴侦察抓包（官网/datawxq 页面与 bundle）：只留本地，结论已写进 docs/ 与 data/
+snapshots/probe-tujian/
 
 # 官方卡池原始抓包（scripts/build_data.py --fetch 产物）：每个约 4 MB，可随时重抓，只留本地
 research/raw-*/

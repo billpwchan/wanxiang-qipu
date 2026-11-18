@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "wanxiang-qipu",
+  "buildCommand": "echo 'no build step required'",
+  "installCommand": "",
+  "outputDirectory": "site/dist",
+  "framework": null
+}
