@@ -4,11 +4,17 @@
 // GPU=1 时开启 WebGL，检查玻璃画布真的在画；CHROME=<路径> 指定浏览器
 import { spawn } from 'node:child_process';
 import { createServer } from 'node:http';
-import { createReadStream, existsSync, statSync } from 'node:fs';
+import { createReadStream, existsSync, readFileSync, statSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { pathToFileURL, fileURLToPath } from 'node:url';
 const DIST = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../site/dist');
+// 「我有的棋手」名单必须覆盖官方卡池全部棋手，数量跟着 cards.json 走，不写死 19 或 21。
+const cardsLords = JSON.parse(readFileSync(path.join(DIST, 'data/cards.json'), 'utf8')).lords.map((x) => x.name);
+const cardsSorted = [...cardsLords].sort((a, b) => a.localeCompare(b, 'zh-Hans-CN'));
+const { FACTS } = await import(pathToFileURL(path.join(DIST, 'data/facts.js')).href);
+// 抽屉里按名称排，比对的期望值也按同一次排序取，免得被 cards.json 里的原始顺序干扰
+const noRoute = cardsSorted.filter((n) => !(FACTS.lords[n]?.routes || []).length);
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.png': 'image/png', '.svg': 'image/svg+xml', '.woff2': 'font/woff2' };
 let server = null;
 let BASE = process.argv[2];
@@ -68,7 +74,11 @@ check('开局：热门但别打 6 条，带导入次数', await ev(`document.que
 check('开局：手机无横向溢出', await noOverflow());
 // 我的棋手
 await ev(`document.querySelector('[data-owned]').click()`); await sleep(300);
-check('我的棋手：抽屉 19 个', await ev(`document.querySelectorAll('[data-own]').length`) === 19);
+check(`我的棋手：抽屉 ${cardsLords.length} 个（= 官方卡池全量）`, await ev(`document.querySelectorAll('[data-own]').length`) === cardsLords.length);
+const picked = await ev(`[...document.querySelectorAll('[data-own]')].map(b => b.dataset.own)`);
+check('我的棋手：名单与 cards.json 的 lords 完全一致', JSON.stringify(picked) === JSON.stringify(cardsSorted), picked.join(' '));
+const naText = await ev(`[...document.querySelectorAll('[data-own][disabled]')].map(b => b.dataset.own + (b.textContent.includes('暂无法推荐') ? '' : '!'))`);
+check(`我的棋手：无路线的 ${noRoute.length} 个置灰并标注暂无法推荐`, JSON.stringify(naText) === JSON.stringify(noRoute), naText.join(' '));
 await ev(`['嬴律','明先生'].forEach(n => document.querySelector('[data-own="'+n+'"]').click())`);
 await ev(`document.querySelector('#sheet [data-close].btn').click()`); await sleep(600);
 check('我的棋手：禁河洛时跳过孙小宾', (await txt('#ans .for b')) !== '孙小宾' && ['嬴律', '明先生'].includes(await txt('#ans .for b')), await txt('#ans .for b'));

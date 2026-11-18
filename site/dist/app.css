@@ -575,6 +575,8 @@ body.playing .bar, body.playing .foot { display: none; }
 .lordpick button { display: grid; justify-items: center; gap: 4px; padding: 10px 4px; border-radius: 16px; background: var(--card); font-size: 13px; opacity: .45; transition: opacity .2s, box-shadow .2s; }
 .lordpick button img { width: 52px; height: 52px; border-radius: 99px; background: var(--card2); }
 .lordpick button.on { opacity: 1; box-shadow: 0 0 0 2px var(--act); }
+.lordpick button:disabled { opacity: .28; cursor: default; }
+.lordpick button small { font-size: 11px; line-height: 1.2; color: var(--ink2); }
 @media (max-width: 640px) {
   .sheet .panel { top: auto; left: 0; width: 100%; max-height: 88svh; border-radius: 24px 24px 0 0; }
 }

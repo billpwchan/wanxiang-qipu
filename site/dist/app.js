@@ -888,11 +888,21 @@ function openNote() {
     <p>游戏更新后数字会变。本站数据更新于 2026-09-26。</p>`);
 }
 
+// 完整棋手池：官方卡池里的 21 个（data/cards.json → lords）。
+// FACTS.lords 只有上榜或有立绘的棋手，光按它渲染会漏人。
+function allLords() {
+  const out = new Map();
+  for (const c of CARDS.lords || []) out.set(c.name, { name: c.name, img: c.img || '' });
+  for (const [n, x] of Object.entries(L)) if (!out.has(n)) out.set(n, { name: n, img: x.icon || '' });
+  return [...out.values()];
+}
+
 function openOwned() {
   const own = new Set(owned());
-  const names = Object.keys(L).sort((a, b) => (L[a].avg ?? 9) - (L[b].avg ?? 9));
+  const list = allLords().map((x) => ({ ...x, can: (L[x.name]?.routes || []).length > 0 }));
+  list.sort((a, b) => a.name.localeCompare(b.name, 'zh-Hans-CN'));
   openSheet(`<h2 class="d">我有的棋手</h2><p>点选你有的棋手，开局推荐只用这些。一个都不选 = 不限制。</p>
-    <div class="lordpick">${names.map((n) => `<button class="${own.has(n) ? 'on' : ''}" data-own="${esc(n)}" aria-pressed="${own.has(n)}"><img src="${L[n].icon}" alt="">${esc(n)}</button>`).join('')}</div>
+    <div class="lordpick">${list.map((x) => { const on = own.has(x.name); const img = x.img || lordIcon(x.name); return `<button class="${on ? 'on' : ''}" data-own="${esc(x.name)}" aria-pressed="${on}"${x.can ? '' : ' disabled title="当前路线库里还没有以它为主的打法"'}>${img ? `<img src="${img}" alt="">` : ''}${esc(x.name)}${x.can ? '' : '<small>暂无法推荐</small>'}</button>`; }).join('')}</div>
     <p style="margin-top:18px;display:flex;gap:10px"><button class="btn go" data-close>好了</button><button class="btn ghost" data-own-clear>全部清除</button></p>`);
 }
 
