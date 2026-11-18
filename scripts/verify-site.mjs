@@ -65,7 +65,12 @@ for (const [ban, v] of Object.entries(BANS)) {
 for (const t of TRAPS) { const d = FACTS.traps.find((x) => x.id === t.id); ok(d && d.uses > 100000 && d.avg >= 3.6, `陷阱 ${t.id}`); if (t.to) ok(ROUTES.some((x) => x.id === t.to), `陷阱 ${t.id} 链接`); }
 for (const [n, l] of Object.entries(FACTS.lords)) { file(l.img); file(l.small); file(l.icon); }
 ok(Object.keys(FACTS.lords).length === 19, '棋手数');
-for (const c of cards.heroes) { file(c.img); file(c.art); }
+for (const c of cards.heroes) {
+  file(c.img); file(c.art);
+  // 卡牌弹窗的属性表要显示这 10 项（app.js statTable），缺一项就会少一行，别让它在页面上悄悄消失。
+  const s = c.stats || {};
+  for (const k of ['hp', 'atk', 'ap', 'phyDefense', 'magDefense', 'criticalRate', 'criticalEffect', 'moveSpeed', 'mana0', 'as']) ok(typeof s[k] === 'number', `${c.name} 缺属性 ${k}`);
+}
 for (const k of ['effects', 'equipment', 'talents']) for (const c of cards[k]) if (c.img) file(c.img);
 for (const v of Object.values(art.card)) file(v);
 ok(RULES.length >= 6, '规则数');

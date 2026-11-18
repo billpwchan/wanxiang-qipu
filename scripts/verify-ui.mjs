@@ -131,6 +131,15 @@ const n1 = await ev(`document.querySelectorAll('#cgrid .cd').length`);
 check('查牌：搜「复生」', n1 > 0 && n1 < 85, String(n1));
 await ev(`document.querySelector('[data-ctab="effects"]').click()`); await sleep(200);
 check('查牌：效果牌', await ev(`document.querySelectorAll('#cgrid .ci').length`) > 0);
+// 清掉搜索和分页状态，回到英雄列表，点第一张开属性表
+await go('#/cards');
+await ev(`(() => { const i = document.querySelector('#cq'); i.value = ''; i.dispatchEvent(new Event('input', { bubbles: true })); })()`); await sleep(200);
+await ev(`document.querySelector('[data-ctab="heroes"]').click()`); await sleep(300);
+await ev(`document.querySelector('#cgrid .cd').click()`); await sleep(400);
+check('查牌：属性表 10 项', await ev(`document.querySelectorAll('#panel .stt div').length`) === 10);
+const stt = (await txt('#panel .stt')) || '';
+check('查牌：暴击率 / 暴击效果转成百分比', /暴击率\d+%/.test(stt) && /暴击效果\d+%/.test(stt), stt);
+await ev(`document.querySelector('#sheet').close()`);
 await go('#/rules');
 check('规则页', await ev(`document.querySelectorAll('.rule').length`) >= 6);
 await ev(`document.querySelector('[data-note]').click()`); await sleep(300);

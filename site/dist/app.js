@@ -646,6 +646,28 @@ function cardsFill() {
   }
 }
 
+// 官方客户端的属性算法（research/raw/js-cards.js:1056-1058）：
+// 暴击率 = criticalRate/10000*100，暴击效果 = (1+criticalEffect/10000)*100，攻速 = as/10000。
+// 移速官方客户端不渲染，按原值显示（85 个英雄都是 4600）。
+const stPct = (v) => `${+((v / 10000) * 100).toFixed(1)}%`;
+function statTable(c) {
+  const s = c.stats;
+  if (!s) return '';
+  const rows = [
+    ['生命', s.hp],
+    ['物攻', s.atk],
+    ['法强', s.ap],
+    ['护甲', s.phyDefense],
+    ['魔抗', s.magDefense],
+    ['暴击率', s.criticalRate == null ? null : stPct(s.criticalRate)],
+    ['暴击效果', s.criticalEffect == null ? null : stPct(10000 + s.criticalEffect)],
+    ['移速', s.moveSpeed],
+    ['初始能量', s.mana0],
+    ['攻速', s.as == null ? null : +(s.as / 10000).toFixed(1)],
+  ].filter(([, v]) => v != null && v !== '');
+  return rows.length ? `<h3>属性</h3><div class="stt">${rows.map(([k, v]) => `<div><span>${k}</span><b>${v}</b></div>`).join('')}</div>` : '';
+}
+
 function openCard(name) {
   const c = BY[name];
   if (!c) return;
@@ -657,6 +679,7 @@ function openCard(name) {
     <h2 class="d">${esc(name)}</h2>
     <div class="chips">${c.tier ? `<span class="chip">${c.tier} 阶</span>` : ''}${c.faction ? `<span class="chip">${esc(c.faction)}</span>` : ''}${c.cost != null && c._k !== 'heroes' ? `<span class="chip">${c.cost} 能量</span>` : ''}</div>
     ${c.text ? `<p>${esc(c.text)}</p>` : ''}
+    ${statTable(c)}
     ${c.awake ? `<h3>觉醒后</h3><p>${esc(c.awake)}</p>` : ''}
     ${c.skills?.[0] ? `<h3>技能：${esc(c.skills[0].name)}</h3><p>${esc(c.skills[0].text)}</p>${nodes.length ? `<div class="lv">${nodes.map((n) => `<div><span>${n.lv} 级</span>${esc(n.text)}</div>`).join('')}</div>` : ''}` : ''}
     ${(c.rel || []).length ? `<h3>可以变成</h3><ul class="plain">${c.rel.map((x) => `<li><b>${esc(x.name)}</b>：${esc(x.text)}</li>`).join('')}</ul>` : ''}

@@ -525,6 +525,11 @@ body.playing .bar, body.playing .foot { display: none; }
 .sheet .lv { display: grid; gap: 8px; font-size: 14px; }
 .sheet .lv div { display: grid; grid-template-columns: 58px 1fr; gap: 8px; color: var(--ink2); }
 .sheet .lv span { font-family: var(--display); color: var(--act); }
+/* 属性表：官方 10 项战斗属性，窄屏两列、宽屏自动多列 */
+.sheet .stt { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 120px), 1fr)); gap: 8px; }
+.sheet .stt div { display: flex; align-items: baseline; justify-content: space-between; gap: 6px; padding: 8px 12px; border-radius: 12px; background: var(--card); font-size: 14px; }
+.sheet .stt span { color: var(--ink3); white-space: nowrap; }
+.sheet .stt b { font-family: var(--display); font-size: 16px; color: var(--ink); }
 .lordpick { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 10px; margin-top: 14px; }
 .lordpick button { display: grid; justify-items: center; gap: 4px; padding: 10px 4px; border-radius: 16px; background: var(--card); font-size: 13px; opacity: .45; transition: opacity .2s, box-shadow .2s; }
 .lordpick button img { width: 52px; height: 52px; border-radius: 99px; background: var(--card2); }
