@@ -355,7 +355,56 @@ if (!existsSync(D('comps.json'))) {
       }
     }
     chk(isStr(r?.statsNote) && r.statsNote.length > 0, `${tag}：statsNote 必须说明这些字段为什么是 null`);
+    // variants：要么 null（没抓到），要么是从 datawxq 摘下来的变阵数组。
+    // 只查结构、类型和「变阵 = 原阵容换掉若干英雄且人数不变」这条对应关系，不补字段、不推算数值。
     chk(r?.variants === null || Array.isArray(r?.variants), `${tag}：variants 只能是 null 或数组`);
+    if (Array.isArray(r?.variants)) {
+      const baseIds = (r.heroList || []).map((h) => String(h.id));
+      const base = new Set(baseIds);
+      chk(r.variants.length <= (st?.variantCount ?? 0),
+        `${tag}.variants：${r.variants.length} 条，超过 stats.variantCount ${st?.variantCount}`);
+      if (r.variants.length) chk(hasDwxq, `${tag}：有 variants 时 stats.source 必须是 datawxq.com`);
+      const VARIANT_KEYS = ['lineupKey', 'lineupCode', 'heroes', 'addedHeroes', 'removedHeroes',
+        'count', 'appearanceRate', 'avgPlacement', 'firstRate', 'top3Rate', 'similarity'];
+      const seenKeys = new Set();
+      for (let i = 0; i < r.variants.length; i++) {
+        const v = r.variants[i];
+        const vt = `${tag}.variants[${i}]`;
+        chk(v && typeof v === 'object' && !Array.isArray(v), `${vt} 必须是对象`);
+        for (const k of Object.keys(v || {})) chk(VARIANT_KEYS.includes(k), `${vt}：多出字段 ${k}`);
+        for (const k of VARIANT_KEYS) chk(k in (v || {}), `${vt}：缺字段 ${k}`);
+        chk(isStr(v.lineupKey) && /^\d+(\|\d+)+$/.test(v.lineupKey), `${vt}.lineupKey 格式不对：${JSON.stringify(v.lineupKey)}`);
+        chk(!seenKeys.has(v.lineupKey), `${vt}.lineupKey 与本条记录里其他变阵重复`);
+        seenKeys.add(v.lineupKey);
+        // lineupCode 是被官网收录的阵容才有的公开编号，多数变阵没有，空串是原值。
+        chk(isStr(v.lineupCode), `${vt}.lineupCode 只能是字符串`);
+        for (const k of ['heroes', 'addedHeroes', 'removedHeroes']) {
+          chk(Array.isArray(v[k]), `${vt}.${k} 必须是数组`);
+          for (const h of v[k] || []) {
+            chk(h && (typeof h.id === 'string' || typeof h.id === 'number') && String(h.id) !== '',
+              `${vt}.${k}：英雄缺 id`);
+            chk(!('name' in (h || {})) || isStr(h.name), `${vt}.${k}：name 只能是字符串`);
+          }
+        }
+        // 变阵 = 原阵容 − removedHeroes + addedHeroes。多带一个、少带一个都见过，所以不查人数不变。
+        const ids = (v.heroes || []).map((h) => String(h.id));
+        chk(ids.length > 0, `${vt}.heroes 不能为空`);
+        chk(new Set(ids).size === ids.length, `${vt}.heroes 有重复英雄`);
+        const added = new Set((v.addedHeroes || []).map((h) => String(h.id)));
+        const removed = new Set((v.removedHeroes || []).map((h) => String(h.id)));
+        for (const hid of added) chk(!base.has(hid), `${vt}：addedHeroes 里的 ${hid} 本来就在原阵容里`);
+        for (const hid of removed) chk(base.has(hid), `${vt}：removedHeroes 里的 ${hid} 不在原阵容里`);
+        for (const hid of added) chk(!removed.has(hid), `${vt}：${hid} 同时出现在 addedHeroes 和 removedHeroes`);
+        const expect = new Set([...baseIds.filter((h) => !removed.has(h)), ...added]);
+        chk(expect.size === ids.length && ids.every((h) => expect.has(h)),
+          `${vt}.heroes 与 addedHeroes / removedHeroes 对不上`);
+        chk(isInt(v.count) && v.count >= 0, `${vt}.count 必须是非负整数`);
+        for (const k of ['appearanceRate', 'firstRate', 'top3Rate', 'similarity']) {
+          chk(isNum(v[k]) && v[k] >= 0 && v[k] <= 1, `${vt}.${k} 必须是 0~1 的数字`);
+        }
+        chk(isNum(v.avgPlacement) && v.avgPlacement > 0, `${vt}.avgPlacement 必须是正数`);
+      }
+    }
 
     // 来源字段
     chk(isStr(r?.source) && r.source.startsWith('http'), `${tag}：source 必须是 URL`);

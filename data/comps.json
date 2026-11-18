@@ -23,7 +23,8 @@
     "beginner 栏全部是官方预置阵容（tag=官方、useNum 恒为 0、seasonId=1），对应记录带 isPreset: true；不要和 general/hot 的使用次数放在一起比较。",
     "beginner 只有 9 行且 pro_2 返回 404，样本不足，暂不作为基准。",
     "stats 的 avgRank / pickRate / difficulty / equipRate 官网不提供，保持 null；登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com（scripts/fetch_stats.mjs + merge_stats.mjs），按 rosterKey 匹配；不要用 operationDetails 推 variants，不要用 equipList 算穿戴率。",
-    "brief / positionDesc / equipDesc / operationDetails / tags / talentCardDesc / effectCardDesc 是玩家原创的阵容攻略（UGC），原文照录，版权归原作者，见 NOTICE。"
+    "brief / positionDesc / equipDesc / operationDetails / tags / talentCardDesc / effectCardDesc 是玩家原创的阵容攻略（UGC），原文照录，版权归原作者，见 NOTICE。",
+    "variants 来自 datawxq.com 的 /wzwxq/lineups/detail（CDP 探针经页面签名模块 dz 抓取 3 个 rosterKey 样本，15 个目标 rosterKey 中其余 12 个因站点 42000 限流未抓），按 rosterKey 匹配，覆盖 6 条记录（其中 6 条有变阵，共 144 条）；匹配到但没有变阵的记 []，没抓到的保持 null。每条只留核心字段，数值原样照抄。"
   ],
   "records": [
     {
@@ -747,7 +748,1237 @@
         "source": "datawxq.com"
       },
       "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
-      "variants": null,
+      "variants": [
+        {
+          "lineupKey": "7|1741|1861|1891|1991|5051|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 1395,
+          "appearanceRate": 0.0966,
+          "avgPlacement": 3.0244,
+          "firstRate": 0.0839,
+          "top3Rate": 0.6645,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1861|1891|1991|5051|5061|5111",
+          "lineupCode": "96881857307147496",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 1375,
+          "appearanceRate": 0.0953,
+          "avgPlacement": 2.8793,
+          "firstRate": 0.1215,
+          "top3Rate": 0.7207,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 869,
+          "appearanceRate": 0.0602,
+          "avgPlacement": 2.8262,
+          "firstRate": 0.1162,
+          "top3Rate": 0.7273,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 658,
+          "appearanceRate": 0.0456,
+          "avgPlacement": 2.8343,
+          "firstRate": 0.1809,
+          "top3Rate": 0.6991,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 527,
+          "appearanceRate": 0.0365,
+          "avgPlacement": 2.8729,
+          "firstRate": 0.1404,
+          "top3Rate": 0.6926,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5051|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 483,
+          "appearanceRate": 0.0335,
+          "avgPlacement": 3.381,
+          "firstRate": 0.0787,
+          "top3Rate": 0.5342,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|5051|5061|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 423,
+          "appearanceRate": 0.0293,
+          "avgPlacement": 3.0827,
+          "firstRate": 0.1418,
+          "top3Rate": 0.6265,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "8|1561|1741|1751|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 291,
+          "appearanceRate": 0.0202,
+          "avgPlacement": 2.6667,
+          "firstRate": 0.2371,
+          "top3Rate": 0.756,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1751|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 289,
+          "appearanceRate": 0.02,
+          "avgPlacement": 2.6782,
+          "firstRate": 0.1557,
+          "top3Rate": 0.7439,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5051|5061|5111",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 257,
+          "appearanceRate": 0.0178,
+          "avgPlacement": 3.4358,
+          "firstRate": 0.0817,
+          "top3Rate": 0.5175,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1741|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            }
+          ],
+          "count": 223,
+          "appearanceRate": 0.0154,
+          "avgPlacement": 3.2197,
+          "firstRate": 0.0897,
+          "top3Rate": 0.5695,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1501|1561|1741|1861|1891|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 210,
+          "appearanceRate": 0.0145,
+          "avgPlacement": 3.2143,
+          "firstRate": 0.0952,
+          "top3Rate": 0.5905,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            }
+          ],
+          "count": 185,
+          "appearanceRate": 0.0128,
+          "avgPlacement": 2.9027,
+          "firstRate": 0.1297,
+          "top3Rate": 0.6703,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 172,
+          "appearanceRate": 0.0119,
+          "avgPlacement": 4.814,
+          "firstRate": 0.0174,
+          "top3Rate": 0.1628,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|31191|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "31191",
+              "name": "始祖熊灵"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "31191",
+              "name": "始祖熊灵"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 164,
+          "appearanceRate": 0.0114,
+          "avgPlacement": 3.061,
+          "firstRate": 0.1585,
+          "top3Rate": 0.628,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 133,
+          "appearanceRate": 0.0092,
+          "avgPlacement": 3.4662,
+          "firstRate": 0.0451,
+          "top3Rate": 0.5414,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 131,
+          "appearanceRate": 0.0091,
+          "avgPlacement": 5.229,
+          "firstRate": 0,
+          "top3Rate": 0.0534,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 127,
+          "appearanceRate": 0.0088,
+          "avgPlacement": 4.8976,
+          "firstRate": 0,
+          "top3Rate": 0.1339,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "7|1561|1741|1751|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 126,
+          "appearanceRate": 0.0087,
+          "avgPlacement": 2.7937,
+          "firstRate": 0.127,
+          "top3Rate": 0.7302,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1741|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            }
+          ],
+          "count": 123,
+          "appearanceRate": 0.0085,
+          "avgPlacement": 4.878,
+          "firstRate": 0.0081,
+          "top3Rate": 0.1707,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "8|1561|1741|1871|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1871",
+              "name": "东皇太一"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1871",
+              "name": "东皇太一"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 81,
+          "appearanceRate": 0.0056,
+          "avgPlacement": 3.2716,
+          "firstRate": 0.0864,
+          "top3Rate": 0.5802,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5061|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 73,
+          "appearanceRate": 0.0051,
+          "avgPlacement": 4.0411,
+          "firstRate": 0.0411,
+          "top3Rate": 0.3288,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|5021|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5021",
+              "name": "裴擒虎"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5021",
+              "name": "裴擒虎"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 64,
+          "appearanceRate": 0.0044,
+          "avgPlacement": 2.6563,
+          "firstRate": 0.2813,
+          "top3Rate": 0.6719,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "8|1501|1561|1741|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 63,
+          "appearanceRate": 0.0044,
+          "avgPlacement": 3.3968,
+          "firstRate": 0.127,
+          "top3Rate": 0.4921,
+          "similarity": 0.875
+        }
+      ],
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
       "fetchedAt": "2026-11-18T07:26:19.366Z",
@@ -5224,7 +6455,1237 @@
         "source": "datawxq.com"
       },
       "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
-      "variants": null,
+      "variants": [
+        {
+          "lineupKey": "7|1741|1861|1891|1991|5051|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 1395,
+          "appearanceRate": 0.0966,
+          "avgPlacement": 3.0244,
+          "firstRate": 0.0839,
+          "top3Rate": 0.6645,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1861|1891|1991|5051|5061|5111",
+          "lineupCode": "96881857307147496",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 1375,
+          "appearanceRate": 0.0953,
+          "avgPlacement": 2.8793,
+          "firstRate": 0.1215,
+          "top3Rate": 0.7207,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 869,
+          "appearanceRate": 0.0602,
+          "avgPlacement": 2.8262,
+          "firstRate": 0.1162,
+          "top3Rate": 0.7273,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 658,
+          "appearanceRate": 0.0456,
+          "avgPlacement": 2.8343,
+          "firstRate": 0.1809,
+          "top3Rate": 0.6991,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 527,
+          "appearanceRate": 0.0365,
+          "avgPlacement": 2.8729,
+          "firstRate": 0.1404,
+          "top3Rate": 0.6926,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5051|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 483,
+          "appearanceRate": 0.0335,
+          "avgPlacement": 3.381,
+          "firstRate": 0.0787,
+          "top3Rate": 0.5342,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|5051|5061|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 423,
+          "appearanceRate": 0.0293,
+          "avgPlacement": 3.0827,
+          "firstRate": 0.1418,
+          "top3Rate": 0.6265,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "8|1561|1741|1751|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 291,
+          "appearanceRate": 0.0202,
+          "avgPlacement": 2.6667,
+          "firstRate": 0.2371,
+          "top3Rate": 0.756,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1751|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 289,
+          "appearanceRate": 0.02,
+          "avgPlacement": 2.6782,
+          "firstRate": 0.1557,
+          "top3Rate": 0.7439,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5051|5061|5111",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 257,
+          "appearanceRate": 0.0178,
+          "avgPlacement": 3.4358,
+          "firstRate": 0.0817,
+          "top3Rate": 0.5175,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1741|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            }
+          ],
+          "count": 223,
+          "appearanceRate": 0.0154,
+          "avgPlacement": 3.2197,
+          "firstRate": 0.0897,
+          "top3Rate": 0.5695,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1501|1561|1741|1861|1891|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 210,
+          "appearanceRate": 0.0145,
+          "avgPlacement": 3.2143,
+          "firstRate": 0.0952,
+          "top3Rate": 0.5905,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            }
+          ],
+          "count": 185,
+          "appearanceRate": 0.0128,
+          "avgPlacement": 2.9027,
+          "firstRate": 0.1297,
+          "top3Rate": 0.6703,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 172,
+          "appearanceRate": 0.0119,
+          "avgPlacement": 4.814,
+          "firstRate": 0.0174,
+          "top3Rate": 0.1628,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|31191|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "31191",
+              "name": "始祖熊灵"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "31191",
+              "name": "始祖熊灵"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 164,
+          "appearanceRate": 0.0114,
+          "avgPlacement": 3.061,
+          "firstRate": 0.1585,
+          "top3Rate": 0.628,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 133,
+          "appearanceRate": 0.0092,
+          "avgPlacement": 3.4662,
+          "firstRate": 0.0451,
+          "top3Rate": 0.5414,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 131,
+          "appearanceRate": 0.0091,
+          "avgPlacement": 5.229,
+          "firstRate": 0,
+          "top3Rate": 0.0534,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 127,
+          "appearanceRate": 0.0088,
+          "avgPlacement": 4.8976,
+          "firstRate": 0,
+          "top3Rate": 0.1339,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "7|1561|1741|1751|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 126,
+          "appearanceRate": 0.0087,
+          "avgPlacement": 2.7937,
+          "firstRate": 0.127,
+          "top3Rate": 0.7302,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1741|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            }
+          ],
+          "count": 123,
+          "appearanceRate": 0.0085,
+          "avgPlacement": 4.878,
+          "firstRate": 0.0081,
+          "top3Rate": 0.1707,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "8|1561|1741|1871|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1871",
+              "name": "东皇太一"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1871",
+              "name": "东皇太一"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 81,
+          "appearanceRate": 0.0056,
+          "avgPlacement": 3.2716,
+          "firstRate": 0.0864,
+          "top3Rate": 0.5802,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5061|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 73,
+          "appearanceRate": 0.0051,
+          "avgPlacement": 4.0411,
+          "firstRate": 0.0411,
+          "top3Rate": 0.3288,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|5021|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5021",
+              "name": "裴擒虎"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5021",
+              "name": "裴擒虎"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 64,
+          "appearanceRate": 0.0044,
+          "avgPlacement": 2.6563,
+          "firstRate": 0.2813,
+          "top3Rate": 0.6719,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "8|1501|1561|1741|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 63,
+          "appearanceRate": 0.0044,
+          "avgPlacement": 3.3968,
+          "firstRate": 0.127,
+          "top3Rate": 0.4921,
+          "similarity": 0.875
+        }
+      ],
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
       "fetchedAt": "2026-11-18T07:26:22.375Z",
@@ -7404,7 +9865,1237 @@
         "source": "datawxq.com"
       },
       "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
-      "variants": null,
+      "variants": [
+        {
+          "lineupKey": "7|1741|1861|1891|1991|5051|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 1395,
+          "appearanceRate": 0.0966,
+          "avgPlacement": 3.0244,
+          "firstRate": 0.0839,
+          "top3Rate": 0.6645,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1861|1891|1991|5051|5061|5111",
+          "lineupCode": "96881857307147496",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 1375,
+          "appearanceRate": 0.0953,
+          "avgPlacement": 2.8793,
+          "firstRate": 0.1215,
+          "top3Rate": 0.7207,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 869,
+          "appearanceRate": 0.0602,
+          "avgPlacement": 2.8262,
+          "firstRate": 0.1162,
+          "top3Rate": 0.7273,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 658,
+          "appearanceRate": 0.0456,
+          "avgPlacement": 2.8343,
+          "firstRate": 0.1809,
+          "top3Rate": 0.6991,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 527,
+          "appearanceRate": 0.0365,
+          "avgPlacement": 2.8729,
+          "firstRate": 0.1404,
+          "top3Rate": 0.6926,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5051|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 483,
+          "appearanceRate": 0.0335,
+          "avgPlacement": 3.381,
+          "firstRate": 0.0787,
+          "top3Rate": 0.5342,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|5051|5061|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 423,
+          "appearanceRate": 0.0293,
+          "avgPlacement": 3.0827,
+          "firstRate": 0.1418,
+          "top3Rate": 0.6265,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "8|1561|1741|1751|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 291,
+          "appearanceRate": 0.0202,
+          "avgPlacement": 2.6667,
+          "firstRate": 0.2371,
+          "top3Rate": 0.756,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1751|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 289,
+          "appearanceRate": 0.02,
+          "avgPlacement": 2.6782,
+          "firstRate": 0.1557,
+          "top3Rate": 0.7439,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5051|5061|5111",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 257,
+          "appearanceRate": 0.0178,
+          "avgPlacement": 3.4358,
+          "firstRate": 0.0817,
+          "top3Rate": 0.5175,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1741|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            }
+          ],
+          "count": 223,
+          "appearanceRate": 0.0154,
+          "avgPlacement": 3.2197,
+          "firstRate": 0.0897,
+          "top3Rate": 0.5695,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1501|1561|1741|1861|1891|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 210,
+          "appearanceRate": 0.0145,
+          "avgPlacement": 3.2143,
+          "firstRate": 0.0952,
+          "top3Rate": 0.5905,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            }
+          ],
+          "count": 185,
+          "appearanceRate": 0.0128,
+          "avgPlacement": 2.9027,
+          "firstRate": 0.1297,
+          "top3Rate": 0.6703,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 172,
+          "appearanceRate": 0.0119,
+          "avgPlacement": 4.814,
+          "firstRate": 0.0174,
+          "top3Rate": 0.1628,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|31191|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "31191",
+              "name": "始祖熊灵"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "31191",
+              "name": "始祖熊灵"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 164,
+          "appearanceRate": 0.0114,
+          "avgPlacement": 3.061,
+          "firstRate": 0.1585,
+          "top3Rate": 0.628,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 133,
+          "appearanceRate": 0.0092,
+          "avgPlacement": 3.4662,
+          "firstRate": 0.0451,
+          "top3Rate": 0.5414,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 131,
+          "appearanceRate": 0.0091,
+          "avgPlacement": 5.229,
+          "firstRate": 0,
+          "top3Rate": 0.0534,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 127,
+          "appearanceRate": 0.0088,
+          "avgPlacement": 4.8976,
+          "firstRate": 0,
+          "top3Rate": 0.1339,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "7|1561|1741|1751|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 126,
+          "appearanceRate": 0.0087,
+          "avgPlacement": 2.7937,
+          "firstRate": 0.127,
+          "top3Rate": 0.7302,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1741|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            }
+          ],
+          "count": 123,
+          "appearanceRate": 0.0085,
+          "avgPlacement": 4.878,
+          "firstRate": 0.0081,
+          "top3Rate": 0.1707,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "8|1561|1741|1871|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1871",
+              "name": "东皇太一"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1871",
+              "name": "东皇太一"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 81,
+          "appearanceRate": 0.0056,
+          "avgPlacement": 3.2716,
+          "firstRate": 0.0864,
+          "top3Rate": 0.5802,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5061|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 73,
+          "appearanceRate": 0.0051,
+          "avgPlacement": 4.0411,
+          "firstRate": 0.0411,
+          "top3Rate": 0.3288,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|5021|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5021",
+              "name": "裴擒虎"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5021",
+              "name": "裴擒虎"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 64,
+          "appearanceRate": 0.0044,
+          "avgPlacement": 2.6563,
+          "firstRate": 0.2813,
+          "top3Rate": 0.6719,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "8|1501|1561|1741|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 63,
+          "appearanceRate": 0.0044,
+          "avgPlacement": 3.3968,
+          "firstRate": 0.127,
+          "top3Rate": 0.4921,
+          "similarity": 0.875
+        }
+      ],
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
       "fetchedAt": "2026-11-18T07:26:26.104Z",
@@ -8287,7 +11978,1237 @@
         "source": "datawxq.com"
       },
       "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
-      "variants": null,
+      "variants": [
+        {
+          "lineupKey": "7|1741|1861|1891|1991|5051|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 1395,
+          "appearanceRate": 0.0966,
+          "avgPlacement": 3.0244,
+          "firstRate": 0.0839,
+          "top3Rate": 0.6645,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1861|1891|1991|5051|5061|5111",
+          "lineupCode": "96881857307147496",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 1375,
+          "appearanceRate": 0.0953,
+          "avgPlacement": 2.8793,
+          "firstRate": 0.1215,
+          "top3Rate": 0.7207,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 869,
+          "appearanceRate": 0.0602,
+          "avgPlacement": 2.8262,
+          "firstRate": 0.1162,
+          "top3Rate": 0.7273,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 658,
+          "appearanceRate": 0.0456,
+          "avgPlacement": 2.8343,
+          "firstRate": 0.1809,
+          "top3Rate": 0.6991,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 527,
+          "appearanceRate": 0.0365,
+          "avgPlacement": 2.8729,
+          "firstRate": 0.1404,
+          "top3Rate": 0.6926,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5051|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 483,
+          "appearanceRate": 0.0335,
+          "avgPlacement": 3.381,
+          "firstRate": 0.0787,
+          "top3Rate": 0.5342,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|5051|5061|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 423,
+          "appearanceRate": 0.0293,
+          "avgPlacement": 3.0827,
+          "firstRate": 0.1418,
+          "top3Rate": 0.6265,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "8|1561|1741|1751|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 291,
+          "appearanceRate": 0.0202,
+          "avgPlacement": 2.6667,
+          "firstRate": 0.2371,
+          "top3Rate": 0.756,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1751|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 289,
+          "appearanceRate": 0.02,
+          "avgPlacement": 2.6782,
+          "firstRate": 0.1557,
+          "top3Rate": 0.7439,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5051|5061|5111",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 257,
+          "appearanceRate": 0.0178,
+          "avgPlacement": 3.4358,
+          "firstRate": 0.0817,
+          "top3Rate": 0.5175,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1741|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            }
+          ],
+          "count": 223,
+          "appearanceRate": 0.0154,
+          "avgPlacement": 3.2197,
+          "firstRate": 0.0897,
+          "top3Rate": 0.5695,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1501|1561|1741|1861|1891|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 210,
+          "appearanceRate": 0.0145,
+          "avgPlacement": 3.2143,
+          "firstRate": 0.0952,
+          "top3Rate": 0.5905,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            }
+          ],
+          "count": 185,
+          "appearanceRate": 0.0128,
+          "avgPlacement": 2.9027,
+          "firstRate": 0.1297,
+          "top3Rate": 0.6703,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 172,
+          "appearanceRate": 0.0119,
+          "avgPlacement": 4.814,
+          "firstRate": 0.0174,
+          "top3Rate": 0.1628,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|31191|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "31191",
+              "name": "始祖熊灵"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "31191",
+              "name": "始祖熊灵"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 164,
+          "appearanceRate": 0.0114,
+          "avgPlacement": 3.061,
+          "firstRate": 0.1585,
+          "top3Rate": 0.628,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 133,
+          "appearanceRate": 0.0092,
+          "avgPlacement": 3.4662,
+          "firstRate": 0.0451,
+          "top3Rate": 0.5414,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 131,
+          "appearanceRate": 0.0091,
+          "avgPlacement": 5.229,
+          "firstRate": 0,
+          "top3Rate": 0.0534,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 127,
+          "appearanceRate": 0.0088,
+          "avgPlacement": 4.8976,
+          "firstRate": 0,
+          "top3Rate": 0.1339,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "7|1561|1741|1751|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 126,
+          "appearanceRate": 0.0087,
+          "avgPlacement": 2.7937,
+          "firstRate": 0.127,
+          "top3Rate": 0.7302,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1741|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            }
+          ],
+          "count": 123,
+          "appearanceRate": 0.0085,
+          "avgPlacement": 4.878,
+          "firstRate": 0.0081,
+          "top3Rate": 0.1707,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "8|1561|1741|1871|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1871",
+              "name": "东皇太一"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1871",
+              "name": "东皇太一"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 81,
+          "appearanceRate": 0.0056,
+          "avgPlacement": 3.2716,
+          "firstRate": 0.0864,
+          "top3Rate": 0.5802,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5061|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 73,
+          "appearanceRate": 0.0051,
+          "avgPlacement": 4.0411,
+          "firstRate": 0.0411,
+          "top3Rate": 0.3288,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|5021|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5021",
+              "name": "裴擒虎"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5021",
+              "name": "裴擒虎"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 64,
+          "appearanceRate": 0.0044,
+          "avgPlacement": 2.6563,
+          "firstRate": 0.2813,
+          "top3Rate": 0.6719,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "8|1501|1561|1741|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 63,
+          "appearanceRate": 0.0044,
+          "avgPlacement": 3.3968,
+          "firstRate": 0.127,
+          "top3Rate": 0.4921,
+          "similarity": 0.875
+        }
+      ],
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
       "fetchedAt": "2026-11-18T07:26:26.104Z",
@@ -15814,7 +20735,1237 @@
         "source": "datawxq.com"
       },
       "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
-      "variants": null,
+      "variants": [
+        {
+          "lineupKey": "7|1741|1861|1891|1991|5051|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 1395,
+          "appearanceRate": 0.0966,
+          "avgPlacement": 3.0244,
+          "firstRate": 0.0839,
+          "top3Rate": 0.6645,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1861|1891|1991|5051|5061|5111",
+          "lineupCode": "96881857307147496",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 1375,
+          "appearanceRate": 0.0953,
+          "avgPlacement": 2.8793,
+          "firstRate": 0.1215,
+          "top3Rate": 0.7207,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 869,
+          "appearanceRate": 0.0602,
+          "avgPlacement": 2.8262,
+          "firstRate": 0.1162,
+          "top3Rate": 0.7273,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 658,
+          "appearanceRate": 0.0456,
+          "avgPlacement": 2.8343,
+          "firstRate": 0.1809,
+          "top3Rate": 0.6991,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 527,
+          "appearanceRate": 0.0365,
+          "avgPlacement": 2.8729,
+          "firstRate": 0.1404,
+          "top3Rate": 0.6926,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5051|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 483,
+          "appearanceRate": 0.0335,
+          "avgPlacement": 3.381,
+          "firstRate": 0.0787,
+          "top3Rate": 0.5342,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|5051|5061|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 423,
+          "appearanceRate": 0.0293,
+          "avgPlacement": 3.0827,
+          "firstRate": 0.1418,
+          "top3Rate": 0.6265,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "8|1561|1741|1751|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 291,
+          "appearanceRate": 0.0202,
+          "avgPlacement": 2.6667,
+          "firstRate": 0.2371,
+          "top3Rate": 0.756,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1751|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 289,
+          "appearanceRate": 0.02,
+          "avgPlacement": 2.6782,
+          "firstRate": 0.1557,
+          "top3Rate": 0.7439,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5051|5061|5111",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 257,
+          "appearanceRate": 0.0178,
+          "avgPlacement": 3.4358,
+          "firstRate": 0.0817,
+          "top3Rate": 0.5175,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1741|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            }
+          ],
+          "count": 223,
+          "appearanceRate": 0.0154,
+          "avgPlacement": 3.2197,
+          "firstRate": 0.0897,
+          "top3Rate": 0.5695,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1501|1561|1741|1861|1891|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 210,
+          "appearanceRate": 0.0145,
+          "avgPlacement": 3.2143,
+          "firstRate": 0.0952,
+          "top3Rate": 0.5905,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            }
+          ],
+          "count": 185,
+          "appearanceRate": 0.0128,
+          "avgPlacement": 2.9027,
+          "firstRate": 0.1297,
+          "top3Rate": 0.6703,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 172,
+          "appearanceRate": 0.0119,
+          "avgPlacement": 4.814,
+          "firstRate": 0.0174,
+          "top3Rate": 0.1628,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|31191|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "31191",
+              "name": "始祖熊灵"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "31191",
+              "name": "始祖熊灵"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 164,
+          "appearanceRate": 0.0114,
+          "avgPlacement": 3.061,
+          "firstRate": 0.1585,
+          "top3Rate": 0.628,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 133,
+          "appearanceRate": 0.0092,
+          "avgPlacement": 3.4662,
+          "firstRate": 0.0451,
+          "top3Rate": 0.5414,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 131,
+          "appearanceRate": 0.0091,
+          "avgPlacement": 5.229,
+          "firstRate": 0,
+          "top3Rate": 0.0534,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 127,
+          "appearanceRate": 0.0088,
+          "avgPlacement": 4.8976,
+          "firstRate": 0,
+          "top3Rate": 0.1339,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "7|1561|1741|1751|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 126,
+          "appearanceRate": 0.0087,
+          "avgPlacement": 2.7937,
+          "firstRate": 0.127,
+          "top3Rate": 0.7302,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1741|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            }
+          ],
+          "count": 123,
+          "appearanceRate": 0.0085,
+          "avgPlacement": 4.878,
+          "firstRate": 0.0081,
+          "top3Rate": 0.1707,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "8|1561|1741|1871|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1871",
+              "name": "东皇太一"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1871",
+              "name": "东皇太一"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 81,
+          "appearanceRate": 0.0056,
+          "avgPlacement": 3.2716,
+          "firstRate": 0.0864,
+          "top3Rate": 0.5802,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5061|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 73,
+          "appearanceRate": 0.0051,
+          "avgPlacement": 4.0411,
+          "firstRate": 0.0411,
+          "top3Rate": 0.3288,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|5021|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5021",
+              "name": "裴擒虎"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5021",
+              "name": "裴擒虎"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 64,
+          "appearanceRate": 0.0044,
+          "avgPlacement": 2.6563,
+          "firstRate": 0.2813,
+          "top3Rate": 0.6719,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "8|1501|1561|1741|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 63,
+          "appearanceRate": 0.0044,
+          "avgPlacement": 3.3968,
+          "firstRate": 0.127,
+          "top3Rate": 0.4921,
+          "similarity": 0.875
+        }
+      ],
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
       "fetchedAt": "2026-11-18T07:26:33.519Z",
@@ -16191,7 +22342,1237 @@
         "source": "datawxq.com"
       },
       "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
-      "variants": null,
+      "variants": [
+        {
+          "lineupKey": "7|1741|1861|1891|1991|5051|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 1395,
+          "appearanceRate": 0.0966,
+          "avgPlacement": 3.0244,
+          "firstRate": 0.0839,
+          "top3Rate": 0.6645,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1861|1891|1991|5051|5061|5111",
+          "lineupCode": "96881857307147496",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 1375,
+          "appearanceRate": 0.0953,
+          "avgPlacement": 2.8793,
+          "firstRate": 0.1215,
+          "top3Rate": 0.7207,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 869,
+          "appearanceRate": 0.0602,
+          "avgPlacement": 2.8262,
+          "firstRate": 0.1162,
+          "top3Rate": 0.7273,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 658,
+          "appearanceRate": 0.0456,
+          "avgPlacement": 2.8343,
+          "firstRate": 0.1809,
+          "top3Rate": 0.6991,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 527,
+          "appearanceRate": 0.0365,
+          "avgPlacement": 2.8729,
+          "firstRate": 0.1404,
+          "top3Rate": 0.6926,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5051|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 483,
+          "appearanceRate": 0.0335,
+          "avgPlacement": 3.381,
+          "firstRate": 0.0787,
+          "top3Rate": 0.5342,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|5051|5061|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 423,
+          "appearanceRate": 0.0293,
+          "avgPlacement": 3.0827,
+          "firstRate": 0.1418,
+          "top3Rate": 0.6265,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "8|1561|1741|1751|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 291,
+          "appearanceRate": 0.0202,
+          "avgPlacement": 2.6667,
+          "firstRate": 0.2371,
+          "top3Rate": 0.756,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1751|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 289,
+          "appearanceRate": 0.02,
+          "avgPlacement": 2.6782,
+          "firstRate": 0.1557,
+          "top3Rate": 0.7439,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5051|5061|5111",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 257,
+          "appearanceRate": 0.0178,
+          "avgPlacement": 3.4358,
+          "firstRate": 0.0817,
+          "top3Rate": 0.5175,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1741|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            }
+          ],
+          "count": 223,
+          "appearanceRate": 0.0154,
+          "avgPlacement": 3.2197,
+          "firstRate": 0.0897,
+          "top3Rate": 0.5695,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "7|1501|1561|1741|1861|1891|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 210,
+          "appearanceRate": 0.0145,
+          "avgPlacement": 3.2143,
+          "firstRate": 0.0952,
+          "top3Rate": 0.5905,
+          "similarity": 0.5556
+        },
+        {
+          "lineupKey": "7|1561|1861|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            }
+          ],
+          "count": 185,
+          "appearanceRate": 0.0128,
+          "avgPlacement": 2.9027,
+          "firstRate": 0.1297,
+          "top3Rate": 0.6703,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5051|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "count": 172,
+          "appearanceRate": 0.0119,
+          "avgPlacement": 4.814,
+          "firstRate": 0.0174,
+          "top3Rate": 0.1628,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|31191|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "31191",
+              "name": "始祖熊灵"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "31191",
+              "name": "始祖熊灵"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 164,
+          "appearanceRate": 0.0114,
+          "avgPlacement": 3.061,
+          "firstRate": 0.1585,
+          "top3Rate": 0.628,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1861|1891|1991|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1861",
+              "name": "太乙真人"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 133,
+          "appearanceRate": 0.0092,
+          "avgPlacement": 3.4662,
+          "firstRate": 0.0451,
+          "top3Rate": 0.5414,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 131,
+          "appearanceRate": 0.0091,
+          "avgPlacement": 5.229,
+          "firstRate": 0,
+          "top3Rate": 0.0534,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "6|1561|1741|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 127,
+          "appearanceRate": 0.0088,
+          "avgPlacement": 4.8976,
+          "firstRate": 0,
+          "top3Rate": 0.1339,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "7|1561|1741|1751|1891|1991|5051|5061",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1751",
+              "name": "钟馗"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1751",
+              "name": "钟馗"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "count": 126,
+          "appearanceRate": 0.0087,
+          "avgPlacement": 2.7937,
+          "firstRate": 0.127,
+          "top3Rate": 0.7302,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "6|1741|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [],
+          "removedHeroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            }
+          ],
+          "count": 123,
+          "appearanceRate": 0.0085,
+          "avgPlacement": 4.878,
+          "firstRate": 0.0081,
+          "top3Rate": 0.1707,
+          "similarity": 0.8571
+        },
+        {
+          "lineupKey": "8|1561|1741|1871|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1871",
+              "name": "东皇太一"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1871",
+              "name": "东皇太一"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 81,
+          "appearanceRate": 0.0056,
+          "avgPlacement": 3.2716,
+          "firstRate": 0.0864,
+          "top3Rate": 0.5802,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "7|1561|1741|1891|1991|5061|5111|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5111",
+              "name": "猪八戒"
+            }
+          ],
+          "removedHeroes": [
+            {
+              "id": "5051",
+              "name": "瑶"
+            }
+          ],
+          "count": 73,
+          "appearanceRate": 0.0051,
+          "avgPlacement": 4.0411,
+          "firstRate": 0.0411,
+          "top3Rate": 0.3288,
+          "similarity": 0.75
+        },
+        {
+          "lineupKey": "8|1561|1741|1891|1991|5021|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5021",
+              "name": "裴擒虎"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "5021",
+              "name": "裴擒虎"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 64,
+          "appearanceRate": 0.0044,
+          "avgPlacement": 2.6563,
+          "firstRate": 0.2813,
+          "top3Rate": 0.6719,
+          "similarity": 0.875
+        },
+        {
+          "lineupKey": "8|1501|1561|1741|1891|1991|5051|5061|5771",
+          "lineupCode": "",
+          "heroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            },
+            {
+              "id": "1561",
+              "name": "张良"
+            },
+            {
+              "id": "1741",
+              "name": "虞姬"
+            },
+            {
+              "id": "1891",
+              "name": "鬼谷子"
+            },
+            {
+              "id": "1991",
+              "name": "公孙离"
+            },
+            {
+              "id": "5051",
+              "name": "瑶"
+            },
+            {
+              "id": "5061",
+              "name": "云中君"
+            },
+            {
+              "id": "5771",
+              "name": "少司缘"
+            }
+          ],
+          "addedHeroes": [
+            {
+              "id": "1501",
+              "name": "韩信"
+            }
+          ],
+          "removedHeroes": [],
+          "count": 63,
+          "appearanceRate": 0.0044,
+          "avgPlacement": 3.3968,
+          "firstRate": 0.127,
+          "top3Rate": 0.4921,
+          "similarity": 0.875
+        }
+      ],
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
       "fetchedAt": "2026-11-18T07:26:33.519Z",
@@ -21164,5 +28545,16 @@
     "sampleCount": 312754,
     "rosterKeysMatched": 15,
     "recordsFilled": 31
+  },
+  "variantsSnapshot": {
+    "source": "datawxq.com",
+    "fetchedAt": "2026-11-18T13:55:20.328Z",
+    "provenance": "CDP 探针经页面签名模块 dz 抓取 3 个 rosterKey 样本，15 个目标 rosterKey 中其余 12 个因站点 42000 限流未抓",
+    "rosterKeysRequested": 3,
+    "rosterKeysFetched": 3,
+    "rosterKeysWithVariants": 3,
+    "recordsFilled": 6,
+    "recordsWithVariants": 6,
+    "variantsTotal": 144
   }
 }

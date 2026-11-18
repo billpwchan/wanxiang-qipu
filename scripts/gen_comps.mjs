@@ -173,24 +173,29 @@ const records = [];
 let crossSeasonCount = 0;
 let interactiveDiffCount = 0;
 let statsCarried = 0;
+let variantsCarried = 0;
 
 // 现有 comps.json 里由 fetch_stats.mjs 合并进来的 stats，按 rosterKey 索引。
 // 只继承 source === 'datawxq.com' 且 6 个字段齐全的记录；其余（含用户手改）一律不碰。
 const carriedStats = new Map();
+// merge_variants.mjs 合并进来的变阵同样按 rosterKey 继承：
+// 只继承已经抓过的记录（null = 没抓过，不继承）；空数组 = 抓过、站点确实没有变阵。
+const carriedVariants = new Map();
+let prevDoc = null;
 {
   const prevPath = outFile;
   if (fs.existsSync(prevPath)) {
     try {
-      const prev = JSON.parse(fs.readFileSync(prevPath, 'utf8'));
-      for (const r of prev.records || []) {
-        const st = r?.stats;
-        if (!st || st.source !== DWXQ_SOURCE) continue;
-        if (!DWXQ_STAT_KEYS.every((k) => k in st)) continue;
+      prevDoc = JSON.parse(fs.readFileSync(prevPath, 'utf8'));
+      for (const r of prevDoc.records || []) {
         const k = rosterKeyOf(r.heroList || []);
-        carriedStats.set(k, st);
+        const st = r?.stats;
+        if (st && st.source === DWXQ_SOURCE && DWXQ_STAT_KEYS.every((x) => x in st)) carriedStats.set(k, st);
+        if (Array.isArray(r?.variants)) carriedVariants.set(k, r.variants);
       }
     } catch (e) {
-      console.log('note: 读不到现有 comps.json，本次不从旧文件继承 stats：', e.message);
+      prevDoc = null;
+      console.log('note: 读不到现有 comps.json，本次不从旧文件继承 stats / variants：', e.message);
     }
   }
 }
@@ -268,6 +273,11 @@ for (const [code, list] of byKey) {
       rec.stats.source = DWXQ_SOURCE;
       statsCarried++;
     }
+    const vs = carriedVariants.get(rosterKeyOf(rec.heroList));
+    if (vs) {
+      rec.variants = vs;
+      variantsCarried++;
+    }
   }
 
   records.push(rec);
@@ -309,15 +319,21 @@ const out = {
     'beginner 栏全部是官方预置阵容（tag=官方、useNum 恒为 0、seasonId=1），对应记录带 isPreset: true；不要和 general/hot 的使用次数放在一起比较。',
     'beginner 只有 9 行且 pro_2 返回 404，样本不足，暂不作为基准。',
     'stats 的 avgRank / pickRate / difficulty / equipRate 官网不提供，保持 null；登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，按 rosterKey 匹配，当初未重生成时保留；不要用 operationDetails 推 variants，不要用 equipList 算穿戴率。',
+    'variants 来自 datawxq.com 的 /wzwxq/lineups/detail，按 rosterKey 匹配；匹配到但没有变阵的记 []，没抓到的保持 null。每条只留 lineupKey / lineupCode / heroes / addedHeroes / removedHeroes / count / appearanceRate / avgPlacement / firstRate / top3Rate / similarity，数值原样照抄。',
     'brief / positionDesc / equipDesc / operationDetails / tags / talentCardDesc / effectCardDesc 是玩家原创的阵容攻略（UGC），原文照录，版权归原作者，见 NOTICE。',
   ],
   records,
 };
+
+// 外部数据的抓取快照也一并继承，重新生成不会丢（statsSnapshot 来自 merge_stats.mjs，variantsSnapshot 来自 merge_variants.mjs）。
+for (const k of ['statsSnapshot', 'variantsSnapshot']) {
+  if (prevDoc && prevDoc[k]) out[k] = prevDoc[k];
+}
 
 fs.mkdirSync(path.dirname(outFile), { recursive: true });
 fs.writeFileSync(outFile, JSON.stringify(out, null, 2) + '\n', 'utf8');
 console.log('in:', path.relative(process.cwd(), rawDir) || rawDir);
 console.log('records:', records.length, '→', path.relative(process.cwd(), outFile) || outFile);
 console.log('columnCount:', JSON.stringify(columnCount));
-console.log('crossSeason:', crossSeasonCount, 'interactiveDiff:', interactiveDiffCount, 'statsCarried:', statsCarried);
+console.log('crossSeason:', crossSeasonCount, 'interactiveDiff:', interactiveDiffCount, 'statsCarried:', statsCarried, 'variantsCarried:', variantsCarried);
 console.log('bytes:', fs.statSync(outFile).size);
