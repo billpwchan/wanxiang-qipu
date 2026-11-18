@@ -542,6 +542,13 @@ body.playing .bar, body.playing .foot { display: none; }
 .cp .cpv .sw b { font-weight: 600; }
 .cp .cpv .up { color: var(--good); }
 .cp .cpv .dn { color: var(--bad); }
+.cp .cpft { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; border-top: 1px solid var(--line); padding-top: 12px; }
+.cp .cpft .btn { flex: none; }
+.cp .cpft .btn[disabled] { opacity: .45; box-shadow: none; pointer-events: none; }
+.cp .cpgo { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--ink2); }
+.cp .cpgo:hover { color: var(--ink); }
+.cp .cpgo svg { width: 16px; height: 16px; flex: none; }
+@media (max-width: 420px) { .cp .cpft { gap: 8px 12px; } .cp .cpft .btn { height: 36px; padding: 0 14px; } }
 
 /* ---------- 抽屉 ---------- */
 .sheet { border: 0; padding: 0; background: transparent; color: var(--ink); max-width: none; max-height: none; width: 100%; height: 100%; margin: 0; }

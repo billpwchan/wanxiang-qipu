@@ -207,6 +207,25 @@ await ev(`document.querySelector('.cp .chi[data-card]').click()`); await sleep(4
 check('阵容：点英雄开查牌抽屉', await ev(`document.querySelector('#sheet').open && !!document.querySelector('#panel h2')`));
 await ev(`document.querySelector('#sheet').close()`);
 check('阵容：底部有社区内容说明', await ev(`[...document.querySelectorAll('.small')].some(p => p.textContent.includes('玩家原创'))`));
+check('阵容：每张卡都有复制阵容码按钮', await ev(`(() => { const cards = [...document.querySelectorAll('.cpgrid .cp')]; return cards.length > 0 && cards.every(c => c.querySelector('.cpft [data-copy]')); })()`));
+const cpCopy = await ev(`(async () => {
+  window.__copied = null;
+  try { Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: async (x) => { window.__copied = x; } } }); } catch {}
+  const b = document.querySelector('.cpgrid .cp .cpft [data-copy]');
+  const want = b.dataset.copy;
+  b.click();
+  await new Promise((r) => setTimeout(r, 250));
+  return { want, got: window.__copied, text: b.textContent.trim(), toast: document.querySelector('#toast').textContent };
+})()`);
+check('阵容：点复制写入阵容码、按钮变「已复制」并提示', !!cpCopy && cpCopy.got === cpCopy.want && cpCopy.text === '已复制' && cpCopy.toast.includes('阵容码已复制'), JSON.stringify(cpCopy));
+check('阵容：匹配到路线的卡有 data-r 链接，没匹配的不显示', await ev(`(() => {
+  const cards = [...document.querySelectorAll('.cpgrid .cp')];
+  const links = cards.map(c => c.querySelector('.cpft .cpgo[data-r]')).filter(Boolean);
+  return links.length >= 1 && links.length < cards.length && links.every(a => a.dataset.r === a.getAttribute('href').slice(4) && /^#\\/r\\//.test(a.getAttribute('href')));
+})()`));
+const cpJump = await ev(`(() => { const a = document.querySelector('.cpgrid .cp .cpgo[data-r]'); if (!a) return null; const id = a.dataset.r; a.click(); return { id, hash: location.hash }; })()`);
+await sleep(700);
+check('阵容：点「去这里看打法」跳到对应路线页', !!cpJump && cpJump.hash === '#/r/' + cpJump.id && (await ev(`location.hash`)) === '#/r/' + cpJump.id && (await ev(`!!document.querySelector('.rhero')`)), JSON.stringify(cpJump));
 
 // ---- 宽度 ----
 for (const [w, h] of [[390, 844], [820, 1180], [1180, 820], [1440, 900]]) {

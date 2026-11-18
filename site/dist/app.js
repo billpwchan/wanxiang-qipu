@@ -774,11 +774,18 @@ function cpCard(r) {
       ? `<details class="cpv"><summary>查看变阵 <b>${r.vars.length}</b></summary><ol>${r.vars.map(cpVariant).join('')}</ol></details>`
       : '<div class="src">查过，这套没有变阵</div>'
     : '';
+  // 阵容码就是这条记录的 code（lineupCode）。预置阵容的短编号也能导入，同样给复制。
+  const copyBtn = r.code
+    ? `<button class="btn sm cpbtn" type="button" data-copy="${esc(r.code)}">复制阵容码</button>`
+    : '<button class="btn sm cpbtn" type="button" disabled>无阵容码</button>';
+  const rt = cpRoute(r);
+  const go = rt ? `<a class="cpgo" href="#/r/${esc(rt.id)}" data-r="${esc(rt.id)}">去这里看打法 ${I.arrow}</a>` : '';
   return `<article class="cp" id="cp-${esc(r.code)}">
     <div class="cphd"><h3 class="d">${esc(r.name)}</h3>${r.preset ? '<span class="chip">官方预置</span>' : ''}</div>
     <div class="cpls">${r.lords.map(cpLord).join('')}<span class="src">社区阵容 ${esc(r.code)}</span></div>
     <div class="chs">${r.heroes.map(cpHero).join('')}</div>
     ${stats}${vars}
+    <div class="cpft">${copyBtn}${go}</div>
   </article>`;
 }
 
@@ -825,7 +832,7 @@ function cpRank() {
       <div class="cprn"><b class="d">${esc(r.name)}</b><span class="cprl">${r.lords.map(cpLord).join('')}</span>${g.length > 1 ? `<span class="src">共 ${g.length} 套同阵容</span>` : ''}</div>
       ${ruler(r.st.m, { sm: true, dp: 2 })}
       <div class="cprst"><span>吃鸡<b>${cpPct(r.st.f)}</b></span><span>前三<b>${cpPct(r.st.t)}</b></span><span class="cprg">${r.st.n.toLocaleString()} 局</span></div>
-      <div class="cpra">${rt ? `<a class="btn sm" href="#/r/${rt.id}">查看打法</a>` : '<span class="src">当前版本胜率最高，打法待补充</span>'}</div>
+      <div class="cpra">${rt ? `<a class="btn sm" href="#/r/${esc(rt.id)}" data-r="${esc(rt.id)}">查看打法</a>` : '<span class="src">当前版本胜率最高，打法待补充</span>'}</div>
     </li>`;
   }).join('')}</ol>
   </div>`;
@@ -973,7 +980,7 @@ function reveal() {
 
 // ---------- 事件 ----------
 document.addEventListener('click', async (e) => {
-  const t = e.target.closest('[data-ban],[data-card],[data-lord],[data-code],[data-note],[data-owned],[data-own],[data-own-clear],[data-step],[data-wake],[data-pivot],[data-ctab],[data-cfac],[data-ctier]');
+  const t = e.target.closest('[data-ban],[data-card],[data-lord],[data-code],[data-copy],[data-r],[data-note],[data-owned],[data-own],[data-own-clear],[data-step],[data-wake],[data-pivot],[data-ctab],[data-cfac],[data-ctier]');
   if (!t) return;
   const d = t.dataset;
   if (d.ban) {
@@ -985,7 +992,16 @@ document.addEventListener('click', async (e) => {
     const c = F[d.code].code;
     const ok = await copy(c.key);
     toast(ok ? '阵容码已复制：游戏大厅「阵容」→「收藏阵容」→「导入阵容」' : `复制失败，阵容码：${c.key}`);
-  } else if ('note' in d) openNote();
+  } else if (d.copy) {
+    const ok = await copy(d.copy);
+    toast(ok ? '阵容码已复制：游戏大厅「阵容」→「收藏阵容」→「导入阵容」' : `复制失败，阵容码：${d.copy}`);
+    if (ok && t.tagName === 'BUTTON') {
+      const old = t.textContent;
+      t.textContent = '已复制';
+      setTimeout(() => { if (t.isConnected) t.textContent = old; }, 1500);
+    }
+  } else if (d.r) { e.preventDefault(); location.hash = `#/r/${d.r}`; }
+  else if ('note' in d) openNote();
   else if ('owned' in d) openOwned();
   else if (d.own) {
     const own = new Set(owned());
