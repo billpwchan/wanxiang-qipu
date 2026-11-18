@@ -22,7 +22,7 @@
     "seasonIdRaw 按官方原值存，不做语义解释；general/hot=0、beginner=1，1 是栏位标识不是赛季。",
     "beginner 栏全部是官方预置阵容（tag=官方、useNum 恒为 0、seasonId=1），对应记录带 isPreset: true；不要和 general/hot 的使用次数放在一起比较。",
     "beginner 只有 9 行且 pro_2 返回 404，样本不足，暂不作为基准。",
-    "stats 四个字段官网不提供，保持 null；不要用 operationDetails 推 variants，不要用 equipList 算穿戴率。",
+    "stats 的 avgRank / pickRate / difficulty / equipRate 官网不提供，保持 null；登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com（scripts/fetch_stats.mjs + merge_stats.mjs），按 rosterKey 匹配；不要用 operationDetails 推 variants，不要用 equipList 算穿戴率。",
     "brief / positionDesc / equipDesc / operationDetails / tags / talentCardDesc / effectCardDesc 是玩家原创的阵容攻略（UGC），原文照录，版权归原作者，见 NOTICE。"
   ],
   "records": [
@@ -187,9 +187,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.1435,
+        "avgPlacement": 3.2803,
+        "firstRate": 0.1508,
+        "top3Rate": 0.5645,
+        "count": 7481,
+        "variantCount": 31,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -350,9 +357,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -522,9 +530,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -728,9 +737,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.2792,
+        "avgPlacement": 3.1722,
+        "firstRate": 0.115,
+        "top3Rate": 0.6054,
+        "count": 14551,
+        "variantCount": 24,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -904,9 +920,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.0491,
+        "avgPlacement": 3.3788,
+        "firstRate": 0.114,
+        "top3Rate": 0.5373,
+        "count": 2561,
+        "variantCount": 11,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -1092,9 +1115,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.0331,
+        "avgPlacement": 3.8545,
+        "firstRate": 0.0933,
+        "top3Rate": 0.3797,
+        "count": 1725,
+        "variantCount": 11,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -1283,9 +1313,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -1471,9 +1502,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.0274,
+        "avgPlacement": 3.4611,
+        "firstRate": 0.0911,
+        "top3Rate": 0.5235,
+        "count": 1427,
+        "variantCount": 5,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -1670,9 +1708,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.0651,
+        "avgPlacement": 3.5427,
+        "firstRate": 0.0834,
+        "top3Rate": 0.4841,
+        "count": 3392,
+        "variantCount": 13,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -1843,9 +1888,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -2018,9 +2064,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -2196,9 +2243,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -2377,9 +2425,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -2571,9 +2620,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -2776,9 +2826,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -2958,9 +3009,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.1159,
+        "avgPlacement": 3.2901,
+        "firstRate": 0.2476,
+        "top3Rate": 0.5348,
+        "count": 6043,
+        "variantCount": 9,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -3146,9 +3204,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -3344,9 +3403,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -3536,9 +3596,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -3721,9 +3782,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.1187,
+        "avgPlacement": 4.1162,
+        "firstRate": 0.1543,
+        "top3Rate": 0.3207,
+        "count": 6189,
+        "variantCount": 9,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -3940,9 +4008,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -4135,9 +4204,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -4331,9 +4401,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.0651,
+        "avgPlacement": 3.5427,
+        "firstRate": 0.0834,
+        "top3Rate": 0.4841,
+        "count": 3392,
+        "variantCount": 13,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -4525,9 +4602,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -4728,9 +4806,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.0791,
+        "avgPlacement": 4.5858,
+        "firstRate": 0.1069,
+        "top3Rate": 0.2209,
+        "count": 4124,
+        "variantCount": 12,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -4912,9 +4997,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.0407,
+        "avgPlacement": 3.4795,
+        "firstRate": 0.1014,
+        "top3Rate": 0.5149,
+        "count": 2121,
+        "variantCount": 11,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -5122,9 +5214,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.2792,
+        "avgPlacement": 3.1722,
+        "firstRate": 0.115,
+        "top3Rate": 0.6054,
+        "count": 14551,
+        "variantCount": 24,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -5294,9 +5393,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -5524,9 +5624,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -5713,9 +5814,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -5902,9 +6004,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -6114,9 +6217,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -6304,9 +6408,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -6487,9 +6592,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -6660,9 +6766,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -6858,9 +6965,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.0199,
+        "avgPlacement": 3.3256,
+        "firstRate": 0.1734,
+        "top3Rate": 0.5212,
+        "count": 1038,
+        "variantCount": 3,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -7093,9 +7207,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -7279,9 +7394,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.2792,
+        "avgPlacement": 3.1722,
+        "firstRate": 0.115,
+        "top3Rate": 0.6054,
+        "count": 14551,
+        "variantCount": 24,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -7439,9 +7561,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -7619,9 +7742,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -7805,9 +7929,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -7958,9 +8083,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -8151,9 +8277,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.2792,
+        "avgPlacement": 3.1722,
+        "firstRate": 0.115,
+        "top3Rate": 0.6054,
+        "count": 14551,
+        "variantCount": 24,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -8315,9 +8448,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -8532,9 +8666,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.0791,
+        "avgPlacement": 4.5858,
+        "firstRate": 0.1069,
+        "top3Rate": 0.2209,
+        "count": 4124,
+        "variantCount": 12,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -8729,9 +8870,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -8872,9 +9014,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -9045,9 +9188,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -9226,9 +9370,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -9414,9 +9559,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.1159,
+        "avgPlacement": 3.2901,
+        "firstRate": 0.2476,
+        "top3Rate": 0.5348,
+        "count": 6043,
+        "variantCount": 9,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -9578,9 +9730,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -9785,9 +9938,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.0791,
+        "avgPlacement": 4.5858,
+        "firstRate": 0.1069,
+        "top3Rate": 0.2209,
+        "count": 4124,
+        "variantCount": 12,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -9989,9 +10149,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -10178,9 +10339,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -10339,9 +10501,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -10546,9 +10709,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -10719,9 +10883,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -10887,9 +11052,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -11071,9 +11237,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -11216,9 +11383,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -11435,9 +11603,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -11621,9 +11790,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -11799,9 +11969,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -11989,9 +12160,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -12103,9 +12275,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -12296,9 +12469,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.1187,
+        "avgPlacement": 4.1162,
+        "firstRate": 0.1543,
+        "top3Rate": 0.3207,
+        "count": 6189,
+        "variantCount": 9,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -12465,9 +12645,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -12644,9 +12825,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.011,
+        "avgPlacement": 4.1713,
+        "firstRate": 0.1049,
+        "top3Rate": 0.2937,
+        "count": 572,
+        "variantCount": 1,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -12835,9 +13023,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -12997,9 +13186,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -13176,9 +13366,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -13340,9 +13531,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -13528,9 +13720,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -13749,9 +13942,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -13922,9 +14116,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.1435,
+        "avgPlacement": 3.2803,
+        "firstRate": 0.1508,
+        "top3Rate": 0.5645,
+        "count": 7481,
+        "variantCount": 31,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -14091,9 +14292,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_4.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -14273,9 +14475,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -14471,9 +14674,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -14646,9 +14850,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -14833,9 +15038,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -15008,9 +15214,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.0185,
+        "avgPlacement": 3.3212,
+        "firstRate": 0.1026,
+        "top3Rate": 0.5762,
+        "count": 965,
+        "variantCount": 5,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -15196,9 +15409,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -15382,9 +15596,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.0651,
+        "avgPlacement": 3.5427,
+        "firstRate": 0.0834,
+        "top3Rate": 0.4841,
+        "count": 3392,
+        "variantCount": 13,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -15583,9 +15804,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.2792,
+        "avgPlacement": 3.1722,
+        "firstRate": 0.115,
+        "top3Rate": 0.6054,
+        "count": 14551,
+        "variantCount": 24,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -15767,9 +15995,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -15952,9 +16181,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.2792,
+        "avgPlacement": 3.1722,
+        "firstRate": 0.115,
+        "top3Rate": 0.6054,
+        "count": 14551,
+        "variantCount": 24,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -16172,9 +16408,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -16372,9 +16609,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -16545,9 +16783,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -16729,9 +16968,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.1187,
+        "avgPlacement": 4.1162,
+        "firstRate": 0.1543,
+        "top3Rate": 0.3207,
+        "count": 6189,
+        "variantCount": 9,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -16962,9 +17208,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.0791,
+        "avgPlacement": 4.5858,
+        "firstRate": 0.1069,
+        "top3Rate": 0.2209,
+        "count": 4124,
+        "variantCount": 12,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -17142,9 +17395,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.1187,
+        "avgPlacement": 4.1162,
+        "firstRate": 0.1543,
+        "top3Rate": 0.3207,
+        "count": 6189,
+        "variantCount": 9,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -17355,9 +17615,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -17541,9 +17802,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -17718,9 +17980,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/598252_oslineupbyrecommend_pro_5.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -17891,9 +18154,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.063,
+        "avgPlacement": 3.4397,
+        "firstRate": 0.1389,
+        "top3Rate": 0.5143,
+        "count": 3282,
+        "variantCount": 12,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600264_oslineupbyhot_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -18074,9 +18344,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600264_oslineupbyhot_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -18267,9 +18538,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.1846,
+        "avgPlacement": 4.0334,
+        "firstRate": 0.1726,
+        "top3Rate": 0.3309,
+        "count": 9623,
+        "variantCount": 28,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600264_oslineupbyhot_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -18407,9 +18685,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600264_oslineupbyhot_pro_2.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -18590,9 +18869,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600264_oslineupbyhot_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -18816,9 +19096,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600264_oslineupbyhot_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -18996,9 +19277,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600264_oslineupbyhot_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -19171,9 +19453,16 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "appearanceRate": 0.1846,
+        "avgPlacement": 4.0334,
+        "firstRate": 0.1726,
+        "top3Rate": 0.3309,
+        "count": 9623,
+        "variantCount": 28,
+        "source": "datawxq.com"
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600264_oslineupbyhot_pro_3.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -19352,9 +19641,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600269_oslineupbybeginner_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -19542,9 +19832,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600269_oslineupbybeginner_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -19732,9 +20023,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600269_oslineupbybeginner_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -19922,9 +20214,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600269_oslineupbybeginner_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -20104,9 +20397,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600269_oslineupbybeginner_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -20301,9 +20595,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600269_oslineupbybeginner_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -20474,9 +20769,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600269_oslineupbybeginner_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -20647,9 +20943,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600269_oslineupbybeginner_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -20816,9 +21113,10 @@
         "avgRank": null,
         "pickRate": null,
         "difficulty": null,
-        "equipRate": null
+        "equipRate": null,
+        "source": ""
       },
-      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。heroList[].level 源数据恒为 1，不是真实等级。",
+      "statsNote": "官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。heroList[].level 源数据恒为 1，不是真实等级。",
       "variants": null,
       "source": "https://game.gtimg.cn/images/amside/ide_timer/600269_oslineupbybeginner_pro_1.js",
       "sourcePage": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
@@ -20858,5 +21156,13 @@
       "effectCardDesc": "",
       "isPreset": true
     }
-  ]
+  ],
+  "statsSnapshot": {
+    "source": "datawxq.com",
+    "fetchedAt": "2026-11-18T14:27:03.666Z",
+    "statisticsScope": "allPlayers",
+    "sampleCount": 312754,
+    "rosterKeysMatched": 15,
+    "recordsFilled": 31
+  }
 }
