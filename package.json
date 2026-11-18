@@ -15,6 +15,9 @@
     "verify:gpu": "GPU=1 node scripts/verify-ui.mjs",
     "test:copilot": "node copilot/test/run.mjs",
     "build:facts": "node scripts/build_facts.mjs",
+    "validate": "node scripts/validate.mjs",
+    "gen:comps": "node scripts/gen_comps.mjs",
+    "analyze:comps": "node scripts/analyze_comps.mjs",
     "release": "python3 scripts/make_release.py",
     "copilot": "./copilot/wx",
     "copilot:demo": "./copilot/wx demo"

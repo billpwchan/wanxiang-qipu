@@ -1,0 +1,18 @@
+[
+  {
+    "version": "v261105",
+    "seasonLabel": "S1",
+    "source": "https://wxq.qq.com/cp/a20260707sfgw/teamlist.html",
+    "fetchedAt": "2026-11-18",
+    "isCurrent": true,
+    "note": "线上阵容列表页当前版本。sourceSeasonId 映射 pending：general/hot 返回 0、beginner 返回 1，语义未确认，按原值存在 data/comps.json 的 seasonIdRaw。beginner 栏 9 条是官方预置阵容（tag=官方、useNum 恒为 0），与 general/hot 的玩家阵容不同源，不混算。"
+  },
+  {
+    "version": "v260924",
+    "seasonLabel": "S1",
+    "source": "https://datawxq.com",
+    "fetchedAt": "2026-09-25",
+    "isCurrent": false,
+    "note": "upstream 既有快照版本（research/v2、research/v4）。与 v261105 不混算：两版数字不可直接比较。"
+  }
+]

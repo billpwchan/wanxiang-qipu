@@ -1,0 +1,24 @@
+[
+  {
+    "url": "https://example.invalid/fixture/598252_oslineupbyrecommend_pro_1.js",
+    "status": 200,
+    "contentType": "application/x-javascript",
+    "bytes": 0,
+    "savedAs": "598252_oslineupbyrecommend_pro_1.js-fixture01.json",
+    "parsedAsJson": true,
+    "arrayLength": 2,
+    "distinctKeys": 2,
+    "at": "2026-11-18T00:00:00.000Z"
+  },
+  {
+    "url": "https://example.invalid/fixture/600269_oslineupbybeginner_pro_1.js",
+    "status": 200,
+    "contentType": "application/x-javascript",
+    "bytes": 0,
+    "savedAs": "600269_oslineupbybeginner_pro_1.js-fixture02.json",
+    "parsedAsJson": true,
+    "arrayLength": 1,
+    "distinctKeys": 1,
+    "at": "2026-11-18T00:00:01.000Z"
+  }
+]

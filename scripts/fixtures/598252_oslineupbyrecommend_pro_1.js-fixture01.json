@@ -1,0 +1,114 @@
+[
+  {
+    "key": "900000000000000001",
+    "name": "瑶妹示例阵容",
+    "tag": "示例",
+    "seasonId": 0,
+    "useNum": 1000,
+    "lordList": [{ "id": 11, "name": "瑶妹" }],
+    "heroList": [
+      {
+        "id": 1001,
+        "name": "英雄甲",
+        "type": 0,
+        "cardQuality": 4,
+        "level": 1,
+        "isEvo": true,
+        "positionX": 1,
+        "positionZ": 0,
+        "equipList": [{ "id": 2001, "name": "装备甲" }]
+      },
+      {
+        "id": 1002,
+        "name": "英雄乙",
+        "type": 0,
+        "cardQuality": 3,
+        "level": 1,
+        "isEvo": false,
+        "positionX": 3,
+        "positionZ": 2,
+        "equipList": []
+      }
+    ],
+    "interactiveData": {
+      "score": "10",
+      "scoreNum": 12,
+      "scores": [0, 0, 0, 0, 12],
+      "commentNum": 3,
+      "likeNum": 100
+    },
+    "brief": "示例文案：前期连败攒经济，中期升到四级。",
+    "positionDesc": "示例站位：主核放最后一排中间。",
+    "equipDesc": "示例出装：先做免控，再做回蓝。",
+    "operationDetails": [
+      { "index": 1, "beginRound": 1, "endRound": 3, "desc": "示例：前 3 回合凑两人打连胜。" },
+      { "index": 2, "beginRound": 4, "endRound": 11, "desc": "示例：第 7 回合升四级，看血量决定要不要 D 牌。" }
+    ],
+    "tags": ["示例"],
+    "talentCardDesc": "示例：天赋优先拿经济类。",
+    "effectCardDesc": ""
+  },
+  {
+    "key": "900000000000000002",
+    "name": "三棋手示例阵容",
+    "tag": "示例",
+    "seasonId": 0,
+    "useNum": 1005,
+    "lordList": [
+      { "id": 11, "name": "瑶妹" },
+      { "id": 34, "name": "昭君" },
+      { "id": 40, "name": "闹闹" }
+    ],
+    "heroList": [
+      {
+        "id": 1001,
+        "name": "英雄甲",
+        "type": 0,
+        "cardQuality": 4,
+        "level": 1,
+        "isEvo": false,
+        "positionX": 0,
+        "positionZ": 1,
+        "equipList": []
+      },
+      {
+        "id": 1003,
+        "name": "英雄丙",
+        "type": 1,
+        "cardQuality": 5,
+        "level": 1,
+        "isEvo": true,
+        "positionX": 2,
+        "positionZ": 0,
+        "equipList": [{ "id": 2002, "name": "装备乙" }, { "id": 2003, "name": "装备丙" }]
+      },
+      {
+        "id": 1004,
+        "name": "英雄丁",
+        "type": 0,
+        "cardQuality": 2,
+        "level": 1,
+        "isEvo": false,
+        "positionX": 5,
+        "positionZ": 3,
+        "equipList": []
+      }
+    ],
+    "interactiveData": {
+      "score": "9.2",
+      "scoreNum": 5,
+      "scores": [0, 0, 0, 5, 0],
+      "commentNum": 0,
+      "likeNum": 40
+    },
+    "brief": "示例文案：三个棋手各有分工，谁先来就用谁。",
+    "positionDesc": "示例站位：前排两个顶住，主核放后排。",
+    "equipDesc": "示例出装：主核免控，其余补肉。",
+    "operationDetails": [
+      { "index": 1, "beginRound": 1, "endRound": 5, "desc": "示例：先买齐前排，再补主核。" }
+    ],
+    "tags": ["示例", "三棋手"],
+    "talentCardDesc": "示例：天赋拿复制的那个。",
+    "effectCardDesc": "示例：攒等级的效果都给主核。"
+  }
+]

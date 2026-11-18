@@ -31,6 +31,10 @@ research/v4/lineups/p*.js
 research/v4/lineups/all.json
 research/raw/lineups.json
 
+# 官网阵容列表页的原始 XHR 快照：含作者昵称等个人信息，只留本地
+# data/comps.json 由 scripts/gen_comps.mjs 从外部快照生成，仓库只存归纳结果
+snapshots/raw/
+
 # v4 退役素材（只保留数据模块作历史参考）
 research/v4/retired/*
 !research/v4/retired/data/

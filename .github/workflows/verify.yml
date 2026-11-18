@@ -20,6 +20,8 @@ jobs:
           node-version: 22
       - name: 中文字体（横向溢出检查依赖真实字宽）
         run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
+      - name: data/ 数据校验
+        run: node scripts/validate.mjs
       - name: 数据完整性
         run: node scripts/verify-site.mjs
       - name: 真实浏览器交互（50 项）

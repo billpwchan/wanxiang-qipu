@@ -41,7 +41,7 @@ python3 scripts/build_assets_v5.py
 ```
 
 - `research/cache/cards/*.png` → `site/dist/assets/c/*.webp`，并把 `cards.json` 里的图片路径改成 WebP。**第 1 步之后必须跑这一步**，否则 `cards.json` 指向不存在的 PNG。
-- `research/v4/official/lord/` 的官方棋手 3D 立绘 → `site/dist/assets/lord/`（大图、小图、头像）+ `data/lords.json`。
+- `research/v4/official/lord/` 的官方棋手 3D 立绘 → `site/dist/assets/lord/`（大图、小图、头像）+ `data/lords.json`（此处指 `site/dist/data/lords.json`，素材宽高表；与 `data/lords.json`（棋手 id/name）不是同一文件）。
 - `research/v4/official/icon/` 的阵营 / 关键词图标 → potrace 矢量化 → `data/icons.js`。
 
 ## 3. 游戏内卡面渲染
