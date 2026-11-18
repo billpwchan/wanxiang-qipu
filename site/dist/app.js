@@ -29,6 +29,25 @@ const store = {
 const LC = { 乔汐: '#c43033', 姜导: '#8c7b6a', 嬴律: '#bb5851', 孙小宾: '#2f63d6', 小妲己: '#d9a53c', 常小娥: '#d13b76', 庄小鱼: '#3863c7', 弈星: '#4f5a9a', 明先生: '#d7393f', 昭君: '#3a74e8', 玉环: '#3aa3a0', 班叔: '#8a9a5b', 瑶妹: '#c865a0', 白歌: '#b08a60', 镜: '#8e96b8', 闹闹: '#5068bc', 阿离: '#d9b43c', 香香: '#e07a3a', 马可: '#d0433a' };
 const LORD_TRAP = { 白歌: 'wukong', 常小娥: 'lukong', 阿离: 'shouyue', 闹闹: 'rilou', 镜: 'jingpig' };
 
+// 第 6 个陷阱没有对应的 META.families；meta.js 是生成文件，不手改，所以在渲染层追加。
+const TRAP_EXTRA = [{
+  id: 'yuhuan-sihaijing', lord: '玉环', name: '玉环日落海司空震',
+  comp: ['莱西奥', '司空震', '海诺', '姜子牙', '姬小满', '亚瑟'],
+  uses: 855358,
+  why: '多带海诺，少了钟馗、太乙真人：没有钩后排，也没有复生保护。',
+  fix: '去掉海诺，补回钟馗、太乙真人，按玉环日落海倒转打。',
+  to: 'yuhuan',
+}];
+const TRAPS_ALL = [...TRAPS, ...TRAP_EXTRA];
+
+// 社区导入量极大、但 datawxq 没有匹配样本的阵容。只报导入量，不判断强弱。
+const HOT_NO_STATS = [
+  { name: '瑶妹牺牲李信（盾山版）', uses: 4520000 },
+  { name: '牺牲流李信', uses: 3100000 },
+  { name: '三分999级吕布', uses: 2740000 },
+  { name: '嫦娥养艾琳', uses: 2730000 },
+];
+
 // ---------- 小部件 ----------
 const I = {
   arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
@@ -163,8 +182,8 @@ function homePage(q) {
   </section>
 
   <section class="wrap sec rv">
-    <div class="hdr"><div><h2 class="d">热门但别打</h2><p>这些阵容在游戏里被导入过上百万次，顶尖局里的平均名次却排在 3.7 名以后。</p></div></div>
-    <div class="traps">${TRAPS.map(trapRow).join('')}</div>
+    <div class="hdr"><div><h2 class="d">热门但别打</h2><p>这些阵容在社区里被大量导入；有统计的平均名次都在 3.8 名以后。</p></div></div>
+    ${trapBlocks()}
   </section>
 
   <section class="wrap sec rv">
@@ -186,12 +205,41 @@ function routeTile(r) {
   </a>`;
 }
 
+function jac(a, b) {
+  const A = new Set(a), B = new Set(b);
+  let hit = 0;
+  for (const x of A) if (B.has(x)) hit++;
+  return { hit, j: hit / (A.size + B.size - hit) };
+}
+
+// 从阵容页数据里按英雄集合找同一套；多个阵容码共用一套英雄时，取场次最多的统计。
+function trapStat(heroes) {
+  let best = null;
+  for (const r of COMPS.records || []) {
+    if (!r.st) continue;
+    const x = jac(heroes, r.heroes);
+    if (x.j < 0.86) continue;
+    if (!best || x.j > best.j || (x.j === best.j && r.st.n > best.st.n)) best = { j: x.j, st: r.st };
+  }
+  return best?.st || null;
+}
+
 function trapRow(t) {
   const d = FACTS.traps.find((x) => x.id === t.id);
+  const st = trapStat(t.comp);
   return `<div class="trap">
-    <div class="uses">${wan(d.uses)}<small>次导入游戏</small></div>
-    <div><h3>${esc(t.name)}</h3><p>${esc(t.why)}${d.lordAvg ? `${esc(d.lord)}的全部对局平均第 ${d.lordAvg.toFixed(1)} 名。` : ''}</p><p>${esc(t.fix)}${t.to ? ` <a href="#/r/${t.to}">${esc(R[t.to].name)} →</a>` : ''}</p></div>
-    <div class="rm">${ruler(d.avg, { sm: true, label: `打成了也只有 · ${d.games.toLocaleString()} 局` })}</div>
+    <div class="uses">${wan(t.uses ?? d?.uses ?? 0)}<small>次导入游戏</small></div>
+    <div><h3>${esc(t.name)}</h3><p>${esc(t.why)}${d?.lordAvg ? `${esc(d.lord)}的全部对局平均第 ${d.lordAvg.toFixed(1)} 名。` : ''}</p><p>${esc(t.fix)}${t.to ? ` <a href="#/r/${t.to}">${esc(R[t.to].name)} →</a>` : ''}</p></div>
+    <div class="rm">${st ? ruler(st.m, { sm: true, dp: 2, label: `名 · 实测 ${st.n.toLocaleString()} 局` }) : '<span class="src">暂无统计</span>'}</div>
+  </div>`;
+}
+
+function trapBlocks() {
+  return `<div class="traps">${TRAPS_ALL.map(trapRow).join('')}</div>
+  <div class="hotnos">
+    <h3 class="d">🔥 热门高导入 · 暂无统计</h3>
+    <p>这些阵容社区使用量极大，但在我们的数据源中暂缺匹配样本，无法判定强弱，请谨慎参考。</p>
+    <ul class="hnlist">${HOT_NO_STATS.map((x) => `<li><b>${esc(x.name)}</b><span>${wan(x.uses)}导入</span></li>`).join('')}</ul>
   </div>`;
 }
 
@@ -297,8 +345,8 @@ function routesPage() {
     ${routeGroups()}
   </section>
   <section class="wrap sec">
-    <div class="hdr"><div><h2 class="d">热门但别打</h2><p>这些阵容在游戏里被导入过上百万次，顶尖局里的平均名次却排在 3.7 名以后。</p></div></div>
-    <div class="traps">${TRAPS.map(trapRow).join('')}</div>
+    <div class="hdr"><div><h2 class="d">热门但别打</h2><p>这些阵容在社区里被大量导入；有统计的平均名次都在 3.8 名以后。</p></div></div>
+    ${trapBlocks()}
   </section>`;
 }
 
@@ -749,19 +797,33 @@ function cpTop() {
     .slice(0, CP_TOP);
 }
 
+// 阵容名会随版本改，不能按名字写死。Jaccard >= 0.86 视为同一套；
+// 或者主核相同、至少 5 张牌重合（换了两三张的变阵），也算有对应打法。
+function cpRoute(r) {
+  let best = null, bj = 0;
+  for (const rt of ROUTES) {
+    const x = jac(r.heroes, rt.board.map((b) => b.h));
+    if (!(x.j >= 0.86 || (x.hit >= 5 && r.heroes.includes(rt.carry)))) continue;
+    if (x.j > bj) { bj = x.j; best = rt; }
+  }
+  return best;
+}
+
 function cpRank() {
   const top = cpTop();
   if (!top.length) return '';
   const scope = COMPS.meta?.statsScope;
   return `<div class="cprank">
-    <div class="cprh"><b class="d">平均名次最好的 ${top.length} 套</b><span class="src">统计维度：${scope ? `全服（${esc(scope)}）` : '全服'} · 按平均名次升序，越低越好</span></div>
+    <div class="cprh"><b class="d">平均名次最好的 ${top.length} 套</b><span class="src">统计维度：全服${scope ? `（${esc(scope)}）` : ''} · 312,754 局样本 · 更新于 2026-11-18 · 按平均名次升序，越低越好</span></div>
     <ol class="cprs">${top.map((g, i) => {
     const r = g[0];
+    const rt = cpRoute(r);
     return `<li class="cpr">
       <span class="rank">${i + 1}</span>
-      <div class="cprn"><b class="d">${esc(r.name)}</b>${g.length > 1 ? `<span class="src">共 ${g.length} 套同阵容</span>` : ''}</div>
+      <div class="cprn"><b class="d">${esc(r.name)}</b><span class="cprl">${r.lords.map(cpLord).join('')}</span>${g.length > 1 ? `<span class="src">共 ${g.length} 套同阵容</span>` : ''}</div>
       ${ruler(r.st.m, { sm: true, dp: 2 })}
-      <span class="cprg">${r.st.n.toLocaleString()} 局</span>
+      <div class="cprst"><span>吃鸡<b>${cpPct(r.st.f)}</b></span><span>前三<b>${cpPct(r.st.t)}</b></span><span class="cprg">${r.st.n.toLocaleString()} 局</span></div>
+      <div class="cpra">${rt ? `<a class="btn sm" href="#/r/${rt.id}">查看打法</a>` : '<span class="src">当前版本胜率最高，打法待补充</span>'}</div>
     </li>`;
   }).join('')}</ol>
   </div>`;
@@ -793,7 +855,7 @@ function rulesPage() {
   </section>
   <section class="wrap sec">
     <div class="hdr"><div><h2 class="d">热门但别打</h2></div></div>
-    <div class="traps">${TRAPS.map(trapRow).join('')}</div>
+    ${trapBlocks()}
   </section>`;
 }
 

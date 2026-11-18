@@ -64,7 +64,7 @@ await ev(`document.querySelector('[data-ban="河洛"]').click()`); await sleep(5
 check('开局：备选 3 条', await ev(`document.querySelectorAll('#ans .alt').length`) === 3);
 check('开局：开始对局带上棋手', (await ev(`document.querySelector('#ans .btn.go').getAttribute('href')`)).includes('#/play/kaituan?lord='));
 check('开局：十套路线，分三档', await ev(`document.querySelectorAll('.rgrid .rt').length === 10 && document.querySelectorAll('.tgroup').length === 3`));
-check('开局：热门但别打 5 条，带导入次数', await ev(`document.querySelectorAll('.trap').length === 5 && document.querySelector('.trap .uses').textContent.includes('万')`));
+check('开局：热门但别打 6 条，带导入次数', await ev(`document.querySelectorAll('.trap').length === 6 && document.querySelector('.trap .uses').textContent.includes('万')`));
 check('开局：手机无横向溢出', await noOverflow());
 // 我的棋手
 await ev(`document.querySelector('[data-owned]').click()`); await sleep(300);
@@ -142,6 +142,12 @@ check('查牌：暴击率 / 暴击效果转成百分比', /暴击率\d+%/.test(s
 await ev(`document.querySelector('#sheet').close()`);
 await go('#/rules');
 check('规则页', await ev(`document.querySelectorAll('.rule').length`) >= 6);
+check('热门但别打：6 条', await ev(`document.querySelectorAll('.traps .trap').length`) === 6);
+check('热门但别打：有统计的显示实测名次和场次', await ev(`(() => { const t = [...document.querySelectorAll('.traps .trap')].find(x => x.textContent.includes('4,124 局')); return !!t && t.textContent.includes('实测') && t.textContent.includes('4.59'); })()`));
+check('热门但别打：无统计的写「暂无统计」', await ev(`[...document.querySelectorAll('.traps .trap')].filter(x => x.querySelector('.rm .src')?.textContent === '暂无统计').length`) === 2);
+check('热门但别打：新增玉环日落海司空震', await ev(`(() => { const t = [...document.querySelectorAll('.traps .trap')].find(x => x.textContent.includes('玉环日落海司空震')); return !!t && t.textContent.includes('85.5 万') && t.textContent.includes('6,189 局'); })()`));
+check('热门高导入：4 条并带说明', await ev(`(() => { const h = document.querySelector('.hotnos'); return !!h && h.querySelectorAll('li').length === 4 && h.textContent.includes('452 万') && h.textContent.includes('273 万') && h.textContent.includes('无法判定强弱'); })()`));
+check('热门但别打：不把无统计的写成坑', await ev(`!document.querySelector('.traps')?.textContent.includes('坑')`));
 await ev(`document.querySelector('[data-note]').click()`); await sleep(300);
 check('数据说明抽屉', await ev(`document.querySelector('#panel').textContent.includes('平均名次')`));
 
@@ -164,9 +170,23 @@ check('阵容榜：同阵容合并的行标出套数', await ev(`[...document.qu
 check('阵容榜：场次带千分位', await ev(`[...document.querySelectorAll('.cprank .cprg')].some(x => /^[\\d,]+ 局$/.test(x.textContent.trim()) && x.textContent.includes(','))`));
 const cpNote = (await txt('.cprank .cprh .src')) || '';
 check('阵容榜：口径写全服，不写没抓到的「近 7 天」', cpNote.includes('全服（allPlayers）') && cpNote.includes('平均名次升序') && !cpNote.includes('近 7 天'), cpNote);
+check('阵容榜：样本数和更新日期', cpNote.includes('312,754 局样本') && cpNote.includes('2026-11-18'), cpNote);
+check('阵容榜：每行有吃鸡率、前三率、棋手、场次', await ev(`(() => {
+  const rows = [...document.querySelectorAll('.cprank .cpr')];
+  return rows.length === 10 && rows.every(x => {
+    const s = x.querySelector('.cprst');
+    return !!s && s.textContent.includes('吃鸡') && s.textContent.includes('前三') && /[\\d,]+ 局/.test(s.textContent) && !!x.querySelector('.cprl .cpl');
+  });
+})()`));
+check('阵容榜：能对上打法的给链接，对不上的写待补充', await ev(`(() => {
+  const rows = [...document.querySelectorAll('.cprank .cpr')];
+  const links = rows.filter(x => x.querySelector('.cpra a[href^="#/r/"]')).length;
+  const none = rows.filter(x => x.querySelector('.cpra .src')?.textContent === '当前版本胜率最高，打法待补充').length;
+  return links >= 1 && none >= 1 && links + none === rows.length;
+})()`));
 check('阵容：有统计的显示登场率和平均名次', await ev(`(() => { const s = document.querySelector('.cp .stats'); return !!s && s.textContent.includes('登场率') && s.textContent.includes('平均名次'); })()`));
 check('阵容：没有统计的写「暂无统计」且不出现 0', await ev(`(() => { const s = [...document.querySelectorAll('.cp .src')].find(x => x.textContent === '暂无统计'); if (!s) return false; const cp = s.closest('.cp'); return !cp.querySelector('.stats') && !/\\b0%/.test(cp.textContent); })()`));
-check('阵容：英雄图标已加载', await ev(`(async () => { const i = document.querySelector('.chi img'); if (!i) return false; await Promise.race([i.decode().catch(() => {}), new Promise(r => setTimeout(r, 4000))]); return i.naturalWidth > 0; })()`));
+check('阵容：英雄图标已加载', await ev(`(async () => { const i = document.querySelector('.cpgrid .chi img'); if (!i) return false; i.scrollIntoView({ block: 'center' }); await Promise.race([i.decode().catch(() => {}), new Promise(r => setTimeout(r, 4000))]); return i.naturalWidth > 0; })()`));
 check('阵容：变阵折叠面板', await ev(`document.querySelectorAll('.cp details.cpv').length`) === 6);
 await ev(`(() => { const d = document.querySelector('.cp details.cpv'); d.open = true; })()`); await sleep(300);
 check('阵容：展开变阵显示换人和场次', await ev(`(() => { const d = document.querySelector('.cp details.cpv'); const li = d.querySelector('li'); return d.open && !!li && (li.querySelector('.sw b.up') || li.querySelector('.sw b.dn')) && li.textContent.includes('局'); })()`));
