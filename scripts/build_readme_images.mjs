@@ -23,8 +23,13 @@ const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '
 const server = createServer((req, res) => {
   let rel; try { rel = decodeURIComponent(req.url.split('?')[0]); } catch { res.writeHead(400); res.end(); return; }
   const [base, sub] = rel.startsWith('/_docs/') ? [SRC, rel.slice(6)] : [DIST, rel];
-  const file = path.join(base, sub.endsWith('/') ? sub + 'index.html' : sub);
-  if (!file.startsWith(base) || !existsSync(file) || !statSync(file).isFile()) { res.writeHead(404); res.end(); return; }
+  const sub0 = sub.endsWith('/') ? sub + 'index.html' : sub;
+  let file = path.join(base, sub0);
+  // History 路由：没有扩展名的路径交给 index.html
+  if (!file.startsWith(base) || !existsSync(file) || !statSync(file).isFile()) {
+    if (path.extname(sub0)) { res.writeHead(404); res.end(); return; }
+    file = path.join(DIST, 'index.html');
+  }
   res.writeHead(200, { 'content-type': TYPES[path.extname(file)] || 'application/octet-stream' });
   createReadStream(file).pipe(res);
 });
@@ -83,13 +88,13 @@ const jobs = {
   chart: async () => { for (const [t, s] of THEMES) await fullPage(`chart-survivorship-${t}.png`, `${BASE}/_docs/chart-survivorship.html?theme=${t}`, { w: 1200, h: 700, scheme: s, ready: 'document.body.dataset.ready', wait: 300, format: 'png' }); },
   screens: async () => {
     const shots = [
-      ['screen-play.webp', '/#/play/kaituan?lord=%E9%A6%99%E9%A6%99&s=2', 1180, 820],
-      ['screen-route.webp', '/#/r/kaituan', 1440, 900],
-      ['screen-lords.webp', '/#/lords', 1440, 900],
+      ['screen-play.webp', '/play/kaituan?lord=%E9%A6%99%E9%A6%99&s=2', 1180, 820],
+      ['screen-route.webp', '/r/kaituan', 1440, 900],
+      ['screen-lords.webp', '/lords', 1440, 900],
     ];
     for (const [file, hash, w, h] of shots) { await open(BASE + hash, { w, h, wait: 3200 }); await capture(file); }
     // 路线页：体检 + 强在哪
-    await open(BASE + '/#/r/lvbu', { w: 1440, h: 900, wait: 2500 });
+    await open(BASE + '/r/lvbu', { w: 1440, h: 900, wait: 2500 });
     await ev(`(() => { document.querySelectorAll('.rv').forEach((e) => e.classList.add('in')); const s = document.querySelector('.check').closest('section'); window.scrollTo(0, s.getBoundingClientRect().top + scrollY - 70); })()`);
     await sleep(900);
     await capture('screen-check.webp');
@@ -103,9 +108,9 @@ const jobs = {
   },
   demo: async () => {
     // 开局页：换两次禁用，每次玻璃推开露出新答案
-    await open(BASE + '/#/', { w: 1280, h: 760, scheme: 'light', dpr: 1, wait: 0 });
+    await open(BASE + '/', { w: 1280, h: 760, scheme: 'light', dpr: 1, wait: 0 });
     await ev('localStorage.clear()');
-    await open(BASE + '/#/?ban=%E6%B2%B3%E6%B4%9B', { w: 1280, h: 760, scheme: 'light', dpr: 1, wait: 4500 });
+    await open(BASE + '/?ban=%E6%B2%B3%E6%B4%9B', { w: 1280, h: 760, scheme: 'light', dpr: 1, wait: 4500 });
     const dir = mkdtempSync(path.join(tmpdir(), 'wx-demo-'));
     // 合成器录屏：画面有变化才出帧，帧时长用帧自带的时间戳
     const stamps = [];

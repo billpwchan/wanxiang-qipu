@@ -76,7 +76,7 @@ for (const c of cards.heroes) {
 for (const k of ['effects', 'equipment', 'talents']) for (const c of cards[k]) if (c.img) file(c.img);
 for (const v of Object.values(art.card)) file(v);
 ok(RULES.length >= 6, '规则数');
-for (const p of ['index.html', 'app.js', 'app.css', 'glass.js', 'fonts/shuhei.woff2', 'assets/og.jpg', 'assets/icon.svg']) file(p);
+for (const p of ['index.html', 'app.js', 'app.css', 'glass.js', 'fonts/shuhei.woff2', 'assets/og.jpg', 'assets/icon.svg', 'robots.txt', 'sitemap.xml']) file(p);
 
 // 阵容页数据（scripts/build_comps_site.mjs 生成）：结构、外键、meta 计数、体积。
 // 查牌库没有的牌必须登记在 meta.missing 里，不能悄悄少一行。
@@ -139,7 +139,7 @@ ok(nStats === comps.meta.withStats, 'meta.withStats 对不上');
 ok(nVars === comps.meta.withVariants, 'meta.withVariants 对不上');
 ok(nVarsTotal === comps.meta.variantsTotal, 'meta.variantsTotal 对不上');
 ok(Buffer.byteLength(compsRaw) <= 50 * 1024, `data/comps.json 超过 50KB（${Buffer.byteLength(compsRaw)}）`);
-ok(readFileSync(path.join(D, 'app.js'), 'utf8').includes("fetch('data/comps.json')"), 'app.js 没有加载 data/comps.json');
+ok(readFileSync(path.join(D, 'app.js'), 'utf8').includes("fetch('/data/comps.json')"), 'app.js 没有加载 /data/comps.json');
 // 页面文案里不应该出现统计术语
 const copy = readFileSync(path.join(D, 'app.js'), 'utf8') + readFileSync(path.join(D, 'data/plan.js'), 'utf8');
 for (const w of ['名次差', '双重差分', '交互项', '幸存者偏差', '判决', '全站最强', '碾压']) ok(!copy.includes(w), `文案里出现「${w}」`);

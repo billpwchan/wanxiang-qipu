@@ -4,5 +4,8 @@
   "buildCommand": "echo 'no build step required'",
   "installCommand": "",
   "outputDirectory": "site/dist",
-  "framework": null
+  "framework": null,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }

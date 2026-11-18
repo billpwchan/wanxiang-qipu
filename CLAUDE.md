@@ -6,7 +6,7 @@
 
 ```sh
 npm run serve                        # http://127.0.0.1:4173/
-npm test                             # verify-site + verify-ui（83 项，自带服务器）+ 副驾回放
+npm test                             # verify-site + verify-ui（89 项，自带服务器）+ 副驾回放
 node scripts/build_facts.mjs         # 改 plan.js 或数据后重算 facts.js
 node scripts/build_comps_site.mjs    # data/comps.json → site/dist/data/comps.json（阵容页数据）
 node scripts/sync_readme.mjs         # README 路线表；CI 用 --check
@@ -16,7 +16,7 @@ node copilot/test/run.mjs            # 副驾完整流程（macOS：Chrome + Vis
 
 ## 结构与约定
 
-- 网站无构建、无 npm 依赖：原生 ES 模块，`app.js`（哈希路由，字符串模板，插值必须过 `esc()`）、`glass.js`（WebGL2 竖纹玻璃）。不要引入框架或打包工具。
+- 网站无构建、无 npm 依赖：原生 ES 模块，`app.js`（History 路由，字符串模板，插值必须过 `esc()`）、`glass.js`（WebGL2 竖纹玻璃）。不要引入框架或打包工具。
 - `data/plan.js` 是人写的打法，不写统计数字；`data/facts.js`、`meta.js`、`evidence.js`、`cards.json`、`release.json` 是生成文件，不要手改。
 - 路线主数字 = 专门打这套的棋手的**全部对局**平均名次（开局选择口径）。「打成这套」的终局统计有幸存者偏差，只作上限参考，不能当主数字。见 `docs/methodology.md`。
 - 强弱先按卡面机制推（成本、免费 vs 付费涨级、主核、弱点、没成型时），再用数据验证；只改口径或措辞不算分析。

@@ -8,7 +8,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "serve": "python3 -m http.server 4173 --bind 127.0.0.1 --directory site/dist",
+    "serve": "node scripts/serve.mjs",
     "test": "node scripts/verify-site.mjs && node scripts/verify-ui.mjs && node copilot/test/run.mjs --replay",
     "verify": "node scripts/verify-site.mjs",
     "verify:ui": "node scripts/verify-ui.mjs",

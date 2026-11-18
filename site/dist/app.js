@@ -1,5 +1,5 @@
 // 万象棋谱 v5
-// 页面：#/ 开局 · #/play/:id 对局 · #/r/:id 路线 · #/routes · #/lords · #/comps · #/cards · #/rules
+// 页面：/ 开局 · /play/:id 对局 · /r/:id 路线 · /routes · /lords · /comps · /cards · /rules
 import { STAGES, BANS, ROUTES, TRAPS, RULES } from './data/plan.js';
 import { FACTS } from './data/facts.js';
 import { ICONS } from './data/icons.js';
@@ -177,7 +177,7 @@ function homePage(q) {
   </section>
 
   <section class="wrap sec rv">
-    <div class="hdr"><div><h2 class="d">十套路线</h2><p>数字是「开局选了这个棋手之后的全部对局」，不只算打成的人。点进去看每个阶段买什么。</p></div><a class="btn sm" href="#/routes">全部路线</a></div>
+    <div class="hdr"><div><h2 class="d">十套路线</h2><p>数字是「开局选了这个棋手之后的全部对局」，不只算打成的人。点进去看每个阶段买什么。</p></div><a class="btn sm" href="/routes">全部路线</a></div>
     ${routeGroups()}
   </section>
 
@@ -187,14 +187,14 @@ function homePage(q) {
   </section>
 
   <section class="wrap sec rv">
-    <div class="hdr"><div><h2 class="d">几条通用规则</h2><p>不管打哪套都适用。</p></div><a class="btn sm" href="#/rules">全部规则</a></div>
+    <div class="hdr"><div><h2 class="d">几条通用规则</h2><p>不管打哪套都适用。</p></div><a class="btn sm" href="/rules">全部规则</a></div>
     <div class="rules">${RULES.slice(0, 4).map(ruleCard).join('')}</div>
   </section>`;
 }
 
 function routeTile(r) {
   const f = F[r.id];
-  return `<a class="rt" href="#/r/${r.id}">
+  return `<a class="rt" href="/r/${r.id}">
     <div class="pic">${f.splash ? `<img src="${f.splash.src}" alt="" loading="lazy" style="object-position:${f.splash.fx}% ${Math.min(40, f.splash.fy)}%">` : ''}${facLabel(r.faction)}${tierChip(f.tier)}</div>
     <div class="bd">
       <h3 class="d">${esc(r.name)}</h3>
@@ -229,7 +229,7 @@ function trapRow(t) {
   const st = trapStat(t.comp);
   return `<div class="trap">
     <div class="uses">${wan(t.uses ?? d?.uses ?? 0)}<small>次导入游戏</small></div>
-    <div><h3>${esc(t.name)}</h3><p>${esc(t.why)}${d?.lordAvg ? `${esc(d.lord)}的全部对局平均第 ${d.lordAvg.toFixed(1)} 名。` : ''}</p><p>${esc(t.fix)}${t.to ? ` <a href="#/r/${t.to}">${esc(R[t.to].name)} →</a>` : ''}</p></div>
+    <div><h3>${esc(t.name)}</h3><p>${esc(t.why)}${d?.lordAvg ? `${esc(d.lord)}的全部对局平均第 ${d.lordAvg.toFixed(1)} 名。` : ''}</p><p>${esc(t.fix)}${t.to ? ` <a href="/r/${t.to}">${esc(R[t.to].name)} →</a>` : ''}</p></div>
     <div class="rm">${st ? ruler(st.m, { sm: true, dp: 2, label: `名 · 实测 ${st.n.toLocaleString()} 局` }) : '<span class="src">暂无统计</span>'}</div>
   </div>`;
 }
@@ -262,14 +262,14 @@ function answerHTML(ban) {
     ${statLine(s)}
     <p class="share">${sh >= 0.35 ? `${esc(p.lord)}的对局里 ${Math.round(sh * 100)}% 在打这套，数字基本就是这套的表现。` : `${esc(p.lord)}什么都能打（只有 ${Math.round(sh * 100)}% 的对局打这套），数字是它全部对局的平均。`}</p>
     <div class="acts">
-      <a class="btn go" href="#/play/${r.id}?lord=${encodeURIComponent(p.lord)}">${I.play}开始对局</a>
-      <a class="btn" href="#/r/${r.id}">怎么打</a>
+      <a class="btn go" href="/play/${r.id}?lord=${encodeURIComponent(p.lord)}">${I.play}开始对局</a>
+      <a class="btn" href="/r/${r.id}">怎么打</a>
       ${f.code ? `<button class="btn" data-code="${r.id}">${I.copy}阵容码</button>` : ''}
     </div>
     ${alt.length ? `<p class="nolord">没有${esc(p.lord)}：${alt.map(esc).join('、')}也能打。</p>` : ''}
     ${note ? `<p class="note">${esc(note)}</p>` : ''}
     <div class="alts"><div class="t">备选</div>
-      ${picks.slice(1, 4).map((a) => { const as = L[a.lord]; const c = BY[a.r.carry]; return `<a class="alt" href="#/r/${a.id}">
+      ${picks.slice(1, 4).map((a) => { const as = L[a.lord]; const c = BY[a.r.carry]; return `<a class="alt" href="/r/${a.id}">
         <span class="ai">${c?.art ? `<img src="${c.art}" alt="">` : ''}</span>
         <span><span class="an">${esc(a.r.name)}</span><span class="al">${esc(a.lord)}${a.have ? '' : '（你没有）'} · ${esc(short(a.r.faction))}</span></span>
         <span class="av">${as.avg.toFixed(1)}<small>平均名次</small></span></a>`; }).join('')}
@@ -341,7 +341,7 @@ async function showAnswer(ban, o = {}) {
 // ---------- 页面：路线列表 ----------
 function routesPage() {
   return `<section class="wrap sec" style="padding-top:clamp(24px,4vw,48px)">
-    <div class="hdr"><div><h2 class="d" style="font-size:clamp(36px,5vw,64px)">十套路线</h2><p>数字是「开局选了这个棋手之后的全部对局」：打成的、没打成的都算。只算打成的人会让每套都显得很强。</p></div><a class="btn go sm" href="#/">按禁用挑一套</a></div>
+    <div class="hdr"><div><h2 class="d" style="font-size:clamp(36px,5vw,64px)">十套路线</h2><p>数字是「开局选了这个棋手之后的全部对局」：打成的、没打成的都算。只算打成的人会让每套都显得很强。</p></div><a class="btn go sm" href="/">按禁用挑一套</a></div>
     ${routeGroups()}
   </section>
   <section class="wrap sec">
@@ -410,7 +410,7 @@ function routePage(id) {
       ${statLine(s)}
       <p class="share">${s.share >= 0.35 ? `${esc(s.lord)}的对局里 ${Math.round(s.share * 100)}% 在打这套。` : ''}${tierChip(f.tier)}</p>
       <div class="acts">
-        <a class="btn go" href="#/play/${id}?lord=${encodeURIComponent(lordFor(r).lord)}">${I.play}开始对局</a>
+        <a class="btn go" href="/play/${id}?lord=${encodeURIComponent(lordFor(r).lord)}">${I.play}开始对局</a>
         ${f.code ? `<button class="btn" data-code="${id}">${I.copy}阵容码</button>` : ''}
         <a class="btn" href="#plan">每个阶段买什么</a>
       </div>
@@ -456,7 +456,7 @@ function routePage(id) {
   </section>
 
   <section class="wrap sec rv" id="plan">
-    <div class="hdr"><div><h2 class="d">每个阶段买什么</h2><p>金点 = 留到最后的牌。拍卖上的数字是出价上限。</p></div><a class="btn go sm" href="#/play/${id}?lord=${encodeURIComponent(lordFor(r).lord)}">${I.play}对局里一步步看</a></div>
+    <div class="hdr"><div><h2 class="d">每个阶段买什么</h2><p>金点 = 留到最后的牌。拍卖上的数字是出价上限。</p></div><a class="btn go sm" href="/play/${id}?lord=${encodeURIComponent(lordFor(r).lord)}">${I.play}对局里一步步看</a></div>
     <div class="tl">${stageHTML}</div>
   </section>
 
@@ -471,7 +471,7 @@ function routePage(id) {
 
   <section class="wrap sec rv">
     <div class="hdr"><div><h2 class="d">打不成怎么办</h2></div></div>
-    <div class="pivots">${r.pivots.map((p) => `<div class="pv"><div class="w">${esc(p.when)}</div><div class="h">${esc(p.do)}</div>${p.to ? `<a class="btn sm" href="#/r/${p.to}">${esc(R[p.to].name)} ${I.arrow}</a>` : '<span></span>'}</div>`).join('')}</div>
+    <div class="pivots">${r.pivots.map((p) => `<div class="pv"><div class="w">${esc(p.when)}</div><div class="h">${esc(p.do)}</div>${p.to ? `<a class="btn sm" href="/r/${p.to}">${esc(R[p.to].name)} ${I.arrow}</a>` : '<span></span>'}</div>`).join('')}</div>
   </section>
 
   ${f.code ? `<section class="wrap sec rv">${codeBlock(r, f.code)}</section>` : ''}
@@ -576,7 +576,7 @@ function playPage(id, q) {
       ${x.see?.length ? `<div class="see"><span class="t">这阶段看到就拿</span>${x.see.map((t) => `<button class="chip gold" data-card="${esc(t)}">${esc(t)}</button>`).join('')}</div>` : ''}`;
   return `<div class="play">
     <div class="pbar"><div class="wrap">
-      <a class="back" href="#/r/${id}" aria-label="返回路线">${I.back}</a>
+      <a class="back" href="/r/${id}" aria-label="返回路线">${I.back}</a>
       <div class="ti"><b>${esc(r.name)}</b><small>${esc(lord)} · 第 ${i + 1} / ${STAGES.length} 步</small></div>
       <div class="dots">${STAGES.map((s, k) => `<button class="${s.kind === 'auction' ? 'auc' : ''} ${k < i ? 'done' : ''} ${k === i ? 'on' : ''}" data-step="${k}">${s.kind === 'auction' ? `拍卖${'一二三'[['a1', 'a2', 'a3'].indexOf(s.id)]}` : s.name}</button>`).join('')}</div>
       <div class="ptools">
@@ -601,20 +601,22 @@ function playPage(id, q) {
     <div class="pnav"><div class="wrap">
       <button class="btn" data-step="${i - 1}" ${prev ? '' : 'disabled'}>${I.back}${prev ? esc(prev.name) : '上一步'}</button>
       <span class="kbd">键盘 ← → 翻页 · 手机左右滑</span>
-      ${next ? `<button class="btn go" data-step="${i + 1}"><span>下一步：${esc(next.name)}</span>${I.arrow}</button>` : `<a class="btn go" href="#/r/${id}"><span>打完了</span>${I.arrow}</a>`}
+      ${next ? `<button class="btn go" data-step="${i + 1}"><span>下一步：${esc(next.name)}</span>${I.arrow}</button>` : `<a class="btn go" href="/r/${id}"><span>打完了</span>${I.arrow}</a>`}
     </div></div>
   </div>`;
 }
 
+// 当前对局页的路线 id；不在对局页时返回 undefined
+const playId = () => location.pathname.match(/^\/play\/([\w-]+)/)?.[1];
+
 function playStep(k) {
-  const m = location.hash.match(/^#\/play\/([\w-]+)/);
-  if (!m) return;
-  const id = m[1];
+  const id = playId();
+  if (!id) return;
   if (k < 0 || k >= STAGES.length) return;
   store.set('play.' + id, k);
-  const q = new URLSearchParams(location.hash.split('?')[1] || '');
+  const q = new URLSearchParams(location.search);
   q.set('s', k);
-  history.replaceState(null, '', `#/play/${id}?${q}`);
+  history.replaceState(null, '', `/play/${id}?${q}`);
   render({ keepScroll: false, step: true });
 }
 
@@ -658,7 +660,7 @@ function openLord(n) {
     <h2 class="d">${esc(n)}</h2>
     ${v.avg ? ruler(v.avg) : '<p class="small">官方卡池里有这个棋手，但顶尖局统计还没覆盖，暂无法推荐。</p>'}
     ${v.avg ? `<div class="stats" style="margin-top:8px"><span>前三<b>${Math.round(v.top3)}%</b></span><span>吃鸡<b>${Math.round(v.win)}%</b></span><span>${v.games?.toLocaleString()} 局</span></div>` : ''}
-    ${v.routes.length ? `<h3>打什么</h3><div class="chips">${v.routes.map((id) => `<a class="btn sm" href="#/r/${id}">${esc(R[id].name)}</a>`).join('')}</div>` : trap ? '' : '<h3>打什么</h3><p class="small">当前路线库里还没有以它为主的打法，暂无法推荐。</p>'}
+    ${v.routes.length ? `<h3>打什么</h3><div class="chips">${v.routes.map((id) => `<a class="btn sm" href="/r/${id}">${esc(R[id].name)}</a>`).join('')}</div>` : trap ? '' : '<h3>打什么</h3><p class="small">当前路线库里还没有以它为主的打法，暂无法推荐。</p>'}
     ${trap ? `<h3>别打</h3><p>${esc(trap.name)}：${esc(trap.why)}${esc(trap.fix)}</p>` : ''}
     <h3>技能</h3>
     ${v.stages.map((s) => s.cards.map((c) => `<div class="skill"><b>${esc(c.name)}<small>${esc(s.stage)}</small></b><p>${esc(c.text)}</p></div>`).join('')).join('')}`);
@@ -734,8 +736,8 @@ function openCard(name) {
     ${c.awake ? `<h3>觉醒后</h3><p>${esc(c.awake)}</p>` : ''}
     ${c.skills?.[0] ? `<h3>技能：${esc(c.skills[0].name)}</h3><p>${esc(c.skills[0].text)}</p>${nodes.length ? `<div class="lv">${nodes.map((n) => `<div><span>${n.lv} 级</span>${esc(n.text)}</div>`).join('')}</div>` : ''}` : ''}
     ${(c.rel || []).length ? `<h3>可以变成</h3><ul class="plain">${c.rel.map((x) => `<li><b>${esc(x.name)}</b>：${esc(x.text)}</li>`).join('')}</ul>` : ''}
-    ${used.length ? `<h3>用在这些路线</h3><div class="chips">${used.map((r) => `<a class="btn sm" href="#/r/${r.id}">${esc(r.name)}</a>`).join('')}</div>` : ''}
-    ${avoid.length ? `<h3>和这些路线冲突</h3><div class="chips">${avoid.map((r) => `<a class="chip bad" href="#/r/${r.id}">${esc(r.name)}</a>`).join('')}</div>` : ''}`);
+    ${used.length ? `<h3>用在这些路线</h3><div class="chips">${used.map((r) => `<a class="btn sm" href="/r/${r.id}">${esc(r.name)}</a>`).join('')}</div>` : ''}
+    ${avoid.length ? `<h3>和这些路线冲突</h3><div class="chips">${avoid.map((r) => `<a class="chip bad" href="/r/${r.id}">${esc(r.name)}</a>`).join('')}</div>` : ''}`);
 }
 
 // ---------- 页面：阵容 ----------
@@ -779,7 +781,7 @@ function cpCard(r) {
     ? `<button class="btn sm cpbtn" type="button" data-copy="${esc(r.code)}">复制阵容码</button>`
     : '<button class="btn sm cpbtn" type="button" disabled>无阵容码</button>';
   const rt = cpRoute(r);
-  const go = rt ? `<a class="cpgo" href="#/r/${esc(rt.id)}" data-r="${esc(rt.id)}">去这里看打法 ${I.arrow}</a>` : '';
+  const go = rt ? `<a class="cpgo" href="/r/${esc(rt.id)}" data-r="${esc(rt.id)}">去这里看打法 ${I.arrow}</a>` : '';
   return `<article class="cp" id="cp-${esc(r.code)}">
     <div class="cphd"><h3 class="d">${esc(r.name)}</h3>${r.preset ? '<span class="chip">官方预置</span>' : ''}</div>
     <div class="cpls">${r.lords.map(cpLord).join('')}<span class="src">社区阵容 ${esc(r.code)}</span></div>
@@ -832,7 +834,7 @@ function cpRank() {
       <div class="cprn"><b class="d">${esc(r.name)}</b><span class="cprl">${r.lords.map(cpLord).join('')}</span>${g.length > 1 ? `<span class="src">共 ${g.length} 套同阵容</span>` : ''}</div>
       ${ruler(r.st.m, { sm: true, dp: 2 })}
       <div class="cprst"><span>吃鸡<b>${cpPct(r.st.f)}</b></span><span>前三<b>${cpPct(r.st.t)}</b></span><span class="cprg">${r.st.n.toLocaleString()} 局</span></div>
-      <div class="cpra">${rt ? `<a class="btn sm" href="#/r/${esc(rt.id)}" data-r="${esc(rt.id)}">查看打法</a>` : '<span class="src">当前版本胜率最高，打法待补充</span>'}</div>
+      <div class="cpra">${rt ? `<a class="btn sm" href="/r/${esc(rt.id)}" data-r="${esc(rt.id)}">查看打法</a>` : '<span class="src">当前版本胜率最高，打法待补充</span>'}</div>
     </li>`;
   }).join('')}</ol>
   </div>`;
@@ -868,7 +870,7 @@ function rulesPage() {
   </section>`;
 }
 
-function notFound() { return `<section class="wrap sec"><h2 class="d">没有这个页面</h2><p><a class="btn" href="#/">回到开局</a></p></section>`; }
+function notFound() { return `<section class="wrap sec"><h2 class="d">没有这个页面</h2><p><a class="btn" href="/">回到开局</a></p></section>`; }
 
 // ---------- 抽屉 ----------
 function openSheet(html) {
@@ -920,14 +922,20 @@ function openPivot(id) {
   const cont = f.contest;
   openSheet(`<h2 class="d">打不成怎么办</h2>
     <p>${cont?.level === 1 ? `${esc(r.carry)}不太怕撞车：被抢一两张影响不大。` : `${esc(r.carry)}${cont?.level === 3 ? '很怕' : '有点怕'}撞车：前 4 回合看到有人和你凑同一个主核，就考虑换。`}</p>
-    <div class="pivots" style="margin-top:14px">${r.pivots.map((p) => `<div class="pv" style="grid-template-columns:1fr"><div class="w">${esc(p.when)}</div><div class="h">${esc(p.do)}</div>${p.to ? `<a class="btn sm" href="#/play/${p.to}" style="justify-self:start">改打${esc(R[p.to].name)} ${I.arrow}</a>` : ''}</div>`).join('')}</div>`);
+    <div class="pivots" style="margin-top:14px">${r.pivots.map((p) => `<div class="pv" style="grid-template-columns:1fr"><div class="w">${esc(p.when)}</div><div class="h">${esc(p.do)}</div>${p.to ? `<a class="btn sm" href="/play/${p.to}" style="justify-self:start">改打${esc(R[p.to].name)} ${I.arrow}</a>` : ''}</div>`).join('')}</div>`);
 }
 
 // ---------- 路由 ----------
 function parse() {
-  const h = location.hash.replace(/^#/, '') || '/';
-  const [p, qs] = h.split('?');
-  return { parts: p.split('/').filter(Boolean), q: new URLSearchParams(qs || '') };
+  const p = location.pathname.replace(/\/+$/, '') || '/';
+  return { parts: p.split('/').filter(Boolean), q: new URLSearchParams(location.search) };
+}
+
+// 站内跳转统一走这里：换地址不刷新页面
+function go(p, { replace = false } = {}) {
+  if (replace) history.replaceState(null, '', p);
+  else history.pushState(null, '', p);
+  render();
 }
 
 let lastKey = '';
@@ -950,24 +958,50 @@ function render(o = {}) {
   else if (a === 'comps') html = compsPage();
   else if (a === 'cards') { html = cardsPage(); mount = cardsFill; }
   else if (a === 'rules') html = rulesPage();
-  else if (a === 'route') { location.replace('#/r/' + b); return; }
+  else if (a === 'route') { go('/r/' + b, { replace: true }); return; }
   else html = notFound();
   const swap = () => {
     view.innerHTML = html;
     if (!o.keepScroll && !(o.step && same)) window.scrollTo(0, 0);
     mount && mount();
     reveal();
-    document.title = titleFor(a, b);
+    setSeo(...seoFor(a, b));
   };
   if (!RM && !o.step && document.startViewTransition && !same) document.startViewTransition(swap);
   else swap();
   if (o.step && !RM) $$('#pstage > *').forEach((el, i) => el.animate([{ opacity: 0, transform: 'translateX(18px)' }, { opacity: 1, transform: 'none' }], { duration: 380, delay: i * 35, easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'backwards' }));
 }
 
-function titleFor(a, b) {
-  if (a === 'r' && R[b]) return `${R[b].name} · 万象棋谱`;
-  if (a === 'play' && R[b]) return `对局 · ${R[b].name}`;
-  return { routes: '路线', lords: '棋手', comps: '阵容', cards: '查牌', rules: '通用规则' }[a] ? `${{ routes: '路线', lords: '棋手', comps: '阵容', cards: '查牌', rules: '通用规则' }[a]} · 万象棋谱` : '万象棋谱 · S1';
+// 每类页面的 title 和 description：搜索引擎抓这里，微信分享读 og:*
+const SITE = 'https://wxq.007.al';
+const SEO = {
+  home: ['王者万象棋攻略助手 - 万象棋谱', '王者万象棋 S1 对局助手：看本局禁用，选棋手和路线；对局里每个阶段该买什么、拍卖出多少、什么时候换。数据来自顶尖对局。'],
+  routes: ['王者万象棋强势阵容打法 - 万象棋谱', '十套成型路线的完整打法：主核、站位、天赋、每个阶段买什么、拍卖出价上限，以及打不成时改打哪套。'],
+  lords: ['王者万象棋全棋手技能与数据 - 万象棋谱', '官方卡池全部棋手：技能、适配路线、顶尖局平均名次，点开看该打什么、怎么用。'],
+  comps: ['王者万象棋全服胜率阵容库 - 万象棋谱', '官方社区阵容照录：棋手、站位、天赋、变阵和对局统计，一键复制阵容码，一键跳到对应打法。'],
+  cards: ['王者万象棋英雄装备天赋图鉴 - 万象棋谱', '英雄、装备、天赋、效果牌全图鉴：费用、面板、阵营，按名字或效果即时搜索。'],
+  rules: ['王者万象棋通用规则 - 万象棋谱', '不管打哪套都适用的对局规则，以及对局模式里会在对应阶段提醒的要点。'],
+  miss: ['没有这个页面 - 万象棋谱', '这个地址没有内容。回开局重新选。'],
+};
+
+function seoFor(a, b) {
+  if (a === 'r' || a === 'route') return SEO.routes;
+  if (a === 'play') return R[b] ? [`${R[b].name}对局怎么打 - 万象棋谱`, `${R[b].name}每一步买什么、拍卖出多少、什么时候换，按阶段走一遍。`] : SEO.routes;
+  if (!a) return SEO.home;
+  return SEO[a] || SEO.miss;
+}
+
+function setSeo(title, desc) {
+  document.title = title;
+  const set = (sel, attr, v) => { const el = document.head.querySelector(sel); if (el) el.setAttribute(attr, v); };
+  set('meta[name="description"]', 'content', desc);
+  set('meta[property="og:title"]', 'content', title);
+  set('meta[property="og:description"]', 'content', desc);
+  set('meta[name="twitter:title"]', 'content', title);
+  set('meta[name="twitter:description"]', 'content', desc);
+  const url = SITE + (location.pathname.replace(/\/+$/, '') || '/');
+  set('meta[property="og:url"]', 'content', url);
+  set('link[rel="canonical"]', 'href', url);
 }
 
 let io;
@@ -979,12 +1013,23 @@ function reveal() {
 }
 
 // ---------- 事件 ----------
+// 站内链接（href="/..."）点击后走 pushState，不刷新页面；外链、新窗口、右键照常。
+document.addEventListener('click', (e) => {
+  if (e.defaultPrevented || e.button > 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  const a = e.target.closest?.('a[href]');
+  if (!a || (a.target && a.target !== '_self') || a.hasAttribute('download')) return;
+  const href = a.getAttribute('href');
+  if (!href.startsWith('/') || href.startsWith('//')) return;
+  e.preventDefault();
+  go(href);
+});
+
 document.addEventListener('click', async (e) => {
   const t = e.target.closest('[data-ban],[data-card],[data-lord],[data-code],[data-copy],[data-r],[data-note],[data-owned],[data-own],[data-own-clear],[data-step],[data-wake],[data-pivot],[data-ctab],[data-cfac],[data-ctier]');
   if (!t) return;
   const d = t.dataset;
   if (d.ban) {
-    history.replaceState(null, '', `#/?ban=${encodeURIComponent(d.ban)}`);
+    history.replaceState(null, '', `/?ban=${encodeURIComponent(d.ban)}`);
     showAnswer(d.ban);
   } else if (d.card) { e.preventDefault(); openCard(d.card); }
   else if (d.lord) openLord(d.lord);
@@ -1000,7 +1045,7 @@ document.addEventListener('click', async (e) => {
       t.textContent = '已复制';
       setTimeout(() => { if (t.isConnected) t.textContent = old; }, 1500);
     }
-  } else if (d.r) { e.preventDefault(); location.hash = `#/r/${d.r}`; }
+  } else if (d.r && t.tagName !== 'A') { e.preventDefault(); go(`/r/${d.r}`); }
   else if ('note' in d) openNote();
   else if ('owned' in d) openOwned();
   else if (d.own) {
@@ -1030,36 +1075,52 @@ sheet.addEventListener('close', () => {
 });
 document.addEventListener('input', (e) => { if (e.target.id === 'cq') { cq.q = e.target.value; cardsFill(); } });
 document.addEventListener('keydown', (e) => {
-  if (!location.hash.startsWith('#/play/') || sheet.open || e.target.closest?.('input,textarea')) return;
-  const i = +(new URLSearchParams(location.hash.split('?')[1] || '').get('s') ?? store.get('play.' + location.hash.match(/^#\/play\/([\w-]+)/)?.[1], 0));
+  const id = playId();
+  if (!id || sheet.open || e.target.closest?.('input,textarea')) return;
+  const i = +(new URLSearchParams(location.search).get('s') ?? store.get('play.' + id, 0));
   if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); playStep(i + 1); }
   else if (e.key === 'ArrowLeft') { e.preventDefault(); playStep(i - 1); }
 });
 let tx = null;
-document.addEventListener('touchstart', (e) => { if (location.hash.startsWith('#/play/') && !e.target.closest('.dots,.prail')) tx = [e.touches[0].clientX, e.touches[0].clientY]; }, { passive: true });
+document.addEventListener('touchstart', (e) => { if (playId() && !e.target.closest('.dots,.prail')) tx = [e.touches[0].clientX, e.touches[0].clientY]; }, { passive: true });
 document.addEventListener('touchend', (e) => {
   if (!tx) return;
   const dx = e.changedTouches[0].clientX - tx[0], dy = e.changedTouches[0].clientY - tx[1];
   tx = null;
   if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.6) {
-    const i = +(new URLSearchParams(location.hash.split('?')[1] || '').get('s') ?? 0);
+    const i = +(new URLSearchParams(location.search).get('s') ?? 0);
     playStep(dx < 0 ? i + 1 : i - 1);
   }
 }, { passive: true });
 addEventListener('scroll', () => $('#bar').classList.toggle('scrolled', scrollY > 8), { passive: true });
-addEventListener('hashchange', () => render());
+// 浏览器前进/后退
+addEventListener('popstate', () => render());
 
 // ---------- 启动 ----------
+// 数据里的图片路径都写成 assets/…；深路径（/r/lvbu）下相对路径会解析错，统一补成根目录。
+function fixAssets(o, seen = new Set()) {
+  if (!o || typeof o !== 'object' || seen.has(o)) return;
+  seen.add(o);
+  for (const k of Object.keys(o)) {
+    const v = o[k];
+    if (typeof v === 'string') { if (v.startsWith('assets/')) o[k] = '/' + v; }
+    else if (v && typeof v === 'object') fixAssets(v, seen);
+  }
+}
+
 (async function boot() {
+  // 旧哈希链接（#/r/xxx）换成新地址，分享出去的旧链接继续可用
+  if (location.hash.startsWith('#/')) history.replaceState(null, '', location.hash.slice(1));
   const [cards, art, comps] = await Promise.all([
-    fetch('data/cards.json').then((r) => r.json()),
-    fetch('data/art.json').then((r) => r.json()).catch(() => ({})),
-    fetch('data/comps.json').then((r) => r.json()).catch(() => null),
+    fetch('/data/cards.json').then((r) => r.json()),
+    fetch('/data/art.json').then((r) => r.json()).catch(() => ({})),
+    fetch('/data/comps.json').then((r) => r.json()).catch(() => null),
   ]);
   CARDS = cards;
   if (comps) COMPS = comps;
-  for (const k of ['talents', 'equipment', 'effects', 'heroes']) for (const c of cards[k]) BY[c.name] = { ...c, _k: k };
   ART = art.card || {};
+  for (const o of [CARDS, ART, COMPS, FACTS]) fixAssets(o);
+  for (const k of ['talents', 'equipment', 'effects', 'heroes']) for (const c of cards[k]) BY[c.name] = { ...c, _k: k };
   await document.fonts?.ready;
   render();
 })();

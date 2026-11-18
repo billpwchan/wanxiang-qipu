@@ -23,16 +23,20 @@ flowchart TB
 
 ### 页面与路由
 
-哈希路由，`render()` 根据 `location.hash` 生成整页 HTML 字符串（所有插值经过 `esc()` 转义），再挂上各页的 `mount`（画 WebGL、填查牌结果）。
+History 路由（`location.pathname`），`render()` 根据地址生成整页 HTML 字符串（所有插值经过 `esc()` 转义），再挂上各页的 `mount`（画 WebGL、填查牌结果）。
 
 | 地址 | 页面 | 说明 |
 |---|---|---|
-| `#/?ban=河洛` | 开局 | 禁用阵营写进地址，可以直接分享 |
-| `#/play/<路线>?lord=<棋手>&s=<步>` | 对局副屏 | 进度存在 `localStorage`，刷新后接着上次 |
-| `#/r/<路线>` | 路线页 | 旧地址 `#/route/<路线>` 会跳转过来 |
-| `#/routes` · `#/lords` · `#/cards` · `#/rules` | 路线列表 · 棋手 · 查牌 · 通用规则 | |
+| `/?ban=河洛` | 开局 | 禁用阵营写进地址，可以直接分享 |
+| `/play/<路线>?lord=<棋手>&s=<步>` | 对局副屏 | 进度存在 `localStorage`，刷新后接着上次 |
+| `/r/<路线>` | 路线页 | 旧地址 `#/route/<路线>`、`#/r/<路线>` 会跳转过来 |
+| `/routes` · `/lords` · `/cards` · `/rules` | 路线列表 · 棋手 · 查牌 · 通用规则 | |
 
 卡牌、棋手详情、数据说明、「我有的棋手」都在同一个 `<dialog>` 抽屉里打开。
+
+History 路由要求服务器把「不是静态文件」的路径交给 `index.html`，否则 `/r/lvbu` 这种地址刷新就 404。三处都要有回退：`vercel.json` 的 `rewrites`（`/(.*)` → `/index.html`，Vercel 先查文件系统，命中的静态文件不会被改写）、`deploy/Caddyfile` 的 `@page not path …` + `rewrite @page /index.html`、本地 `npm run serve`（`scripts/serve.mjs`，没有扩展名的路径回退到 `index.html`）。
+
+标题和描述随页面变：`setSeo()` 在 `render()` 里更新 `document.title`、`meta[name=description]`、`og:*`/`twitter:*` 与 `canonical`，各页文案在 `SEO` 表里。站点根数据一律用绝对路径（`/data/*.json`、`/assets/*`），深链接下相对路径会解析到错误的目录。
 
 ### 状态
 
@@ -121,7 +125,7 @@ sequenceDiagram
 | 命令 | 检查什么 | 需要 |
 |---|---|---|
 | `node scripts/verify-site.mjs` | 数据完整性：卡牌引用、阶段、站位、禁用推荐、图片文件、文案用词 | Node |
-| `node scripts/verify-ui.mjs [地址]` | 83 项真实浏览器交互；不给地址时自带静态服务器测 `site/dist` | Node 22+、Chrome |
+| `node scripts/verify-ui.mjs [地址]` | 89 项真实浏览器交互；不给地址时自带静态服务器测 `site/dist` | Node 22+、Chrome |
 | `GPU=1 node scripts/verify-ui.mjs` | 额外检查玻璃画布真的在画 | 同上 |
 | `node copilot/test/run.mjs` | 用官方卡面合成 8 张模拟画面 → Chrome 截图 → Vision OCR → brain 回放 → 检查每步建议 | macOS、Chrome |
 | `node copilot/test/run.mjs --replay` | 只回放已提交的 OCR 结果 | Node |

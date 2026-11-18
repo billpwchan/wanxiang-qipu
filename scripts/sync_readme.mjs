@@ -19,7 +19,7 @@ const wan = (n) => (n >= 10000 ? `${(n / 10000).toFixed(0)} 万` : n.toLocaleStr
 
 const routes = [...ROUTES].sort((a, b) => FACTS.routes[a.id].stat.avg - FACTS.routes[b.id].stat.avg).map((r) => {
   const f = FACTS.routes[r.id];
-  return `| [${r.name}](${SITE}#/r/${r.id}) | ${short(r.faction)} | ${r.carry} | ${r.lords.join('、')} | **${f.stat.avg.toFixed(2)}**（${f.stat.lord}） | ${f.done ? f.done.avg.toFixed(2) : '—'} | ${TIER[f.tier]} | ${r.tag} |`;
+  return `| [${r.name}](${SITE}r/${r.id}) | ${short(r.faction)} | ${r.carry} | ${r.lords.join('、')} | **${f.stat.avg.toFixed(2)}**（${f.stat.lord}） | ${f.done ? f.done.avg.toFixed(2) : '—'} | ${TIER[f.tier]} | ${r.tag} |`;
 });
 const routeTable = [
   '| 路线 | 阵营 | 主核 | 棋手 | 平均名次<br><sub>棋手的全部对局</sub> | <sub>只算打成的对局</sub> | 档位 | 特点 |',
@@ -30,7 +30,7 @@ const routeTable = [
 const traps = TRAPS.map((t) => {
   const d = FACTS.traps.find((x) => x.id === t.id);
   const to = ROUTES.find((r) => r.id === t.to);
-  return `| ${t.name} | ${wan(d.uses)}次 | ${d.avg.toFixed(2)} | ${d.lord} ${d.lordAvg.toFixed(2)} | ${t.fix}${to ? `→ [${to.name}](${SITE}#/r/${to.id})` : ''} |`;
+  return `| ${t.name} | ${wan(d.uses)}次 | ${d.avg.toFixed(2)} | ${d.lord} ${d.lordAvg.toFixed(2)} | ${t.fix}${to ? `→ [${to.name}](${SITE}r/${to.id})` : ''} |`;
 });
 const trapTable = [
   '| 阵容 | 游戏内被导入 | 打成了也只有 | 棋手的全部对局 | 改成 |',
