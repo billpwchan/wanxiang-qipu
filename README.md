@@ -219,6 +219,7 @@ scripts/          数据抓取、素材处理、测试、发布、README 配图
 research/         原始数据快照、条件查询结果、机制假设与分析脚本（见 research/README.md）
 deploy/           服务器安装、原子更新、校验脚本
 docs/             方法、架构、数据流程、部署；images/ 与 src/ 是 README 配图及其源页面
+PROJECT_HISTORY.md 重构与演进史：为什么重构、技术里程碑、数据流、维护 SOP
 ```
 
 ## 路线图
