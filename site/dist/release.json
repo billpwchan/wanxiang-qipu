@@ -1,5 +1,5 @@
 {
- "release": "20261119-023800",
+ "release": "20261119-031304",
  "files": {
   "app.css": "6c39b00d0a5209f7c6cc387cf3d37f0181b7ca264841c717fcf885f0ee0b04bc",
   "app.js": "f9633493b3268f794b92956469a248d81d8ab1b198167ffff84fe0efd1637870",
@@ -803,7 +803,7 @@
   "data/cards.json": "e07d114a728129c507ce971e12d89a25019038b1250a480b6da07a15f18d6832",
   "data/comps.json": "e275d0ccb441b16a2a2872275bf2ad2c1600b0b983f5c4fef40a88188edd7ada",
   "data/evidence.js": "d5d3f2180e5a938e372cb5b34c7611eca55de56aa4e1e179fddc10d2f6cafa00",
-  "data/facts.js": "ac87dfd4010a9a7a4be3d56c20416e835dc7ef87c475609b58b387d0c2cd3fe6",
+  "data/facts.js": "a962cd0536617df1e492682dfa8dcd0425dacd288c79dae14c31f1771f7e0ed9",
   "data/icons.js": "e2ae95b5f162b6c2152a9635f0d8df8d361b7c69bb6df24d0a8886ab38339077",
   "data/lords.json": "eb90cd7b3f76042de8305ee199dc831281d91f60c66d2dd2612121a960e2ecfd",
   "data/meta.js": "efe83d1f129363255341097da560d5e17ba40b7a727ef9c5aa5cc960c91d44e2",
