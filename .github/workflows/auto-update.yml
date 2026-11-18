@@ -1,0 +1,106 @@
+name: auto-update
+
+# 官方卡池更新后自动重建站点数据，开 PR 等人工审核，合并后 Vercel 重新部署。
+# 只跑官方无风控接口（scripts/build_data.py --fetch → game.gtimg.cn）。
+# datawxq 的统计/变阵抓取不在本工作流内：那边有 IP 风控，抓一次就可能封。
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # UTC 02:00 = 北京时间 10:00
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: auto-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 系统依赖（potrace：阵营/关键词图标矢量化）
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq potrace
+
+      - name: Node 依赖
+        run: npm ci --no-audit --no-fund
+
+      - name: Python 依赖
+        run: pip install --disable-pip-version-check -r requirements.txt
+
+      # --fetch 把五个官方接口下到 research/raw-<今天>/，不读仓库里任何旧快照目录。
+      - name: 抓官方卡池
+        run: python scripts/build_data.py --fetch
+
+      # 卡图 PNG → webp、棋手立绘、图标 path，并把 cards.json 的 img/art 改写成 webp 路径。
+      - name: 生成图鉴素材
+        run: python scripts/build_assets_v5.py
+
+      - name: 重算数字层（facts.js）
+        run: node scripts/build_facts.mjs
+
+      - name: 生成阵容页数据（comps.json）
+        run: node scripts/build_comps_site.mjs
+
+      - name: 数据校验
+        run: npm run validate
+
+      - name: 重算发布清单
+        run: python scripts/make_release.py
+
+      # snapshot / release 时间戳本来就会天天变，语义比对后没有真实数据变更就不提 PR。
+      - name: 检查是否有真实数据变更
+        id: diff
+        run: |
+          if node scripts/check_real_diff.mjs; then
+            echo "changed=0" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 日期
+        if: steps.diff.outputs.changed == '1'
+        id: d
+        run: echo "d=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+
+      # 不直接 push main：开 data/auto-update 分支的 PR，留人工审核。
+      # token 用 AUTO_UPDATE_TOKEN（PAT）优先：GITHUB_TOKEN 创建的 PR 不会触发其他 workflow，
+      # 用 PAT 才能让 verify.yml 在这个 PR 上跑。
+      - name: 有变动就开 PR
+        if: steps.diff.outputs.changed == '1'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.AUTO_UPDATE_TOKEN || secrets.GITHUB_TOKEN }}
+          branch: data/auto-update
+          base: main
+          delete-branch: false
+          add-paths: |
+            site/dist
+          commit-message: "data: 官方数据自动更新 ${{ steps.d.outputs.d }}"
+          title: "data: 官方数据自动更新 ${{ steps.d.outputs.d }}"
+          body: |
+            官方卡池自动抓取 + 站点数据重建。
+
+            流水线：`build_data.py --fetch` → `build_assets_v5.py` → `build_facts.mjs` → `build_comps_site.mjs` → `validate` → `make_release.py`
+
+            - 数据源：game.gtimg.cn 官方卡牌接口（无风控）。
+            - 不含 datawxq 统计/变阵抓取：那部分有 IP 风控，只在本地跑。
+            - `site/dist/data/cards.json` 的 `meta.snapshot` 和 `site/dist/release.json` 的 release 号会变，属正常。
+            - 合并后 Vercel 自动重新部署。
+
+            审核要点：卡图/立绘是否齐全、`npm run verify` 是否通过、`site/dist/data/plan.js` 里的路线是否还有牌被改名或下架。
+          labels: |
+            data
