@@ -21,6 +21,20 @@ const FEEDS = [
 // primaryColumn 优先级：多栏命中时固定取 general > hot > beginner，避免随机
 const PRIORITY = ['general', 'hot', 'beginner'];
 
+// datawxq.com 的统计字段：由 scripts/fetch_stats.mjs 抓取后合并进来，不属于官网快照。
+// 重新生成时必须按 rosterKey 继承，否则这批外部数据会被冲掉。
+const DWXQ_SOURCE = 'datawxq.com';
+const DWXQ_STAT_KEYS = ['appearanceRate', 'avgPlacement', 'firstRate', 'top3Rate', 'count', 'variantCount'];
+const STATS_NOTE =
+  '官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。' +
+  '登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，匹配不到则留 null。' +
+  'heroList[].level 源数据恒为 1，不是真实等级。';
+
+// rosterKey：<英雄数>|<id 字符串升序>，与 datawxq 的 lineupKey / rosterKey 同构。
+// 必须用字符串序（默认 sort），数字序会与站点不一致（例如 31191 排在 5051 之前）。
+const rosterKeyOf = (heroList) =>
+  [heroList.length, ...heroList.map((h) => String(h.id)).sort()].join('|');
+
 const USAGE = 'usage: node scripts/gen_comps.mjs [--in <快照目录>] [--out <文件或目录>]';
 
 function parseArgs(argv) {
@@ -158,6 +172,28 @@ const rounds = (list) =>
 const records = [];
 let crossSeasonCount = 0;
 let interactiveDiffCount = 0;
+let statsCarried = 0;
+
+// 现有 comps.json 里由 fetch_stats.mjs 合并进来的 stats，按 rosterKey 索引。
+// 只继承 source === 'datawxq.com' 且 6 个字段齐全的记录；其余（含用户手改）一律不碰。
+const carriedStats = new Map();
+{
+  const prevPath = outFile;
+  if (fs.existsSync(prevPath)) {
+    try {
+      const prev = JSON.parse(fs.readFileSync(prevPath, 'utf8'));
+      for (const r of prev.records || []) {
+        const st = r?.stats;
+        if (!st || st.source !== DWXQ_SOURCE) continue;
+        if (!DWXQ_STAT_KEYS.every((k) => k in st)) continue;
+        const k = rosterKeyOf(r.heroList || []);
+        carriedStats.set(k, st);
+      }
+    } catch (e) {
+      console.log('note: 读不到现有 comps.json，本次不从旧文件继承 stats：', e.message);
+    }
+  }
+}
 
 for (const [code, list] of byKey) {
   const columns = [...new Set(list.map((x) => x.column))];
@@ -195,10 +231,8 @@ for (const [code, list] of byKey) {
     lords: (primaryRow.row.lordList || []).map((l) => ({ id: l.id, name: l.name })),
     heroList: primaryRow.row.heroList.map(hero),
     interactiveData,
-    stats: { avgRank: null, pickRate: null, difficulty: null, equipRate: null },
-    statsNote:
-      '官网阵容列表页不提供平均排名 / 选取率 / 难度 / 穿戴率，未推算。' +
-      'heroList[].level 源数据恒为 1，不是真实等级。',
+    stats: { avgRank: null, pickRate: null, difficulty: null, equipRate: null, source: '' },
+    statsNote: STATS_NOTE,
     variants: null,
     source: primaryRow.source,
     sourcePage: SOURCE_PAGE,
@@ -224,6 +258,17 @@ for (const [code, list] of byKey) {
 
   // beginner 栏是官方预置阵容（tag=官方、useNum 恒 0、seasonId=1），不是玩家提交的阵容。
   if (columns.includes('beginner')) rec.isPreset = true;
+
+  // 外部统计：按 rosterKey 继承 fetch_stats.mjs 合并过的 datawxq 数据。
+  // beginner 是官方预置阵容，不参与对局统计，永远保持 null。
+  if (!rec.isPreset) {
+    const st = carriedStats.get(rosterKeyOf(rec.heroList));
+    if (st) {
+      for (const k of DWXQ_STAT_KEYS) rec.stats[k] = st[k];
+      rec.stats.source = DWXQ_SOURCE;
+      statsCarried++;
+    }
+  }
 
   records.push(rec);
 }
@@ -263,7 +308,7 @@ const out = {
     'seasonIdRaw 按官方原值存，不做语义解释；general/hot=0、beginner=1，1 是栏位标识不是赛季。',
     'beginner 栏全部是官方预置阵容（tag=官方、useNum 恒为 0、seasonId=1），对应记录带 isPreset: true；不要和 general/hot 的使用次数放在一起比较。',
     'beginner 只有 9 行且 pro_2 返回 404，样本不足，暂不作为基准。',
-    'stats 四个字段官网不提供，保持 null；不要用 operationDetails 推 variants，不要用 equipList 算穿戴率。',
+    'stats 的 avgRank / pickRate / difficulty / equipRate 官网不提供，保持 null；登场率 / 平均名次 / 登顶率 / 前三率 / 场次 / 变阵数来自 datawxq.com，按 rosterKey 匹配，当初未重生成时保留；不要用 operationDetails 推 variants，不要用 equipList 算穿戴率。',
     'brief / positionDesc / equipDesc / operationDetails / tags / talentCardDesc / effectCardDesc 是玩家原创的阵容攻略（UGC），原文照录，版权归原作者，见 NOTICE。',
   ],
   records,
@@ -274,5 +319,5 @@ fs.writeFileSync(outFile, JSON.stringify(out, null, 2) + '\n', 'utf8');
 console.log('in:', path.relative(process.cwd(), rawDir) || rawDir);
 console.log('records:', records.length, '→', path.relative(process.cwd(), outFile) || outFile);
 console.log('columnCount:', JSON.stringify(columnCount));
-console.log('crossSeason:', crossSeasonCount, 'interactiveDiff:', interactiveDiffCount);
+console.log('crossSeason:', crossSeasonCount, 'interactiveDiff:', interactiveDiffCount, 'statsCarried:', statsCarried);
 console.log('bytes:', fs.statSync(outFile).size);

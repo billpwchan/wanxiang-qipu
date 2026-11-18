@@ -34,6 +34,10 @@ research/raw/lineups.json
 # 官网阵容列表页的原始 XHR 快照：含作者昵称等个人信息，只留本地
 # data/comps.json 由 scripts/gen_comps.mjs 从外部快照生成，仓库只存归纳结果
 snapshots/raw/
+# datawxq 变阵探针样本：抓包原始响应，只留本地
+snapshots/probe-variants/
+# datawxq 统计抓取结果（scripts/fetch_stats.mjs 产物）：只留本地，合并结果进 data/comps.json
+snapshots/probe-stats/
 
 # 官方卡池原始抓包（scripts/build_data.py --fetch 产物）：每个约 4 MB，可随时重抓，只留本地
 research/raw-*/

@@ -333,6 +333,27 @@ if (!existsSync(D('comps.json'))) {
       chk(st && f in st, `${tag}.stats：缺字段 ${f}`);
       chk(st?.[f] === null || isNum(st?.[f]), `${tag}.stats.${f} 只能是 null 或数字`);
     }
+    // datawxq.com 的统计：有 source 就必须字段齐全且类型正确；没有 source（或为空）就必须是 null。
+    // 数值不做二次推算，只查类型与取值范围。
+    chk(st?.source === undefined || st?.source === '' || st?.source === 'datawxq.com',
+      `${tag}.stats.source 只能是缺省、'' 或 'datawxq.com'，实际 ${JSON.stringify(st?.source)}`);
+    const hasDwxq = st?.source === 'datawxq.com';
+    for (const f of ['appearanceRate', 'avgPlacement', 'firstRate', 'top3Rate', 'count', 'variantCount']) {
+      if (hasDwxq) {
+        chk(f in (st || {}), `${tag}.stats：source=datawxq.com 时缺字段 ${f}`);
+      } else {
+        chk(!(f in (st || {})) || st?.[f] === null, `${tag}.stats.${f}：没有 source 时必须是 null 或不出现`);
+      }
+    }
+    if (hasDwxq) {
+      for (const f of ['appearanceRate', 'firstRate', 'top3Rate']) {
+        chk(isNum(st[f]) && st[f] >= 0 && st[f] <= 1, `${tag}.stats.${f} 必须是 0~1 的数字`);
+      }
+      chk(isNum(st.avgPlacement) && st.avgPlacement > 0, `${tag}.stats.avgPlacement 必须是正数`);
+      for (const f of ['count', 'variantCount']) {
+        chk(isInt(st[f]) && st[f] >= 0, `${tag}.stats.${f} 必须是非负整数`);
+      }
+    }
     chk(isStr(r?.statsNote) && r.statsNote.length > 0, `${tag}：statsNote 必须说明这些字段为什么是 null`);
     chk(r?.variants === null || Array.isArray(r?.variants), `${tag}：variants 只能是 null 或数组`);
 
