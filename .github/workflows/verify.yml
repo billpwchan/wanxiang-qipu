@@ -28,3 +28,16 @@ jobs:
         run: node copilot/test/run.mjs --replay
       - name: README 表格与数据一致
         run: node scripts/sync_readme.mjs --check
+
+  # Windows 回归：动态 import 的 file:// URL 构造在这条路径上才暴露，
+  # Linux runner 用 path.join 得到的 POSIX 绝对路径恰好能被 ESM loader 接受。
+  verify-windows:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 数据完整性（Windows）
+        run: node scripts/verify-site.mjs
