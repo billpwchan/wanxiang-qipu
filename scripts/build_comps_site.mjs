@@ -40,6 +40,21 @@ const namesOf = (list, tag) =>
 const intOrNull = (v) => (Number.isInteger(v) && v >= 0 ? v : null);
 const numOrNull = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : null);
 
+// rosterKey：<英雄数>|<英雄 id 字符串升序>，和 scripts/fetch_stats.mjs、fetch_variants.mjs 同一套构造，
+// datawxq 的统计就是按它对齐的。前端靠它把「同一套英雄、不同阵容码」的记录去重成一行。
+const rosterKeyOf = (heroList, tag) => {
+  const list = heroList || [];
+  if (!list.length) throw new Error(`${tag}：heroList 为空，没法算 rosterKey`);
+  const ids = list.map((h) => {
+    if (!h?.id) throw new Error(`${tag}：英雄项没有 id，没法算 rosterKey（${JSON.stringify(h)}）`);
+    return String(h.id);
+  });
+  return [ids.length, ...ids.sort()].join('|');
+};
+
+// 阵容名来自社区，个别带 \r（换行残留）。只清控制字符和首尾空白，不改文字。
+const cleanName = (s) => String(s).replace(/[\r\n]/g, '').trim();
+
 const records = [];
 const unknownBase = new Set(); // 阵容本体里的英雄，卡片上要显示图标，对不上就是硬错
 const unknownVariant = new Set(); // 只在变阵里出现的英雄，文字列表照样能读，只提示
@@ -97,7 +112,8 @@ for (const r of comps.records || []) {
 
   records.push({
     code: r.lineupCode,
-    name: r.name,
+    name: cleanName(r.name),
+    rosterKey: rosterKeyOf(r.heroList, tag),
     col: Array.isArray(r.column) ? r.column : [],
     preset: !!r.isPreset,
     heroes,
@@ -128,12 +144,15 @@ const out = {
     withVariants,
     variantsTotal,
     statsSource: DWXQ_SOURCE,
+    // 统计口径取抓取时接口自己返回的 statisticsScope（当前是 allPlayers）。
+    // 接口没有给时间窗口，页面上就不要写「近 N 天」。
+    statsScope: comps.statsSnapshot?.statisticsScope ?? null,
     // 没有图标的棋手 / 只出现在变阵里的新牌：如实登记，前端走文字兜底，不剔数据也不假装有图。
     missing: {
       lords: [...unknownLords],
       heroes: [...unknownVariant],
     },
-    note: '数组顺序与 data/comps.json 一致；st 为 null 表示没有该来源的统计，不是 0；vars 为 null 表示没抓过变阵，[] 表示查过确实没有。',
+    note: '数组顺序与 data/comps.json 一致；rosterKey 是「英雄数|英雄 id 升序」，同一套英雄的不同阵容码会得到同一个值，前端靠它去重排榜；name 已去掉 \\r\\n 并 trim；st 为 null 表示没有该来源的统计，不是 0；vars 为 null 表示没抓过变阵，[] 表示查过确实没有。',
   },
   records,
 };

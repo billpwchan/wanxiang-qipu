@@ -148,6 +148,22 @@ check('数据说明抽屉', await ev(`document.querySelector('#panel').textConte
 // ---- 阵容 ----
 await go('#/comps');
 check('阵容：112 套', await ev(`document.querySelectorAll('.cp').length`) === 112);
+// 阵容榜：按 rosterKey 去重后取平均名次最好的 10 组，排在 112 张卡之前。
+check('阵容榜：10 行', await ev(`document.querySelectorAll('.cprank .cpr').length`) === 10);
+check('阵容榜：在卡牌网格之前', await ev(`(() => { const k = document.querySelector('.cprank'); const g = document.querySelector('.cpgrid'); return !!k && !!g && !!(k.compareDocumentPosition(g) & Node.DOCUMENT_POSITION_FOLLOWING); })()`));
+check('阵容榜：名次 1–10 且平均名次升序、两位小数', await ev(`(() => {
+  const rank = [...document.querySelectorAll('.cprank .cpr .rank')].map(x => x.textContent.trim());
+  const m = [...document.querySelectorAll('.cprank .cpr .rnum')].map(x => x.textContent.trim());
+  return rank.join(',') === '1,2,3,4,5,6,7,8,9,10' && m.every(x => /^\\d\\.\\d\\d$/.test(x)) && m.every((x, i) => !i || +x >= +m[i - 1]);
+})()`));
+check('阵容榜：一行一套阵容，没有重复', await ev(`(() => {
+  const n = [...document.querySelectorAll('.cprank .cpr .cprn b')].map(x => x.textContent.trim());
+  return n.length === 10 && new Set(n).size === 10 && n.every(x => x && !/[\\r\\n]/.test(x));
+})()`));
+check('阵容榜：同阵容合并的行标出套数', await ev(`[...document.querySelectorAll('.cprank .cprn .src')].some(x => /^共 \\d+ 套同阵容$/.test(x.textContent.trim()))`));
+check('阵容榜：场次带千分位', await ev(`[...document.querySelectorAll('.cprank .cprg')].some(x => /^[\\d,]+ 局$/.test(x.textContent.trim()) && x.textContent.includes(','))`));
+const cpNote = (await txt('.cprank .cprh .src')) || '';
+check('阵容榜：口径写全服，不写没抓到的「近 7 天」', cpNote.includes('全服（allPlayers）') && cpNote.includes('平均名次升序') && !cpNote.includes('近 7 天'), cpNote);
 check('阵容：有统计的显示登场率和平均名次', await ev(`(() => { const s = document.querySelector('.cp .stats'); return !!s && s.textContent.includes('登场率') && s.textContent.includes('平均名次'); })()`));
 check('阵容：没有统计的写「暂无统计」且不出现 0', await ev(`(() => { const s = [...document.querySelectorAll('.cp .src')].find(x => x.textContent === '暂无统计'); if (!s) return false; const cp = s.closest('.cp'); return !cp.querySelector('.stats') && !/\\b0%/.test(cp.textContent); })()`));
 check('阵容：英雄图标已加载', await ev(`(async () => { const i = document.querySelector('.chi img'); if (!i) return false; await Promise.race([i.decode().catch(() => {}), new Promise(r => setTimeout(r, 4000))]); return i.naturalWidth > 0; })()`));

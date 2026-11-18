@@ -74,9 +74,10 @@ function card(name, o = {}) {
 
 function ruler(avg, o = {}) {
   if (avg == null) return '';
+  const dp = o.dp ?? 1;
   const p = Math.max(0, Math.min(100, ((avg - 1) / 5) * 100)).toFixed(1);
-  return `<div class="ruler ${o.sm ? 'sm' : ''}" style="--p:${p}%" role="img" aria-label="平均第 ${avg.toFixed(1)} 名（6 人局）">
-    <div class="rtop"><span class="rnum">${avg.toFixed(1)}</span><span class="rl">${o.label || '平均名次'}${o.sm ? '' : '（6 人局）'}</span></div>
+  return `<div class="ruler ${o.sm ? 'sm' : ''}" style="--p:${p}%" role="img" aria-label="平均第 ${avg.toFixed(dp)} 名（6 人局）">
+    <div class="rtop"><span class="rnum">${avg.toFixed(dp)}</span><span class="rl">${o.label || '平均名次'}${o.sm ? '' : '（6 人局）'}</span></div>
     <div class="track"><i></i></div>
     <div class="ticks"><em>第 1 名</em><em>平均</em><em>第 6 名</em></div>
   </div>`;
@@ -731,6 +732,41 @@ function cpCard(r) {
   </article>`;
 }
 
+// 阵容榜：按 rosterKey 把「同一套英雄、不同阵容码」的记录合成一组，组只占一行。
+// 只用 datawxq 的统计（脚本已经按这个来源过滤过，st 为 null 的进不来），按平均名次升序。
+// 平均名次越低越好；同分时场次多的排前面（样本更实）。
+const CP_TOP = 10;
+function cpTop() {
+  const groups = new Map();
+  for (const r of COMPS.records || []) {
+    if (!r.st || !r.rosterKey) continue;
+    const g = groups.get(r.rosterKey);
+    if (g) g.push(r);
+    else groups.set(r.rosterKey, [r]);
+  }
+  return [...groups.values()]
+    .sort((a, b) => a[0].st.m - b[0].st.m || b[0].st.n - a[0].st.n)
+    .slice(0, CP_TOP);
+}
+
+function cpRank() {
+  const top = cpTop();
+  if (!top.length) return '';
+  const scope = COMPS.meta?.statsScope;
+  return `<div class="cprank">
+    <div class="cprh"><b class="d">平均名次最好的 ${top.length} 套</b><span class="src">统计维度：${scope ? `全服（${esc(scope)}）` : '全服'} · 按平均名次升序，越低越好</span></div>
+    <ol class="cprs">${top.map((g, i) => {
+    const r = g[0];
+    return `<li class="cpr">
+      <span class="rank">${i + 1}</span>
+      <div class="cprn"><b class="d">${esc(r.name)}</b>${g.length > 1 ? `<span class="src">共 ${g.length} 套同阵容</span>` : ''}</div>
+      ${ruler(r.st.m, { sm: true, dp: 2 })}
+      <span class="cprg">${r.st.n.toLocaleString()} 局</span>
+    </li>`;
+  }).join('')}</ol>
+  </div>`;
+}
+
 function compsPage() {
   const m = COMPS.meta || {};
   const recs = COMPS.records || [];
@@ -741,6 +777,7 @@ function compsPage() {
   return `<section class="wrap sec" style="padding-top:clamp(24px,4vw,48px)">
     <div class="hdr"><div><h2 class="d" style="font-size:clamp(36px,5vw,64px)">阵容</h2><p>官方社区里的阵容，原文照录。有对局统计的标出登场率和平均名次；抓得到的还列出变阵，也就是常被改成的几套。</p></div></div>
     <div class="cpsum">共 ${recs.length} 套 · ${m.withStats || 0} 套有对局统计 · ${m.withVariants || 0} 套有变阵（${m.variantsTotal || 0} 条）</div>
+    ${cpRank()}
     <div class="cpgrid">${recs.map(cpCard).join('')}</div>
   </section>
   <section class="wrap sec">

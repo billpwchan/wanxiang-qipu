@@ -480,6 +480,20 @@ body.playing .bar, body.playing .foot { display: none; }
 
 /* ---------- 阵容 ---------- */
 .cpsum { font-size: 14px; color: var(--ink3); margin-bottom: 20px; }
+/* 阵容榜：名次 + 阵容名 + 平均名次尺 + 场次，窄屏时尺子落到第二行 */
+.cprank { margin-bottom: 24px; }
+.cprh { display: flex; align-items: baseline; gap: 8px 14px; flex-wrap: wrap; margin-bottom: 10px; }
+.cprh b { font-size: 20px; }
+.cprs { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.cpr { display: grid; grid-template-columns: 28px minmax(0, 1fr) minmax(120px, 180px) auto; align-items: center; gap: 12px; padding: 10px 16px; border-radius: 16px; background: var(--card); box-shadow: var(--shadow); }
+.cpr .rank { font-family: var(--display); font-size: 15px; color: var(--ink3); }
+.cpr .cprn { display: grid; gap: 2px; min-width: 0; }
+.cpr .cprn b { font-size: 16px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cpr .cprg { font-size: 13px; color: var(--ink2); white-space: nowrap; }
+@media (max-width: 640px) {
+  .cpr { grid-template-columns: 24px minmax(0, 1fr) auto; gap: 6px 10px; }
+  .cpr .ruler { grid-column: 2 / -1; }
+}
 .cpgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 18px; align-items: start; }
 .cp { padding: 18px 20px 16px; border-radius: var(--r); background: var(--card); box-shadow: var(--shadow); display: grid; gap: 12px; }
 .cp .cphd { display: flex; align-items: start; justify-content: space-between; gap: 10px; }

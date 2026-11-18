@@ -95,6 +95,13 @@ for (const r of comps.records) {
   ok(!seenCodes.has(r.code), `阵容码重复 ${r.code}`);
   seenCodes.add(r.code);
   ok(!!r.name, `${r.code} 没有阵容名`);
+  ok(!/[\r\n\t]/.test(r.name), `${r.code} 阵容名里有控制字符`);
+  ok(r.name === r.name.trim(), `${r.code} 阵容名首尾有空白`);
+  // rosterKey = 「英雄数|英雄 id 升序」，前端靠它给阵容榜去重，格式错了会把两套不同的阵容并成一行。
+  const [rkCount, ...rkIds] = String(r.rosterKey || '').split('|');
+  ok(/^\d+(\|\d+)+$/.test(r.rosterKey || ''), `${r.code} rosterKey 格式 ${r.rosterKey}`);
+  ok(+rkCount === r.heroes.length, `${r.code} rosterKey 的英雄数对不上`);
+  ok(rkIds.every((id, i) => !i || id >= rkIds[i - 1]), `${r.code} rosterKey 的 id 没升序`);
   ok(r.heroes.length >= 1, `${r.code} 没有英雄`);
   for (const h of r.heroes) ok(heroNames.has(h), `${r.code} 英雄 ${h} 不在查牌库`);
   ok(r.lords.length >= 1, `${r.code} 没有棋手`);
