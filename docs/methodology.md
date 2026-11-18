@@ -17,9 +17,9 @@
 
 | 层 | 来源 | 规模 | 文件 |
 |---|---|---|---|
-| 卡牌规则 | 官方卡牌接口快照（9/24 版本） | 85 英雄 · 98 效果牌 · 73 装备 · 258 天赋 · 19 棋手 | `research/raw-20260925/` → `site/dist/data/cards.json` |
-| 榜单统计 | datawxq.com 公开榜单：顶尖棋手、v260924、近 7 天 | 19 位棋手、阵容家族、每个禁用阵营 | `research/v2/datawxq-20260925/` → `site/dist/data/meta.js` |
-| 条件检索 | datawxq 大数据检索器：v260924、近 7 天、顶尖棋手 | 184,680 个终局，150+ 次条件查询 | `research/v2/explore/` → `site/dist/data/evidence.js` |
+| 卡牌规则 | 官方卡牌接口快照（v261105，2026-11-18 抓取） | 85 英雄 · 98 效果牌 · 77 装备 · 292 天赋 · 21 棋手 | `research/raw-20261118/` → `site/dist/data/cards.json` |
+| 榜单统计 | datawxq.com 公开榜单：顶尖棋手、v260924、近 7 天 | 19 位棋手（21 位棋手中 2 位没有统计）、阵容家族、每个禁用阵营 | `research/v2/datawxq-20260925/` → `site/dist/data/meta.js` |
+| 条件检索 | datawxq 大数据检索器：v260924、近 7 天、顶尖棋手 | 184,680 个终局，171 条条件查询；**目前基于 9 月快照，等待下次全量刷新** | `research/v2/explore/` → `site/dist/data/evidence.js` |
 
 另外用到官方社区阵容接口（阵容码、导入次数，`research/v4/lineups/lineups.json`）。
 

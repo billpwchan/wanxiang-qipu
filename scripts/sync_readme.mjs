@@ -12,7 +12,7 @@ const D = path.join(ROOT, 'site/dist/data');
 const load = (p) => import(pathToFileURL(p).href);
 const { ROUTES, TRAPS } = await load(path.join(D, 'plan.js'));
 const { FACTS } = await load(path.join(D, 'facts.js'));
-const SITE = 'https://wanxiang-qipu.vercel.app/';
+const SITE = 'https://wxq.007.al/';
 const TIER = { top: '首选', ok: '可以打', avg: '一般' };
 const short = (f) => ({ 三分之地: '三分', 大河流域: '大河' }[f] || f);
 const wan = (n) => (n >= 10000 ? `${(n / 10000).toFixed(0)} 万` : n.toLocaleString('en-US'));
