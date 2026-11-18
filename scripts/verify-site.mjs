@@ -64,7 +64,9 @@ for (const [ban, v] of Object.entries(BANS)) {
 }
 for (const t of TRAPS) { const d = FACTS.traps.find((x) => x.id === t.id); ok(d && d.uses > 100000 && d.avg >= 3.6, `陷阱 ${t.id}`); if (t.to) ok(ROUTES.some((x) => x.id === t.to), `陷阱 ${t.id} 链接`); }
 for (const [n, l] of Object.entries(FACTS.lords)) { file(l.img); file(l.small); file(l.icon); }
-ok(Object.keys(FACTS.lords).length === 19, '棋手数');
+// 棋手名单跟着官方卡池走：有多少算多少，但不许漏。
+for (const c of cards.lords) ok(FACTS.lords[c.name], `棋手 ${c.name} 不在 facts.lords`);
+ok(Object.keys(FACTS.lords).length === cards.lords.length, `棋手数 ${Object.keys(FACTS.lords).length} != 卡池 ${cards.lords.length}`);
 for (const c of cards.heroes) {
   file(c.img); file(c.art);
   // 卡牌弹窗的属性表要显示这 10 项（app.js statTable），缺一项就会少一行，别让它在页面上悄悄消失。

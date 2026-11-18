@@ -145,21 +145,26 @@ for (const r of ROUTES) {
   };
 }
 
+// 棋手名单以官方卡池（cards.json 的 lords）为准，一个不漏；
+// 榜单统计（META.lords）和 3D 立绘（lords.json）有谁算谁，缺的就留空，前端按「暂无法推荐」展示。
 const lords = {};
-for (const L of META.lords) {
-  const a = lordAssets[L.name];
-  const c = cards.lords.find((x) => x.name === L.name);
-  lords[L.name] = {
-    avg: L.avg, top3: L.top3, win: L.win, games: L.games, pick: L.pick,
-    img: a ? `assets/lord/${a.id}.webp` : null, small: a ? `assets/lord/${a.id}-s.webp` : null, icon: a ? `assets/lord/${a.id}-i.webp` : null,
+for (const c of cards.lords) {
+  const m = ML[c.name];
+  const a = lordAssets[c.name];
+  lords[c.name] = {
+    ...(m ? { avg: m.avg, top3: m.top3, win: m.win, games: m.games, pick: m.pick } : {}),
+    img: a ? `assets/lord/${a.id}.webp` : (c.art || null),
+    small: a ? `assets/lord/${a.id}-s.webp` : (c.art || null),
+    icon: a ? `assets/lord/${a.id}-i.webp` : (c.img || null),
     w: a?.w, h: a?.h,
-    stages: c?.stages || [],
-    routes: ROUTES.filter((r) => r.lords.includes(L.name)).map((r) => r.id),
+    stages: c.stages || [],
+    routes: ROUTES.filter((r) => r.lords.includes(c.name)).map((r) => r.id),
   };
 }
+// 有立绘但官方卡池里没有的（理论上不该出现）：保留旧行为，别把人弄丢。
 for (const name of Object.keys(lordAssets)) if (!lords[name]) {
   const a = lordAssets[name];
-  lords[name] = { img: `assets/lord/${a.id}.webp`, small: `assets/lord/${a.id}-s.webp`, icon: `assets/lord/${a.id}-i.webp`, w: a.w, h: a.h, stages: cards.lords.find((x) => x.name === name)?.stages || [], routes: [] };
+  lords[name] = { img: `assets/lord/${a.id}.webp`, small: `assets/lord/${a.id}-s.webp`, icon: `assets/lord/${a.id}-i.webp`, w: a.w, h: a.h, stages: cards.lords.find((x) => x.name === name)?.stages || [], routes: ROUTES.filter((r) => r.lords.includes(name)).map((r) => r.id) };
 }
 
 const traps = TRAPS.map((t) => {

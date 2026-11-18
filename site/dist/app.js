@@ -633,16 +633,18 @@ document.addEventListener('visibilitychange', async () => {
 
 // ---------- 页面：棋手 ----------
 function lordsPage() {
-  const list = Object.entries(L).filter(([, v]) => v.avg).sort((a, b) => a[1].avg - b[1].avg);
+  // 官方卡池全量棋手都列；有榜单统计的按平均名次排前面，没数据的按名称排在最后。
+  const all = Object.entries(L);
+  const list = [...all.filter(([, v]) => v.avg).sort((a, b) => a[1].avg - b[1].avg), ...all.filter(([, v]) => !v.avg).sort((a, b) => a[0].localeCompare(b[0], 'zh-Hans-CN'))];
   return `<section class="wrap sec" style="padding-top:clamp(24px,4vw,48px)">
     <div class="hdr"><div><h2 class="d" style="font-size:clamp(36px,5vw,64px)">棋手</h2><p>棋手第一回合就定了，是影响名次最大的一个选择。按顶尖局的平均名次排，点开看技能和该打什么。</p></div><button class="btn sm" data-owned>设置我有的棋手</button></div>
     <div class="lgrid">${list.map(([n, v], k) => `<button class="lc ${v.avg >= 3.7 ? 'low' : ''}" data-lord="${esc(n)}" style="--lc:${LC[n] || 'var(--act)'}">
-      <div class="pic"><span class="rank">${k + 1}</span><img src="${v.small}" alt="" loading="lazy"></div>
+      <div class="pic">${v.avg ? `<span class="rank">${k + 1}</span>` : ''}<img src="${v.small}" alt="" loading="lazy"></div>
       <div class="bd">
         <h3 class="d">${esc(n)}</h3>
-        ${ruler(v.avg, { sm: true })}
-        <div class="stats"><span>前三<b>${Math.round(v.top3)}%</b></span><span>吃鸡<b>${Math.round(v.win)}%</b></span><span>${v.pick}% 的人在用</span></div>
-        <div class="rs">${v.routes.length ? v.routes.map((id) => `<span class="chip">${esc(R[id].name)}</span>`).join('') : LORD_TRAP[n] ? `<span class="chip bad">别打${esc(TRAPS.find((t) => t.id === LORD_TRAP[n]).name.replace(/（.*）/, ''))}</span>` : '<span class="chip">没有推荐路线</span>'}</div>
+        ${v.avg ? `${ruler(v.avg, { sm: true })}
+        <div class="stats"><span>前三<b>${Math.round(v.top3)}%</b></span><span>吃鸡<b>${Math.round(v.win)}%</b></span><span>${v.pick}% 的人在用</span></div>` : '<p class="small" style="margin:0">顶尖局统计还没覆盖这个棋手。</p>'}
+        <div class="rs">${v.routes.length ? v.routes.map((id) => `<span class="chip">${esc(R[id].name)}</span>`).join('') : LORD_TRAP[n] ? `<span class="chip bad">别打${esc(TRAPS.find((t) => t.id === LORD_TRAP[n]).name.replace(/（.*）/, ''))}</span>` : '<span class="chip">暂无法推荐</span>'}</div>
       </div>
     </button>`).join('')}</div>
   </section>`;
@@ -654,9 +656,9 @@ function openLord(n) {
   const trap = LORD_TRAP[n] && TRAPS.find((t) => t.id === LORD_TRAP[n]);
   openSheet(`<div class="lordbig" style="--lc:${LC[n] || 'var(--act)'}"><img src="${v.img}" alt=""></div>
     <h2 class="d">${esc(n)}</h2>
-    ${v.avg ? ruler(v.avg) : ''}
+    ${v.avg ? ruler(v.avg) : '<p class="small">官方卡池里有这个棋手，但顶尖局统计还没覆盖，暂无法推荐。</p>'}
     ${v.avg ? `<div class="stats" style="margin-top:8px"><span>前三<b>${Math.round(v.top3)}%</b></span><span>吃鸡<b>${Math.round(v.win)}%</b></span><span>${v.games?.toLocaleString()} 局</span></div>` : ''}
-    ${v.routes.length ? `<h3>打什么</h3><div class="chips">${v.routes.map((id) => `<a class="btn sm" href="#/r/${id}">${esc(R[id].name)}</a>`).join('')}</div>` : ''}
+    ${v.routes.length ? `<h3>打什么</h3><div class="chips">${v.routes.map((id) => `<a class="btn sm" href="#/r/${id}">${esc(R[id].name)}</a>`).join('')}</div>` : trap ? '' : '<h3>打什么</h3><p class="small">当前路线库里还没有以它为主的打法，暂无法推荐。</p>'}
     ${trap ? `<h3>别打</h3><p>${esc(trap.name)}：${esc(trap.why)}${esc(trap.fix)}</p>` : ''}
     <h3>技能</h3>
     ${v.stages.map((s) => s.cards.map((c) => `<div class="skill"><b>${esc(c.name)}<small>${esc(s.stage)}</small></b><p>${esc(c.text)}</p></div>`).join('')).join('')}`);

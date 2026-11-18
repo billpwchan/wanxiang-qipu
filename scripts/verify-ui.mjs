@@ -132,7 +132,10 @@ check('对局：手机无横向溢出', await noOverflow());
 
 // ---- 棋手 / 查牌 / 规则 ----
 await go('#/lords');
-check('棋手：19 个，按平均名次排', await ev(`(() => { const v = [...document.querySelectorAll('.lc .rnum')].map(x => +x.textContent); return v.length === 19 && v.every((x, i) => !i || x >= v[i - 1]); })()`));
+const rankedLords = cardsSorted.filter((n) => FACTS.lords[n]?.avg);
+check('棋手：' + cardsLords.length + ' 个（官方卡池全量），' + rankedLords.length + ' 个有统计按平均名次排',
+  await ev(`(() => { const v = [...document.querySelectorAll('.lc .rnum')].map(x => +x.textContent); return document.querySelectorAll('.lc').length === ` + cardsLords.length + ` && v.length === ` + rankedLords.length + ` && v.every((x, i) => !i || x >= v[i - 1]); })()`));
+check('棋手：没有统计的卡片标「暂无法推荐」', await ev(`[...document.querySelectorAll('.lc')].filter(b => !b.querySelector('.rnum')).every(b => b.textContent.includes('暂无法推荐'))`));
 check('棋手：官方立绘已加载', await ev(`(async () => { const i = document.querySelector('.lc img'); await Promise.race([i.decode().catch(() => {}), new Promise(r => setTimeout(r, 4000))]); return i.naturalWidth > 200; })()`));
 await go('#/cards');
 check('查牌：85 个英雄', await ev(`document.querySelectorAll('#cgrid .cd').length`) === 85);
