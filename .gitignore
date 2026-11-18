@@ -35,6 +35,9 @@ research/raw/lineups.json
 # data/comps.json 由 scripts/gen_comps.mjs 从外部快照生成，仓库只存归纳结果
 snapshots/raw/
 
+# 官方卡池原始抓包（scripts/build_data.py --fetch 产物）：每个约 4 MB，可随时重抓，只留本地
+research/raw-*/
+
 # v4 退役素材（只保留数据模块作历史参考）
 research/v4/retired/*
 !research/v4/retired/data/

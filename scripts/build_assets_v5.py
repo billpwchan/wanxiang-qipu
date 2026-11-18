@@ -87,7 +87,7 @@ def icons():
         res[names[k]] = trace(f, 2.2 if k == "Icon_SanFenZhiDi" else 7)
     js = '// 官方阵营 / 关键词图标，potrace 矢量化。生成：scripts/build_assets_v5.py\n'
     js += 'export const ICONS = ' + json.dumps(res, ensure_ascii=False) + ';\n'
-    (DIST / 'data/icons.js').write_text(js)
+    (DIST / 'data/icons.js').write_text(js, encoding='utf-8')
     return list(res)
 
 
@@ -95,7 +95,7 @@ def cards():
     src = ROOT / 'research/cache/cards'
     out = DIST / 'assets/c'
     out.mkdir(parents=True, exist_ok=True)
-    data = json.loads((DIST / 'data/cards.json').read_text())
+    data = json.loads((DIST / 'data/cards.json').read_text(encoding='utf-8'))
     done = {}
 
     def conv(p):
@@ -117,13 +117,14 @@ def cards():
             for k in ('img', 'art'):
                 if k in x:
                     x[k] = conv(x[k])
-    (DIST / 'data/cards.json').write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')))
+    # 必须显式 utf-8：Windows 上 write_text 默认走 locale（cp936），中文会写坏
+    (DIST / 'data/cards.json').write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
     return len(done)
 
 
 if __name__ == '__main__':
     m = lords()
-    (DIST / 'data/lords.json').write_text(json.dumps(m, ensure_ascii=False))
+    (DIST / 'data/lords.json').write_text(json.dumps(m, ensure_ascii=False), encoding='utf-8')
     print('lords', len(m))
     print('icons', icons())
     print('cards', cards())
