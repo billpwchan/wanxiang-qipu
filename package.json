@@ -17,6 +17,7 @@
     "build:facts": "node scripts/build_facts.mjs",
     "validate": "node scripts/validate.mjs",
     "gen:comps": "node scripts/gen_comps.mjs",
+    "build:comps": "node scripts/build_comps_site.mjs",
     "analyze:comps": "node scripts/analyze_comps.mjs",
     "release": "python3 scripts/make_release.py",
     "copilot": "./copilot/wx",

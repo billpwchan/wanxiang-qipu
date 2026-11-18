@@ -70,6 +70,62 @@ for (const k of ['effects', 'equipment', 'talents']) for (const c of cards[k]) i
 for (const v of Object.values(art.card)) file(v);
 ok(RULES.length >= 6, '规则数');
 for (const p of ['index.html', 'app.js', 'app.css', 'glass.js', 'fonts/shuhei.woff2', 'assets/og.jpg', 'assets/icon.svg']) file(p);
+
+// 阵容页数据（scripts/build_comps_site.mjs 生成）：结构、外键、meta 计数、体积。
+// 查牌库没有的牌必须登记在 meta.missing 里，不能悄悄少一行。
+const compsPath = path.join(D, 'data/comps.json');
+file('data/comps.json');
+const comps = existsSync(compsPath) ? JSON.parse(readFileSync(compsPath)) : { meta: {}, records: [] };
+const compsRaw = existsSync(compsPath) ? readFileSync(compsPath) : '';
+const heroNames = new Set(cards.heroes.map((c) => c.name));
+const lordIcons = new Set(Object.keys(FACTS.lords));
+const knownMissingHeroes = new Set(comps.meta?.missing?.heroes || []);
+const seenCodes = new Set();
+let nStats = 0, nVars = 0, nVarsTotal = 0;
+ok(comps.records.length > 0, '阵容数据为空');
+ok(comps.records.length === comps.meta.total, '阵容数与 meta.total 不一致');
+for (const r of comps.records) {
+  // 社区阵容是 17 位雪花号，官方预置是十几到几十的小编号，都是纯数字。
+  ok(/^\d{1,20}$/.test(r.code || ''), `阵容码格式 ${r.code}`);
+  ok(!seenCodes.has(r.code), `阵容码重复 ${r.code}`);
+  seenCodes.add(r.code);
+  ok(!!r.name, `${r.code} 没有阵容名`);
+  ok(r.heroes.length >= 1, `${r.code} 没有英雄`);
+  for (const h of r.heroes) ok(heroNames.has(h), `${r.code} 英雄 ${h} 不在查牌库`);
+  ok(r.lords.length >= 1, `${r.code} 没有棋手`);
+  for (const l of r.lords) ok(lordIcons.has(l) || (comps.meta?.missing?.lords || []).includes(l), `${r.code} 棋手 ${l} 没有图标也没登记`);
+  if (r.st) {
+    nStats++;
+    ok(r.st.a >= 0 && r.st.a <= 1, `${r.code} 登场率越界`);
+    ok(r.st.m > 1 && r.st.m < 7, `${r.code} 平均名次越界`);
+    ok(Number.isInteger(r.st.n) && r.st.n > 0, `${r.code} 场次不是正整数`);
+  }
+  if (!Array.isArray(r.vars)) { ok(r.vars === null, `${r.code} vars 既不是数组也不是 null`); continue; }
+  if (!r.vars.length) continue;
+  ok(!!r.st, `${r.code} 有变阵却没有统计`);
+  nVars++;
+  nVarsTotal += r.vars.length;
+  for (const v of r.vars) {
+    ok(v.add.length + v.rem.length >= 1, `${r.code} 变阵没有换人`);
+    for (const h of v.add) {
+      ok(heroNames.has(h) || knownMissingHeroes.has(h), `${r.code} 变阵新增 ${h} 不在查牌库也没登记`);
+      ok(!r.heroes.includes(h), `${r.code} 变阵新增 ${h} 本来就在阵容里`);
+    }
+    for (const h of v.rem) {
+      ok(heroNames.has(h) || knownMissingHeroes.has(h), `${r.code} 变阵移除 ${h} 不在查牌库也没登记`);
+      ok(r.heroes.includes(h), `${r.code} 变阵移除 ${h} 不在阵容里`);
+      ok(!v.add.includes(h), `${r.code} ${h} 同时新增和移除`);
+    }
+    ok(Number.isInteger(v.n) && v.n >= 0, `${r.code} 变阵场次异常`);
+    if (v.ar != null) ok(v.ar >= 0 && v.ar <= 1, `${r.code} 变阵登场率越界`);
+    if (v.m != null) ok(v.m > 1 && v.m < 7, `${r.code} 变阵平均名次越界`);
+  }
+}
+ok(nStats === comps.meta.withStats, 'meta.withStats 对不上');
+ok(nVars === comps.meta.withVariants, 'meta.withVariants 对不上');
+ok(nVarsTotal === comps.meta.variantsTotal, 'meta.variantsTotal 对不上');
+ok(Buffer.byteLength(compsRaw) <= 50 * 1024, `data/comps.json 超过 50KB（${Buffer.byteLength(compsRaw)}）`);
+ok(readFileSync(path.join(D, 'app.js'), 'utf8').includes("fetch('data/comps.json')"), 'app.js 没有加载 data/comps.json');
 // 页面文案里不应该出现统计术语
 const copy = readFileSync(path.join(D, 'app.js'), 'utf8') + readFileSync(path.join(D, 'data/plan.js'), 'utf8');
 for (const w of ['名次差', '双重差分', '交互项', '幸存者偏差', '判决', '全站最强', '碾压']) ok(!copy.includes(w), `文案里出现「${w}」`);

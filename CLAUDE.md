@@ -8,6 +8,7 @@
 npm run serve                        # http://127.0.0.1:4173/
 npm test                             # verify-site + verify-ui（50 项，自带服务器）+ 副驾回放
 node scripts/build_facts.mjs         # 改 plan.js 或数据后重算 facts.js
+node scripts/build_comps_site.mjs    # data/comps.json → site/dist/data/comps.json（阵容页数据）
 node scripts/sync_readme.mjs         # README 路线表；CI 用 --check
 node scripts/build_readme_images.mjs # docs/images/ 配图（macOS 用 GPU）
 node copilot/test/run.mjs            # 副驾完整流程（macOS：Chrome + Vision OCR）

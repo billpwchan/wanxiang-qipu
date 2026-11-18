@@ -478,6 +478,30 @@ body.playing .bar, body.playing .foot { display: none; }
 .ci b { display: block; }
 .ci p { margin: 2px 0 0; font-size: 13px; color: var(--ink2); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
+/* ---------- 阵容 ---------- */
+.cpsum { font-size: 14px; color: var(--ink3); margin-bottom: 20px; }
+.cpgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 18px; align-items: start; }
+.cp { padding: 18px 20px 16px; border-radius: var(--r); background: var(--card); box-shadow: var(--shadow); display: grid; gap: 12px; }
+.cp .cphd { display: flex; align-items: start; justify-content: space-between; gap: 10px; }
+.cp .cphd h3 { margin: 0; font-size: 20px; line-height: 1.3; overflow-wrap: anywhere; }
+.cp .cpls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.cp .cpl { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px 0 4px; border-radius: 99px; background: var(--card2); font-size: 13.5px; }
+.cp .cpl img { width: 22px; height: 22px; border-radius: 99px; object-fit: cover; background: var(--bg2); }
+.cp .chs { display: flex; flex-wrap: wrap; gap: 6px; }
+.cp .chi { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px 3px 3px; border-radius: 99px; background: var(--card2); font-size: 13px; color: var(--ink2); }
+.cp .chi img { width: 26px; height: 26px; border-radius: 8px; background: var(--bg2); object-fit: contain; }
+.cp .chi:hover { color: var(--ink); }
+.cp .chi.pic-none { padding: 3px 10px; }
+.cp .cpv { border-top: 1px solid var(--line); padding-top: 10px; }
+.cp .cpv summary { cursor: pointer; font-size: 14px; color: var(--ink2); }
+.cp .cpv summary b { font-family: var(--display); color: var(--ink); margin-left: 2px; }
+.cp .cpv ol { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 8px; }
+.cp .cpv li { padding: 10px 12px; border-radius: 12px; background: var(--card2); display: grid; gap: 6px; }
+.cp .cpv .sw { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 13.5px; }
+.cp .cpv .sw b { font-weight: 600; }
+.cp .cpv .up { color: var(--good); }
+.cp .cpv .dn { color: var(--bad); }
+
 /* ---------- 抽屉 ---------- */
 .sheet { border: 0; padding: 0; background: transparent; color: var(--ink); max-width: none; max-height: none; width: 100%; height: 100%; margin: 0; }
 .sheet::backdrop { background: rgba(8, 12, 30, .36); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }

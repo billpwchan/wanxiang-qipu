@@ -1,5 +1,5 @@
 // 万象棋谱 v5
-// 页面：#/ 开局 · #/play/:id 对局 · #/r/:id 路线 · #/routes · #/lords · #/cards · #/rules
+// 页面：#/ 开局 · #/play/:id 对局 · #/r/:id 路线 · #/routes · #/lords · #/comps · #/cards · #/rules
 import { STAGES, BANS, ROUTES, TRAPS, RULES } from './data/plan.js';
 import { FACTS } from './data/facts.js';
 import { ICONS } from './data/icons.js';
@@ -18,7 +18,7 @@ const view = $('#view');
 const sheet = $('#sheet');
 const panel = $('#panel');
 
-let CARDS = null, BY = {}, ART = {};
+let CARDS = null, BY = {}, ART = {}, COMPS = { meta: {}, records: [] };
 
 const store = {
   get(k, d) { try { const v = localStorage.getItem('wx.' + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
@@ -664,6 +664,67 @@ function openCard(name) {
     ${avoid.length ? `<h3>和这些路线冲突</h3><div class="chips">${avoid.map((r) => `<a class="chip bad" href="#/r/${r.id}">${esc(r.name)}</a>`).join('')}</div>` : ''}`);
 }
 
+// ---------- 页面：阵容 ----------
+// 数据来自 data/comps.json，由 scripts/build_comps_site.mjs 裁字段后输出到 data/comps.json。
+// 三种「空」要分清楚：st 是 null = 没有统计，不显示 0；vars 是 null = 没抓过变阵，不提；vars 是 [] = 查过确实没有。
+const cpPct = (v) => `${(v * 100).toFixed(v < 0.1 ? 1 : 0)}%`;
+
+function cpHero(name) {
+  const c = BY[name];
+  // 变阵里可能出现查牌库里没有的牌（例如新英雄）：名字照显示，只是没有图标，不假装有。
+  if (!c) return `<span class="chi pic-none" title="这张牌不在查牌库里">${esc(name)}</span>`;
+  return `<button class="chi" type="button" data-card="${esc(name)}">${c.img ? `<img src="${c.img}" alt="" loading="lazy" decoding="async">` : ''}<span>${esc(name)}</span></button>`;
+}
+
+function cpLord(name) {
+  const icon = lordIcon(name);
+  return `<span class="cpl">${icon ? `<img src="${esc(icon)}" alt="">` : ''}${esc(name)}</span>`;
+}
+
+function cpVariant(v) {
+  const swap = [
+    ...v.add.map((n) => `<b class="up">+${esc(n)}</b>`),
+    ...v.rem.map((n) => `<b class="dn">−${esc(n)}</b>`),
+  ].join('');
+  return `<li><div class="sw">${swap || '<b>原阵容</b>'}</div>
+    <div class="stats">${v.n != null ? `<span>${v.n.toLocaleString()} 局</span>` : ''}${v.ar != null ? `<span>登场率<b>${cpPct(v.ar)}</b></span>` : ''}${v.m != null ? `<span>平均名次<b>${v.m.toFixed(1)}</b></span>` : ''}</div></li>`;
+}
+
+function cpCard(r) {
+  const st = r.st;
+  const stats = st
+    ? `<div class="stats"><span>登场率<b>${cpPct(st.a)}</b></span><span>平均名次<b>${st.m.toFixed(1)}</b></span><span>${st.n.toLocaleString()} 局</span></div>`
+    : '<div class="src">暂无统计</div>';
+  const vars = Array.isArray(r.vars)
+    ? r.vars.length
+      ? `<details class="cpv"><summary>查看变阵 <b>${r.vars.length}</b></summary><ol>${r.vars.map(cpVariant).join('')}</ol></details>`
+      : '<div class="src">查过，这套没有变阵</div>'
+    : '';
+  return `<article class="cp" id="cp-${esc(r.code)}">
+    <div class="cphd"><h3 class="d">${esc(r.name)}</h3>${r.preset ? '<span class="chip">官方预置</span>' : ''}</div>
+    <div class="cpls">${r.lords.map(cpLord).join('')}<span class="src">社区阵容 ${esc(r.code)}</span></div>
+    <div class="chs">${r.heroes.map(cpHero).join('')}</div>
+    ${stats}${vars}
+  </article>`;
+}
+
+function compsPage() {
+  const m = COMPS.meta || {};
+  const recs = COMPS.records || [];
+  if (!recs.length) {
+    return `<section class="wrap sec" style="padding-top:clamp(24px,4vw,48px)">
+      <h2 class="d">阵容</h2><p>阵容数据没有载入，刷新一下试试。</p></section>`;
+  }
+  return `<section class="wrap sec" style="padding-top:clamp(24px,4vw,48px)">
+    <div class="hdr"><div><h2 class="d" style="font-size:clamp(36px,5vw,64px)">阵容</h2><p>官方社区里的阵容，原文照录。有对局统计的标出登场率和平均名次；抓得到的还列出变阵，也就是常被改成的几套。</p></div></div>
+    <div class="cpsum">共 ${recs.length} 套 · ${m.withStats || 0} 套有对局统计 · ${m.withVariants || 0} 套有变阵（${m.variantsTotal || 0} 条）</div>
+    <div class="cpgrid">${recs.map(cpCard).join('')}</div>
+  </section>
+  <section class="wrap sec">
+    <p class="small">阵容名和棋手名来自官方社区阵容，是玩家原创内容，原文照录，版权归原作者。登场率是这套阵容在统计对局里的占比，平均名次按 6 人一局算。统计和变阵只覆盖匹配到的那部分阵容。</p>
+  </section>`;
+}
+
 // ---------- 页面：规则 ----------
 function rulesPage() {
   return `<section class="wrap sec" style="padding-top:clamp(24px,4vw,48px)">
@@ -745,6 +806,7 @@ function render(o = {}) {
   else if (a === 'r') { html = routePage(b); mount = () => routeMount(b); }
   else if (a === 'play') html = playPage(b, q);
   else if (a === 'lords') html = lordsPage();
+  else if (a === 'comps') html = compsPage();
   else if (a === 'cards') { html = cardsPage(); mount = cardsFill; }
   else if (a === 'rules') html = rulesPage();
   else if (a === 'route') { location.replace('#/r/' + b); return; }
@@ -764,7 +826,7 @@ function render(o = {}) {
 function titleFor(a, b) {
   if (a === 'r' && R[b]) return `${R[b].name} · 万象棋谱`;
   if (a === 'play' && R[b]) return `对局 · ${R[b].name}`;
-  return { routes: '路线', lords: '棋手', cards: '查牌', rules: '通用规则' }[a] ? `${{ routes: '路线', lords: '棋手', cards: '查牌', rules: '通用规则' }[a]} · 万象棋谱` : '万象棋谱 · S1';
+  return { routes: '路线', lords: '棋手', comps: '阵容', cards: '查牌', rules: '通用规则' }[a] ? `${{ routes: '路线', lords: '棋手', comps: '阵容', cards: '查牌', rules: '通用规则' }[a]} · 万象棋谱` : '万象棋谱 · S1';
 }
 
 let io;
@@ -839,8 +901,13 @@ addEventListener('hashchange', () => render());
 
 // ---------- 启动 ----------
 (async function boot() {
-  const [cards, art] = await Promise.all([fetch('data/cards.json').then((r) => r.json()), fetch('data/art.json').then((r) => r.json()).catch(() => ({}))]);
+  const [cards, art, comps] = await Promise.all([
+    fetch('data/cards.json').then((r) => r.json()),
+    fetch('data/art.json').then((r) => r.json()).catch(() => ({})),
+    fetch('data/comps.json').then((r) => r.json()).catch(() => null),
+  ]);
   CARDS = cards;
+  if (comps) COMPS = comps;
   for (const k of ['talents', 'equipment', 'effects', 'heroes']) for (const c of cards[k]) BY[c.name] = { ...c, _k: k };
   ART = art.card || {};
   await document.fonts?.ready;

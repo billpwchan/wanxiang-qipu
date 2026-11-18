@@ -136,12 +136,26 @@ check('规则页', await ev(`document.querySelectorAll('.rule').length`) >= 6);
 await ev(`document.querySelector('[data-note]').click()`); await sleep(300);
 check('数据说明抽屉', await ev(`document.querySelector('#panel').textContent.includes('平均名次')`));
 
+// ---- 阵容 ----
+await go('#/comps');
+check('阵容：112 套', await ev(`document.querySelectorAll('.cp').length`) === 112);
+check('阵容：有统计的显示登场率和平均名次', await ev(`(() => { const s = document.querySelector('.cp .stats'); return !!s && s.textContent.includes('登场率') && s.textContent.includes('平均名次'); })()`));
+check('阵容：没有统计的写「暂无统计」且不出现 0', await ev(`(() => { const s = [...document.querySelectorAll('.cp .src')].find(x => x.textContent === '暂无统计'); if (!s) return false; const cp = s.closest('.cp'); return !cp.querySelector('.stats') && !/\\b0%/.test(cp.textContent); })()`));
+check('阵容：英雄图标已加载', await ev(`(async () => { const i = document.querySelector('.chi img'); if (!i) return false; await Promise.race([i.decode().catch(() => {}), new Promise(r => setTimeout(r, 4000))]); return i.naturalWidth > 0; })()`));
+check('阵容：变阵折叠面板', await ev(`document.querySelectorAll('.cp details.cpv').length`) === 6);
+await ev(`(() => { const d = document.querySelector('.cp details.cpv'); d.open = true; })()`); await sleep(300);
+check('阵容：展开变阵显示换人和场次', await ev(`(() => { const d = document.querySelector('.cp details.cpv'); const li = d.querySelector('li'); return d.open && !!li && (li.querySelector('.sw b.up') || li.querySelector('.sw b.dn')) && li.textContent.includes('局'); })()`));
+await ev(`document.querySelector('.cp .chi[data-card]').click()`); await sleep(400);
+check('阵容：点英雄开查牌抽屉', await ev(`document.querySelector('#sheet').open && !!document.querySelector('#panel h2')`));
+await ev(`document.querySelector('#sheet').close()`);
+check('阵容：底部有社区内容说明', await ev(`[...document.querySelectorAll('.small')].some(p => p.textContent.includes('玩家原创'))`));
+
 // ---- 宽度 ----
 for (const [w, h] of [[390, 844], [820, 1180], [1180, 820], [1440, 900]]) {
   await size(w, h);
-  for (const hsh of ['#/', '#/r/yuhuan', '#/play/kaituan?s=3', '#/lords', '#/cards']) { await go(hsh, 900); if (!(await noOverflow())) check(`无横向溢出 ${w} ${hsh}`, false); }
+  for (const hsh of ['#/', '#/r/yuhuan', '#/play/kaituan?s=3', '#/lords', '#/comps', '#/cards']) { await go(hsh, 900); if (!(await noOverflow())) check(`无横向溢出 ${w} ${hsh}`, false); }
 }
-check('四种宽度 × 5 页无横向溢出', !results.some((r) => r[1].startsWith('无横向溢出 ')));
+check('四种宽度 × 6 页无横向溢出', !results.some((r) => r[1].startsWith('无横向溢出 ')));
 if (GPU) {
   await size(1180, 820); await go('#/?ban=%E6%B2%B3%E6%B4%9B', 3500);
   check('WebGL：首页玻璃画布在画', await ev(`(() => { const c = document.querySelector('#gl'); const g = c.getContext('webgl2'); if (!g) return false; const p = new Uint8Array(4); g.readPixels(c.width >> 1, c.height >> 1, 1, 1, g.RGBA, g.UNSIGNED_BYTE, p); return c.width > 100; })()`));
