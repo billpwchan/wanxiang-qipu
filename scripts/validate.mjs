@@ -67,6 +67,118 @@ if (!existsSync(D('lords.json'))) {
   lordCount = lordList.length;
 }
 
+// ---- data/heroes.json / equips.json / talents.json / effects.json ----
+// 图鉴四表：纯数据，不含任何图片字段。字段定义见 data/README.md。
+const STAT_KEYS = ['hp', 'atk', 'ap', 'range', 'mana0', 'mana', 'as',
+  'phyDefense', 'magDefense', 'criticalRate', 'criticalEffect', 'moveSpeed', 'initEnergy'];
+const BASE_KEYS = ['id', 'name', 'type', 'tier', 'faction', 'cost', 'desc'];
+const CARD_FILES = [
+  { file: 'heroes.json', type: 1, extra: ['stats', 'kw', 'awake', 'skills'], optional: [] },
+  { file: 'equips.json', type: 5, extra: ['grpName', 'equipType'], optional: ['rel'] },
+  { file: 'talents.json', type: 6, extra: ['grpName'], optional: ['rel'] },
+  { file: 'effects.json', type: 2, extra: ['grpName'], optional: ['rel'] },
+];
+// 图片字段一律不许出现在这四张表里：卡面由 site/dist/data/cards.json 管。
+const IMAGE_KEYS = new Set(['img', 'art', 'icon', 'thumb', 'url', 'image', 'cardImage', 'levelIcon',
+  'levelIconV2', 'imageBg', 'bg', 'bgImg', 'portrait', 'portraitV2', 'avatar', 'banShenImg']);
+
+const imageKeyHits = (v, at, out) => {
+  if (Array.isArray(v)) {
+    v.forEach((x, i) => imageKeyHits(x, `${at}[${i}]`, out));
+    return out;
+  }
+  if (v && typeof v === 'object') {
+    for (const [k, x] of Object.entries(v)) {
+      if (IMAGE_KEYS.has(k)) out.push(`${at}.${k}`);
+      imageKeyHits(x, `${at}.${k}`, out);
+    }
+  }
+  return out;
+};
+
+let heroIds = null;
+for (const spec of CARD_FILES) {
+  const label = spec.file.replace('.json', '');
+  if (!existsSync(D(spec.file))) {
+    problems.push(`${spec.file}：文件不存在`);
+    continue;
+  }
+  const arr = readJson(spec.file);
+  chk(Array.isArray(arr), `${spec.file}：顶层必须是数组`);
+  if (!Array.isArray(arr)) continue;
+  chk(arr.length > 0, `${spec.file}：不能为空数组`);
+  notes.push(`data/${spec.file} 当前 ${arr.length} 条`);
+
+  const allowed = new Set([...BASE_KEYS, ...spec.extra, ...spec.optional]);
+  const required = [...BASE_KEYS, ...spec.extra];
+  const seen = new Set();
+
+  arr.forEach((c, i) => {
+    const at = `${label}[${i}]`;
+    if (!c || typeof c !== 'object' || Array.isArray(c)) {
+      problems.push(`${at}：必须是对象`);
+      return;
+    }
+    for (const k of Object.keys(c)) {
+      if (!allowed.has(k)) problems.push(`${at}：出现未定义字段 ${k}`);
+    }
+    for (const k of required) chk(k in c, `${at}：缺字段 ${k}`);
+
+    chk(isInt(c.id), `${at}：id 必须是整数`);
+    if (isInt(c.id)) {
+      chk(!seen.has(c.id), `${at}：id ${c.id} 重复`);
+      seen.add(c.id);
+    }
+    chk(isStr(c.name) && c.name.length > 0, `${at}：name 必须是非空字符串`);
+    chk(c.type === spec.type, `${at}：type 必须是 ${spec.type}，实际 ${c.type}`);
+    chk(isInt(c.tier) && c.tier >= 1 && c.tier <= 6, `${at}：tier 必须是 1-6 的整数`);
+    chk(isStr(c.faction), `${at}：faction 必须是字符串`);
+    chk(isInt(c.cost), `${at}：cost 必须是整数`);
+    chk(isStr(c.desc), `${at}：desc 必须是字符串`);
+    if ('grpName' in c) chk(isStr(c.grpName) && c.grpName.length > 0, `${at}：grpName 必须是非空字符串`);
+    if ('equipType' in c) chk(isStr(c.equipType) && c.equipType.length > 0, `${at}：equipType 必须是非空字符串`);
+
+    if ('stats' in c) {
+      const st = c.stats;
+      chk(st && typeof st === 'object' && !Array.isArray(st), `${at}：stats 必须是对象`);
+      if (st && typeof st === 'object' && !Array.isArray(st)) {
+        const keys = Object.keys(st).sort().join();
+        chk(keys === [...STAT_KEYS].sort().join(), `${at}：stats 必须且只能有 ${STAT_KEYS.length} 个字段`);
+        for (const k of STAT_KEYS) chk(isNum(st[k]), `${at}.stats.${k} 必须是数字`);
+      }
+    }
+    if ('kw' in c) {
+      chk(Array.isArray(c.kw), `${at}：kw 必须是数组`);
+      for (const k of Array.isArray(c.kw) ? c.kw : []) chk(isStr(k) && k.length > 0, `${at}：kw 的元素必须是非空字符串`);
+    }
+    if ('awake' in c) chk(isStr(c.awake), `${at}：awake 必须是字符串`);
+    if ('skills' in c) {
+      chk(Array.isArray(c.skills), `${at}：skills 必须是数组`);
+      for (const [j, s] of (Array.isArray(c.skills) ? c.skills : []).entries()) {
+        const sAt = `${at}.skills[${j}]`;
+        chk(isStr(s?.name) && s.name.length > 0, `${sAt}：name 必须是非空字符串`);
+        chk(isStr(s?.text), `${sAt}：text 必须是字符串`);
+        chk(Array.isArray(s?.nodes), `${sAt}：nodes 必须是数组`);
+        for (const [k, n] of (Array.isArray(s?.nodes) ? s.nodes : []).entries()) {
+          chk(isInt(n?.lv), `${sAt}.nodes[${k}]：lv 必须是整数`);
+          chk(isStr(n?.text), `${sAt}.nodes[${k}]：text 必须是字符串`);
+        }
+      }
+    }
+    if ('rel' in c) {
+      chk(Array.isArray(c.rel), `${at}：rel 必须是数组`);
+      for (const [j, r] of (Array.isArray(c.rel) ? c.rel : []).entries()) {
+        chk(isStr(r?.name) && r.name.length > 0, `${at}.rel[${j}]：name 必须是非空字符串`);
+        chk(isStr(r?.text), `${at}.rel[${j}]：text 必须是字符串`);
+      }
+    }
+    const hits = imageKeyHits(c, at, []);
+    for (const h of hits) problems.push(`${h}：图鉴表里不许出现图片字段`);
+  });
+
+  if (spec.file === 'heroes.json') heroIds = seen;
+}
+
 // ---- data/comps.json ----
 if (!existsSync(D('comps.json'))) {
   problems.push('comps.json：文件不存在');
@@ -85,16 +197,9 @@ if (!existsSync(D('comps.json'))) {
   );
   chk(isStr(doc?.fetchedAt) && !Number.isNaN(Date.parse(doc.fetchedAt)), 'comps.json：fetchedAt 不是合法时间');
 
-  // 外键：heroList[].id。heroes.json 不存在时跳过并提示。
-  let heroIds = null;
-  if (existsSync(D('heroes.json'))) {
-    const h = readJson('heroes.json');
-    const arr = Array.isArray(h) ? h : Array.isArray(h?.heroes) ? h.heroes : null;
-    if (arr) heroIds = new Set(arr.map((x) => x.id));
-    else notes.push('heroes.json 结构未知（既不是数组也没有 heroes 数组），外键校验已跳过');
-  } else {
-    notes.push('data/heroes.json 不存在，heroList[].id 外键校验已跳过');
-  }
+  // 外键：heroList[].id 必须落在上面图鉴校验建好的 heroIds 里。
+  // heroes.json 缺失或结构不对时 heroIds 为 null，这里只提示、不静默关掉。
+  if (!heroIds) notes.push('data/heroes.json 不可用，heroList[].id 外键校验已跳过');
 
   const codeSeen = new Map();
   list.forEach((r, i) => {

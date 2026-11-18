@@ -72,7 +72,11 @@ def hero(c):
         'awake': clean((h.get('awakeingCard') or {}).get('desc')),
         'kw': [k['name'] for k in h.get('keywordDescription', []) if k.get('name')],
         'stats': {'hp': p.get('HP'), 'atk': p.get('phyAttack'), 'ap': p.get('magAttack'), 'range': p.get('attackDistance'),
-                  'mana0': p.get('initEnergy'), 'mana': p.get('energy'), 'as': p.get('attackSpeed')},
+                  'mana0': p.get('initEnergy'), 'mana': p.get('energy'), 'as': p.get('attackSpeed'),
+                  # 完整战斗属性：护甲、暴击、移速、初始能量。上面 7 项是旧字段，保持不动。
+                  'phyDefense': p.get('phyDefense'), 'magDefense': p.get('magDefense'),
+                  'criticalRate': p.get('criticalRate'), 'criticalEffect': p.get('criticalEffect'),
+                  'moveSpeed': p.get('moveSpeed'), 'initEnergy': p.get('initEnergy')},
         'skills': [{'name': s['name'], 'text': clean(s['desc']),
                     'nodes': [{'lv': q['level'], 'text': clean(q['desc'])} for q in (s.get('enhanceSkill') or {}).get('params', [])]}
                    for s in h.get('skillList', [])],
@@ -120,7 +124,8 @@ if __name__ == '__main__':
         'lords': [lord(l) for l in load(16)],
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')))
+    # 必须显式 utf-8：Windows 上 write_text 默认走 locale（cp936），中文会写坏
+    OUT.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
     print(json.dumps({k: len(v) for k, v in data.items() if isinstance(v, list)}, ensure_ascii=False),
           'bytes', OUT.stat().st_size, 'missing images', len(missing))
     for u, e in missing[:10]:
