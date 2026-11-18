@@ -40,12 +40,15 @@ const trapTable = [
 
 const file = path.join(ROOT, 'README.md');
 const before = readFileSync(file, 'utf8');
-let after = before;
+// Windows 上 core.autocrlf 会把 README 检出成 CRLF，正则按 LF 写；统一按 LF 处理后原样写回
+const eol = before.includes('\r\n') ? '\r\n' : '\n';
+let after = before.split('\r\n').join('\n');
 for (const [key, body] of [['routes', routeTable], ['traps', trapTable]]) {
   const re = new RegExp(`(<!-- ${key}:start -->\\n)[\\s\\S]*?(\\n<!-- ${key}:end -->)`);
   if (!re.test(after)) { console.error(`README 里缺少 <!-- ${key}:start --> / <!-- ${key}:end --> 标记`); process.exit(1); }
   after = after.replace(re, `$1${body}$2`);
 }
+if (eol === '\r\n') after = after.split('\n').join('\r\n');
 if (process.argv.includes('--check')) {
   if (after !== before) { console.error('README 的路线表和 site/dist/data 不一致：运行 node scripts/sync_readme.mjs'); process.exit(1); }
   console.log('README 表格与数据一致');
