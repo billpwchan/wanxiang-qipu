@@ -743,7 +743,9 @@ function openCard(name) {
 // ---------- 页面：阵容 ----------
 // 数据来自 data/comps.json，由 scripts/build_comps_site.mjs 裁字段后输出到 data/comps.json。
 // 三种「空」要分清楚：st 是 null = 没有统计，不显示 0；vars 是 null = 没抓过变阵，不提；vars 是 [] = 查过确实没有。
-const cpPct = (v) => `${(v * 100).toFixed(v < 0.1 ? 1 : 0)}%`;
+// 百分比文案：0 写 0%，不足 1% 保留一位小数（别把小比例抹成 0%），其余四舍五入到整数。
+// 不再用 0.1 阈值切换精度：那样 9.9% 写 10.0%、10% 写 10%，同一个数两种写法（issue #20）。
+const cpPct = (v) => { const p = v * 100; return p === 0 ? '0%' : p < 1 ? `${p.toFixed(1)}%` : `${Math.round(p)}%`; };
 
 function cpHero(name) {
   const c = BY[name];

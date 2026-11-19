@@ -98,6 +98,17 @@ const noOverflow = async () => ev(`document.documentElement.scrollWidth <= docum
 const results = []; const check = (name, ok, detail = '') => results.push([ok ? 'PASS' : 'FAIL', name, detail]);
 const txt = (sel) => ev(`document.querySelector(${JSON.stringify(sel)})?.textContent.trim()`);
 
+// ---- 阵容百分比格式（issue #20）----
+// cpPct 直接从 site/dist/app.js 取源码求值：断言的实现就是渲染用的那份，不是抄一份副本。
+const cpPctLine = readFileSync(path.join(DIST, 'app.js'), 'utf8').split('\n').find((l) => l.startsWith('const cpPct = '));
+const cpPct = cpPctLine ? new Function(`${cpPctLine}\nreturn cpPct;`)() : (v) => `未从 app.js 提取到 cpPct（${v}）`;
+check('阵容：百分比 0 写 0%', cpPct(0) === '0%', cpPct(0));
+check('阵容：百分比 0.099 四舍五入到 10%', cpPct(0.099) === '10%', cpPct(0.099));
+check('阵容：百分比 0.1 写 10%', cpPct(0.1) === '10%', cpPct(0.1));
+check('阵容：百分比 0.999 四舍五入到 100%', cpPct(0.999) === '100%', cpPct(0.999));
+check('阵容：百分比 1 写 100%', cpPct(1) === '100%', cpPct(1));
+check('阵容：百分比不足 1% 保留一位小数', cpPct(0.004) === '0.4%', cpPct(0.004));
+
 // ---- 开局 ----
 await go('/'); await ev(`localStorage.clear()`); await go('/');
 check('开局：5 个禁用 + 还没看到', await ev(`document.querySelectorAll('.ban').length`) === 6);
