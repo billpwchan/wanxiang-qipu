@@ -11,7 +11,7 @@ const D = (p) => path.join(DATA_DIR, p);
 
 const problems = [];
 const notes = [];
-const chk = (ok, msg) => { if (!ok) problems.push(msg); };
+const chk = (ok, msg) => { if (!ok) problems.push(msg); return !!ok; };
 const isInt = (v) => Number.isInteger(v);
 const isNum = (v) => typeof v === 'number' && Number.isFinite(v);
 const isStr = (v) => typeof v === 'string';
@@ -97,6 +97,10 @@ const imageKeyHits = (v, at, out) => {
 };
 
 let heroIds = null;
+// 变阵英雄外键用名字反查 id：官网图鉴未收录、只在变阵里出现的新牌没有 heroes.json 记录，
+// 名字查不到就登记成 note，名字查得到则 id 必须与图鉴一致。
+let heroIdByName = null;
+const unknownVariantNames = new Set();
 for (const spec of CARD_FILES) {
   const label = spec.file.replace('.json', '');
   if (!existsSync(D(spec.file))) {
@@ -176,7 +180,10 @@ for (const spec of CARD_FILES) {
     for (const h of hits) problems.push(`${h}：图鉴表里不许出现图片字段`);
   });
 
-  if (spec.file === 'heroes.json') heroIds = seen;
+  if (spec.file === 'heroes.json') {
+    heroIds = seen;
+    heroIdByName = new Map(arr.filter((c) => isInt(c?.id) && isStr(c?.name)).map((c) => [c.name, c.id]));
+  }
 }
 
 // ---- data/comps.json ----
@@ -196,6 +203,47 @@ if (!existsSync(D('comps.json'))) {
     `comps.json：columns 必须是 ${COLUMNS.join('/')}`
   );
   chk(isStr(doc?.fetchedAt) && !Number.isNaN(Date.parse(doc.fetchedAt)), 'comps.json：fetchedAt 不是合法时间');
+
+  // statsSnapshot / variantsSnapshot：datawxq.com 抓取的汇总。字段固定、类型固定，
+  // 计数之间要自洽，并且要和 records 里实际填了几条对得上（部分抓取没写全就会在这里露出来）。
+  const SNAP_KEYS = {
+    statsSnapshot: ['source', 'fetchedAt', 'statisticsScope', 'sampleCount', 'rosterKeysMatched', 'recordsFilled'],
+    variantsSnapshot: ['source', 'fetchedAt', 'provenance', 'rosterKeysRequested', 'rosterKeysFetched',
+      'rosterKeysWithVariants', 'recordsFilled', 'recordsWithVariants', 'variantsTotal'],
+  };
+  const SNAP_INTS = ['sampleCount', 'rosterKeysMatched', 'recordsFilled',
+    'rosterKeysRequested', 'rosterKeysFetched', 'rosterKeysWithVariants', 'recordsWithVariants', 'variantsTotal'];
+  const snaps = {};
+  for (const [name, keys] of Object.entries(SNAP_KEYS)) {
+    const s = doc?.[name];
+    if (!chk(s && typeof s === 'object' && !Array.isArray(s), `comps.json：${name} 必须是对象`)) continue;
+    snaps[name] = s;
+    for (const k of keys) chk(k in s, `comps.json.${name}：缺字段 ${k}`);
+    for (const k of Object.keys(s)) chk(keys.includes(k), `comps.json.${name}：出现未定义字段 ${k}`);
+    chk(s.source === 'datawxq.com', `comps.json.${name}.source 必须是 datawxq.com，实际 ${JSON.stringify(s.source)}`);
+    chk(isStr(s.fetchedAt) && !Number.isNaN(Date.parse(s.fetchedAt)), `comps.json.${name}.fetchedAt 不是合法时间`);
+    for (const k of SNAP_INTS) {
+      if (k in s) chk(isInt(s[k]) && s[k] >= 0, `comps.json.${name}.${k} 必须是非负整数`);
+    }
+  }
+  const statsSnap = snaps.statsSnapshot;
+  const varSnap = snaps.variantsSnapshot;
+  const sampleCount = statsSnap?.sampleCount;
+  if (isStr(statsSnap?.statisticsScope)) {
+    chk(statsSnap.statisticsScope.length > 0, 'comps.json.statsSnapshot.statisticsScope 不能是空串');
+  }
+  if (isStr(varSnap?.provenance)) {
+    chk(varSnap.provenance.length > 0, 'comps.json.variantsSnapshot.provenance 不能是空串');
+  }
+  if (isInt(varSnap?.rosterKeysRequested) && isInt(varSnap?.rosterKeysFetched)) {
+    chk(varSnap.rosterKeysFetched <= varSnap.rosterKeysRequested, 'comps.json.variantsSnapshot：rosterKeysFetched 不能大于 rosterKeysRequested');
+  }
+  if (isInt(varSnap?.rosterKeysFetched) && isInt(varSnap?.rosterKeysWithVariants)) {
+    chk(varSnap.rosterKeysWithVariants <= varSnap.rosterKeysFetched, 'comps.json.variantsSnapshot：rosterKeysWithVariants 不能大于 rosterKeysFetched');
+  }
+  if (isInt(varSnap?.recordsFilled) && isInt(varSnap?.recordsWithVariants)) {
+    chk(varSnap.recordsWithVariants <= varSnap.recordsFilled, 'comps.json.variantsSnapshot：recordsWithVariants 不能大于 recordsFilled');
+  }
 
   // 外键：heroList[].id 必须落在上面图鉴校验建好的 heroIds 里。
   // heroes.json 缺失或结构不对时 heroIds 为 null，这里只提示、不静默关掉。
@@ -349,9 +397,12 @@ if (!existsSync(D('comps.json'))) {
       for (const f of ['appearanceRate', 'firstRate', 'top3Rate']) {
         chk(isNum(st[f]) && st[f] >= 0 && st[f] <= 1, `${tag}.stats.${f} 必须是 0~1 的数字`);
       }
-      chk(isNum(st.avgPlacement) && st.avgPlacement > 0, `${tag}.stats.avgPlacement 必须是正数`);
+      // 平均名次是 8 人局的名次均值，只能落在 (1, 7) 里；上限防的是把场次/局数写进这个字段。
+      chk(isNum(st.avgPlacement) && st.avgPlacement > 1 && st.avgPlacement < 7,
+        `${tag}.stats.avgPlacement 必须在 1 和 7 之间，实际 ${st.avgPlacement}`);
       for (const f of ['count', 'variantCount']) {
         chk(isInt(st[f]) && st[f] >= 0, `${tag}.stats.${f} 必须是非负整数`);
+        if (isInt(sampleCount)) chk(st[f] <= sampleCount, `${tag}.stats.${f} ${st[f]} 大于 statsSnapshot.sampleCount ${sampleCount}`);
       }
     }
     chk(isStr(r?.statsNote) && r.statsNote.length > 0, `${tag}：statsNote 必须说明这些字段为什么是 null`);
@@ -384,6 +435,16 @@ if (!existsSync(D('comps.json'))) {
             chk(h && (typeof h.id === 'string' || typeof h.id === 'number') && String(h.id) !== '',
               `${vt}.${k}：英雄缺 id`);
             chk(!('name' in (h || {})) || isStr(h.name), `${vt}.${k}：name 只能是字符串`);
+            // 外键：图鉴里有这个名字时 id 必须一致；图鉴没有的（官网未收录、只在变阵里出现的新牌）
+            // 记进 unknownVariantNames，校验结束按 note 列出，不静默放过。
+            if (!heroIdByName) continue;
+            const nm = isStr(h?.name) ? h.name : '';
+            if (heroIdByName.has(nm)) {
+              chk(String(h.id) === String(heroIdByName.get(nm)),
+                `${vt}.${k}：${nm} 的 id ${h.id} 与 data/heroes.json 的 ${heroIdByName.get(nm)} 不一致`);
+            } else {
+              unknownVariantNames.add(nm || `id=${h?.id}`);
+            }
           }
         }
         // 变阵 = 原阵容 − removedHeroes + addedHeroes。多带一个、少带一个都见过，所以不查人数不变。
@@ -399,10 +460,12 @@ if (!existsSync(D('comps.json'))) {
         chk(expect.size === ids.length && ids.every((h) => expect.has(h)),
           `${vt}.heroes 与 addedHeroes / removedHeroes 对不上`);
         chk(isInt(v.count) && v.count >= 0, `${vt}.count 必须是非负整数`);
+        if (isInt(v.count) && isInt(st?.count)) chk(v.count <= st.count, `${vt}.count ${v.count} 大于本条阵容的 stats.count ${st.count}`);
         for (const k of ['appearanceRate', 'firstRate', 'top3Rate', 'similarity']) {
           chk(isNum(v[k]) && v[k] >= 0 && v[k] <= 1, `${vt}.${k} 必须是 0~1 的数字`);
         }
-        chk(isNum(v.avgPlacement) && v.avgPlacement > 0, `${vt}.avgPlacement 必须是正数`);
+        chk(isNum(v.avgPlacement) && v.avgPlacement > 1 && v.avgPlacement < 7,
+          `${vt}.avgPlacement 必须在 1 和 7 之间，实际 ${v.avgPlacement}`);
       }
     }
 
@@ -431,6 +494,26 @@ if (!existsSync(D('comps.json'))) {
       chk(!r?.isPreset, `${tag}：非 beginner 记录不应带 isPreset`);
     }
   });
+
+  // 快照里的计数必须和 records 实际内容一致：部分抓取只写了一半时这里会失败。
+  const withStats = list.filter((r) => r?.stats?.source === 'datawxq.com').length;
+  const withVariants = list.filter((r) => Array.isArray(r?.variants)).length;
+  const variantsTotal = list.reduce((s, r) => s + (Array.isArray(r?.variants) ? r.variants.length : 0), 0);
+  if (isInt(statsSnap?.recordsFilled)) {
+    chk(statsSnap.recordsFilled === withStats, `comps.json.statsSnapshot.recordsFilled=${statsSnap.recordsFilled}，实际带 stats 的记录 ${withStats} 条`);
+  }
+  if (isInt(varSnap?.recordsFilled)) {
+    chk(varSnap.recordsFilled === withVariants, `comps.json.variantsSnapshot.recordsFilled=${varSnap.recordsFilled}，实际带 variants 的记录 ${withVariants} 条`);
+  }
+  if (isInt(varSnap?.recordsWithVariants)) {
+    chk(varSnap.recordsWithVariants === withVariants, `comps.json.variantsSnapshot.recordsWithVariants=${varSnap.recordsWithVariants}，实际带 variants 的记录 ${withVariants} 条`);
+  }
+  if (isInt(varSnap?.variantsTotal)) {
+    chk(varSnap.variantsTotal === variantsTotal, `comps.json.variantsSnapshot.variantsTotal=${varSnap.variantsTotal}，实际变阵 ${variantsTotal} 条`);
+  }
+  if (unknownVariantNames.size) {
+    notes.push(`变阵里出现 heroes.json 未收录的英雄：${[...unknownVariantNames].join('、')}（按原文渲染，请核对是否官方新牌）`);
+  }
 
   // 分组统计：按 (column, seasonIdRaw) 分组，禁止跨组计算
   const groups = {};
