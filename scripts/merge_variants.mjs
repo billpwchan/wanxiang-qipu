@@ -1,5 +1,5 @@
 // 把 datawxq 的变阵（variants）合并进 data/comps.json。
-// 用法：node scripts/merge_variants.mjs [--in snapshots/probe-variants/fetch-variants.json] [--dry]
+// 用法：node scripts/merge_variants.mjs [--in snapshots/probe-variants/fetch-variants.json] [--dry] [--allow-partial]
 //
 // 规则：
 //   - 只处理 stats.source === "datawxq.com" 的记录（其余没有统计，也就没抓变阵），按 rosterKey 匹配。
@@ -7,12 +7,14 @@
 //   - 命中但站点说没变阵：record.variants = []（查过，确实是空），不是 null。
 //   - 没抓到的记录：保持 null，不动。
 //   - 合并前逐条核对结构：人数不变、added/removed 各换几个、数值范围。对不上就抛错，不修数据。
+//   - 输入不完整（requested/succeeded 缺失或对不上，或没覆盖 comps 需要变阵的全部 rosterKey）
+//     默认拒绝合并；加 --allow-partial 才放行，并在 variantsSnapshot 记 partial: true。
 import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
-const USAGE = 'usage: node scripts/merge_variants.mjs [--in <json>] [--dry]';
-const opts = { in: path.join(ROOT, 'snapshots', 'probe-variants', 'fetch-variants.json'), dry: false };
+const USAGE = 'usage: node scripts/merge_variants.mjs [--in <json>] [--dry] [--allow-partial]';
+const opts = { in: path.join(ROOT, 'snapshots', 'probe-variants', 'fetch-variants.json'), dry: false, allowPartial: false };
 {
   const argv = process.argv.slice(2);
   for (let i = 0; i < argv.length; i++) {
@@ -26,6 +28,8 @@ const opts = { in: path.join(ROOT, 'snapshots', 'probe-variants', 'fetch-variant
       opts.in = path.resolve(v);
     } else if (a === '--dry') {
       opts.dry = true;
+    } else if (a === '--allow-partial') {
+      opts.allowPartial = true;
     } else if (a === '-h' || a === '--help') {
       console.log(USAGE);
       process.exit(0);
@@ -118,6 +122,37 @@ const pickVariant = (v, outerKey, baseIds, tag) => {
 const compsPath = path.join(ROOT, 'data', 'comps.json');
 const comps = JSON.parse(fs.readFileSync(compsPath, 'utf8'));
 
+// 抓取可能因站点限流提前收尾，也可能只探了部分 rosterKey；拿这种文件合并会整体覆写
+// variantsSnapshot 与 note，把上一次的全量记录换成部分数据。
+// 对账：requested / succeeded / items 必须是有限数且自洽，并且覆盖 comps 里所有需要变阵的 rosterKey。
+const neededKeys = new Set(
+  comps.records
+    .filter((r) => r?.stats?.source === DWXQ_SOURCE)
+    .map((r) => rosterKeyOf(r.heroList || [])),
+);
+const requested = snap.requested;
+const succeeded = snap.succeeded;
+const itemCount = (snap.items || []).length;
+const fetchedKeys = byKey.size;
+const missingKeys = [...neededKeys].filter((k) => !byKey.has(k));
+const partial =
+  !isNum(requested) || !isNum(succeeded) ||
+  requested !== succeeded || succeeded !== fetchedKeys || itemCount !== fetchedKeys ||
+  missingKeys.length > 0;
+if (partial) {
+  console.error(
+    `抓取结果不完整：rosterKeysRequested=${isNum(requested) ? requested : '(缺失)'}，` +
+    `rosterKeysFetched=${fetchedKeys}（succeeded=${isNum(succeeded) ? succeeded : '(缺失)'}，items=${itemCount}），` +
+    `comps 需要 ${neededKeys.size} 个 rosterKey，缺 ${missingKeys.length} 个` +
+    (missingKeys.length ? `（如 ${missingKeys[0]}）` : ''),
+  );
+  if (!opts.allowPartial) {
+    console.error('部分数据会整体覆写 variantsSnapshot，已拒绝合并；确认要合并请加 --allow-partial');
+    process.exit(1);
+  }
+  console.warn('--allow-partial：允许合并部分数据');
+}
+
 let recordsFilled = 0;
 let recordsWithVariants = 0;
 let variantTotal = 0;
@@ -147,7 +182,6 @@ for (const r of comps.records) {
   }
 }
 
-const fetchedKeys = byKey.size;
 const withVariantsKeys = [...byKey.values()].filter((i) => (i.variants || []).length).length;
 
 console.log('comps records:', comps.records.length, '有 datawxq 统计的记录跳过计数:', skippedNoStats);
@@ -179,12 +213,13 @@ comps.variantsSnapshot = {
   source: DWXQ_SOURCE,
   fetchedAt: snap.fetchedAt || null,
   provenance,
-  rosterKeysRequested: snap.requested ?? fetchedKeys,
+  rosterKeysRequested: isNum(requested) ? requested : null,
   rosterKeysFetched: fetchedKeys,
   rosterKeysWithVariants: withVariantsKeys,
   recordsFilled,
   recordsWithVariants,
   variantsTotal: variantTotal,
+  ...(partial ? { partial: true } : {}),
 };
 
 fs.writeFileSync(compsPath, JSON.stringify(comps, null, 2) + '\n', 'utf8');
