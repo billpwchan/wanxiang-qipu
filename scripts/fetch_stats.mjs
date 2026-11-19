@@ -87,11 +87,17 @@ const ws = new WebSocket(targets.find((t) => t.type === 'page').webSocketDebugge
 await new Promise((r) => ws.addEventListener('open', r));
 let msgId = 0;
 const pending = new Map();
+const reqUrls = new Map(); // requestId -> url，供 Network.loadingFailed 还原失败地址
+const netFails = []; // 网络级失败（代理/断网/DNS），与选择器失败分开报
 ws.addEventListener('message', (e) => {
   const m = JSON.parse(e.data);
   if (m.id && pending.has(m.id)) {
     pending.get(m.id)(m);
     pending.delete(m.id);
+  } else if (m.method === 'Network.requestWillBeSent') {
+    reqUrls.set(m.params.requestId, m.params.request?.url || '');
+  } else if (m.method === 'Network.loadingFailed') {
+    netFails.push({ url: reqUrls.get(m.params.requestId) || '', errorText: m.params.errorText || '', type: m.params.type || '' });
   }
 });
 const send = (method, params = {}) =>
@@ -105,6 +111,7 @@ const ev = async (expr) =>
 
 await send('Page.enable');
 await send('Runtime.enable');
+await send('Network.enable');
 
 // 挂钩 fetch：页面自己发请求、自己签名，我们只收响应体。
 await send('Page.addScriptToEvaluateOnNewDocument', {
@@ -135,6 +142,21 @@ window.__wxqCap = [];
 
 await send('Page.navigate', { url: 'https://www.datawxq.com/lineups' });
 await sleep(15000);
+
+// 先判断网络可达性：代理/断网/DNS 失败时页面里也不会有 .el-select，
+// 不能误报成「页面结构变了」。
+const netFail = netFails.find(
+  (f) =>
+    f.errorText.startsWith('net::ERR_') &&
+    f.errorText !== 'net::ERR_ABORTED' &&
+    (f.type === 'Document' || /datawxq\.com|datatft\.com/.test(f.url)),
+);
+if (netFail) {
+  ws.close();
+  proc.kill();
+  console.error(`网络不可达，检查代理/CHROME_PATH 包装器（${netFail.errorText}${netFail.url ? ` ${netFail.url}` : ''}）`);
+  process.exit(1);
+}
 
 // 页面把 minimumCount 固定在「最小 50 场」，会漏掉场次少的阵容。
 // 通过 UI 选「最小 10 场」——签名由页面自己算，我们只点选。

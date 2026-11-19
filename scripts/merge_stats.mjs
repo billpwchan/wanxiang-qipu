@@ -7,13 +7,15 @@
 //           并把 stats.source 置为 "datawxq.com"。
 //   - 未命中：stats 只补 source: ""，原有 4 个 null 字段原样不动，绝不留占位数值。
 //   - beginner（isPreset）是官方预置阵容，不参与对局统计，永远不合并。
+//   - 输入不完整（coverage.lineupsFetched < sampleCount 或字段缺失）默认拒绝合并；
+//     加 --allow-partial 才放行，并在 statsSnapshot 记 partial: true。
 // 只改 stats / statsNote，不动任何其他字段。
 import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
-const USAGE = 'usage: node scripts/merge_stats.mjs [--in <json>] [--dry]';
-const opts = { in: path.join(ROOT, 'snapshots', 'probe-stats', 'search-stats.json'), dry: false };
+const USAGE = 'usage: node scripts/merge_stats.mjs [--in <json>] [--dry] [--allow-partial]';
+const opts = { in: path.join(ROOT, 'snapshots', 'probe-stats', 'search-stats.json'), dry: false, allowPartial: false };
 {
   const argv = process.argv.slice(2);
   for (let i = 0; i < argv.length; i++) {
@@ -27,6 +29,8 @@ const opts = { in: path.join(ROOT, 'snapshots', 'probe-stats', 'search-stats.jso
       opts.in = path.resolve(v);
     } else if (a === '--dry') {
       opts.dry = true;
+    } else if (a === '--allow-partial') {
+      opts.allowPartial = true;
     } else if (a === '-h' || a === '--help') {
       console.log(USAGE);
       process.exit(0);
@@ -60,6 +64,23 @@ for (const l of snap.lineups || []) {
 if (!byKey.size) {
   console.error('抓取结果里没有 lineups，不合并');
   process.exit(1);
+}
+
+// 抓取可能因 --max-pages 触顶或连续无新增而提前收尾，此时 lineupsFetched < sampleCount。
+// 拿这种文件合并会把未命中阵容的统计清空，所以默认拒绝，--allow-partial 显式放行。
+const isNum = (v) => typeof v === 'number' && Number.isFinite(v);
+const fetched = snap.coverage?.lineupsFetched;
+const sampleCount = snap.sampleCount;
+const partial = !isNum(fetched) || !isNum(sampleCount) || fetched < sampleCount;
+if (partial) {
+  console.error(
+    `抓取结果不完整：coverage.lineupsFetched=${isNum(fetched) ? fetched : '(缺失)'}，sampleCount=${isNum(sampleCount) ? sampleCount : '(缺失)'}`,
+  );
+  if (!opts.allowPartial) {
+    console.error('部分数据会把未命中的阵容统计清空，已拒绝合并；确认要合并请加 --allow-partial');
+    process.exit(1);
+  }
+  console.warn('--allow-partial：允许合并部分数据');
 }
 
 const compsPath = path.join(ROOT, 'data', 'comps.json');
@@ -116,6 +137,7 @@ comps.statsSnapshot = {
   sampleCount: snap.sampleCount ?? null,
   rosterKeysMatched: hitKeys.size,
   recordsFilled: recordsCovered,
+  ...(partial ? { partial: true } : {}),
 };
 
 fs.writeFileSync(compsPath, JSON.stringify(comps, null, 2) + '\n', 'utf8');
