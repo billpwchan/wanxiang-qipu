@@ -824,8 +824,15 @@ function cpRank() {
   const top = cpTop();
   if (!top.length) return '';
   const scope = COMPS.meta?.statsScope;
+  // 样本数与抓取日期来自 data/comps.json 的 statsSnapshot（经 build_comps_site 进 meta），不写死。
+  const sampleCount = COMPS.meta?.statsSampleCount;
+  const fetchedAt = COMPS.meta?.statsFetchedAt;
+  const facts = [
+    typeof sampleCount === 'number' && Number.isFinite(sampleCount) ? `${sampleCount.toLocaleString('en-US')} 局样本` : '',
+    typeof fetchedAt === 'string' && fetchedAt ? `更新于 ${esc(fetchedAt.slice(0, 10))}` : '',
+  ].filter(Boolean).join(' · ');
   return `<div class="cprank">
-    <div class="cprh"><b class="d">平均名次最好的 ${top.length} 套</b><span class="src">统计维度：全服${scope ? `（${esc(scope)}）` : ''} · 312,754 局样本 · 更新于 2026-11-18 · 按平均名次升序，越低越好</span></div>
+    <div class="cprh"><b class="d">平均名次最好的 ${top.length} 套</b><span class="src">统计维度：全服${scope ? `（${esc(scope)}）` : ''}${facts ? ` · ${facts}` : ''} · 按平均名次升序，越低越好</span></div>
     <ol class="cprs">${top.map((g, i) => {
     const r = g[0];
     const rt = cpRoute(r);

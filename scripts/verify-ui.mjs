@@ -13,6 +13,8 @@ const DIST = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../site
 const cardsLords = JSON.parse(readFileSync(path.join(DIST, 'data/cards.json'), 'utf8')).lords.map((x) => x.name);
 const cardsSorted = [...cardsLords].sort((a, b) => a.localeCompare(b, 'zh-Hans-CN'));
 const { FACTS } = await import(pathToFileURL(path.join(DIST, 'data/facts.js')).href);
+// 阵容榜的样本数/更新日期断言要和站点渲染同源，否则就是对着自己断言，永远绿（issue #21）。
+const compsMeta = JSON.parse(readFileSync(path.join(DIST, 'data/comps.json'), 'utf8')).meta;
 // 抽屉里按名称排，比对的期望值也按同一次排序取，免得被 cards.json 里的原始顺序干扰
 const noRoute = cardsSorted.filter((n) => !(FACTS.lords[n]?.routes || []).length);
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.png': 'image/png', '.svg': 'image/svg+xml', '.woff2': 'font/woff2' };
@@ -191,7 +193,9 @@ check('阵容榜：同阵容合并的行标出套数', await ev(`[...document.qu
 check('阵容榜：场次带千分位', await ev(`[...document.querySelectorAll('.cprank .cprg')].some(x => /^[\\d,]+ 局$/.test(x.textContent.trim()) && x.textContent.includes(','))`));
 const cpNote = (await txt('.cprank .cprh .src')) || '';
 check('阵容榜：口径写全服，不写没抓到的「近 7 天」', cpNote.includes('全服（allPlayers）') && cpNote.includes('平均名次升序') && !cpNote.includes('近 7 天'), cpNote);
-check('阵容榜：样本数和更新日期', cpNote.includes('312,754 局样本') && cpNote.includes('2026-11-18'), cpNote);
+const cpSample = typeof compsMeta?.statsSampleCount === 'number' ? `${compsMeta.statsSampleCount.toLocaleString('en-US')} 局样本` : '';
+const cpFetched = typeof compsMeta?.statsFetchedAt === 'string' ? compsMeta.statsFetchedAt.slice(0, 10) : '';
+check('阵容榜：样本数和更新日期', !!cpSample && !!cpFetched && cpNote.includes(cpSample) && cpNote.includes(cpFetched), cpNote);
 check('阵容榜：每行有吃鸡率、前三率、棋手、场次', await ev(`(() => {
   const rows = [...document.querySelectorAll('.cprank .cpr')];
   return rows.length === 10 && rows.every(x => {

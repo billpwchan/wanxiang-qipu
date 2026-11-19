@@ -1,8 +1,8 @@
 {
- "release": "20261119-042846",
+ "release": "20261119-131351",
  "files": {
   "app.css": "881174c0e12f6e55fcc4d6c0fdb309d3a6cbd4e91bc8860adfa40f63cbbbc01e",
-  "app.js": "72f7e3bde167be4da40d855cf300789eaa37e1047a25b67838e72e6a88f2d855",
+  "app.js": "d4fd5a591e3e37dcd2422bbfc07f702c268b91dcbc489aca2e453c96eb86c1b2",
   "assets/art/c-004048c6aec5967a.webp": "b811be220258887f4d9a57d6bf22e068050464e85d4f8a4a2e3f996ed7674c0f",
   "assets/art/c-019fbfc8c25295a2.webp": "06d83e433b180b53a8fc758daa4b9f24387491d3fc52a9454c400c71c24aa6e2",
   "assets/art/c-03047863afff6b55.webp": "9094b3b188c4827a9ef9020eede011215ad00890f37dcfeebf153e8bbe35ffe0",
@@ -730,7 +730,7 @@
   "assets/c/fe979c3b4b3d5c8b9a62ccbd.webp": "bcfe8dc42113f027f75d5c1217b0f5313e0e8c49023bf9e92ad59b40690f3a0c",
   "assets/c/ff1268f95af384c00e64f620.webp": "4c704f6ef43fc56573a498f6af26bf6348a031424b1ab671358d759a54e1c0e6",
   "assets/c/ff31debc86619fda18d31382.webp": "06dc21c8d4a05bdfff8b7e3bb27d3f0b1d843022d78f952a47ae425585a8e406",
-  "assets/icon.svg": "46a0676dda749e63eddeaa7a0564747bdc96e4766cb8464cb778faf1ad7f5948",
+  "assets/icon.svg": "9c5eda488fec8e448e7fc4bc8fff17fc64848f1a8f029fcb4b3384f356b607d5",
   "assets/lord/l060fc5c2-i.webp": "cd79474d3aa8f1317f18b85fa0ea8a7b7b43b5b9451c797f8f507b028b68a71b",
   "assets/lord/l060fc5c2-s.webp": "40550fe689cb1275513b7dd51c162150fe7014e658a539d79b02bf46295512c5",
   "assets/lord/l060fc5c2.webp": "8e240916d64e5a3bd5195fc5e890debcd85e20dd20170683d80b0f68aa6052eb",
@@ -807,7 +807,7 @@
   "assets/poster/537-1-bg.webp": "ba862844b4d9fb8ed2e3cc13012a1addcc6a8dd6500ec084a5fa1afa7d98f379",
   "data/art.json": "536da7c60a451673921800a390f264e6a7e5b10a61d3c65f8b4f2adeb9c5a393",
   "data/cards.json": "e07d114a728129c507ce971e12d89a25019038b1250a480b6da07a15f18d6832",
-  "data/comps.json": "e275d0ccb441b16a2a2872275bf2ad2c1600b0b983f5c4fef40a88188edd7ada",
+  "data/comps.json": "3e9cb8b17895b8aeca99539fcfe93565d4738e4050d89f5be39aa115fc3ff17b",
   "data/evidence.js": "d5d3f2180e5a938e372cb5b34c7611eca55de56aa4e1e179fddc10d2f6cafa00",
   "data/facts.js": "b1569f208d127962e552284b8a497dc67e96ea4ceee222b67e28867b90a7c8f0",
   "data/icons.js": "e2ae95b5f162b6c2152a9635f0d8df8d361b7c69bb6df24d0a8886ab38339077",

@@ -147,6 +147,9 @@ const out = {
     // 统计口径取抓取时接口自己返回的 statisticsScope（当前是 allPlayers）。
     // 接口没有给时间窗口，页面上就不要写「近 N 天」。
     statsScope: comps.statsSnapshot?.statisticsScope ?? null,
+    // 样本数与抓取时间给前端渲染用，前端不再写死；缺就 null，页面自然省略。
+    statsSampleCount: comps.statsSnapshot?.sampleCount ?? null,
+    statsFetchedAt: comps.statsSnapshot?.fetchedAt ?? null,
     // 没有图标的棋手 / 只出现在变阵里的新牌：如实登记，前端走文字兜底，不剔数据也不假装有图。
     missing: {
       lords: [...unknownLords],
