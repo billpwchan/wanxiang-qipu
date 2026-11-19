@@ -42,6 +42,6 @@
 ```bash
 npm run validate  # 检查数据外键与 schema
 npm run verify    # 检查静态文件引用完整性
-CHROME="C:/Program Files/Google/Chrome/Application/chrome.exe" npm test  # 89项真实浏览器交互断言
+CHROME="C:/Program Files/Google/Chrome/Application/chrome.exe" npm test  # 全量真实浏览器交互断言
 
 ```

@@ -140,7 +140,7 @@ flowchart LR
 - **无构建、零依赖。** 原生 ES 模块，`index.html` + `app.js`（约 1,050 行，History 路由）+ `glass.js`。站点 21 MB，其中 20 MB 是图片。没有 `npm install`。
 - **竖纹玻璃是一个片元着色器。** 官方 S1 主视觉的竖纹玻璃，在 [`glass.js`](site/dist/glass.js) 里用 WebGL2 实现：每条竖纹是一段柱面透镜，横向折射 + RGB 分离色散 + 5 次采样磨砂 + 高光线，扫描线把玻璃「推开」露出答案。不支持 WebGL2 或系统开启「减少动态效果」时退回静态图。
 - **打法和数字分开。** `plan.js` 是人写的打法（短句、没有统计数字），`facts.js` 由 [`build_facts.mjs`](scripts/build_facts.mjs) 从三份数据源生成。README 里的两张表也是脚本生成的，CI 会检查它们和数据一致。
-- **测试不装 Puppeteer。** [`verify-ui.mjs`](scripts/verify-ui.mjs) 直接用 Chrome DevTools 协议跑全量真实浏览器交互（当前 89 项，覆盖开局、路线、对局、棋手、查牌、阵容六类页面），包括 4 种屏幕宽度 × 6 个页面无横向溢出；[`verify-site.mjs`](scripts/verify-site.mjs) 检查每张牌都在官方卡池里、每条路线 7 个阶段齐全、阵容的外键与 `rosterKey` 格式正确、棋手名单与官方卡池一一对应、禁用推荐不会推荐被禁的路线。
+- **测试不装 Puppeteer。** [`verify-ui.mjs`](scripts/verify-ui.mjs) 直接用 Chrome DevTools 协议跑全量真实浏览器交互（覆盖开局、路线、对局、棋手、查牌、阵容六类页面），包括 4 种屏幕宽度 × 6 个页面无横向溢出；[`verify-site.mjs`](scripts/verify-site.mjs) 检查每张牌都在官方卡池里、每条路线 7 个阶段齐全、阵容的外键与 `rosterKey` 格式正确、棋手名单与官方卡池一一对应、禁用推荐不会推荐被禁的路线。
 - **部署**：Vercel 静态托管，`vercel.json` 声明无构建、输出 `site/dist`，push 到 `main` 自动重建；另带一套自有服务器方案：只读容器、96 MiB 内存上限、每个文件带 SHA-256 清单、原子替换软链接切换版本，见 [docs/deployment.md](docs/deployment.md)。
 
 ```mermaid

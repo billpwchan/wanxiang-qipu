@@ -125,7 +125,7 @@ sequenceDiagram
 | 命令 | 检查什么 | 需要 |
 |---|---|---|
 | `node scripts/verify-site.mjs` | 数据完整性：卡牌引用、阶段、站位、禁用推荐、图片文件、文案用词 | Node |
-| `node scripts/verify-ui.mjs [地址]` | 89 项真实浏览器交互；不给地址时自带静态服务器测 `site/dist` | Node 22+、Chrome |
+| `node scripts/verify-ui.mjs [地址]` | 全量真实浏览器交互；不给地址时自带静态服务器测 `site/dist` | Node 22+、Chrome |
 | `GPU=1 node scripts/verify-ui.mjs` | 额外检查玻璃画布真的在画 | 同上 |
 | `node copilot/test/run.mjs` | 用官方卡面合成 8 张模拟画面 → Chrome 截图 → Vision OCR → brain 回放 → 检查每步建议 | macOS、Chrome |
 | `node copilot/test/run.mjs --replay` | 只回放已提交的 OCR 结果 | Node |
