@@ -4,7 +4,7 @@
 // GPU=1 时开启 WebGL，检查玻璃画布真的在画；CHROME=<路径> 指定浏览器
 import { spawn } from 'node:child_process';
 import { createServer } from 'node:http';
-import { createReadStream, existsSync, readFileSync, statSync } from 'node:fs';
+import { createReadStream, existsSync, openSync, readFileSync, statSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { pathToFileURL, fileURLToPath } from 'node:url';
@@ -39,9 +39,42 @@ if (!BASE) {
 const CHROME = process.env.CHROME || (process.platform === 'darwin' ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' : 'google-chrome');
 const port = 9800 + Math.floor(Math.random() * 100);
 const GPU = process.env.GPU === '1';
-const proc = spawn(CHROME, ['--headless=new', ...(GPU ? ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] : ['--disable-gpu']), ...(process.env.CI ? ['--no-sandbox'] : []), `--remote-debugging-port=${port}`, '--user-data-dir=' + path.join(tmpdir(), 'wx-ui-' + port), 'about:blank'], { stdio: 'ignore' });
+// Chrome 的 stderr 落到临时文件：起不来时能看到它自己说了什么，而不是只剩一个 TypeError。
+const chromeLog = path.join(tmpdir(), 'wx-ui-chrome-' + port + '.log');
+const chromeLogFd = openSync(chromeLog, 'w');
+let chromeSpawnError = null;
+const proc = spawn(CHROME, ['--headless=new', ...(GPU ? ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] : ['--disable-gpu']), ...(process.env.CI ? ['--no-sandbox'] : []), `--remote-debugging-port=${port}`, '--user-data-dir=' + path.join(tmpdir(), 'wx-ui-' + port), 'about:blank'], { stdio: ['ignore', 'ignore', chromeLogFd] });
+// spawn 失败（ENOENT 等）时 child 会发 error 事件；不监听会让整个进程崩掉，这里记下来交给等待循环统一报错。
+proc.on('error', (err) => { chromeSpawnError = err; });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-let info; for (let i = 0; i < 50 && !info; i++) { try { info = await (await fetch(`http://127.0.0.1:${port}/json/list`)).json(); } catch { await sleep(200); } }
+const chromeLogTail = () => {
+  try {
+    const text = readFileSync(chromeLog, 'utf8').trim();
+    return text ? `Chrome 日志尾部（${chromeLog}）：\n${text.split('\n').slice(-20).join('\n')}` : `Chrome 日志为空（${chromeLog}）`;
+  } catch {
+    return `Chrome 日志不可读（${chromeLog}）`;
+  }
+};
+// 等 CDP 起来：fetch 带 1s 超时；返回值不是数组、或数组里没有 page 目标都继续重试，50 次耗尽抛可诊断错误。
+const waitStart = Date.now();
+let info;
+for (let i = 0; i < 50 && !info; i++) {
+  const ac = new AbortController();
+  const timer = setTimeout(() => ac.abort(), 1000);
+  try {
+    const list = await (await fetch(`http://127.0.0.1:${port}/json/list`, { signal: ac.signal })).json();
+    if (Array.isArray(list) && list.some((t) => t && t.type === 'page')) info = list;
+  } catch { /* 连不上 / 超时 / 非 JSON：继续重试 */ } finally { clearTimeout(timer); }
+  if (!info) await sleep(200);
+}
+if (!info) {
+  throw new Error(
+    `Chrome 未就绪：${CHROME} 在 ${Math.round((Date.now() - waitStart) / 1000)}s 内未暴露 CDP（port ${port}）` +
+    `\n进程退出码：${proc.exitCode === null ? '仍在运行（未退出）' : proc.exitCode}` +
+    (chromeSpawnError ? `\nspawn 失败：${chromeSpawnError.message}` : '') +
+    `\n${chromeLogTail()}`,
+  );
+}
 const ws = new WebSocket(info.find((t) => t.type === 'page').webSocketDebuggerUrl);
 await new Promise((r) => ws.addEventListener('open', r));
 let id = 0; const pending = new Map(); const errors = []; const bad = [];
