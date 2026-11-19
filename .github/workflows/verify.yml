@@ -24,7 +24,7 @@ jobs:
         run: node scripts/validate.mjs
       - name: 数据完整性
         run: node scripts/verify-site.mjs
-      - name: 真实浏览器交互（50 项）
+      - name: 真实浏览器交互
         run: node scripts/verify-ui.mjs
       - name: 副驾回放
         run: node copilot/test/run.mjs --replay
