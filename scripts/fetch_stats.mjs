@@ -6,7 +6,7 @@
 // 不要在 Node 里重放抓到的 t/did/nonce/signature —— nonce 一次性，重放必失败。
 //
 // 只读：不写 data/ 下任何文件。输出默认落 snapshots/probe-stats/search-stats.json（已 gitignore）。
-import { spawn } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -69,6 +69,28 @@ const proc = spawn(chrome, [
   '--window-size=1600,2400', 'about:blank',
 ], { stdio: 'ignore' });
 
+// 收尾只走这一处：正常结束、任意报错、Ctrl-C 都要把 Chrome 收掉。
+// Windows 上 Chrome 会派生渲染进程，只杀父进程会留下子进程，所以按进程树收。
+let chromeKilled = false;
+const killChrome = () => {
+  if (chromeKilled) return;
+  chromeKilled = true;
+  try { proc.kill(); } catch { /* 已经退出 */ }
+  try {
+    if (process.platform === 'win32' && proc.pid) spawnSync('taskkill', ['/pid', String(proc.pid), '/T', '/F'], { stdio: 'ignore' });
+  } catch { /* taskkill 不可用或进程已消失 */ }
+};
+proc.on('error', (e) => {
+  console.error(`spawn 失败：${e.message}`);
+  killChrome();
+  process.exit(1);
+});
+process.on('exit', killChrome);
+process.on('SIGINT', () => { killChrome(); process.exit(1); });
+process.on('SIGTERM', () => { killChrome(); process.exit(1); });
+process.on('uncaughtException', (e) => { console.error(e); killChrome(); process.exit(1); });
+process.on('unhandledRejection', (e) => { console.error(e); killChrome(); process.exit(1); });
+
 let targets = null;
 for (let i = 0; i < 120 && !targets; i++) {
   try {
@@ -78,7 +100,7 @@ for (let i = 0; i < 120 && !targets; i++) {
   }
 }
 if (!targets) {
-  proc.kill();
+  killChrome();
   console.error('Chrome 没起来');
   process.exit(1);
 }
@@ -153,7 +175,7 @@ const netFail = netFails.find(
 );
 if (netFail) {
   ws.close();
-  proc.kill();
+  killChrome();
   console.error(`网络不可达，检查代理/CHROME_PATH 包装器（${netFail.errorText}${netFail.url ? ` ${netFail.url}` : ''}）`);
   process.exit(1);
 }
@@ -177,7 +199,7 @@ await sleep(6000);
 console.log('minimumCount filter:', picked, opt);
 if (opt !== 'clicked') {
   ws.close();
-  proc.kill();
+  killChrome();
   console.error('没能把最小场次降到 10，页面结构可能变了');
   process.exit(1);
 }
@@ -188,7 +210,7 @@ const collect = async () =>
 let caps = await collect();
 if (!caps.length) {
   ws.close();
-  proc.kill();
+  killChrome();
   console.error('页面没有发出 /wzwxq/lineups/search 请求');
   process.exit(1);
 }
@@ -196,7 +218,7 @@ if (!caps.length) {
 const fail = caps.find((c) => !c.json || c.json.success !== true);
 if (fail) {
   ws.close();
-  proc.kill();
+  killChrome();
   console.error('接口返回失败：', JSON.stringify(fail.json || { status: fail.status }));
   console.error('（签名重放不可行；这是站点对本机/IP 的拒绝，等它恢复再跑）');
   process.exit(1);
@@ -286,7 +308,7 @@ fs.mkdirSync(path.dirname(opts.out), { recursive: true });
 fs.writeFileSync(opts.out, JSON.stringify(payload, null, 1) + '\n', 'utf8');
 
 ws.close();
-proc.kill();
+killChrome();
 
 console.log('out:', path.relative(ROOT, opts.out) || opts.out);
 console.log('lineups:', merged.size, 'rosterKeys matched:', `${matched.length}/${wanted.size}`, 'comps records covered:', `${coveredRecords}/${comps.records.length}`);
