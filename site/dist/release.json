@@ -1,8 +1,8 @@
 {
- "release": "20261119-131351",
+ "release": "20261119-151510",
  "files": {
   "app.css": "881174c0e12f6e55fcc4d6c0fdb309d3a6cbd4e91bc8860adfa40f63cbbbc01e",
-  "app.js": "d4fd5a591e3e37dcd2422bbfc07f702c268b91dcbc489aca2e453c96eb86c1b2",
+  "app.js": "1e38abec22256c2f76c5f4f23995ef016942ea02db1d53e1aa581152d95aa59a",
   "assets/art/c-004048c6aec5967a.webp": "b811be220258887f4d9a57d6bf22e068050464e85d4f8a4a2e3f996ed7674c0f",
   "assets/art/c-019fbfc8c25295a2.webp": "06d83e433b180b53a8fc758daa4b9f24387491d3fc52a9454c400c71c24aa6e2",
   "assets/art/c-03047863afff6b55.webp": "9094b3b188c4827a9ef9020eede011215ad00890f37dcfeebf153e8bbe35ffe0",

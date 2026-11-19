@@ -85,7 +85,7 @@ function card(name, o = {}) {
   const src = hero ? (c.art || c.img) : c?.img;
   const cls = ['cd', hero ? '' : 'fx', o.core ? 'core' : '', o.keep ? 'keep' : '', `f-${c?.faction || '无阵营'}`].join(' ');
   return `<button class="${cls}" data-card="${esc(name)}" type="button">
-    <div class="art">${hero ? tierGlyph(c.tier) : ''}${src ? `<img src="${src}" alt="" loading="lazy" decoding="async">` : ''}</div>
+    <div class="art">${hero ? tierGlyph(c.tier) : ''}${src ? `<img src="${esc(src)}" alt="" loading="lazy" decoding="async">` : ''}</div>
     ${o.cap ? `<span class="cap">${esc(o.cap)}</span>` : ''}
     <div class="nm">${esc(name)}</div>${o.why ? `<div class="why">${esc(o.why)}</div>` : ''}
   </button>`;
@@ -167,7 +167,7 @@ function homePage(q) {
         <button class="ban none f-未知 ${ban === '未知' ? 'on' : ''}" role="radio" aria-checked="${ban === '未知'}" data-ban="未知">还没看到</button>
       </div>
       <div class="owned">
-        ${own.length ? `<span class="ics">${own.slice(0, 8).map((n) => `<img src="${lordIcon(n)}" alt="${esc(n)}">`).join('')}</span><span>只推荐你有的 ${own.length} 个棋手</span><button class="link" data-owned>修改</button>` : `<button class="link" data-owned>只推荐我有的棋手</button>`}
+        ${own.length ? `<span class="ics">${own.slice(0, 8).map((n) => `<img src="${esc(lordIcon(n))}" alt="${esc(n)}">`).join('')}</span><span>只推荐你有的 ${own.length} 个棋手</span><button class="link" data-owned>修改</button>` : `<button class="link" data-owned>只推荐我有的棋手</button>`}
       </div>
     </div>
     <div class="stage" id="stage">
@@ -194,13 +194,13 @@ function homePage(q) {
 
 function routeTile(r) {
   const f = F[r.id];
-  return `<a class="rt" href="/r/${r.id}">
-    <div class="pic">${f.splash ? `<img src="${f.splash.src}" alt="" loading="lazy" style="object-position:${f.splash.fx}% ${Math.min(40, f.splash.fy)}%">` : ''}${facLabel(r.faction)}${tierChip(f.tier)}</div>
+  return `<a class="rt" href="/r/${esc(r.id)}">
+    <div class="pic">${f.splash ? `<img src="${esc(f.splash.src)}" alt="" loading="lazy" style="object-position:${f.splash.fx}% ${Math.min(40, f.splash.fy)}%">` : ''}${facLabel(r.faction)}${tierChip(f.tier)}</div>
     <div class="bd">
       <h3 class="d">${esc(r.name)}</h3>
       <p class="tag">${esc(r.tag)}</p>
       <p>${esc(r.idea)}</p>
-      <div class="lr">${ruler(f.stat.avg, { sm: true, label: `${f.stat.lord} · 平均名次` })}<span class="lds">${r.lords.map((n) => `<img src="${lordIcon(n)}" alt="${esc(n)}" title="${esc(n)}">`).join('')}</span></div>
+      <div class="lr">${ruler(f.stat.avg, { sm: true, label: `${f.stat.lord} · 平均名次` })}<span class="lds">${r.lords.map((n) => `<img src="${esc(lordIcon(n))}" alt="${esc(n)}" title="${esc(n)}">`).join('')}</span></div>
     </div>
   </a>`;
 }
@@ -229,7 +229,7 @@ function trapRow(t) {
   const st = trapStat(t.comp);
   return `<div class="trap">
     <div class="uses">${wan(t.uses ?? d?.uses ?? 0)}<small>次导入游戏</small></div>
-    <div><h3>${esc(t.name)}</h3><p>${esc(t.why)}${d?.lordAvg ? `${esc(d.lord)}的全部对局平均第 ${d.lordAvg.toFixed(1)} 名。` : ''}</p><p>${esc(t.fix)}${t.to ? ` <a href="/r/${t.to}">${esc(R[t.to].name)} →</a>` : ''}</p></div>
+    <div><h3>${esc(t.name)}</h3><p>${esc(t.why)}${d?.lordAvg ? `${esc(d.lord)}的全部对局平均第 ${d.lordAvg.toFixed(1)} 名。` : ''}</p><p>${esc(t.fix)}${t.to ? ` <a href="/r/${esc(t.to)}">${esc(R[t.to].name)} →</a>` : ''}</p></div>
     <div class="rm">${st ? ruler(st.m, { sm: true, dp: 2, label: `名 · 实测 ${st.n.toLocaleString()} 局` }) : '<span class="src">暂无统计</span>'}</div>
   </div>`;
 }
@@ -255,22 +255,22 @@ function answerHTML(ban) {
   const alt = r.lords.filter((l) => l !== p.lord);
   const note = BANS[ban]?.note;
   return `
-    <div class="for"><img src="${lordIcon(p.lord)}" alt="">用 <b>${esc(p.lord)}</b> 打${p.have ? '' : '<span class="chip bad">你没有这个棋手</span>'}</div>
+    <div class="for"><img src="${esc(lordIcon(p.lord))}" alt="">用 <b>${esc(p.lord)}</b> 打${p.have ? '' : '<span class="chip bad">你没有这个棋手</span>'}</div>
     <h2 class="d">${esc(r.name)}</h2>
     <p class="idea">${esc(r.idea)}</p>
     ${ruler(s.avg)}
     ${statLine(s)}
     <p class="share">${sh >= 0.35 ? `${esc(p.lord)}的对局里 ${Math.round(sh * 100)}% 在打这套，数字基本就是这套的表现。` : `${esc(p.lord)}什么都能打（只有 ${Math.round(sh * 100)}% 的对局打这套），数字是它全部对局的平均。`}</p>
     <div class="acts">
-      <a class="btn go" href="/play/${r.id}?lord=${encodeURIComponent(p.lord)}">${I.play}开始对局</a>
-      <a class="btn" href="/r/${r.id}">怎么打</a>
+      <a class="btn go" href="/play/${esc(r.id)}?lord=${esc(encodeURIComponent(p.lord))}">${I.play}开始对局</a>
+      <a class="btn" href="/r/${esc(r.id)}">怎么打</a>
       ${f.code ? `<button class="btn" data-code="${r.id}">${I.copy}阵容码</button>` : ''}
     </div>
     ${alt.length ? `<p class="nolord">没有${esc(p.lord)}：${alt.map(esc).join('、')}也能打。</p>` : ''}
     ${note ? `<p class="note">${esc(note)}</p>` : ''}
     <div class="alts"><div class="t">备选</div>
-      ${picks.slice(1, 4).map((a) => { const as = L[a.lord]; const c = BY[a.r.carry]; return `<a class="alt" href="/r/${a.id}">
-        <span class="ai">${c?.art ? `<img src="${c.art}" alt="">` : ''}</span>
+      ${picks.slice(1, 4).map((a) => { const as = L[a.lord]; const c = BY[a.r.carry]; return `<a class="alt" href="/r/${esc(a.id)}">
+        <span class="ai">${c?.art ? `<img src="${esc(c.art)}" alt="">` : ''}</span>
         <span><span class="an">${esc(a.r.name)}</span><span class="al">${esc(a.lord)}${a.have ? '' : '（你没有）'} · ${esc(short(a.r.faction))}</span></span>
         <span class="av">${as.avg.toFixed(1)}<small>平均名次</small></span></a>`; }).join('')}
     </div>`;
@@ -286,7 +286,7 @@ async function homeMount(q) {
   const paradeLords = ['孙小宾', '嬴律', '明先生', '香香', '昭君', '玉环', '班叔', '瑶妹', '马可', '小妲己', '庄小鱼', '白歌'];
   const g = new Glass(cv, { flute: innerWidth < 600 ? 20 : 26, tint: dark ? [0.06, 0.08, 0.16] : [0.9, 0.93, 1] });
   if (!g.ok) {
-    stage.insertAdjacentHTML('afterbegin', `<img class="still" alt="" src="${L['孙小宾'].img}" style="object-fit:contain;object-position:50% 100%">`);
+    stage.insertAdjacentHTML('afterbegin', `<img class="still" alt="" src="${esc(L['孙小宾'].img)}" style="object-fit:contain;object-position:50% 100%">`);
   } else {
     glass = g;
     const parade = await composeParade(paradeLords.map((n) => L[n].small), { h: 900, dark });
@@ -369,7 +369,7 @@ function boardSVG(r, o = {}) {
     const img = face(b.h);
     return `<g class="tok ${core ? 'core' : ''} ${st}" data-card="${esc(b.h)}" style="cursor:pointer">
       <clipPath id="${id}"><polygon points="${hex(x, y, 0.9)}"/></clipPath>
-      ${img ? `<image href="${img}" x="${x - s}" y="${y - s}" width="${s * 2}" height="${s * 2}" clip-path="url(#${id})" preserveAspectRatio="xMidYMid slice"/>` : ''}
+      ${img ? `<image href="${esc(img)}" x="${x - s}" y="${y - s}" width="${s * 2}" height="${s * 2}" clip-path="url(#${id})" preserveAspectRatio="xMidYMid slice"/>` : ''}
       <polygon class="ring" points="${hex(x, y, 0.9)}"/>
       ${core ? `<rect class="tagc" x="${x - 17}" y="${y - s - 8}" width="34" height="17" rx="8.5"/><text class="tagt" x="${x}" y="${y - s + 4.5}">主核</text>` : ''}
       <text class="nmt" x="${x}" y="${y + s + 14}">${esc(b.h)}</text>
@@ -396,7 +396,7 @@ function routePage(id) {
   const contText = !cont ? '—' : cont.level === 3 ? '很怕' : cont.level === 2 ? '有点怕' : '不怕';
   const contSub = (!cont ? '' : cont.level === 1 ? '单张就能用，被抢一张影响不大' : cont.level === 3 ? '同局有人一起打，名次明显变差' : '同局有人一起打，会差一些') + (f.pick != null ? `；${Math.round(f.pick)}% 的对局里有人打` : '');
   const pickText = f.pick != null ? `${Math.round(f.pick)}% 的对局里有人打` : '';
-  const lordsHTML = f.lords.map((x) => `<button class="lordpill" data-lord="${esc(x.name)}" type="button" title="${esc(r.lordWhy?.[x.name] || '')}"><img src="${lordIcon(x.name)}" alt=""><b>${esc(x.name)}</b><small>平均 ${x.avg?.toFixed(1)}</small></button>`).join('');
+  const lordsHTML = f.lords.map((x) => `<button class="lordpill" data-lord="${esc(x.name)}" type="button" title="${esc(r.lordWhy?.[x.name] || '')}"><img src="${esc(lordIcon(x.name))}" alt=""><b>${esc(x.name)}</b><small>平均 ${x.avg?.toFixed(1)}</small></button>`).join('');
   const stageHTML = STAGES.map((st) => stageCard(r, st)).join('');
   return `
   <section class="rhero">
@@ -410,7 +410,7 @@ function routePage(id) {
       ${statLine(s)}
       <p class="share">${s.share >= 0.35 ? `${esc(s.lord)}的对局里 ${Math.round(s.share * 100)}% 在打这套。` : ''}${tierChip(f.tier)}</p>
       <div class="acts">
-        <a class="btn go" href="/play/${id}?lord=${encodeURIComponent(lordFor(r).lord)}">${I.play}开始对局</a>
+        <a class="btn go" href="/play/${esc(id)}?lord=${esc(encodeURIComponent(lordFor(r).lord))}">${I.play}开始对局</a>
         ${f.code ? `<button class="btn" data-code="${id}">${I.copy}阵容码</button>` : ''}
         <a class="btn" href="#plan">每个阶段买什么</a>
       </div>
@@ -435,7 +435,7 @@ function routePage(id) {
     <div class="hdr"><div><h2 class="d">强在哪</h2></div></div>
     <div class="logic">${r.logic.map((n, i) => `${i ? `<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>` : ''}
       <div class="lnode ${i === r.logic.length - 1 ? 'last' : ''}">
-        <div class="faces">${n.cards.map((c) => `<img src="${n.lord ? lordIcon(c) : face(c)}" alt="${esc(c)}" title="${esc(c)}">`).join('')}</div>
+        <div class="faces">${n.cards.map((c) => `<img src="${esc(n.lord ? lordIcon(c) : face(c))}" alt="${esc(c)}" title="${esc(c)}">`).join('')}</div>
         <div class="kw">${emb(kwIcon(n.key))}${esc(n.key)}</div>
         <p>${esc(n.text)}</p>
       </div>`).join('')}</div>
@@ -448,15 +448,15 @@ function routePage(id) {
       <div class="side">
         <h3>站位</h3><ul>${r.place.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
         <h3>${esc(r.carry)}的装备</h3>
-        <div class="gear">${r.gear.map((g) => `<figure data-card="${esc(g)}"><img src="${BY[g]?.img || ''}" alt="">${esc(g)}</figure>`).join('')}</div>
-        ${f.partners.plus.length ? `<h3>成型后值得带</h3><div class="chips" style="margin-bottom:18px">${f.partners.plus.map((p) => `<button class="face good" data-card="${esc(p.h)}"><img src="${face(p.h)}" alt="">${esc(p.h)}</button>`).join('')}</div>` : ''}
-        ${f.partners.minus.length ? `<h3>决赛别留</h3><div class="chips">${f.partners.minus.map((p) => `<button class="face bad" data-card="${esc(p.h)}"><img src="${face(p.h)}" alt="">${esc(p.h)}</button>`).join('')}</div>` : ''}
+        <div class="gear">${r.gear.map((g) => `<figure data-card="${esc(g)}"><img src="${esc(BY[g]?.img || '')}" alt="">${esc(g)}</figure>`).join('')}</div>
+        ${f.partners.plus.length ? `<h3>成型后值得带</h3><div class="chips" style="margin-bottom:18px">${f.partners.plus.map((p) => `<button class="face good" data-card="${esc(p.h)}"><img src="${esc(face(p.h))}" alt="">${esc(p.h)}</button>`).join('')}</div>` : ''}
+        ${f.partners.minus.length ? `<h3>决赛别留</h3><div class="chips">${f.partners.minus.map((p) => `<button class="face bad" data-card="${esc(p.h)}"><img src="${esc(face(p.h))}" alt="">${esc(p.h)}</button>`).join('')}</div>` : ''}
       </div>
     </div>
   </section>
 
   <section class="wrap sec rv" id="plan">
-    <div class="hdr"><div><h2 class="d">每个阶段买什么</h2><p>金点 = 留到最后的牌。拍卖上的数字是出价上限。</p></div><a class="btn go sm" href="/play/${id}?lord=${encodeURIComponent(lordFor(r).lord)}">${I.play}对局里一步步看</a></div>
+    <div class="hdr"><div><h2 class="d">每个阶段买什么</h2><p>金点 = 留到最后的牌。拍卖上的数字是出价上限。</p></div><a class="btn go sm" href="/play/${esc(id)}?lord=${esc(encodeURIComponent(lordFor(r).lord))}">${I.play}对局里一步步看</a></div>
     <div class="tl">${stageHTML}</div>
   </section>
 
@@ -471,7 +471,7 @@ function routePage(id) {
 
   <section class="wrap sec rv">
     <div class="hdr"><div><h2 class="d">打不成怎么办</h2></div></div>
-    <div class="pivots">${r.pivots.map((p) => `<div class="pv"><div class="w">${esc(p.when)}</div><div class="h">${esc(p.do)}</div>${p.to ? `<a class="btn sm" href="/r/${p.to}">${esc(R[p.to].name)} ${I.arrow}</a>` : '<span></span>'}</div>`).join('')}</div>
+    <div class="pivots">${r.pivots.map((p) => `<div class="pv"><div class="w">${esc(p.when)}</div><div class="h">${esc(p.do)}</div>${p.to ? `<a class="btn sm" href="/r/${esc(p.to)}">${esc(R[p.to].name)} ${I.arrow}</a>` : '<span></span>'}</div>`).join('')}</div>
   </section>
 
   ${f.code ? `<section class="wrap sec rv">${codeBlock(r, f.code)}</section>` : ''}
@@ -527,7 +527,7 @@ async function routeMount(id) {
   img.src = f.splash.src;
   await img.decode().catch(() => {});
   if (!g.ok) {
-    $('#rstage').insertAdjacentHTML('afterbegin', `<img class="still" alt="" src="${f.splash.src}" style="object-position:${f.splash.fx}% 30%">`);
+    $('#rstage').insertAdjacentHTML('afterbegin', `<img class="still" alt="" src="${esc(f.splash.src)}" style="object-position:${f.splash.fx}% 30%">`);
     return;
   }
   rglass = g;
@@ -576,7 +576,7 @@ function playPage(id, q) {
       ${x.see?.length ? `<div class="see"><span class="t">这阶段看到就拿</span>${x.see.map((t) => `<button class="chip gold" data-card="${esc(t)}">${esc(t)}</button>`).join('')}</div>` : ''}`;
   return `<div class="play">
     <div class="pbar"><div class="wrap">
-      <a class="back" href="/r/${id}" aria-label="返回路线">${I.back}</a>
+      <a class="back" href="/r/${esc(id)}" aria-label="返回路线">${I.back}</a>
       <div class="ti"><b>${esc(r.name)}</b><small>${esc(lord)} · 第 ${i + 1} / ${STAGES.length} 步</small></div>
       <div class="dots">${STAGES.map((s, k) => `<button class="${s.kind === 'auction' ? 'auc' : ''} ${k < i ? 'done' : ''} ${k === i ? 'on' : ''}" data-step="${k}">${s.kind === 'auction' ? `拍卖${'一二三'[['a1', 'a2', 'a3'].indexOf(s.id)]}` : s.name}</button>`).join('')}</div>
       <div class="ptools">
@@ -601,7 +601,7 @@ function playPage(id, q) {
     <div class="pnav"><div class="wrap">
       <button class="btn" data-step="${i - 1}" ${prev ? '' : 'disabled'}>${I.back}${prev ? esc(prev.name) : '上一步'}</button>
       <span class="kbd">键盘 ← → 翻页 · 手机左右滑</span>
-      ${next ? `<button class="btn go" data-step="${i + 1}"><span>下一步：${esc(next.name)}</span>${I.arrow}</button>` : `<a class="btn go" href="/r/${id}"><span>打完了</span>${I.arrow}</a>`}
+      ${next ? `<button class="btn go" data-step="${i + 1}"><span>下一步：${esc(next.name)}</span>${I.arrow}</button>` : `<a class="btn go" href="/r/${esc(id)}"><span>打完了</span>${I.arrow}</a>`}
     </div></div>
   </div>`;
 }
@@ -641,7 +641,7 @@ function lordsPage() {
   return `<section class="wrap sec" style="padding-top:clamp(24px,4vw,48px)">
     <div class="hdr"><div><h2 class="d" style="font-size:clamp(36px,5vw,64px)">棋手</h2><p>棋手第一回合就定了，是影响名次最大的一个选择。按顶尖局的平均名次排，点开看技能和该打什么。</p></div><button class="btn sm" data-owned>设置我有的棋手</button></div>
     <div class="lgrid">${list.map(([n, v], k) => `<button class="lc ${v.avg >= 3.7 ? 'low' : ''}" data-lord="${esc(n)}" style="--lc:${LC[n] || 'var(--act)'}">
-      <div class="pic">${v.avg ? `<span class="rank">${k + 1}</span>` : ''}<img src="${v.small}" alt="" loading="lazy"></div>
+      <div class="pic">${v.avg ? `<span class="rank">${k + 1}</span>` : ''}<img src="${esc(v.small)}" alt="" loading="lazy"></div>
       <div class="bd">
         <h3 class="d">${esc(n)}</h3>
         ${v.avg ? `${ruler(v.avg, { sm: true })}
@@ -656,11 +656,11 @@ function openLord(n) {
   const v = L[n];
   if (!v) return;
   const trap = LORD_TRAP[n] && TRAPS.find((t) => t.id === LORD_TRAP[n]);
-  openSheet(`<div class="lordbig" style="--lc:${LC[n] || 'var(--act)'}"><img src="${v.img}" alt=""></div>
+  openSheet(`<div class="lordbig" style="--lc:${LC[n] || 'var(--act)'}"><img src="${esc(v.img)}" alt=""></div>
     <h2 class="d">${esc(n)}</h2>
     ${v.avg ? ruler(v.avg) : '<p class="small">官方卡池里有这个棋手，但顶尖局统计还没覆盖，暂无法推荐。</p>'}
     ${v.avg ? `<div class="stats" style="margin-top:8px"><span>前三<b>${Math.round(v.top3)}%</b></span><span>吃鸡<b>${Math.round(v.win)}%</b></span><span>${v.games?.toLocaleString()} 局</span></div>` : ''}
-    ${v.routes.length ? `<h3>打什么</h3><div class="chips">${v.routes.map((id) => `<a class="btn sm" href="/r/${id}">${esc(R[id].name)}</a>`).join('')}</div>` : trap ? '' : '<h3>打什么</h3><p class="small">当前路线库里还没有以它为主的打法，暂无法推荐。</p>'}
+    ${v.routes.length ? `<h3>打什么</h3><div class="chips">${v.routes.map((id) => `<a class="btn sm" href="/r/${esc(id)}">${esc(R[id].name)}</a>`).join('')}</div>` : trap ? '' : '<h3>打什么</h3><p class="small">当前路线库里还没有以它为主的打法，暂无法推荐。</p>'}
     ${trap ? `<h3>别打</h3><p>${esc(trap.name)}：${esc(trap.why)}${esc(trap.fix)}</p>` : ''}
     <h3>技能</h3>
     ${v.stages.map((s) => s.cards.map((c) => `<div class="skill"><b>${esc(c.name)}<small>${esc(s.stage)}</small></b><p>${esc(c.text)}</p></div>`).join('')).join('')}`);
@@ -695,7 +695,7 @@ function cardsFill() {
     g.innerHTML = list.sort((a, b) => a.tier - b.tier).map((c) => card(c.name)).join('') || '<p class="small">没有找到。</p>';
   } else {
     g.className = 'cgrid txt';
-    g.innerHTML = list.map((c) => `<button class="ci" data-card="${esc(c.name)}"><img src="${c.img || ''}" alt="" loading="lazy"><span><b>${esc(c.name)}</b><p>${esc(c.text || '')}</p></span></button>`).join('') || '<p class="small">没有找到。</p>';
+    g.innerHTML = list.map((c) => `<button class="ci" data-card="${esc(c.name)}"><img src="${esc(c.img || '')}" alt="" loading="lazy"><span><b>${esc(c.name)}</b><p>${esc(c.text || '')}</p></span></button>`).join('') || '<p class="small">没有找到。</p>';
   }
 }
 
@@ -728,7 +728,7 @@ function openCard(name) {
   const avoid = ROUTES.filter((r) => r.talents.avoid.includes(name));
   const full = ART['hero:' + name];
   const nodes = c.skills?.[0]?.nodes || [];
-  openSheet(`${full ? `<img class="big" src="${full}" alt="${esc(name)} 卡面">` : c.art ? `<img class="big" src="${c.art}" alt="">` : c.img ? `<img class="big" style="max-width:120px" src="${c.img}" alt="">` : ''}
+  openSheet(`${full ? `<img class="big" src="${esc(full)}" alt="${esc(name)} 卡面">` : c.art ? `<img class="big" src="${esc(c.art)}" alt="">` : c.img ? `<img class="big" style="max-width:120px" src="${esc(c.img)}" alt="">` : ''}
     <h2 class="d">${esc(name)}</h2>
     <div class="chips">${c.tier ? `<span class="chip">${c.tier} 阶</span>` : ''}${c.faction ? `<span class="chip">${esc(c.faction)}</span>` : ''}${c.cost != null && c._k !== 'heroes' ? `<span class="chip">${c.cost} 能量</span>` : ''}</div>
     ${c.text ? `<p>${esc(c.text)}</p>` : ''}
@@ -736,8 +736,8 @@ function openCard(name) {
     ${c.awake ? `<h3>觉醒后</h3><p>${esc(c.awake)}</p>` : ''}
     ${c.skills?.[0] ? `<h3>技能：${esc(c.skills[0].name)}</h3><p>${esc(c.skills[0].text)}</p>${nodes.length ? `<div class="lv">${nodes.map((n) => `<div><span>${n.lv} 级</span>${esc(n.text)}</div>`).join('')}</div>` : ''}` : ''}
     ${(c.rel || []).length ? `<h3>可以变成</h3><ul class="plain">${c.rel.map((x) => `<li><b>${esc(x.name)}</b>：${esc(x.text)}</li>`).join('')}</ul>` : ''}
-    ${used.length ? `<h3>用在这些路线</h3><div class="chips">${used.map((r) => `<a class="btn sm" href="/r/${r.id}">${esc(r.name)}</a>`).join('')}</div>` : ''}
-    ${avoid.length ? `<h3>和这些路线冲突</h3><div class="chips">${avoid.map((r) => `<a class="chip bad" href="/r/${r.id}">${esc(r.name)}</a>`).join('')}</div>` : ''}`);
+    ${used.length ? `<h3>用在这些路线</h3><div class="chips">${used.map((r) => `<a class="btn sm" href="/r/${esc(r.id)}">${esc(r.name)}</a>`).join('')}</div>` : ''}
+    ${avoid.length ? `<h3>和这些路线冲突</h3><div class="chips">${avoid.map((r) => `<a class="chip bad" href="/r/${esc(r.id)}">${esc(r.name)}</a>`).join('')}</div>` : ''}`);
 }
 
 // ---------- 页面：阵容 ----------
@@ -749,7 +749,7 @@ function cpHero(name) {
   const c = BY[name];
   // 变阵里可能出现查牌库里没有的牌（例如新英雄）：名字照显示，只是没有图标，不假装有。
   if (!c) return `<span class="chi pic-none" title="这张牌不在查牌库里">${esc(name)}</span>`;
-  return `<button class="chi" type="button" data-card="${esc(name)}">${c.img ? `<img src="${c.img}" alt="" loading="lazy" decoding="async">` : ''}<span>${esc(name)}</span></button>`;
+  return `<button class="chi" type="button" data-card="${esc(name)}">${c.img ? `<img src="${esc(c.img)}" alt="" loading="lazy" decoding="async">` : ''}<span>${esc(name)}</span></button>`;
 }
 
 function cpLord(name) {
@@ -920,7 +920,7 @@ function openOwned() {
   const list = allLords().map((x) => ({ ...x, can: (L[x.name]?.routes || []).length > 0 }));
   list.sort((a, b) => a.name.localeCompare(b.name, 'zh-Hans-CN'));
   openSheet(`<h2 class="d">我有的棋手</h2><p>点选你有的棋手，开局推荐只用这些。一个都不选 = 不限制。</p>
-    <div class="lordpick">${list.map((x) => { const on = own.has(x.name); const img = x.img || lordIcon(x.name); return `<button class="${on ? 'on' : ''}" data-own="${esc(x.name)}" aria-pressed="${on}"${x.can ? '' : ' disabled title="当前路线库里还没有以它为主的打法"'}>${img ? `<img src="${img}" alt="">` : ''}${esc(x.name)}${x.can ? '' : '<small>暂无法推荐</small>'}</button>`; }).join('')}</div>
+    <div class="lordpick">${list.map((x) => { const on = own.has(x.name); const img = x.img || lordIcon(x.name); return `<button class="${on ? 'on' : ''}" data-own="${esc(x.name)}" aria-pressed="${on}"${x.can ? '' : ' disabled title="当前路线库里还没有以它为主的打法"'}>${img ? `<img src="${esc(img)}" alt="">` : ''}${esc(x.name)}${x.can ? '' : '<small>暂无法推荐</small>'}</button>`; }).join('')}</div>
     <p style="margin-top:18px;display:flex;gap:10px"><button class="btn go" data-close>好了</button><button class="btn ghost" data-own-clear>全部清除</button></p>`);
 }
 
@@ -929,7 +929,7 @@ function openPivot(id) {
   const cont = f.contest;
   openSheet(`<h2 class="d">打不成怎么办</h2>
     <p>${cont?.level === 1 ? `${esc(r.carry)}不太怕撞车：被抢一两张影响不大。` : `${esc(r.carry)}${cont?.level === 3 ? '很怕' : '有点怕'}撞车：前 4 回合看到有人和你凑同一个主核，就考虑换。`}</p>
-    <div class="pivots" style="margin-top:14px">${r.pivots.map((p) => `<div class="pv" style="grid-template-columns:1fr"><div class="w">${esc(p.when)}</div><div class="h">${esc(p.do)}</div>${p.to ? `<a class="btn sm" href="/play/${p.to}" style="justify-self:start">改打${esc(R[p.to].name)} ${I.arrow}</a>` : ''}</div>`).join('')}</div>`);
+    <div class="pivots" style="margin-top:14px">${r.pivots.map((p) => `<div class="pv" style="grid-template-columns:1fr"><div class="w">${esc(p.when)}</div><div class="h">${esc(p.do)}</div>${p.to ? `<a class="btn sm" href="/play/${esc(p.to)}" style="justify-self:start">改打${esc(R[p.to].name)} ${I.arrow}</a>` : ''}</div>`).join('')}</div>`);
 }
 
 // ---------- 路由 ----------
