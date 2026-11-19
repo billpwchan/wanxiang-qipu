@@ -55,10 +55,12 @@ const chromeLogTail = () => {
     return `Chrome 日志不可读（${chromeLog}）`;
   }
 };
-// 等 CDP 起来：fetch 带 1s 超时；返回值不是数组、或数组里没有 page 目标都继续重试，50 次耗尽抛可诊断错误。
+// 等 CDP 起来：fetch 带 1s 超时；返回值不是数组、或数组里没有 page 目标都继续重试。
+// 预算按时间算（默认 30s），不按次数：50 次 × 200ms 约 10s，CI 装完中文字体后 Chrome 冷启动会超，假红。
+const WAIT_MS = Number(process.env.CDP_WAIT_MS) || 30000;
 const waitStart = Date.now();
 let info;
-for (let i = 0; i < 50 && !info; i++) {
+while (!info && Date.now() - waitStart < WAIT_MS) {
   const ac = new AbortController();
   const timer = setTimeout(() => ac.abort(), 1000);
   try {
@@ -68,6 +70,8 @@ for (let i = 0; i < 50 && !info; i++) {
   if (!info) await sleep(200);
 }
 if (!info) {
+  // 失败不留孤儿进程：否则每抖一次就在 CI/本地攒一个 --headless 的 Chrome。
+  try { proc.kill(); } catch { /* 已经退出 */ }
   throw new Error(
     `Chrome 未就绪：${CHROME} 在 ${Math.round((Date.now() - waitStart) / 1000)}s 内未暴露 CDP（port ${port}）` +
     `\n进程退出码：${proc.exitCode === null ? '仍在运行（未退出）' : proc.exitCode}` +
