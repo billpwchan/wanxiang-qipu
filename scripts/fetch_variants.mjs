@@ -6,7 +6,7 @@
 // 不要在 Node 里重放请求头 —— nonce 一次性，重放必返 42000。
 //
 // 只读：不写 data/ 下任何文件。输出默认落 snapshots/probe-variants/fetch-variants.json（已 gitignore）。
-import { spawn } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -102,7 +102,37 @@ const proc = spawn(chrome, [
   // 指定代理时整页流量走它；本地回环（CDP）除外，否则命令行连不上浏览器。
   ...(opts.proxy ? [`--proxy-server=${opts.proxy}`, '--proxy-bypass-list=<-loopback>'] : []),
   'about:blank',
-], { stdio: 'ignore' });
+], { stdio: 'ignore', detached: process.platform !== 'win32' });
+
+// 收尾只走这一处：正常结束、任意报错、Ctrl-C 都要把 Chrome 收掉。
+// Windows 用 taskkill /T 收进程树；其余平台靠 detached 进程组按负 PID 收。
+let chromeKilled = false;
+const killChrome = () => {
+  if (chromeKilled) return;
+  chromeKilled = true;
+  if (!proc.pid) return;
+  if (process.platform === 'win32') {
+    const r = spawnSync('taskkill', ['/pid', String(proc.pid), '/T', '/F'], { stdio: 'ignore' });
+    if (r.error) console.error(`taskkill 失败：${r.error.message}`);
+    else if (r.status !== 0 && r.status !== 128) console.error(`taskkill 退出码 ${r.status}`);
+    return;
+  }
+  try {
+    process.kill(-proc.pid, 'SIGKILL');
+  } catch {
+    try { proc.kill(); } catch { /* 已经退出 */ }
+  }
+};
+proc.on('error', (e) => {
+  console.error(`spawn 失败：${e.message}`);
+  killChrome();
+  process.exit(1);
+});
+process.on('exit', killChrome);
+process.on('SIGINT', () => { killChrome(); process.exit(130); });
+process.on('SIGTERM', () => { killChrome(); process.exit(143); });
+process.on('uncaughtException', (e) => { console.error(e); killChrome(); process.exit(1); });
+process.on('unhandledRejection', (e) => { console.error(e); killChrome(); process.exit(1); });
 
 let targetsList = null;
 for (let i = 0; i < 120 && !targetsList; i++) {
@@ -113,7 +143,7 @@ for (let i = 0; i < 120 && !targetsList; i++) {
   }
 }
 if (!targetsList) {
-  proc.kill();
+  killChrome();
   console.error('Chrome 没起来');
   process.exit(1);
 }
@@ -145,7 +175,7 @@ const ev = async (expr) => {
 
 const shutdown = (code) => {
   try { ws.close(); } catch {}
-  try { proc.kill(); } catch {}
+  killChrome();
   process.exit(code);
 };
 

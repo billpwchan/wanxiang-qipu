@@ -3,7 +3,7 @@
 //   node scripts/build_readme_images.mjs            全部
 //   node scripts/build_readme_images.mjs banner     只做名字里含 banner 的
 // 需要 Chrome（CHROME=<路径> 可指定）；动图用 python3 + Pillow 合成 animated WebP。
-import { spawn, execFileSync } from 'node:child_process';
+import { spawn, spawnSync, execFileSync } from 'node:child_process';
 import { createServer } from 'node:http';
 import { createReadStream, existsSync, statSync, mkdirSync, writeFileSync, rmSync, mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -45,7 +45,50 @@ const CHROME = process.env.CHROME || (process.platform === 'darwin' ? '/Applicat
 const port = 9600 + Math.floor(Math.random() * 200);
 const profile = mkdtempSync(path.join(tmpdir(), 'wx-readme-'));
 const GL = process.platform === 'darwin' ? [] : ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'];
-const proc = spawn(CHROME, ['--headless=new', ...GL, '--hide-scrollbars', ...(process.env.CI ? ['--no-sandbox'] : []), `--remote-debugging-port=${port}`, `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore' });
+const proc = spawn(CHROME, ['--headless=new', ...GL, '--hide-scrollbars', ...(process.env.CI ? ['--no-sandbox'] : []), `--remote-debugging-port=${port}`, `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore', detached: process.platform !== 'win32' });
+// 收尾只走这一处：正常结束、任意报错、Ctrl-C 都要把本脚本起的 Chrome 与 hud 收掉。
+// Windows 用 taskkill /T 按各自 PID 收进程树；其余平台靠 detached 进程组按负 PID 收。
+let chromeKilled = false;
+const killChrome = () => {
+  if (chromeKilled) return;
+  chromeKilled = true;
+  if (!proc.pid) return;
+  if (process.platform === 'win32') {
+    const r = spawnSync('taskkill', ['/pid', String(proc.pid), '/T', '/F'], { stdio: 'ignore' });
+    if (r.error) console.error(`taskkill 失败：${r.error.message}`);
+    else if (r.status !== 0 && r.status !== 128) console.error(`taskkill 退出码 ${r.status}`);
+    return;
+  }
+  try {
+    process.kill(-proc.pid, 'SIGKILL');
+  } catch {
+    try { proc.kill(); } catch { /* 已经退出 */ }
+  }
+};
+let hudKilled = false;
+const killHud = () => {
+  if (hudKilled) return;
+  hudKilled = true;
+  if (!hud || !hud.pid) return;
+  if (process.platform === 'win32') {
+    const r = spawnSync('taskkill', ['/pid', String(hud.pid), '/T', '/F'], { stdio: 'ignore' });
+    if (r.error) console.error(`taskkill 失败（hud）：${r.error.message}`);
+    else if (r.status !== 0 && r.status !== 128) console.error(`taskkill 退出码（hud） ${r.status}`);
+    return;
+  }
+  try {
+    process.kill(-hud.pid, 'SIGKILL');
+  } catch {
+    try { hud.kill(); } catch { /* 已经退出 */ }
+  }
+};
+const killAll = () => { killChrome(); killHud(); };
+proc.on('error', (e) => { console.error(`spawn 失败：${e.message}`); killAll(); process.exit(1); });
+process.on('exit', killAll);
+process.on('SIGINT', () => { killAll(); process.exit(130); });
+process.on('SIGTERM', () => { killAll(); process.exit(143); });
+process.on('uncaughtException', (e) => { console.error(e); killAll(); process.exit(1); });
+process.on('unhandledRejection', (e) => { console.error(e); killAll(); process.exit(1); });
 let info; for (let i = 0; i < 50 && !info; i++) { try { info = await (await fetch(`http://127.0.0.1:${port}/json/list`)).json(); } catch { await sleep(200); } }
 const ws = new WebSocket(info.find((t) => t.type === 'page').webSocketDebuggerUrl);
 await new Promise((r) => ws.addEventListener('open', r));
@@ -100,11 +143,11 @@ const jobs = {
     await capture('screen-check.webp');
   },
   hud: async () => {
-    hud = spawn('node', [path.join(ROOT, 'copilot/brain.mjs'), 'demo', path.join(ROOT, 'copilot/test/frames.jsonl'), '--no-voice', '--port', String(HUD_PORT), '--until', '7'], { stdio: 'ignore' });
+    hud = spawn('node', [path.join(ROOT, 'copilot/brain.mjs'), 'demo', path.join(ROOT, 'copilot/test/frames.jsonl'), '--no-voice', '--port', String(HUD_PORT), '--until', '7'], { stdio: 'ignore', detached: process.platform !== 'win32' });
     await sleep(1500);
     await open(`http://127.0.0.1:${HUD_PORT}/`, { w: 1280, h: 820, scheme: 'dark', wait: 2200 });
     await capture('screen-copilot.webp');
-    hud.kill(); hud = null;
+    killHud(); hud = null;
   },
   demo: async () => {
     // 开局页：换两次禁用，每次玻璃推开露出新答案
@@ -156,9 +199,9 @@ print('frames', len(out), 'seconds', round(sum(dd) / 1000, 1))
 try {
   for (const [name, job] of Object.entries(jobs)) if (!only.length || only.some((o) => name.includes(o))) await job();
 } finally {
-  hud?.kill(); ws.close(); server.close();
+  killHud(); ws.close(); server.close();
   const exited = new Promise((r) => proc.once('exit', r));
-  proc.kill(); await exited;
+  killChrome(); await exited;
   rmSync(profile, { recursive: true, force: true, maxRetries: 5, retryDelay: 200 });
 }
 if (errors.length) { console.log('页面脚本错误：\n' + errors.join('\n')); process.exit(1); }
