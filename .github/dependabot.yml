@@ -1,0 +1,9 @@
+# 见 .github/workflows/：第三方 action 全部钉死到 40 位 commit SHA。
+# 依赖升级由本文件驱动，固定与自动更新两条同时成立。
+
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

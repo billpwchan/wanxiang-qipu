@@ -8,6 +8,7 @@
 - 目录：`/opt/wanxiang/releases/<发布号>`，`/opt/wanxiang/current` 是指向当前版本的软链接
 - 容器：`wanxiang-guide`，用服务器上已有的 `caddy:2.10-alpine` 镜像，配置见 `deploy/Caddyfile`
 - 网关：只新增 `/config/sites-enabled/wanxiang.caddy`（`deploy/wanxiang.caddy`），其余片段不动
+- History 路由：`deploy/Caddyfile` 里把非静态文件路径改写到 `index.html`（`@page not path /assets/* /data/* /fonts/* /app.css /app.js /glass.js /robots.txt /sitemap.xml`），深链接刷新不会 404；新增静态文件时要把路径加进这条排除表
 - 域名用 sslip.io 按 IP 解析；HTTPS 证书由现有网关自动管理
 
 ## 更新（常规流程）

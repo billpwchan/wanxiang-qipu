@@ -22,6 +22,9 @@
  }
  handle {
   header Cache-Control "no-cache"
+  # History 路由：不是静态文件的路径都交给 index.html，深链接刷新不会 404
+  @page not path /assets/* /data/* /fonts/* /app.css /app.js /glass.js /robots.txt /sitemap.xml
+  rewrite @page /index.html
   file_server
  }
 }

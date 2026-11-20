@@ -18,3 +18,24 @@ and is not licensed under the MIT License.
 
 本仓库的 MIT 许可只覆盖源代码和原创文档。上述目录中的游戏美术和数据归腾讯及相关权利人所有，
 不在 MIT 许可范围内，仅供非商业参考。
+
+## Player-written lineups (UGC)
+
+`data/comps.json` contains player-submitted lineups from the official lineup
+list. These fields are user-generated content and are reproduced verbatim:
+
+- `brief`, `positionDesc`, `equipDesc`, `operationDetails`
+- `tags`, `talentCardDesc`, `effectCardDesc`
+
+Copyright in that text belongs to its respective authors. It is included here
+for non-commercial reference as part of a lineup listing, not licensed under
+the MIT License. Author accounts, user IDs, avatars and comment objects are
+deliberately not included. An author who wants their text removed can open an
+issue and it will be dropped from the next data update.
+
+## 玩家 UGC
+
+`data/comps.json` 里的 `brief`、`positionDesc`、`equipDesc`、`operationDetails`、
+`tags`、`talentCardDesc`、`effectCardDesc` 来自官网社区阵容页，是玩家自己写的攻略文案，
+原文照录，版权归原作者，不在 MIT 许可范围内，仅供非商业展示。作者昵称、用户 ID、头像和评论
+对象未收录。作者如要求删除，请开 Issue，下一次数据更新时移除。

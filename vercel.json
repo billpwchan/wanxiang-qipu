@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "name": "wanxiang-qipu",
+  "buildCommand": "echo 'no build step required'",
+  "installCommand": "",
+  "outputDirectory": "site/dist",
+  "framework": null,
+  "rewrites": [
+    { "source": "/((?!.*\\.[a-zA-Z0-9]+$).*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "DENY" }
+      ]
+    }
+  ]
+}

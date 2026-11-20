@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wxq.007.al/sitemap.xml

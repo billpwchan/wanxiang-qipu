@@ -1,6 +1,6 @@
 // 用 Chrome DevTools 协议做真实手机宽度截图，并收集页面脚本错误。
 // node scripts/shoot.mjs <outdir> <width> <height> <dark|light> <name=url> ...
-import { spawn } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 import { writeFileSync, mkdirSync } from 'node:fs';
 
 const [outDir, w, h, scheme, ...jobs] = process.argv.slice(2);
@@ -8,7 +8,32 @@ mkdirSync(outDir, { recursive: true });
 const CHROME = process.env.CHROME || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const port = 9300 + Math.floor(Math.random() * 500);
 const GPU = process.env.GPU === '1' ? ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] : ['--disable-gpu'];
-const proc = spawn(CHROME, ['--headless=new', ...GPU, `--remote-debugging-port=${port}`, '--user-data-dir=/tmp/wx-cdp-' + port, 'about:blank'], { stdio: 'ignore' });
+const proc = spawn(CHROME, ['--headless=new', ...GPU, `--remote-debugging-port=${port}`, '--user-data-dir=/tmp/wx-cdp-' + port, 'about:blank'], { stdio: 'ignore', detached: process.platform !== 'win32' });
+// 收尾只走这一处：正常结束、任意报错、Ctrl-C 都要把 Chrome 收掉。
+// Windows 用 taskkill /T 收进程树；其余平台靠 detached 进程组按负 PID 收。
+let chromeKilled = false;
+const killChrome = () => {
+  if (chromeKilled) return;
+  chromeKilled = true;
+  if (!proc.pid) return;
+  if (process.platform === 'win32') {
+    const r = spawnSync('taskkill', ['/pid', String(proc.pid), '/T', '/F'], { stdio: 'ignore' });
+    if (r.error) console.error(`taskkill 失败：${r.error.message}`);
+    else if (r.status !== 0 && r.status !== 128) console.error(`taskkill 退出码 ${r.status}`);
+    return;
+  }
+  try {
+    process.kill(-proc.pid, 'SIGKILL');
+  } catch {
+    try { proc.kill(); } catch { /* 已经退出 */ }
+  }
+};
+proc.on('error', (e) => { console.error(`spawn 失败：${e.message}`); killChrome(); process.exit(1); });
+process.on('exit', killChrome);
+process.on('SIGINT', () => { killChrome(); process.exit(130); });
+process.on('SIGTERM', () => { killChrome(); process.exit(143); });
+process.on('uncaughtException', (e) => { console.error(e); killChrome(); process.exit(1); });
+process.on('unhandledRejection', (e) => { console.error(e); killChrome(); process.exit(1); });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let info;
 for (let i = 0; i < 50 && !info; i++) { try { info = await (await fetch(`http://127.0.0.1:${port}/json/list`)).json(); } catch { await sleep(200); } }
@@ -48,4 +73,4 @@ for (const job of jobs) {
   if (FULL) await metrics(+h);
   console.log(name, JSON.stringify(dims), dims.sw > dims.cw ? 'OVERFLOW-X' : '', errors.slice(before).join(' | '));
 }
-ws.close(); proc.kill();
+ws.close(); killChrome();

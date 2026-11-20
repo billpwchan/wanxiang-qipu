@@ -14,17 +14,32 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 22
       - name: 中文字体（横向溢出检查依赖真实字宽）
         run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
+      - name: data/ 数据校验
+        run: node scripts/validate.mjs
       - name: 数据完整性
         run: node scripts/verify-site.mjs
-      - name: 真实浏览器交互（50 项）
+      - name: 真实浏览器交互
         run: node scripts/verify-ui.mjs
       - name: 副驾回放
         run: node copilot/test/run.mjs --replay
       - name: README 表格与数据一致
         run: node scripts/sync_readme.mjs --check
+
+  # Windows 回归：动态 import 的 file:// URL 构造在这条路径上才暴露，
+  # Linux runner 用 path.join 得到的 POSIX 绝对路径恰好能被 ESM loader 接受。
+  verify-windows:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+      - name: 数据完整性（Windows）
+        run: node scripts/verify-site.mjs

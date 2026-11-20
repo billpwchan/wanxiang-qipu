@@ -21,8 +21,8 @@ body::before { content: ''; position: absolute; inset: 0; background: repeating-
 .phone .scr { width: 296px; height: 628px; border-radius: 42px; overflow: hidden; }
 .phone iframe { width: 390px; height: 828px; transform: scale(.759); }
 </style>
-<div class="dev pad"><div class="scr"><iframe id="a" src="/?still#/play/kaituan?lord=%E9%A6%99%E9%A6%99&s=4"></iframe></div></div>
-<div class="dev phone"><div class="scr"><iframe id="b" src="/?still#/?ban=%E4%B8%89%E5%88%86%E4%B9%8B%E5%9C%B0"></iframe></div></div>
+<div class="dev pad"><div class="scr"><iframe id="a" src="/play/kaituan?lord=%E9%A6%99%E9%A6%99&s=4&still"></iframe></div></div>
+<div class="dev phone"><div class="scr"><iframe id="b" src="/?ban=%E4%B8%89%E5%88%86%E4%B9%8B%E5%9C%B0&still"></iframe></div></div>
 <script>
 let n = 0;
 for (const f of document.querySelectorAll('iframe')) f.addEventListener('load', () => { if (++n === 2) setTimeout(() => { document.body.dataset.ready = '1'; }, 3800); });

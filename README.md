@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://wanxiang.52-198-144-26.sslip.io/">
+<a href="https://wxq.007.al/">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/banner-dark.webp">
   <img alt="万象棋谱：这局禁了谁 → 用哪个棋手、打哪套 → 每个阶段买什么" src="docs/images/banner-light.webp" width="100%">
@@ -9,12 +9,12 @@
 
 **王者万象棋 S1 对局助手**：开局按本局禁用的阵营给出棋手和路线，对局中逐阶段告诉你买什么、拍卖出多少、什么时候换。
 
-[**在线使用 →**](https://wanxiang.52-198-144-26.sslip.io/)　·　[数据怎么来的](docs/methodology.md)　·　[局内副驾](copilot/README.md)　·　[更新日志](CHANGELOG.md)
+[**在线使用 →**](https://wxq.007.al/)　·　[数据怎么来的](docs/methodology.md)　·　[局内副驾](copilot/README.md)　·　[更新日志](CHANGELOG.md)
 
-[![在线使用](https://img.shields.io/badge/在线使用-wanxiang-2c46f5?style=flat-square)](https://wanxiang.52-198-144-26.sslip.io/)
-[![游戏版本](https://img.shields.io/badge/游戏版本-S1_·_9%2F24-d8952a?style=flat-square)](CHANGELOG.md)
+[![在线使用](https://img.shields.io/badge/在线使用-wanxiang-2c46f5?style=flat-square)](https://wxq.007.al/)
+[![数据版本](https://img.shields.io/badge/数据版本-v261105-d8952a?style=flat-square)](CHANGELOG.md)
 [![数据](https://img.shields.io/badge/检索器终局-18.5_万-465073?style=flat-square)](docs/methodology.md)
-[![verify](https://img.shields.io/github/actions/workflow/status/billpwchan/wanxiang-qipu/verify.yml?branch=main&label=50%20%E9%A1%B9%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95&style=flat-square)](https://github.com/billpwchan/wanxiang-qipu/actions/workflows/verify.yml)
+[![verify](https://img.shields.io/github/actions/workflow/status/kekeguai/wanxiang-qipu/verify.yml?branch=main&label=verify&style=flat-square)](https://github.com/kekeguai/wanxiang-qipu/actions/workflows/verify.yml)
 [![无构建](https://img.shields.io/badge/依赖-0_·_无构建-10152e?style=flat-square)](#本地运行)
 [![MIT](https://img.shields.io/badge/代码许可-MIT-8990ae?style=flat-square)](LICENSE)
 
@@ -63,16 +63,16 @@
 <!-- routes:start -->
 | 路线 | 阵营 | 主核 | 棋手 | 平均名次<br><sub>棋手的全部对局</sub> | <sub>只算打成的对局</sub> | 档位 | 特点 |
 |---|---|---|---|---|---|---|---|
-| [孙小宾三分](https://wanxiang.52-198-144-26.sslip.io/#/r/lvbu) | 三分 | 吕布 | 孙小宾 | **3.06**（孙小宾） | 1.62 | 首选 | 上限最高，但离不开孙小宾 |
-| [大河开团射](https://wanxiang.52-198-144-26.sslip.io/#/r/kaituan) | 大河 | 公孙离 | 香香、明先生、嬴律 | **3.16**（香香） | 2.80 | 首选 | 便宜、每场开战自动涨级 |
-| [马可养猪](https://wanxiang.52-198-144-26.sslip.io/#/r/marco) | 无阵营 | 猪八戒 | 马可 | **3.22**（马可） | 2.93 | 可以打 | 全 3 阶最便宜，几乎没人抢 |
-| [逐鹿嬴政](https://wanxiang.52-198-144-26.sslip.io/#/r/yingzheng) | 逐鹿 | 嬴政 | 明先生、小妲己、嬴律 | **3.27**（小妲己） | 3.22 | 可以打 | 飞剑强，但最容易撞车 |
-| [古币花木兰](https://wanxiang.52-198-144-26.sslip.io/#/r/mulan) | 河洛 | 花木兰 | 嬴律、明先生、庄小鱼 | **3.28**（庄小鱼） | 2.66 | 可以打 | 有花木兰时很强，前期偏弱 |
-| [瑶妹李信](https://wanxiang.52-198-144-26.sslip.io/#/r/lixin) | 河洛 | 李信 | 瑶妹、常小娥 | **3.30**（瑶妹） | 3.02 | 可以打 | 战斗里越死越强，怕被秒 |
-| [大河图腾](https://wanxiang.52-198-144-26.sslip.io/#/r/totem) | 大河 | 敖隐 | 昭君、闹闹、瑶妹 | **3.39**（昭君） | 2.98 | 一般 | 要两张 5 阶 |
-| [班叔诸葛亮](https://wanxiang.52-198-144-26.sslip.io/#/r/zhuge) | 三分 | 诸葛亮 | 班叔 | **3.41**（班叔） | 2.84 | 一般 | 全靠战斗里叠临时等级 |
-| [玉环日落海倒转](https://wanxiang.52-198-144-26.sslip.io/#/r/yuhuan) | 日落海 | 司空震 | 玉环、小妲己 | **3.44**（玉环） | 2.93 | 一般 | 拿不到司空震就崩 |
-| [钟馗韩信](https://wanxiang.52-198-144-26.sslip.io/#/r/hanxin) | 大河 | 韩信 | 明先生、姜导、嬴律 | **3.58**（姜导） | 2.37 | 一般 | 等级涨得最快，但韩信太脆 |
+| [孙小宾三分](https://wxq.007.al/r/lvbu) | 三分 | 吕布 | 孙小宾 | **3.06**（孙小宾） | 1.62 | 首选 | 上限最高，但离不开孙小宾 |
+| [大河开团射](https://wxq.007.al/r/kaituan) | 大河 | 公孙离 | 香香、明先生、嬴律 | **3.16**（香香） | 2.80 | 首选 | 便宜、每场开战自动涨级 |
+| [马可养猪](https://wxq.007.al/r/marco) | 无阵营 | 猪八戒 | 马可 | **3.22**（马可） | 2.93 | 可以打 | 全 3 阶最便宜，几乎没人抢 |
+| [逐鹿嬴政](https://wxq.007.al/r/yingzheng) | 逐鹿 | 嬴政 | 明先生、小妲己、嬴律 | **3.27**（小妲己） | 3.22 | 可以打 | 飞剑强，但最容易撞车 |
+| [古币花木兰](https://wxq.007.al/r/mulan) | 河洛 | 花木兰 | 嬴律、明先生、庄小鱼 | **3.28**（庄小鱼） | 2.66 | 可以打 | 有花木兰时很强，前期偏弱 |
+| [瑶妹李信](https://wxq.007.al/r/lixin) | 河洛 | 李信 | 瑶妹、常小娥 | **3.30**（瑶妹） | 3.02 | 可以打 | 战斗里越死越强，怕被秒 |
+| [大河图腾](https://wxq.007.al/r/totem) | 大河 | 敖隐 | 昭君、闹闹、瑶妹 | **3.39**（昭君） | 2.98 | 一般 | 要两张 5 阶 |
+| [班叔诸葛亮](https://wxq.007.al/r/zhuge) | 三分 | 诸葛亮 | 班叔 | **3.41**（班叔） | 2.84 | 一般 | 全靠战斗里叠临时等级 |
+| [玉环日落海倒转](https://wxq.007.al/r/yuhuan) | 日落海 | 司空震 | 玉环、小妲己 | **3.44**（玉环） | 2.93 | 一般 | 拿不到司空震就崩 |
+| [钟馗韩信](https://wxq.007.al/r/hanxin) | 大河 | 韩信 | 明先生、姜导、嬴律 | **3.58**（姜导） | 2.37 | 一般 | 等级涨得最快，但韩信太脆 |
 <!-- routes:end -->
 
 ## 热门但别打
@@ -82,11 +82,11 @@
 <!-- traps:start -->
 | 阵容 | 游戏内被导入 | 打成了也只有 | 棋手的全部对局 | 改成 |
 |---|---|---|---|---|
-| 白歌三分倒转 | 151 万次 | 3.74 | 白歌 3.78 | 同一批牌换孙小宾打。→ [孙小宾三分](https://wanxiang.52-198-144-26.sslip.io/#/r/lvbu) |
-| 常小娥海陆空（四人） | 138 万次 | 3.99 | 常小娥 3.76 | 补上太乙、钟馗到六人；或者常小娥去打李信。→ [瑶妹李信](https://wanxiang.52-198-144-26.sslip.io/#/r/lixin) |
+| 白歌三分倒转 | 151 万次 | 3.74 | 白歌 3.78 | 同一批牌换孙小宾打。→ [孙小宾三分](https://wxq.007.al/r/lvbu) |
+| 常小娥海陆空（四人） | 138 万次 | 3.99 | 常小娥 3.76 | 补上太乙、钟馗到六人；或者常小娥去打李信。→ [瑶妹李信](https://wxq.007.al/r/lixin) |
 | 阿离百里守约 | 55 万次 | 3.71 | 阿离 3.90 | 阿离改打海月四人（海月、太乙、扁鹊、瑶）。 |
-| 普通日落海（安琪拉、米莱狄） | 131 万次 | 3.80 | 闹闹 3.51 | 日落海底座接韩信，或者玉环倒转。→ [钟馗韩信](https://wanxiang.52-198-144-26.sslip.io/#/r/hanxin) |
-| 镜 · 猪虎四人 | 26 万次 | 4.33 | 镜 3.73 | 镜也打复读吕布。→ [孙小宾三分](https://wanxiang.52-198-144-26.sslip.io/#/r/lvbu) |
+| 普通日落海（安琪拉、米莱狄） | 131 万次 | 3.80 | 闹闹 3.51 | 日落海底座接韩信，或者玉环倒转。→ [钟馗韩信](https://wxq.007.al/r/hanxin) |
+| 镜 · 猪虎四人 | 26 万次 | 4.33 | 镜 3.73 | 镜也打复读吕布。→ [孙小宾三分](https://wxq.007.al/r/lvbu) |
 <!-- traps:end -->
 
 ## 页面
@@ -98,11 +98,21 @@
 </tr>
 <tr>
 <td><img src="docs/images/screen-check.webp" alt="体检与机制链"><br><b>体检与机制链</b>　成本、自动涨级、主核、弱点、没成型时各打几分，以及这套「强在哪」的三步机制。</td>
-<td><img src="docs/images/screen-lords.webp" alt="棋手"><br><b>棋手</b>　19 位棋手按全部对局平均名次排序，官方 3D 立绘，点开看技能和该打哪套。</td>
+<td><img src="docs/images/screen-lords.webp" alt="棋手"><br><b>棋手</b>　官方卡池全部 21 位棋手都列出，官方 3D 立绘与头像；有顶尖局统计的 19 位按全部对局平均名次排序，点开看技能和该打哪套，还没统计的标「暂无法推荐」。</td>
 </tr>
 </table>
 
-另有 **查牌**（85 英雄、98 效果牌、73 装备、258 天赋，官方卡面，可按阵营、品阶、效果文字搜）和 **通用规则**（8 条不管打哪套都适用的规则，对局副屏会在对应阶段提醒）。
+另有 **查牌**（85 英雄、98 效果牌、77 装备、292 天赋，每张英雄卡带 13 项完整战斗属性——护甲、暴击率、移速等；官方卡面，可按阵营、品阶、效果文字搜）和 **通用规则**（8 条不管打哪套都适用的规则，对局副屏会在对应阶段提醒）。
+
+## 阵容库
+
+`/comps` 收录 112 套官方社区阵容：阵容码、棋手、英雄、导入次数，以及作者写的攻略文案。
+
+- **平均名次 Top 10。** 页面顶部按平均名次升序排出最好的 10 套，用全服（`allPlayers`）统计；同一个英雄组合的多条阵容只占一行，并标出「共 N 套同阵容」。统计覆盖 31 套阵容的登场率、平均名次和场次。
+- **一键复制阵容码。** 每张阵容卡上直接复制阵容码，拿到游戏里「阵容 → 收藏阵容 → 导入阵容」就能用。
+- **一键跳转打法。** 阵容能对上本站路线时（主核相同，或至少 5 张牌重合），卡片上有「查看打法」直达路线页。
+- **变阵。** 阵容卡片里可以展开变阵，看换上了谁、换下了谁、这套变阵的登场率与平均名次。目前 6 套阵容共 144 条真实变阵；没抓到的记录不显示，也不补 0。
+- **统计口径。** 变阵和平均名次来自 datawxq.com 的全服统计，不是站内实测；没有统计的阵容写「暂无统计」，不估算。
 
 ## 万象副驾：不用打字的局内助手
 
@@ -127,28 +137,32 @@ flowchart LR
 
 ## 技术上值得一看的
 
-- **无构建、零依赖。** 原生 ES 模块，`index.html` + `app.js`（约 850 行，哈希路由）+ `glass.js`。站点 19 MB，其中 18 MB 是图片。没有 `npm install`。
+- **无构建、零依赖。** 原生 ES 模块，`index.html` + `app.js`（约 1,050 行，History 路由）+ `glass.js`。站点 21 MB，其中 20 MB 是图片。没有 `npm install`。
 - **竖纹玻璃是一个片元着色器。** 官方 S1 主视觉的竖纹玻璃，在 [`glass.js`](site/dist/glass.js) 里用 WebGL2 实现：每条竖纹是一段柱面透镜，横向折射 + RGB 分离色散 + 5 次采样磨砂 + 高光线，扫描线把玻璃「推开」露出答案。不支持 WebGL2 或系统开启「减少动态效果」时退回静态图。
 - **打法和数字分开。** `plan.js` 是人写的打法（短句、没有统计数字），`facts.js` 由 [`build_facts.mjs`](scripts/build_facts.mjs) 从三份数据源生成。README 里的两张表也是脚本生成的，CI 会检查它们和数据一致。
-- **测试不装 Puppeteer。** [`verify-ui.mjs`](scripts/verify-ui.mjs) 直接用 Chrome DevTools 协议跑 50 项真实浏览器交互，包括 4 种屏幕宽度 × 5 个页面无横向溢出；[`verify-site.mjs`](scripts/verify-site.mjs) 检查每张牌都在官方卡池里、每条路线 7 个阶段齐全、禁用推荐不会推荐被禁的路线。
-- **部署**：只读容器、96 MiB 内存上限、每个文件带 SHA-256 清单、原子替换软链接切换版本，见 [docs/deployment.md](docs/deployment.md)。
+- **测试不装 Puppeteer。** [`verify-ui.mjs`](scripts/verify-ui.mjs) 直接用 Chrome DevTools 协议跑全量真实浏览器交互（覆盖开局、路线、对局、棋手、查牌、阵容六类页面），包括 4 种屏幕宽度 × 6 个页面无横向溢出；[`verify-site.mjs`](scripts/verify-site.mjs) 检查每张牌都在官方卡池里、每条路线 7 个阶段齐全、阵容的外键与 `rosterKey` 格式正确、棋手名单与官方卡池一一对应、禁用推荐不会推荐被禁的路线。
+- **部署**：Vercel 静态托管，`vercel.json` 声明无构建、输出 `site/dist`，push 到 `main` 自动重建；另带一套自有服务器方案：只读容器、96 MiB 内存上限、每个文件带 SHA-256 清单、原子替换软链接切换版本，见 [docs/deployment.md](docs/deployment.md)。
 
 ```mermaid
 flowchart LR
   subgraph 数据源
-    O["官方卡牌接口<br>85 英雄 · 19 棋手"]
-    Q["官方社区阵容<br>阵容码 · 导入次数"]
-    W["datawxq.com 公开页面<br>榜单 + 18.5 万个终局"]
+    O["官方卡牌接口 v261105<br>85 英雄 · 77 装备 · 292 天赋"]
+    Q["官方社区阵容<br>112 套 · 阵容码 · 导入次数"]
+    W["datawxq.com 公开页面<br>榜单 + 18.5 万个终局<br>（检索器为 9 月快照）"]
   end
-  O --> CJ["cards.json"]
-  Q --> BF
-  W --> MJ["meta.js · evidence.js"]
+  O --> CJ["site/dist/data/cards.json"]
+  O --> TAB["data/ 图鉴四表<br>heroes · equips · talents · effects"]
+  Q --> GC["gen_comps.mjs"] --> CM["data/comps.json"]
+  W -- "统计 + 变阵" --> MS["merge_stats.mjs<br>merge_variants.mjs"] --> CM
   CJ --> BF["build_facts.mjs"]
+  W --> MJ["meta.js · evidence.js"]
   MJ --> BF
   P["plan.js<br>人写的打法"] --> BF
   BF --> FJ["facts.js"]
+  CM --> BC["build_comps_site.mjs"] --> SCM["site/dist/data/comps.json"]
   P --> APP["网站 app.js"]
   FJ --> APP
+  SCM --> APP
   P --> COP["副驾 brain.mjs"]
   FJ --> COP
 ```
@@ -157,13 +171,13 @@ flowchart LR
 
 ## 本地运行
 
-需要 Python 3（静态服务器）。测试需要 Node 22+ 和 Chrome。
+需要 Node 22+（`npm run serve` 是 Node 静态服务器，带 History 路由回退）。测试另需 Chrome。
 
 ```sh
-git clone https://github.com/billpwchan/wanxiang-qipu.git
+git clone https://github.com/kekeguai/wanxiang-qipu.git
 cd wanxiang-qipu
 npm run serve   # → http://127.0.0.1:4173/
-npm test        # 数据完整性 + 50 项浏览器交互 + 副驾回放
+npm test        # 数据完整性 + 全量浏览器交互 + 副驾回放
 ```
 
 副驾（macOS）：
@@ -176,17 +190,36 @@ npm test        # 数据完整性 + 50 项浏览器交互 + 副驾回放
 
 游戏版本更新后怎么重跑数据，见 [docs/data-pipeline.md](docs/data-pipeline.md)。
 
+### 社区阵容数据（`data/comps.json`）
+
+阵容码、棋手、英雄、导入次数，以及作者写的攻略文案，都由外部快照归纳：
+
+```sh
+npm run gen:comps -- --in <快照目录> --out data
+npm run validate
+```
+
+**更新流程需外部快照**：默认 `--in snapshots`，仓库内不含快照，实际使用请传 `--in <快照路径>`。官网阵容列表页的原始 XHR 含作者昵称、用户 ID、头像，只在本地保存，`snapshots/raw/` 已进 `.gitignore`，仓库只存归纳后的 `data/comps.json`。没有快照就只能改代码，不动 `data/comps.json`。`scripts/fixtures/` 是 3 条脱敏样本，用来验证生成器：
+
+```sh
+npm run gen:comps -- --in scripts/fixtures --out /tmp
+```
+
 ## 目录
 
 ```
-site/dist/        网站（直接部署这个目录）
+site/dist/        网站（直接部署这个目录，Vercel 的 outputDirectory）
   app.js          页面与路由        glass.js   竖纹玻璃着色器
   data/plan.js    打法（人写）      facts.js   数字（生成）
+  data/cards.json 卡面与 13 项属性（生成）     data/comps.json  阵容库（生成）
+data/             落库数据：comps.json（112 套阵容）、heroes.json、equips.json、
+                  talents.json、effects.json、lords.json、versions.json
 copilot/          局内副驾：eye/（Swift 抓屏 + OCR）、brain.mjs、hud/、test/
 scripts/          数据抓取、素材处理、测试、发布、README 配图
 research/         原始数据快照、条件查询结果、机制假设与分析脚本（见 research/README.md）
 deploy/           服务器安装、原子更新、校验脚本
 docs/             方法、架构、数据流程、部署；images/ 与 src/ 是 README 配图及其源页面
+PROJECT_HISTORY.md 重构与演进史：为什么重构、技术里程碑、数据流、维护 SOP
 ```
 
 ## 路线图
@@ -199,20 +232,21 @@ docs/             方法、架构、数据流程、部署；images/ 与 src/ 是
 - [ ] 拍卖出价上限和站位目前来自卡面机制推导，还没有对局数据验证
 - [ ] 游戏每次版本更新后重跑数据并发布
 
-每次重跑数据都会发一个 [Release](https://github.com/billpwchan/wanxiang-qipu/releases)。点右上角 **Watch → Custom → Releases**，版本更新后会收到通知。
+每次重跑数据都会发一个 [Release](https://github.com/kekeguai/wanxiang-qipu/releases)。点右上角 **Watch → Custom → Releases**，版本更新后会收到通知。
 
 ## 参与
 
-数据不对、游戏版本更新了、副驾认错牌，都欢迎开 [Issue](https://github.com/billpwchan/wanxiang-qipu/issues/new/choose)，模板会问需要的信息。改代码或打法之前请看 [CONTRIBUTING.md](CONTRIBUTING.md)。
+数据不对、游戏版本更新了、副驾认错牌，都欢迎开 [Issue](https://github.com/kekeguai/wanxiang-qipu/issues/new/choose)，模板会问需要的信息。改代码或打法之前请看 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 数据来源
 
 | 来源 | 用在 |
 |---|---|
-| 官方卡牌接口快照（`research/raw-20260925/`，9/24 版本） | 卡面规则、机制推导、查牌 |
-| 官方社区阵容接口 | 阵容码、导入次数 |
-| [datawxq.com](https://www.datawxq.com/) 公开榜单（顶尖棋手、近 7 天） | 棋手与阵容的平均名次、按禁用的表现 |
-| datawxq 大数据检索器（v260924、近 7 天、184,680 个终局，150+ 次条件查询） | 搭档、撞车、棋手 × 主核、天赋与出装 |
+| 官方卡牌接口快照（`research/raw-20261118/`，v261105，2026-11-18 抓取） | 卡面规则、机制推导、查牌、13 项战斗属性 |
+| 官方社区阵容接口（v261105，2026-11-18 抓取） | 112 套阵容码、导入次数、攻略文案 |
+| [datawxq.com](https://www.datawxq.com/) 全服统计（`allPlayers`，312,754 局样本，2026-11-18 抓取） | 31 套阵容的登场率、平均名次、场次；6 套阵容的 144 条变阵 |
+| [datawxq.com](https://www.datawxq.com/) 公开榜单（顶尖棋手、近 7 天） | 棋手与路线的平均名次、按禁用的表现 |
+| datawxq 大数据检索器（v260924、近 7 天、184,680 个终局，171 条条件查询，2026-09-26 读取） | 搭档、撞车、棋手 × 主核、天赋与出装。**检索器深度数据目前基于 9 月快照，等待下次全量刷新** |
 | 王者荣耀官网皮肤原画 | 路线页海报 |
 | [阿里妈妈数黑体](https://www.npmjs.com/package/@fontpkg/alimama-shu-hei-ti) | 标题字体（免费商用，按站内文字子集化） |
 
@@ -224,6 +258,6 @@ docs/             方法、架构、数据流程、部署；images/ 与 src/ 是
 
 <div align="center">
 
-[![Star History](https://api.star-history.com/svg?repos=billpwchan/wanxiang-qipu&type=Date)](https://star-history.com/#billpwchan/wanxiang-qipu&Date)
+[![Star History](https://api.star-history.com/svg?repos=kekeguai/wanxiang-qipu&type=Date)](https://star-history.com/#kekeguai/wanxiang-qipu&Date)
 
 </div>

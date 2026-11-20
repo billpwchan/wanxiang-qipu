@@ -1,14 +1,39 @@
 // datawxq 大数据检索器的批量查询（浏览公开页面、模拟点击，不调用其签名接口）。
 // node scripts/explore.mjs queries.json out.json
 // queries.json: [{ "id": "hanxin", "all": ["韩信"], "none": ["雅典娜"], "tabs": ["英雄", "天赋牌"] }, ...]
-import { spawn } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 import { readFileSync, writeFileSync } from 'node:fs';
 
 const [qfile, ofile] = process.argv.slice(2);
 const queries = JSON.parse(readFileSync(qfile, 'utf8'));
 const CHROME = process.env.CHROME || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const port = 9100 + Math.floor(Math.random() * 90);
-const proc = spawn(CHROME, ['--headless=new', '--disable-gpu', `--remote-debugging-port=${port}`, '--user-data-dir=/tmp/wx-explore-' + port, 'about:blank'], { stdio: 'ignore' });
+const proc = spawn(CHROME, ['--headless=new', '--disable-gpu', `--remote-debugging-port=${port}`, '--user-data-dir=/tmp/wx-explore-' + port, 'about:blank'], { stdio: 'ignore', detached: process.platform !== 'win32' });
+// 收尾只走这一处：正常结束、任意报错、Ctrl-C 都要把 Chrome 收掉。
+// Windows 用 taskkill /T 收进程树；其余平台靠 detached 进程组按负 PID 收。
+let chromeKilled = false;
+const killChrome = () => {
+  if (chromeKilled) return;
+  chromeKilled = true;
+  if (!proc.pid) return;
+  if (process.platform === 'win32') {
+    const r = spawnSync('taskkill', ['/pid', String(proc.pid), '/T', '/F'], { stdio: 'ignore' });
+    if (r.error) console.error(`taskkill 失败：${r.error.message}`);
+    else if (r.status !== 0 && r.status !== 128) console.error(`taskkill 退出码 ${r.status}`);
+    return;
+  }
+  try {
+    process.kill(-proc.pid, 'SIGKILL');
+  } catch {
+    try { proc.kill(); } catch { /* 已经退出 */ }
+  }
+};
+proc.on('error', (e) => { console.error(`spawn 失败：${e.message}`); killChrome(); process.exit(1); });
+process.on('exit', killChrome);
+process.on('SIGINT', () => { killChrome(); process.exit(130); });
+process.on('SIGTERM', () => { killChrome(); process.exit(143); });
+process.on('uncaughtException', (e) => { console.error(e); killChrome(); process.exit(1); });
+process.on('unhandledRejection', (e) => { console.error(e); killChrome(); process.exit(1); });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let info; for (let i = 0; i < 50 && !info; i++) { try { info = await (await fetch(`http://127.0.0.1:${port}/json/list`)).json(); } catch { await sleep(200); } }
 const ws = new WebSocket(info.find((t) => t.type === 'page').webSocketDebuggerUrl);
@@ -83,4 +108,4 @@ for (const q of queries) {
   console.log(q.id, JSON.stringify(res.summary), log.join(' '));
   writeFileSync(ofile, JSON.stringify(out, null, 1));
 }
-ws.close(); proc.kill();
+ws.close(); killChrome();

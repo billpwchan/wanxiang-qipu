@@ -1,0 +1,39 @@
+[
+  {
+    "key": "1",
+    "name": "官方预置示例阵容",
+    "tag": "官方",
+    "seasonId": 1,
+    "useNum": 0,
+    "lordList": [{ "id": 8, "name": "示例棋手" }],
+    "heroList": [
+      {
+        "id": 1005,
+        "name": "英雄戊",
+        "type": 0,
+        "cardQuality": 3,
+        "level": 1,
+        "isEvo": true,
+        "positionX": 2,
+        "positionZ": 2,
+        "equipList": []
+      }
+    ],
+    "interactiveData": {
+      "score": "9.6",
+      "scoreNum": 57,
+      "scores": [0, 0, 0, 0, 57],
+      "commentNum": 0,
+      "likeNum": 0
+    },
+    "brief": "",
+    "positionDesc": "",
+    "equipDesc": "",
+    "operationDetails": [
+      { "index": 1, "beginRound": 1, "endRound": 3, "desc": "示例：预置阵容的第 1 阶段。" }
+    ],
+    "tags": ["官方", "新手"],
+    "talentCardDesc": "",
+    "effectCardDesc": ""
+  }
+]
